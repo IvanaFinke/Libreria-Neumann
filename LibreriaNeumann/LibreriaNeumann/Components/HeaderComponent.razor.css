@@ -22,8 +22,9 @@
 .search {
     display: flex;
     align-items: center;
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
+    padding-left:30px;
 }
 
 .buscador {
@@ -46,6 +47,7 @@
 
 .user, .carrito, .lupa, .logo {
     cursor: pointer;
+    padding-right:30px;
 }
 
 .bi-person-circle, .bi-cart4 {
