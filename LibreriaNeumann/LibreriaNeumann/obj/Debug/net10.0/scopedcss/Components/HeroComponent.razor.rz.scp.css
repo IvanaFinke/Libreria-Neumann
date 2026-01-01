@@ -1,0 +1,51 @@
+
+.hero[b-pbijrvm6gy] {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 3rem;
+    width:100%;
+    padding: 3rem 3rem;
+    margin-bottom:7rem;
+}
+
+.hero-texto[b-pbijrvm6gy]{
+    display:flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content:start;
+   
+}
+
+.titulo-hero[b-pbijrvm6gy] {
+    font-size: 60px;
+    font-family:serif;
+    text-wrap: balance;
+    max-width:200px;
+}
+
+.eslogan[b-pbijrvm6gy] {
+    font-size:40px;
+    max-width:450px;
+    font-weight:500;
+    font-family:serif;
+
+}
+
+.btn-ver-libros[b-pbijrvm6gy] {
+    text-emphasis-color: white;
+    background-color: rgb(244, 152, 117);
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 24px;
+    color: white;
+    border-color: rgb(244, 152, 117);
+}
+
+.hero-imagen img[b-pbijrvm6gy] {
+    width: 500px;
+    height: 356px;
+    object-fit: contain;
+    border-radius: 60px;
+}

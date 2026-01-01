@@ -8,6 +8,12 @@ main[b-acmwwuxy9a] {
     flex: 1;
 }
 
+.main-layout[b-acmwwuxy9a] {
+    display: grid;
+    min-height: 200px;
+    background-color:white;
+}
+
 .sidebar[b-acmwwuxy9a] {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
 }
