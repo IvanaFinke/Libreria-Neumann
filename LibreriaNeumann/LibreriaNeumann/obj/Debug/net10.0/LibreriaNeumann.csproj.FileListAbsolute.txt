@@ -87,5 +87,6 @@ C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debu
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\HeroComponent.razor.rz.scp.css
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\CatalogoComponent.razor.rz.scp.css
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\LibroSeccionComponent.razor.rz.scp.css
-C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\13twna8nz8-{0}-2rg3nlbjf7-2rg3nlbjf7.gz
-C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tnl8yodhue-{0}-2rg3nlbjf7-2rg3nlbjf7.gz
+C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\SobreNosotrosComponent.razor.rz.scp.css
+C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\13twna8nz8-{0}-8jgaqbukfj-8jgaqbukfj.gz
+C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tnl8yodhue-{0}-8jgaqbukfj-8jgaqbukfj.gz
