@@ -1,0 +1,90 @@
+﻿.libro-seccion{
+    display:grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr auto;
+    width:100%;
+    align-items:center;
+    padding: 3rem 3rem;
+    padding-top:1rem;
+
+}
+
+.libro-seccion img{
+    display:flex;
+    justify-items:start;
+    width:330px;
+    height:480px;
+}
+
+.titulo-autor-comprar {
+    align-items: center;
+    align-content: start;
+    margin-bottom: 4rem;
+    padding-right:12rem;
+}
+
+.titulo-libro-seccion{
+    font-weight:500;
+}
+
+.autor-libro-seccion, .precio-libro-seccion, .precio-cuotas-libro-seccion {
+    padding-top: 1rem;
+}
+
+.cuadro-cantidad {
+    display: flex;
+    background-color: white;
+    border-color: rgb(212, 212, 221);
+    border-style:solid;
+    border-width:2px;
+    width:100px;
+    height:40px;
+    justify-content: space-between;
+    align-items:center;
+    margin-top:1rem;
+}
+
+.agregar-carrito {
+    border-color: rgb(212, 212, 212);
+    background-color: rgb(244, 152, 117);
+    color: white;
+    width: 300px;
+    height: 40px;
+    margin-top:1rem;
+}
+
+.boton-cantidad-disminuir, .boton-cantidad-aumentar{
+    border:none;
+    background-color:white;
+}
+
+.boton-cantidad-disminuir:hover, .boton-cantidad-aumentar:hover {
+    color: rgb(128, 128, 128);
+}
+
+.agregar-carrito:hover {
+    border-color: rgb(128, 128, 128);
+}
+
+.cantidad-carrito {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    gap:2rem;
+}
+
+
+.descripcion {
+    display: grid;
+    justify-items:start;
+    gap: 10px;
+    padding-top:2rem;
+    grid-column:1/-1;
+}
+
+.editorial-seccion, .fecha-publicacion-seccion, .num-pag-seccion{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+

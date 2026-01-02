@@ -645,3 +645,94 @@ main[b-acmwwuxy9a] {
         opacity: 0;
     }
 }
+/* /Components/LibroSeccionComponent.razor.rz.scp.css */
+.libro-seccion[b-1l9de3t9q8]{
+    display:grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr auto;
+    width:100%;
+    align-items:center;
+    padding: 3rem 3rem;
+    padding-top:1rem;
+
+}
+
+.libro-seccion img[b-1l9de3t9q8]{
+    display:flex;
+    justify-items:start;
+    width:330px;
+    height:480px;
+}
+
+.titulo-autor-comprar[b-1l9de3t9q8] {
+    align-items: center;
+    align-content: start;
+    margin-bottom: 4rem;
+    padding-right:12rem;
+}
+
+.titulo-libro-seccion[b-1l9de3t9q8]{
+    font-weight:500;
+}
+
+.autor-libro-seccion[b-1l9de3t9q8], .precio-libro-seccion[b-1l9de3t9q8], .precio-cuotas-libro-seccion[b-1l9de3t9q8] {
+    padding-top: 1rem;
+}
+
+.cuadro-cantidad[b-1l9de3t9q8] {
+    display: flex;
+    background-color: white;
+    border-color: rgb(212, 212, 221);
+    border-style:solid;
+    border-width:2px;
+    width:100px;
+    height:40px;
+    justify-content: space-between;
+    align-items:center;
+    margin-top:1rem;
+}
+
+.agregar-carrito[b-1l9de3t9q8] {
+    border-color: rgb(212, 212, 212);
+    background-color: rgb(244, 152, 117);
+    color: white;
+    width: 300px;
+    height: 40px;
+    margin-top:1rem;
+}
+
+.boton-cantidad-disminuir[b-1l9de3t9q8], .boton-cantidad-aumentar[b-1l9de3t9q8]{
+    border:none;
+    background-color:white;
+}
+
+.boton-cantidad-disminuir:hover[b-1l9de3t9q8], .boton-cantidad-aumentar:hover[b-1l9de3t9q8] {
+    color: rgb(128, 128, 128);
+}
+
+.agregar-carrito:hover[b-1l9de3t9q8] {
+    border-color: rgb(128, 128, 128);
+}
+
+.cantidad-carrito[b-1l9de3t9q8] {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    gap:2rem;
+}
+
+
+.descripcion[b-1l9de3t9q8] {
+    display: grid;
+    justify-items:start;
+    gap: 10px;
+    padding-top:2rem;
+    grid-column:1/-1;
+}
+
+.editorial-seccion[b-1l9de3t9q8], .fecha-publicacion-seccion[b-1l9de3t9q8], .num-pag-seccion[b-1l9de3t9q8]{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
