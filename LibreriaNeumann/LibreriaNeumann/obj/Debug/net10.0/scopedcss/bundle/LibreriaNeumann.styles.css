@@ -100,6 +100,56 @@
     text-align:start;
     text-wrap:balance;
 }
+/* /Components/ContactoComponent.razor.rz.scp.css */
+.contacto[b-8mn0lwk0x1] {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    align-items: center;
+    padding: 3em 3rem;
+    padding-top: 1rem;
+    gap: 10px;
+}
+
+.titulo-contacto-seccion[b-8mn0lwk0x1] {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.ingreso[b-8mn0lwk0x1] {
+    width: 500px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167);
+    border-style:solid;
+}
+
+.ingreso-de-la-solicitud[b-8mn0lwk0x1] {
+    width: 500px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
+    border-width:2px;
+    height:100px;
+}
+
+.boton-enviar[b-8mn0lwk0x1] {
+    text-emphasis-color: white;
+    background-color: rgb(244, 152, 117);
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: white;
+    border-color: rgb(244, 152, 117);
+    border-style:solid;
+    font-weight:600;
+    font-family:sans-serif;
+}
+
+.boton-enviar:hover[b-8mn0lwk0x1]{
+   border-color: rgb(128, 128, 128);
+}
 /* /Components/HeaderComponent.razor.rz.scp.css */
 .header[b-rxk6cxr2lu] {
     display: grid;
@@ -268,6 +318,7 @@
     font-size: 24px;
     color: white;
     border-color: rgb(244, 152, 117);
+    border-style:solid;
 }
 
 .hero-imagen img[b-pbijrvm6gy] {
