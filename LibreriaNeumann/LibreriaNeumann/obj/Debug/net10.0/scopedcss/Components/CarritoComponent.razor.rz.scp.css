@@ -1,0 +1,102 @@
+.carrito[b-8g0gqjtdyx] {
+    display: grid;
+    grid-template-columns: auto;
+    width: 500px;
+    align-items: center;
+    padding: 3em 3rem;
+    padding-top: 1rem;
+    gap: 2px;
+    border-style:solid;
+    border-color:black;
+}
+
+.titulo-carrito[b-8g0gqjtdyx] {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.datos-libro-carrito img[b-8g0gqjtdyx]{
+    width:80px;
+    height:120px;
+    border-radius:10px;
+    
+    background:none;
+    margin-left:12px;
+}
+
+.datos-libro-carrito[b-8g0gqjtdyx] {
+    border-color: rgb(244, 152, 117);
+    border-width: 2px;
+    border-style: solid;
+    background: rgb(212, 212, 212, 0.6);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    align-content: center;
+    width: 400px;
+    height: 140px;
+    margin-top: 2px;
+}
+
+.titulo-libro-carrito[b-8g0gqjtdyx], .precio-carrito[b-8g0gqjtdyx]{
+    font-size:20px;
+    text-wrap:balance;
+}
+
+.titulo-precio[b-8g0gqjtdyx]{
+    display:flex;
+    justify-content:center;
+    gap: 14px;
+    padding-left: 12px;
+}
+
+.precio-carrito[b-8g0gqjtdyx]{
+    padding-top:20px;
+}
+
+.bi-trash[b-8g0gqjtdyx]{
+    display:flex;
+    justify-items:end;
+    margin-bottom:6rem;
+    padding: 4px;
+    font-size:22px;
+}
+
+.seccion-compra-botones[b-8g0gqjtdyx] {
+    border-color: rgb(244, 152, 117);
+    border-width: 2px;
+    border-style: solid;
+    height: 140px;
+}
+
+.frase-total[b-8g0gqjtdyx], .frase-precio-total[b-8g0gqjtdyx] {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.total-clase[b-8g0gqjtdyx] {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top:20px;
+}
+
+.boton-comprar[b-8g0gqjtdyx] {
+    background-color: rgb(244, 152, 117);
+    color: white;
+    border-style: solid;
+    border-color: rgb(244, 152, 117);
+    font-weight: 500;
+    width: 100%;
+    align-content: center;
+}
+
+.boton-comprar:hover[b-8g0gqjtdyx] {
+   border-color: rgb(128, 128, 128);
+   border-width:2px;
+}
+
+.boton-basura-carrito[b-8g0gqjtdyx] {
+    border:none;
+    background:none;
+}
