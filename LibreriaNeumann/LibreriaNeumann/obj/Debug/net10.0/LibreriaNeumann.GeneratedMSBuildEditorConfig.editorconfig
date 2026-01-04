@@ -62,10 +62,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/RegistrarComponent.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSZWdpc3RyYXJDb21wb25lbnQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -105,6 +101,10 @@ build_metadata.AdditionalFiles.CssScope = b-77wm5m25zu
 [C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/LibroSeccionComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMaWJyb1NlY2Npb25Db21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-1l9de3t9q8
+
+[C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/RegistrarComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSZWdpc3RyYXJDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-f1rx34fkzg
 
 [C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/SobreNosotrosComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTb2JyZU5vc290cm9zQ29tcG9uZW50LnJhem9y
