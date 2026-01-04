@@ -46,9 +46,9 @@
     margin-top:3rem;
 }
 
-.nav-link-contraseña {
-
-
+::deep .nav-link-contraseña {
+    display: block;
+    margin-top: 10px;
 }
 
 
