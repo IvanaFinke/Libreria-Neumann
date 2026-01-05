@@ -1,81 +1,81 @@
-﻿<div class="detalles-pago">
-    <h2>Detalles de pago</h2>
-    <h2>DETALLES DEL CONTACTO </h2>
-    <h3>E-mail</h3>
-    <h4 class="email-usuario">suemail@gmal.com</h4>
+﻿@rendermode InteractiveServer
 
-    <div class="ingresos">
+<div class="detalles-pago">
 
-        <div class="ingreso-telefono">
-            <h4>Ingrese su telefono</h4>
-            <div class="clase-input-telefono">
-                <input type="text" class="ingreso-del-telefono" />
-            </div>
+    <div class="columna-1">
+
+        <h2 class="titulo-detalles-pago">Detalles de pago</h2>
+        <h5 class="detalles-contacto">DETALLES DEL CONTACTO </h5>
+
+        <div class="mail-detpago">
+            <h5>E-mail</h5>
+            <h5 class="email-usuario">suemail@gmal.com</h5>
         </div>
 
-        <br />
 
-        <div class="ingreso-calle">
-            <h4>Ingrese su calle</h4>
-            <div class="clase-input-calle">
-                <input type="text" class="ingreso-de-calle" />
+        <div class="ingresos">
+
+            <div class="ingreso-telefono">
+                <h4>Ingrese su teléfono</h4>
+                <div class="clase-input-telefono">
+                    <input type="text" class="ingreso" />
+                </div>
             </div>
-        </div>
 
-        <br />
-
-        <div class="ingreso-altura">
-            <h4>Ingrese su altura de calle</h4>
-            <div class="clase-input-altura">
-                <input type="number" class="ingreso-de-altura" />
+            <div class="ingreso-calle">
+                <h4>Ingrese su calle</h4>
+                <div class="clase-input-calle">
+                    <input type="text" class="ingreso" />
+                </div>
             </div>
-        </div>
 
-        <br />
-
-        <div class="ingreso-contraseña">
-            <h4>Ingrese su constraseña</h4>
-            <div class="clase-input-contraseña">
-                <input type="password" class="ingreso-de-contraseña" />
+            <div class="ingreso-altura">
+                <h4>Ingrese su altura de calle</h4>
+                <div class="clase-input-altura">
+                    <input type="number" class="ingreso" />
+                </div>
             </div>
-        </div>
 
-        <br />
-
-        <div class="ingreso-localidad">
-            <h4>Ingrese su localidad</h4>
-            <div class="clase-input-localidad">
-                <input type="text" class="ingreso-de-localidad" />
+            <div class="ingreso-contraseña">
+                <h4>Ingrese su contraseña</h4>
+                <div class="clase-input-contraseña">
+                    <input type="password" class="ingreso" />
+                </div>
             </div>
-        </div>
 
-        <br />
-
-        <div class="ingreso-provincia">
-            <h4>Ingrese su provincia</h4>
-            <div class="clase-input-provincia">
-                <input type="text" class="ingreso-de-provincia" />
+            <div class="ingreso-localidad">
+                <h4>Ingrese su localidad</h4>
+                <div class="clase-input-localidad">
+                    <input type="text" class="ingreso" />
+                </div>
             </div>
-        </div>
 
-        <br />
+            <div class="ingreso-provincia">
+                <h4>Ingrese su provincia</h4>
+                <div class="clase-input-provincia">
+                    <input type="text" class="ingreso" />
+                </div>
+            </div>
+
+        </div>
 
     </div>
+    
 
     <div class="cuadro-carrito">
-        <CarritoComponent></CarritoComponent>
+        <CarritoComponent MostrarBotonComprar="false"></CarritoComponent>
     </div>
 
     <div class="medios-pago-seccion">
 
-        <h2 class="frase-medios-pago">MEDIOS DE PAGO</h2>
+        <h5 class="frase-medios-pago">MEDIOS DE PAGO</h5>
+
         <div class="seccion-medios-pago">
 
-            <div class="cuadro-pago-efectivo">
+            <button class="cuadro-pago-efectivo @(medioSeleccionado == "efectivo" ? "activo" : "")" 
+                 @onclick='() => SeleccionarMedio("efectivo")'>
 
-                <div class="clase-icono-billete">
-                   <h5>icono billete</h5>
-                </div>
+                <img src="https://i.postimg.cc/fy10kbHT/billete-logo.png" />
 
                 <h5 class="frase-efectivo-local">Efectivo en nuestro local</h5>
 
@@ -83,147 +83,173 @@
                     <i class="bi bi-caret-right-fill"></i>
                 </div>
 
-                <div class="cuando-clickea">
+            </button>
+
+            @if(medioSeleccionado == "efectivo")
+            {
+                <div class="cuando-clickea-billete">
 
                     <div class="monto-a-pagar">
                         <h5>Su monto total es:</h5>
-                        <h5>$MONTO</h5>
+                        <h5><strong>$124.000</strong></h5>
                     </div>
-             
+
                     <h5>Nuestra dirección de local es:</h5>
 
-                    <h5>>Diagonal 73, 7526,
-                        La Plata
+                    <h5>
+                        <strong>
+                            Diagonal 73, 7526,
+                            La Plata
+                        </strong>
                     </h5>
 
                     <a class="direccionador-a-google-maps" href="#">
-                        <img src="">
+                        <img src="https://i.postimg.cc/bN8ghyGG/image.png">
                     </a>
 
-                    <h5>Nuestros horarios de atencion:</h5>
+                    <h5 class="pt-2">Nuestros horarios de atencion:</h5>
 
                     <h5>
-                        Lun a Sab
-                        09:00 a 20:00
+                        <strong>
+                            Lun a Sab
+                            09:00 a 20:00
+                        </strong>
                     </h5>
 
-                    <h5>Al solicitar "comprar" se enviará un comprobante de solicitud de compra a su mail.
+                    <h5>
+                        Al solicitar "comprar" se enviará un comprobante de solicitud de compra a su mail.
                         Por favor, dirijase a nuestro local dentro de 48 hs para continuar el proceso de compra de su pedido.
                     </h5>
 
-                    <div class="boton-cambiar-medio-pago">
+                    <button class="boton-cambiar-medio-pago"
+                    @onclick = "() => medioSeleccionado = null">
+
                         <i class="bi bi-caret-left-fill"></i>
                         <h5 class="frase-cambiar-medio-pago">Cambiar medio de pago</h5>
-                    </div>
+                    </button>
                 </div>
+            }
+               
 
             </div>
 
-            <div class="cuadro-pago-tarjeta">
+            <button class="cuadro-pago-tarjeta @(medioSeleccionado == "tarjeta" ? "activo" : "")"
+             @onclick =' () => SeleccionarMedio("tarjeta")'>
 
-                <div class="clase-icono-tarjeta">
-                    <h5>icono tarjeta</h5>
-                </div>
+            <img src="https://i.postimg.cc/MZ4SBs7V/tarjeta-logo.png" />
 
                 <h5 class="frase-tarjeta">Pago con tarjetas</h5>
 
                 <div class="clase-icono-flecha">
                     <i class="bi bi-caret-right-fill"></i>
                 </div>
+            </button>
 
-                <div class="cuando-clickea">
+            @if(medioSeleccionado == "tarjeta")
+            {
+                <div class="cuando-clickea-tarjetas">
 
                     <h5>Ingrese numero de la tarjeta</h5>
 
-                    <input type="number"/>
+                    <input type="number" class="ingreso" />
 
                     <h5>Nombre completo del titular de la tarjeta</h5>
-                    <input type="text" />
+                    <input type="text" class="ingreso" />
 
                     <h5>Codigo de seguridad</h5>
-                    <input type="number" />
+                    <input type="number" class="ingreso" />
 
                     <h5>
                         Al solicitar "comprar" se enviará un comprobante de compra a su mail.
                         Por favor, dirijase a correo para revisar los detalles de su pedido.
                     </h5>
 
-                    <div class="boton-cambiar-medio-pago">
+                    <button class="boton-cambiar-medio-pago"
+                    @onclick = "() => medioSeleccionado = null">
+
                         <i class="bi bi-caret-left-fill"></i>
                         <h5 class="frase-cambiar-medio-pago">Cambiar medio de pago</h5>
-                    </div>
+                    </button>
                 </div>
+            }
+                
 
-            </div>
+            <button class="cuadro-pago-transferencia @(medioSeleccionado == "transferencia" ? "activo" : "")"
+                 @onclick=' () => SeleccionarMedio("transferencia")'>
 
-            <div class="cuadro-pago-transferencia">
-
-                <div class="clase-icono-transferencia">
-                    <h5>icono transferencia</h5>
-                </div>
+            <img src="https://i.postimg.cc/CK6rRxtW/icono-transferencia.png" />
 
                 <h5 class="frase-transferencia">Transferencia bancaria</h5>
 
                 <div class="clase-icono-flecha">
                     <i class="bi bi-caret-right-fill"></i>
                 </div>
+            </button>
 
-                <div class="cuando-clickea">
+            @if(medioSeleccionado == "transferencia")
+            {
+            <div class="cuando-clickea-transferencia">
 
-                    <h5>Datos para la transferencia</h5>
+                <h5>Datos para la transferencia</h5>
 
-                    <div class="cbu-class">
-                        <h5>CBU:</h5>
-                        <h6 class="cbu-frase">005689192727</h6>
-                    </div>
-
-                    <div class="alias-frase">
-                        <h5>Alias: </h5>
-                        <h6>neumann.libros.fantasia.mp</h6>
-                    </div>
-
-                    <div class="nombre-transferencia-frase">
-                        <h5>Titular cuenta:</h5>
-                        <h6>Lucas Kingschollar</h6>
-                    </div>
-
-                    <div class="banco-frase">
-                        <h5>Banco:</h5>
-                        <h6>Galicia</h6>
-                    </div>
-
-                    <h5>
-                        Al solicitar "comprar" se enviará un comprobante de solicitud de compra a su mail.
-                    </h5>
-
-                    <br />
-
-                    <h5>
-                        Por favor, envie el comprobante de transferencia a nuestro mail dentro de 48 hs para continuar el proceso de compra de su pedido.
-
-                    </h5>
-                    <br />
-                    <h5>
-                        Tenga en cuenta que la confirmación de comprar puede demorar un tiempo. Cuando su pago sea confirmado se le enviará confirmación
-                        de pago y su numero de compra.
-                    </h5>
-
-                    <div class="boton-cambiar-medio-pago">
-                        <i class="bi bi-caret-left-fill"></i>
-                        <h5 class="frase-cambiar-medio-pago">Cambiar medio de pago</h5>
-                    </div>
+                <div class="cbu-class">
+                    <h5><strong>CBU:</strong></h5>
+                    <h6 class="cbu-frase">005689192727</h6>
                 </div>
 
-            </div>
+                <div class="alias-frase">
+                    <h5><strong>Alias: </strong></h5>
+                    <h6>neumann.libros.fantasia.mp</h6>
+                </div>
 
-            <br />
-            <div class="clase-boton-comprar">
-                <button class="boton-compprar">COMPRAR</button>
+                <div class="nombre-transferencia-frase">
+                    <h5><strong>Titular cuenta:</strong></h5>
+                    <h6>Lucas Kingschollar</h6>
+                </div>
+
+                <div class="banco-frase">
+                    <h5><strong>Banco:</strong></h5>
+                    <h6>Galicia</h6>
+                </div>
+
+                <h5>
+                    Al solicitar "comprar" se enviará un comprobante de solicitud de compra a su mail.
+                </h5>
+
+                <h5>
+                    Por favor, envie el comprobante de transferencia a nuestro mail dentro de 48 hs para continuar el proceso de compra de su pedido.
+
+                </h5>
+                <h5>
+                    Tenga en cuenta que la confirmación de comprar puede demorar un tiempo. Cuando su pago sea confirmado se le enviará confirmación
+                    de pago y su numero de compra.
+                </h5>
+
+                <button class="boton-cambiar-medio-pago"
+                @onclick = "() => medioSeleccionado = null">
+
+                    <i class="bi bi-caret-left-fill"></i>
+                    <h5 class="frase-cambiar-medio-pago">Cambiar medio de pago</h5>
+                </button>
             </div>
-        </div>
-    </div>
+            }
+               
+
+       </div>
+
+                <button class="boton-comprar">
+                 <span><strong>COMPRAR</strong></span>
+                 </button>
+       
 </div>
 
 @code {
+
+    public string ? medioSeleccionado;
+
+    public void SeleccionarMedio(string medio)
+    {
+        medioSeleccionado = medio;
+    }
 
 }

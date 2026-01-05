@@ -1,0 +1,260 @@
+.detalles-pago[b-q6ignot1cw] {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+    align-items: start;
+    padding: 3em 3rem;
+    padding-top: 1rem;
+    gap: 2rem;
+}
+
+.columna-1[b-q6ignot1cw] {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.titulo-detalles-pago[b-q6ignot1cw] {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.email-usuario[b-q6ignot1cw]{
+    position:relative;
+    display:inline-block;
+    text-decoration:none;
+    color:black;
+}
+
+[b-q6ignot1cw] .email-usuario::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(1);
+    margin-top: 28px;
+}
+
+.ingresos[b-q6ignot1cw]{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
+.ingreso[b-q6ignot1cw] {
+    width: 500px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
+}
+
+.cuadro-carrito[b-q6ignot1cw]{
+    display:grid;
+    grid-column:2;
+    align-content:end;
+    margin-top: 2rem;
+    padding-top:28px;
+}
+
+.detalles-contacto[b-q6ignot1cw], .mail-detpago[b-q6ignot1cw] {
+    margin-top: 1rem;
+}
+
+.medios-pago-seccion[b-q6ignot1cw] {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:4px;
+
+}
+
+.cuadro-pago-efectivo img[b-q6ignot1cw]{
+    width: 40px;
+    height: 30px;
+}
+
+.cuadro-pago-efectivo[b-q6ignot1cw] {
+    width: 500px;
+    height: 50px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167, 0.4);
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    align-content: space-evenly;
+    gap: 20px;
+}
+
+.frase-efectivo-local[b-q6ignot1cw]{
+  align-self:center;
+  padding-top:8px;
+}
+
+.clase-icono-flecha[b-q6ignot1cw]{
+    align-self:center;
+    font-size:26px;
+    align-items:start;
+    padding-left:9rem;
+    background:none;
+    border-style:none;
+}
+
+.cuando-clickea-billete[b-q6ignot1cw] {
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167, 0.4);
+    border-style: solid;
+    padding: 10px;
+    background-color: rgb(244, 152, 117, 0.2);
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    justify-items: start;
+    gap: 2px;
+}
+
+.direccionador-a-google-maps img[b-q6ignot1cw] {
+    width: 450px;
+    height: 300px;
+    padding: 2px;
+}
+
+.boton-cambiar-medio-pago[b-q6ignot1cw] {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    border-style: solid;
+    border-color: rgb(167, 167, 167, 0.4);
+    width:250px;
+    padding: 0px;
+
+}
+
+.boton-cambiar-medio-pago i[b-q6ignot1cw]{
+    padding-top:3px;
+    font-size:20px;
+}
+
+.frase-cambiar-medio-pago[b-q6ignot1cw]{
+    padding-right:30rem;
+    display:flex;
+    text-wrap:nowrap;
+    text-align:center;
+    padding-top:6px;
+}
+
+.cuadro-pago-tarjeta img[b-q6ignot1cw]{
+    height:46px;
+    width:44px;
+}
+
+.cuadro-pago-tarjeta[b-q6ignot1cw] {
+    width: 500px;
+    height: 50px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167, 0.4);
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    align-content: space-evenly;
+    gap: 20px;
+}
+
+.frase-tarjeta[b-q6ignot1cw] {
+    align-self: center;
+    padding-top: 8px;
+}
+
+.cuadro-pago-tarjeta >.clase-icono-flecha[b-q6ignot1cw] {
+    padding-left:12.6rem;
+}
+
+.cuando-clickea-tarjetas[b-q6ignot1cw] {
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167, 0.4);
+    border-style: solid;
+    padding: 10px;
+    background-color: rgb(244, 152, 117, 0.2);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    justify-items: start;
+    gap:2px;
+}
+
+.cuadro-pago-transferencia[b-q6ignot1cw] {
+    width: 500px;
+    height: 50px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167, 0.4);
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    align-content: space-evenly;
+    gap: 20px;
+    
+}
+
+.cuadro-pago-transferencia img[b-q6ignot1cw]{
+    height:32px;
+    width:42px;
+}
+
+.cuadro-pago-transferencia > .clase-icono-flecha[b-q6ignot1cw] {
+    padding-left: 9.7rem;
+}
+
+.cuando-clickea-transferencia[b-q6ignot1cw] {
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167, 0.4);
+    border-style: solid;
+    padding: 10px;
+    background-color: rgb(244, 152, 117, 0.2);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    justify-items: start;
+    gap: 2px;
+}
+
+.cuadro-pago-efectivo[b-q6ignot1cw], .cuadro-pago-tarjeta[b-q6ignot1cw], .cuadro-pago-transferencia[b-q6ignot1cw] {
+    background-color: white;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+.frase-transferencia[b-q6ignot1cw] {
+    align-self: center;
+    padding-top: 8px;
+}
+
+.activo[b-q6ignot1cw] {
+    background-color: rgb(244, 152, 117, 0.2);
+    border-color: rgb(244, 152, 117);
+}
+
+.boton-comprar[b-q6ignot1cw] {
+    display: grid;
+    grid-column: 1;
+    background-color: rgb(244, 152, 117);
+    color: white;
+    border-style: solid;
+    border-color: rgb(244, 152, 117);
+    font-weight: 500;
+    width: 100%;
+    height:40px;
+    align-content: center;
+    font-size:20px;
+    margin-top:3rem;
+}
+
+.boton-comprar:hover[b-q6ignot1cw] {
+        border-color: rgb(128, 128, 128);
+        border-width: 4px;
+        border-style:solid;
+}

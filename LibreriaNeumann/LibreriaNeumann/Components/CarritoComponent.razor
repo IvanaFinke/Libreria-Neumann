@@ -67,14 +67,19 @@
 
             <br />
 
-            <button class="boton-comprar">
-            <span><strong>COMPRAR</strong></span>
+
+            @if(MostrarBotonComprar)
+            {
+                <button class="boton-comprar">
+                    <span><strong>COMPRAR</strong></span>
                 </button>
+            }
        
         </div>
         
 
 </div>
-@code{
 
+@code{
+    [Parameter] public bool MostrarBotonComprar { get; set; } = true;
 }
