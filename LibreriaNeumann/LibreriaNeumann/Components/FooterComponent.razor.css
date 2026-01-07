@@ -1,0 +1,9 @@
+﻿.footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+    align-items: start;
+    padding: 3em 3rem;
+    padding-top: 1rem;
+    gap: 2rem;
+}
