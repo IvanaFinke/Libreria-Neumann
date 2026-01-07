@@ -7,3 +7,8 @@
     padding-top: 1rem;
     gap: 2rem;
 }
+
+.redes-seccion{
+    display:flex;
+    flex-direction:column;
+}
