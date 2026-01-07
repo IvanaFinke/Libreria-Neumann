@@ -12,3 +12,7 @@
     display:flex;
     flex-direction:column;
 }
+
+.clase-donde-estamos {
+    display: flex;
+    -ms-flex-direction: column;
