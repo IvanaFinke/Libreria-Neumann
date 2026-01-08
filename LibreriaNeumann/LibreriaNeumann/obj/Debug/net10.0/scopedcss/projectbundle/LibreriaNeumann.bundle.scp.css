@@ -513,6 +513,117 @@
         border-width: 4px;
         border-style:solid;
 }
+/* /Components/FooterComponent.razor.rz.scp.css */
+.footer[b-4tvn7u64oa] {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    align-items: start;
+    padding: 3em 3rem;
+    padding-top: 2.5rem;
+    gap: 1rem;
+    background-color:lightgray;
+}
+
+.frase[b-4tvn7u64oa]{
+    color:white;
+    font-size:22px;
+}
+
+.redes-seccion[b-4tvn7u64oa]{
+    display:flex;
+    flex-direction:column;  
+    gap:1.5rem;
+    align-items:start;
+}
+
+[b-4tvn7u64oa] .contenedor {
+    content: "";
+    background-color: rgb(244, 152, 117);
+    border-radius: 75px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    justify-items: start;
+    border-color: rgb(244, 152, 117);
+    border-style:solid;
+    cursor:pointer;
+}
+
+.contenedor i[b-4tvn7u64oa]{
+    font-size:24px;
+    color:lightgray;
+    padding-top:1px;
+}
+
+[b-4tvn7u64oa] .contenedor-facebook {
+    display: flex;
+    background: none;
+    align-items:start;
+    width: 40px;
+    cursor:pointer;
+}
+
+[b-4tvn7u64oa] .contenedor-facebook i {
+    color: rgb(244, 152, 117);
+    font-size: 40px;
+    align-self:start;
+    padding-right:6px;
+}
+
+.clase-donde-estamos[b-4tvn7u64oa] {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+[b-4tvn7u64oa] .iconos-contacto{
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    gap:2rem;
+    margin-top:1.7rem;
+   
+}
+
+[b-4tvn7u64oa] .telefono-seccion{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:start;
+    gap:20px;
+    
+}
+
+.contenedor-mail[b-4tvn7u64oa], .contenedor-ubicacion[b-4tvn7u64oa] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    background-color: rgb(244, 152, 117);
+    border-radius:75px;
+    width:40px;
+    height:40px;
+    text-wrap:nowrap;
+    cursor:pointer;
+}
+
+.bi-envelope[b-4tvn7u64oa], .contenedor-ubicacion i[b-4tvn7u64oa]{
+    font-size:24px;
+    color:lightgray;
+    display:flex;
+    justify-items:center;
+    padding-left:8px;
+    gap:20px;
+}
+
+[b-4tvn7u64oa] .mail-texto, .horario-texto[b-4tvn7u64oa]{
+    margin-left:10px;
+}
+
 /* /Components/HeaderComponent.razor.rz.scp.css */
 .header[b-rxk6cxr2lu] {
     display: grid;

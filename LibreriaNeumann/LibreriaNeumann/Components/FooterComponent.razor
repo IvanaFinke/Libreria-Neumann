@@ -2,27 +2,27 @@
 
     <div class="redes-seccion">
 
-        <h5 class="frase-redes">NUESTRAS REDES</h5>
+        <h5 class="frase"><strong>NUESTRAS REDES</strong></h5>
 
-        <div class="instagram-contenedor">
+        <NavLink class="contenedor">
             <i class="bi bi-instagram"></i>
-        </div>
+        </NavLink>
 
-        <div class="facebook-contenedor">
+        <NavLink class="contenedor-facebook">
             <i class="bi bi-facebook"></i>
-        </div>
+        </NavLink>
 
-        <div class="tiktok-contenedor">
+        <NavLink class="contenedor">
             <i class="bi bi-tiktok"></i>
-        </div>
+        </NavLink>
     </div>
 
     <div class="clase-donde-estamos">
 
-        <h5 class="frase-ubicacion">DONDE ESTAMOS</h5>
+        <h5 class="frase"><strong>DONDE ESTAMOS</strong></h5>
 
         <h5>
-            Diagonal 73, 7526,
+            Diagonal 73, 7526, <br />
             La Plata
         </h5>
 
@@ -33,30 +33,35 @@
 
     <div class="atencion-seccion">
 
-        <h5>ATENCIÓN</h5>
+        <h5 class="frase"><strong>ATENCIÓN</strong></h5>
 
-        <div class="telefono-seccion">
+        <div class="iconos-contacto">
+            <div class="telefono-seccion">
 
-            <div class="contenedor-telefono">
-                <i class="bi bi-telephone"></i>
+                <NavLink class="contenedor">
+                    <i class="bi bi-telephone"></i>
+                </NavLink>
+
+                <h6>221-566-555</h6>
             </div>
 
-            <h6>221-566-555</h6>
-        </div>
+            <div class="contenedor-mail">
+                <NavLink>
+                    <i class="bi bi-envelope"></i>
+                </NavLink>
+                <h6 class="mail-texto">libneum@gmail.com</h6>
+            </div>
 
-        <div class="mail-seccion">
-            <i class="bi bi-envelope"></i>
-            <h6>libneum@gmail.com</h6>
+            <div class="contenedor-ubicacion">
+                <NavLink>
+                    <i class="bi bi-geo-alt-fill"></i>
+                </NavLink>
+                <h6 class="horario-texto">
+                    Lun a Sab <br />09:00 a 20:00
+                </h6>
+            </div>
         </div>
-
-        <div class="contenedor-ubicacion">
-            <i class="bi bi-geo-alt-fill"></i>
-
-            <h6>
-                Lun a Sab
-                09:00 a 20:00
-            </h6>
-        </div>
+       
     </div>
 
 </div>

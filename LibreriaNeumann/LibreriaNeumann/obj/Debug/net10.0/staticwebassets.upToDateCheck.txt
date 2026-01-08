@@ -93,5 +93,5 @@ C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\Components\Layout\ReconnectModal.razor.js
-C:\Users\Maite\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.1\_framework\blazor.server.js
 C:\Users\Maite\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.1\_framework\blazor.web.js
+C:\Users\Maite\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.1\_framework\blazor.server.js
