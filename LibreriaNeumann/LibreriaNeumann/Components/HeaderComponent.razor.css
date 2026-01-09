@@ -105,12 +105,45 @@
 }
 
 /*Diseño responsive IMPLEMENTAR MAS TARDE AL TERMINAR EL MAQUETADO*/
-@media (max-widt:1100px) {
+@media (max-width:500px) {
+
+    .header {
+        padding-right:15px;
+        padding-left:5px;
+    }
+    .logo {
+        width: 20px;
+        height: 20px;
+        padding-left: 4rem;
+    }
     .hamburger-menu {
+        display:flex;
+        flex-direction:column;
+        width:15px;
+        height:15px;
+        justify-self:start;
+       
     }
 
-    .hamburger-icon {
+    .hamburguer-icon{
         border: none;
+        background: none;
+       
+    }
+
+    .subheader{
+        display:none;
+    }
+
+    .menu-header-desplegable{
+        content:"";
+        border-style:solid;
+        border-color:black;
+        width:120px;
+        height:150px;
+        padding:5px;
+        border-radius:8px;
+        border-width:2px;
     }
 
     .bi-list {

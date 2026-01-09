@@ -18,8 +18,4 @@
             </div>
         `)
         .openPopup();
-
-    setTimeout(() => {
-        map.invalidateSize();
-    }, 200);
 };

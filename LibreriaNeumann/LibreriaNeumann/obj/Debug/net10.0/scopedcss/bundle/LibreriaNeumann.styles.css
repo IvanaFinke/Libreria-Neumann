@@ -625,8 +625,8 @@
 }
 
 [b-4tvn7u64oa] #map {
-    height: 300px;
-    width:100%;
+    height: 200px;
+    width:400px;
     border-radius:8px;
 }
 /* /Components/HeaderComponent.razor.rz.scp.css */
@@ -737,12 +737,45 @@
 }
 
 /*Diseño responsive IMPLEMENTAR MAS TARDE AL TERMINAR EL MAQUETADO*/
-@media (max-widt:1100px) {
+@media (max-width:500px) {
+
+    .header[b-rxk6cxr2lu] {
+        padding-right:15px;
+        padding-left:5px;
+    }
+    .logo[b-rxk6cxr2lu] {
+        width: 20px;
+        height: 20px;
+        padding-left: 4rem;
+    }
     .hamburger-menu[b-rxk6cxr2lu] {
+        display:flex;
+        flex-direction:column;
+        width:15px;
+        height:15px;
+        justify-self:start;
+       
     }
 
-    .hamburger-icon[b-rxk6cxr2lu] {
+    .hamburguer-icon[b-rxk6cxr2lu]{
         border: none;
+        background: none;
+       
+    }
+
+    .subheader[b-rxk6cxr2lu]{
+        display:none;
+    }
+
+    .menu-header-desplegable[b-rxk6cxr2lu]{
+        content:"";
+        border-style:solid;
+        border-color:black;
+        width:120px;
+        height:150px;
+        padding:5px;
+        border-radius:8px;
+        border-width:2px;
     }
 
     .bi-list[b-rxk6cxr2lu] {
