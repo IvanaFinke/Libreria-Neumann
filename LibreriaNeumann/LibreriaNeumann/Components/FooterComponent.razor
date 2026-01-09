@@ -1,4 +1,8 @@
-﻿<div class="footer">
+﻿@rendermode InteractiveServer
+
+@inject IJSRuntime JS
+
+<div class="footer">
 
     <div class="redes-seccion">
 
@@ -26,9 +30,8 @@
             La Plata
         </h5>
 
-        <a href="#">
-            <img src="" />
-        </a>
+        <div id="map">
+        </div>
     </div>
 
     <div class="atencion-seccion">
@@ -66,5 +69,11 @@
 
 </div>
 @code {
-
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("initMap");
+        }
+    }
 }

@@ -624,6 +624,11 @@
     margin-left:10px;
 }
 
+[b-4tvn7u64oa] #map {
+    height: 300px;
+    width:100%;
+    border-radius:8px;
+}
 /* /Components/HeaderComponent.razor.rz.scp.css */
 .header[b-rxk6cxr2lu] {
     display: grid;
