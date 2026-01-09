@@ -1,5 +1,4 @@
 ﻿@rendermode InteractiveServer
-
 <div class= "header">
        <div class="logo">
             <img src="https://i.postimg.cc/7ZkKL7v9/book-png.png" />
@@ -13,45 +12,28 @@
             </button>
        </div>
 
-       <div class="user">
+       <button class="user">
          <i class="bi bi-person-circle"></i>
-       </div>
+       </button>
       
-       <div class="carrito">
+       <button class="carrito">
          <i class="bi bi-cart4"></i>
-       </div>
+       </button>
 
-           <div class="hamburger-menu">
-                    <button class="hamburguer-icon">
+            
+           <button class="hamburger-menu"
+                @onclick = " () => OnClickMenu()">
+
+                    <div class="hamburguer-icon">
                         <i class="bi bi-list"></i>
-                    </button>
+                    </div>
+           </button>
 
-                <div class="menu-header-desplegable">
-                    <div class="inicio">
-                        <NavLink class="nav-link" href="/inicio">
-                            <span>INICIO</span>
-                        </NavLink>
-                    </div>
-          
-                    <div class="catalogo">
-                        <NavLink class="nav-link" href="/catalogo">
-                            <span>CATÁLOGO</span>
-                        </NavLink>
-                    </div>
+                @if(!menuSeleccionado)
+                {
+                    <SidebarComponent></SidebarComponent>
+                }
 
-                    <div class="nosotros">
-                        <NavLink class="nav-link" href="/nosotros">
-                            <span>NOSOTROS</span>
-                        </NavLink>
-                    </div>
-
-                    <div class="contacto">
-                        <NavLink class="nav-link" href="/contacto">
-                            <span>CONTACTO</span>
-                        </NavLink>
-                    </div>
-                </div>
-           </div>
 </div>
 
 
@@ -82,5 +64,13 @@
 
 
 @code {
+
+    private bool menuSeleccionado { get; set; } = false;
+
+    private void OnClickMenu()
+    {
+        menuSeleccionado = !menuSeleccionado;
+        
+    }
 
 }

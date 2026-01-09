@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "9G2v7zUCIuQ=",
+  "dgSpecHash": "d4UARrzgVZw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\LibreriaNeumann.csproj",
+  "projectFilePath": "C:\\Users\\ivana\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\LibreriaNeumann.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Maite\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.1\\microsoft.aspnetcore.app.internal.assets.10.0.1.nupkg.sha512"
+    "C:\\Users\\ivana\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.1\\microsoft.aspnetcore.app.internal.assets.10.0.1.nupkg.sha512"
   ],
   "logs": []
 }

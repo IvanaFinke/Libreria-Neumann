@@ -1,0 +1,19 @@
+﻿.menu-header-desplegable {
+   display:none;
+}
+
+@media (max-width:500px)
+{
+    .menu-header-desplegable {
+        content: "";
+        display: flex;
+        flex-direction: column;
+        border-style: solid;
+        border-color: black;
+        width: 120px;
+        height: 150px;
+        padding: 5px;
+        border-radius: 8px;
+        border-width: 2px;
+    }
+}
