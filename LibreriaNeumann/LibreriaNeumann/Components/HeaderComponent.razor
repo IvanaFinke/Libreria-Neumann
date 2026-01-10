@@ -29,11 +29,6 @@
                     </div>
            </button>
 
-                @if(!menuSeleccionado)
-                {
-                    <SidebarComponent></SidebarComponent>
-                }
-
 </div>
 
 
@@ -65,12 +60,13 @@
 
 @code {
 
-    private bool menuSeleccionado { get; set; } = false;
+    [Parameter]
+    public EventCallback UserClickedSideBar{ get; set; }
 
-    private void OnClickMenu()
+    private async void OnClickMenu()
     {
-        menuSeleccionado = !menuSeleccionado;
-        
+        await UserClickedSideBar.InvokeAsync();
+
     }
 
 }

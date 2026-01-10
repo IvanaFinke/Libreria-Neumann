@@ -15,8 +15,20 @@ main[b-acmwwuxy9a] {
 }
 
 .sidebar[b-acmwwuxy9a] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
 }
+
+.pages-closed-sidebar[b-acmwwuxy9a] {
+    grid-row: 2;
+    grid-column: 1/-1;
+    background-color: white;
+}
+
+.pages-opened-sidebar[b-acmwwuxy9a]{
+    grid-row: 2;
+    grid-column: 2/-1;
+    background-color: white;
+}
+
 
 .top-row[b-acmwwuxy9a] {
     background-color: #f7f7f7;

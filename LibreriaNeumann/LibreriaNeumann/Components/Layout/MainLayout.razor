@@ -2,11 +2,24 @@
 
 <div class="main-layout">
 
-    <HeaderComponent></HeaderComponent>
+    <HeaderComponent UserClickedSideBar="SetSidebarStatus"></HeaderComponent>
 
-    <DetallesPagoComponent></DetallesPagoComponent>
+    @if(menuSeleccionado)
+    {
+        <div class="sidebar">
+            <SidebarComponent></SidebarComponent>
+        </div>
+    }
 
-    <FooterComponent></FooterComponent>
+    <div class="@PagesStyleName">
+        <DetallesPagoComponent></DetallesPagoComponent>
+
+    </div>
+
+    <div class="footer">
+        <FooterComponent></FooterComponent>
+    </div>
+    <></>
 </div>
    
 
@@ -16,3 +29,25 @@
     <a href="." class="reload">Reload</a>
     <span class="dismiss">🗙</span>
 </div>
+
+
+@code{
+
+    private bool menuSeleccionado = true;
+
+    private string PagesStyleName = "pages-opened_sidebar";
+
+    private void SetSidebarStatus()
+    {
+        if(menuSeleccionado)
+        {
+            menuSeleccionado = !menuSeleccionado;
+            PagesStyleName = "pages-closed-sidebar";
+        }
+        else
+        {
+            menuSeleccionado = !menuSeleccionado;
+            PagesStyleName = "pages-opened_sidebar";
+        }
+    }
+}
