@@ -195,5 +195,5 @@ C:\Users\ivana\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debu
 C:\Users\ivana\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\k91dbzg12w-{0}-wmp8iwak4q-wmp8iwak4q.gz
 C:\Users\ivana\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\lzomuo2bci-{0}-2lgipwaf5j-2lgipwaf5j.gz
 C:\Users\ivana\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\SidebarComponent.razor.rz.scp.css
-C:\Users\ivana\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\13twna8nz8-{0}-30louu5njy-30louu5njy.gz
-C:\Users\ivana\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tnl8yodhue-{0}-30louu5njy-30louu5njy.gz
+C:\Users\ivana\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\13twna8nz8-{0}-ksu3wt01ky-ksu3wt01ky.gz
+C:\Users\ivana\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tnl8yodhue-{0}-ksu3wt01ky-ksu3wt01ky.gz

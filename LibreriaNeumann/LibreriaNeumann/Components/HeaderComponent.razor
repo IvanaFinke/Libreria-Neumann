@@ -22,12 +22,18 @@
 
             
            <button class="hamburger-menu"
-                @onclick = " () => OnClickMenu()">
+                @onclick = "ToggleMenu">
 
                     <div class="hamburguer-icon">
                         <i class="bi bi-list"></i>
                     </div>
            </button>
+
+           @if(menuSeleccionado)
+           {
+                <SidebarComponent OnClose="CloseMenu"/>
+
+           }
 
 </div>
 
@@ -60,12 +66,17 @@
 
 @code {
 
-    [Parameter]
-    public EventCallback UserClickedSideBar{ get; set; }
+    private bool menuSeleccionado;
 
-    private async void OnClickMenu()
+    private void CloseMenu()
     {
-        await UserClickedSideBar.InvokeAsync();
+        menuSeleccionado = false;
+    }
+
+
+    private void ToggleMenu()
+    {
+        menuSeleccionado = !menuSeleccionado;
 
     }
 

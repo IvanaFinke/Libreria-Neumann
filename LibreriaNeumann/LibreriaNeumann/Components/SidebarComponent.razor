@@ -1,32 +1,21 @@
-﻿
+﻿@rendermode InteractiveServer 
+
 <div class="menu-header-desplegable">
-
-    <div class="inicio">
-        <NavLink class="nav-link" href="/inicio">
-            <span>INICIO</span>
-        </NavLink>
-    </div>
-
-    <div class="catalogo">
-        <NavLink class="nav-link" href="/catalogo">
-            <span>CATÁLOGO</span>
-        </NavLink>
-    </div>
-
-    <div class="nosotros">
-        <NavLink class="nav-link" href="/nosotros">
-            <span>NOSOTROS</span>
-        </NavLink>
-    </div>
-
-    <div class="contacto">
-        <NavLink class="nav-link" href="/contacto">
-            <span>CONTACTO</span>
-        </NavLink>
-    </div>
-
+    <NavLink class="nav-link" href="/inicio" @onclick="Close">INICIO</NavLink>
+    <NavLink class="nav-link" href="/catalogo" @onclick="Close">CATÁLOGO</NavLink>
+    <NavLink class="nav-link" href="/nosotros" @onclick="Close">NOSOTROS</NavLink>
+    <NavLink class="nav-link" href="/contacto" @onclick="Close">CONTACTO</NavLink>
 </div>
 
-@code {
 
+@code {
+    private bool ClickDetected=true;
+
+    [Parameter]
+    public EventCallback OnClose { get; set; }
+
+    protected async Task Close()
+    {
+        await OnClose.InvokeAsync();
+    }
 }
