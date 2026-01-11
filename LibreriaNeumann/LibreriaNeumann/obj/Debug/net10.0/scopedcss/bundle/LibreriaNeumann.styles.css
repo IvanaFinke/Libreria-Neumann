@@ -747,13 +747,14 @@
         display: grid;
         grid-template-columns: auto 1fr auto auto auto;
         grid-template-rows: auto auto;
-        margin-right:5px;
+        margin-right: 5px;
         margin-left: 5px;
         align-items: center;
         width: 100%;
-        gap:10px;
+        gap: 10px;
         height: fit-content;
-        margin:0px;
+        margin: 0;
+        padding: 0 0;
     }
 
     .hamburger-menu[b-rxk6cxr2lu] {
@@ -766,6 +767,7 @@
         background: none;
         border: none;
         grid-row:1;
+        padding: 6px;
     }
 
     .hamburguer-icon i[b-rxk6cxr2lu] {
@@ -778,15 +780,16 @@
         width: fit-content;
         padding-right: 0;
         justify-self:center;
+        align-items:center;
     }
 
         .logo img[b-rxk6cxr2lu] {
-            width: 30px;
-            height: 30px;
+            width: 34px;
+            height: 34px;
         }
 
     .nombre-logo[b-rxk6cxr2lu] {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .subheader[b-rxk6cxr2lu] {
@@ -797,45 +800,55 @@
         grid-row: 2;
         grid-column: 1/-1;
         border-radius: 0px;
-        border-color: black;
-        border-style: solid;
-        display:flex;
-        width:100%;
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+        height: 36px;
+        align-self: end;
+        padding-left:0;
+        border-color: rgb(128, 128, 128, 0.5);
+        border-style:solid;
+        border-width:2px;
+        overflow:hidden;
     }
 
+        .search:focus-within[b-rxk6cxr2lu] {
+            border-color: rgb(13,110,253);
+            box-shadow: 0 0 0 2px rgb(13,110,253,0.3);
+        }
+
         .buscador[b-rxk6cxr2lu] {
-            border-radius: 0px;
             display:flex;
-            border-color: black;
-            border-style: solid;
             flex:1;
             min-width:0;
+            height:100%;
+            border:none;
+            outline:none;
+            font-size:14px;
         }
 
     .lupa[b-rxk6cxr2lu] {
-        flex: 0 0 40px;
         display: flex;
-        justify-self: center;
-        border-radius:0px;
-        border-color:black;
-        border-style:solid;
-
+        flex: 0 20px 40px;
+        justify-content: center;
+        align-items:center;
+        border:none;
+        height: 100%;
     }
 
         .lupa img[b-rxk6cxr2lu] {
             height: 14px;
-            width: 14px;
-            display: flex;
-            justify-items: center;
-            align-self:center;
-            padding-top:4px;
+            width: 14px; 
         }
 
     .user[b-rxk6cxr2lu], .carrito[b-rxk6cxr2lu], .user i[b-rxk6cxr2lu], .carrito i[b-rxk6cxr2lu] {
-        font-size: 16px;
-        gap:10px
+        font-size: 24px;
     }
 
+    .user[b-rxk6cxr2lu], .carrito[b-rxk6cxr2lu]{
+        width: 100%;
+        padding: 0;
+    }
     
 }
 /* /Components/HeroComponent.razor.rz.scp.css */
