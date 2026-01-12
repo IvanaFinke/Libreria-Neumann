@@ -108,7 +108,7 @@
     display: none;
 }
 
-/*Diseño responsive IMPLEMENTAR MAS TARDE AL TERMINAR EL MAQUETADO*/
+/*Diseño movil*/
 @media (max-width:570px) {
 
     .header[b-rxk6cxr2lu] {
@@ -139,8 +139,7 @@
     }
 
     .hamburguer-icon i[b-rxk6cxr2lu] {
-        font-size: 18px;
-
+        font-size: 22px;
     }
 
     .logo[b-rxk6cxr2lu] {
@@ -151,10 +150,10 @@
         align-items:center;
     }
 
-        .logo img[b-rxk6cxr2lu] {
-            width: 34px;
-            height: 34px;
-        }
+    .logo img[b-rxk6cxr2lu] {
+        width: 50px;
+        height: 50px;
+     }
 
     .nombre-logo[b-rxk6cxr2lu] {
         font-size: 20px;
@@ -180,42 +179,103 @@
         overflow:hidden;
     }
 
-        .search:focus-within[b-rxk6cxr2lu] {
-            border-color: rgb(13,110,253);
-            box-shadow: 0 0 0 2px rgb(13,110,253,0.3);
-        }
+    .search:focus-within[b-rxk6cxr2lu] {
+        border-color: rgb(13,110,253);
+        box-shadow: 0 0 0 2px rgb(13,110,253,0.3);
+     }
 
-        .buscador[b-rxk6cxr2lu] {
-            display:flex;
-            flex:1;
-            min-width:0;
-            height:100%;
-            border:none;
-            outline:none;
-            font-size:14px;
-        }
+     .buscador[b-rxk6cxr2lu] {
+        display:flex;
+        flex:1;
+        min-width:0;
+        height:100%;
+        border:none;
+        outline:none;
+        font-size:14px;
+     }
 
     .lupa[b-rxk6cxr2lu] {
         display: flex;
-        flex: 0 20px 40px;
+        flex: 0 20px 24px;
         justify-content: center;
         align-items:center;
         border:none;
         height: 100%;
     }
 
-        .lupa img[b-rxk6cxr2lu] {
-            height: 14px;
-            width: 14px; 
-        }
+    .lupa img[b-rxk6cxr2lu] {
+        height: 14px;
+        width: 14px; 
+    }
 
-    .user[b-rxk6cxr2lu], .carrito[b-rxk6cxr2lu], .user i[b-rxk6cxr2lu], .carrito i[b-rxk6cxr2lu] {
-        font-size: 24px;
+    .user i[b-rxk6cxr2lu], .carrito i[b-rxk6cxr2lu] {
+        font-size: 18px;
     }
 
     .user[b-rxk6cxr2lu], .carrito[b-rxk6cxr2lu]{
         width: 100%;
         padding: 0;
+        margin-right:5px;
     }
     
+}
+
+
+/*Diseño Tablets*/
+@media (max-width:860px) {
+
+    .header[b-rxk6cxr2lu] {
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu-header[b-rxk6cxr2lu] {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        border-color: black;
+    }
+
+    .logo[b-rxk6cxr2lu] {
+        display: flex;
+        width: fit-content;
+        padding: 0;
+    }
+
+    .nombre-logo[b-rxk6cxr2lu] {
+        font-size: 24px;
+    }
+
+    .search[b-rxk6cxr2lu] {
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+        border-color: black;
+        border-style: solid;
+        padding: 0px;
+    }
+
+    .search:focus-within[b-rxk6cxr2lu] {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 2px rgb(13,110,253,0.3);
+    }
+
+    .buscador[b-rxk6cxr2lu] {
+        display: flex;
+        width: 40px;
+        min-width: 0;
+    }
+
+    .user[b-rxk6cxr2lu], .carrito[b-rxk6cxr2lu], .user i[b-rxk6cxr2lu], .carrito i[b-rxk6cxr2lu] {
+        font-size: 40px;
+    }
+
+    .user[b-rxk6cxr2lu], .carrito[b-rxk6cxr2lu] {
+        width: 100%;
+        padding: 0;
+    }
 }

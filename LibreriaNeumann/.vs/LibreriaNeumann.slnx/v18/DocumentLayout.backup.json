@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\HeaderComponent.razor.css",
               "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\HeaderComponent.razor.css",
               "RelativeToolTip": "LibreriaNeumann\\Components\\HeaderComponent.razor.css",
-              "ViewState": "AgIAAMcAAAAAAAAAAAAAwNQAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAqwAgBAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-01-09T05:02:47.017Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "LibreriaNeumann\\Components\\HeaderComponent.razor",
               "ViewState": "AgIAAAgAAAAAAAAAAAAuwA4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-09T05:02:45.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T05:02:45.871Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "LibreriaNeumann\\Components\\Layout\\MainLayout.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-09T20:41:52.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T20:41:52.924Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "LibreriaNeumann\\Components\\Layout\\MainLayout.razor.css",
               "ViewState": "AgIAAFgAAAAAAAAAAADwv3QAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-09T23:23:03.129Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T23:23:03.129Z"
             }
           ]
         }
