@@ -222,7 +222,7 @@
 
 
 /*Diseño Tablets*/
-@media (max-width:860px) {
+@media (min-width:571px) and (max-width:860px) {
 
     .header {
         display: grid;
@@ -254,19 +254,16 @@
         display: flex;
         width: 100%;
         align-items: stretch;
-        border-color: black;
-        border-style: solid;
         padding: 0px;
     }
 
     .search:focus-within {
         border-color: #0d6efd;
-        box-shadow: 0 0 0 2px rgb(13,110,253,0.3);
+        box-shadow: 0 0 0 4px rgb(13,110,253,0.5);
     }
 
     .buscador {
-        display: flex;
-        width: 40px;
+        flex:1;
         min-width: 0;
     }
 
