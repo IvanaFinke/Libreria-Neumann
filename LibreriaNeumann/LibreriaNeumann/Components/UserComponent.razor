@@ -1,4 +1,7 @@
-﻿<div class="user-component">
+﻿@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+
+<div class="user-component">
     <h1 class="nombre-usuario">Hola, @nombreUsuario!</h1>
     <h3 class="frase-datos-usuario"><strong>Datos de usuario:</strong></h3>
     <div class="datos-usuario-seccion">
@@ -8,7 +11,7 @@
         <h5 class="localidad-seccion">Su localidad es: <strong>@localidadUsuario</strong></h5>
         <h5 class="direccion-usuario">Su calle es: <strong>@calleUsuario @numeroCalleUsuario</strong></h5>
     </div>
-    <button class="cambiar-datos-boton">Cambiar datos</button>
+    <button class="cambiar-datos-boton" @onclick="OnClick">Cambiar datos</button>
 </div>
 
 @code {
@@ -19,4 +22,9 @@
     private string provinciaUsuario = "Buenos Aires";
     private string localidadUsuario = "San Martín";
     private int numeroCalleUsuario = 1234;
+
+    public void OnClick()
+    {
+        NavigationManager.NavigateTo("/cambio-datos");
+    }
 }
