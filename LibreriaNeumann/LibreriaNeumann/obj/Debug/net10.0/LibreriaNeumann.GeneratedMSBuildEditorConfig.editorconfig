@@ -26,10 +26,6 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/CambioDatosComponent.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYW1iaW9EYXRvc0NvbXBvbmVudC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -57,6 +53,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/CambioDatosComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYW1iaW9EYXRvc0NvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-9c4epm92vh
 
 [C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/CarritoComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXJyaXRvQ29tcG9uZW50LnJhem9y

@@ -1,15 +1,25 @@
 ﻿@page "/cambio-datos"
 <div class="seccion-cambiar-datos">
-    <h5>Su nombre: <input class="input-nombre" placeholder="ingrese aquí para modificar su nombre" /></h5>
-    <h5>Su apellido: <input class="input-apellido" placeholder="ingrese aquí para modificar su apellido" /></h5>
-    <h5>Su mail: <input class="input-mail" placeholder="ingrese aquí para modificar su mail" type="email" /></h5>
-    <h5>Su telefono: <input class="input-telefono" placeholder="ingrese aquí para modificar su teléfono" /></h5>
-    <h5>Su contraseña: <input class="input-contraseña" placeholder="ingrese aquí para modificar su contraseña" /></h5>
-    <h5>Su provincia: <input class="input-provincia" placeholder="ingrese aquí para modificar su provincia" /></h5>
-    <h5>Su localidad: <input class="input-localidad" placeholder="ingrese aquí para modificar su localidad" /></h5>
-    <h5>Su calle: <input class="input-calle" placeholder="ingrese aquí para modificar su calle" type="text" /></h5>
-    <h5>Su altura: <input class="input-altura" placeholder="ingrese aquí para modificar su altura" type="number" /></h5>
-    <button class="guardar-datos-boton">Guardar datos</button>
+    <h3 class="frase-cambio-datos-usuario"><strong>Cambio de datos de usuario:</strong></h3>
+    <div class="datos-seccion-inputs">
+        <div class="datos-personales">
+            <h5>Su nombre: <input class="input-nombre" placeholder="ingrese aquí para modificar su nombre" /></h5>
+            <h5>Su apellido: <input class="input-apellido" placeholder="ingrese aquí para modificar su apellido" /></h5>
+            <h5>Su contraseña: <input class="input-contraseña" placeholder="ingrese aquí para modificar su contraseña" /></h5>
+        </div>
+       <div class="datos-contacto">
+            <h5>Su mail: <input class="input-mail" placeholder="ingrese aquí para modificar su mail" type="email" /></h5>
+            <h5>Su telefono: <input class="input-telefono" placeholder="ingrese aquí para modificar su teléfono" /></h5>
+       </div>
+       <div class="datos-ubicacion">
+            <h5>Su provincia: <input class="input-provincia" placeholder="ingrese aquí para modificar su provincia" /></h5>
+            <h5>Su localidad: <input class="input-localidad" placeholder="ingrese aquí para modificar su localidad" /></h5>
+            <h5>Su calle: <input class="input-calle" placeholder="ingrese aquí para modificar su calle" type="text" /></h5>
+            <h5>Su altura: <input class="input-altura" placeholder="ingrese aquí para modificar su altura" type="number" /></h5>
+       </div>     
+        <button class="guardar-datos-boton">Guardar datos</button>
+    </div>
+   
 </div>
 
 @code {

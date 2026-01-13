@@ -1,6 +1,6 @@
 .user-component[b-5f5yu2qgmf] {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 20%;
     width: 100%;
     align-items: center;
     padding: 3em 3rem;
@@ -30,7 +30,7 @@
 .cambiar-datos-boton[b-5f5yu2qgmf] {
     grid-column: 2;
     align-self: end;
-    text-emphasis-color: white;
+    min-width:0;
     background-color: rgb(244, 152, 117);
     width: 200px;
     height: 40px;
