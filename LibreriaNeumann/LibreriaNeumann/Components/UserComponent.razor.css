@@ -52,6 +52,12 @@
         align-items: center;
         text-align: center;
         text-wrap: pretty;
+        gap:4px;
+        padding-bottom:2rem;
+    }
+
+    .datos-usuario-seccion{
+        gap:4px;
     }
 
     .nombre-usuario {
@@ -62,6 +68,7 @@
     .email-usuario, .telefono-usuario, .provincia-seccion, .localidad-seccion, .direccion-usuario {
        width:150px;
        text-wrap:balance;
+       font-size:16px;
     }
 
     .cambiar-datos-boton {

@@ -52,6 +52,12 @@
         align-items: center;
         text-align: center;
         text-wrap: pretty;
+        gap:4px;
+        padding-bottom:2rem;
+    }
+
+    .datos-usuario-seccion[b-5f5yu2qgmf]{
+        gap:4px;
     }
 
     .nombre-usuario[b-5f5yu2qgmf] {
@@ -62,6 +68,7 @@
     .email-usuario[b-5f5yu2qgmf], .telefono-usuario[b-5f5yu2qgmf], .provincia-seccion[b-5f5yu2qgmf], .localidad-seccion[b-5f5yu2qgmf], .direccion-usuario[b-5f5yu2qgmf] {
        width:150px;
        text-wrap:balance;
+       font-size:16px;
     }
 
     .cambiar-datos-boton[b-5f5yu2qgmf] {

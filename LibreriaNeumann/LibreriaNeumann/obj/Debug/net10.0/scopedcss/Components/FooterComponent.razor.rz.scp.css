@@ -1,4 +1,4 @@
-.footer[b-4tvn7u64oa] {
+﻿.footer[b-4tvn7u64oa] {
     display: grid;
     grid-template-columns: auto auto auto;
     width: 100%;
@@ -6,19 +6,19 @@
     padding: 3em 3rem;
     padding-top: 2.5rem;
     gap: 1rem;
-    background-color:lightgray;
+    background-color: lightgray;
 }
 
-.frase[b-4tvn7u64oa]{
-    color:white;
-    font-size:22px;
+.frase[b-4tvn7u64oa] {
+    color: white;
+    font-size: 22px;
 }
 
-.redes-seccion[b-4tvn7u64oa]{
-    display:flex;
-    flex-direction:column;  
-    gap:1.5rem;
-    align-items:start;
+.redes-seccion[b-4tvn7u64oa] {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: start;
 }
 
 [b-4tvn7u64oa] .contenedor {
@@ -31,85 +31,195 @@
     justify-content: center;
     justify-items: start;
     border-color: rgb(244, 152, 117);
-    border-style:solid;
-    cursor:pointer;
+    border-style: solid;
+    cursor: pointer;
 }
 
-.contenedor i[b-4tvn7u64oa]{
-    font-size:24px;
-    color:lightgray;
-    padding-top:1px;
+[b-4tvn7u64oa] .contenedor-tiktok {
+    content: "";
+    background-color: rgb(244, 152, 117);
+    border-radius: 75px;
+    width: 41px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    justify-items: end;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    cursor: pointer;
+    margin-top:12px;
+}
+
+.contenedor i[b-4tvn7u64oa], .contenedor-tiktok i[b-4tvn7u64oa] {
+    font-size: 24px;
+    color: lightgray;
+    padding-top: 1px;
 }
 
 [b-4tvn7u64oa] .contenedor-facebook {
     display: flex;
     background: none;
-    align-items:start;
+    align-items: start;
     width: 40px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-[b-4tvn7u64oa] .contenedor-facebook i {
-    color: rgb(244, 152, 117);
-    font-size: 40px;
-    align-self:start;
-    padding-right:6px;
-}
+    [b-4tvn7u64oa] .contenedor-facebook i {
+        font-size: 40px;
+        line-height: 1;
+        transform: translateX(-1px);
+        color: rgb(244, 152, 117);
+    }
 
 .clase-donde-estamos[b-4tvn7u64oa] {
     display: flex;
     flex-direction: column;
-
 }
 
 
-[b-4tvn7u64oa] .iconos-contacto{
-    display:flex;
-    flex-direction:column;
-    align-items:start;
-    gap:2rem;
-    margin-top:1.7rem;
-   
+[b-4tvn7u64oa] .iconos-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2.4rem;
+    margin-top: 2rem;
 }
 
-[b-4tvn7u64oa] .telefono-seccion{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:start;
-    gap:20px;
-    
+[b-4tvn7u64oa] .telefono-seccion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
 }
 
-.contenedor-mail[b-4tvn7u64oa], .contenedor-ubicacion[b-4tvn7u64oa] {
+.contenedor-mail[b-4tvn7u64oa], .contenedor-ubicacion[b-4tvn7u64oa], .link-a-mapa[b-4tvn7u64oa] {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: start;
     gap: 20px;
     background-color: rgb(244, 152, 117);
-    border-radius:75px;
-    width:40px;
-    height:40px;
-    text-wrap:nowrap;
-    cursor:pointer;
+    border-radius: 75px;
+    width: 40px;
+    height: 40px;
+    text-wrap: nowrap;
+    cursor: pointer;
 }
 
-.bi-envelope[b-4tvn7u64oa], .contenedor-ubicacion i[b-4tvn7u64oa]{
-    font-size:24px;
-    color:lightgray;
-    display:flex;
-    justify-items:center;
-    padding-left:8px;
-    gap:20px;
-}
+    .bi-envelope[b-4tvn7u64oa], .contenedor-ubicacion i[b-4tvn7u64oa], .link-a-mapa i[b-4tvn7u64oa] {
+        font-size: 24px;
+        color: lightgray;
+        display: flex;
+        justify-items: center;
+        padding-left: 8px;
+        gap: 20px;
+    }
 
-[b-4tvn7u64oa] .mail-texto, .horario-texto[b-4tvn7u64oa]{
-    margin-left:10px;
+[b-4tvn7u64oa] .mail-texto, .horario-texto[b-4tvn7u64oa] {
+    margin-left: 10px;
 }
 
 [b-4tvn7u64oa] #map {
     height: 200px;
-    width:400px;
-    border-radius:8px;
+    width: 400px;
+    border-radius: 8px;
+}
+
+.link-a-mapa[b-4tvn7u64oa]{
+    display:none;
+}
+
+.icon-link[b-4tvn7u64oa]{
+    text-decoration:none;
+    outline:none;
+}
+
+
+[b-4tvn7u64oa] .iconos-redes{
+    gap:2rem;
+    display:flex;
+    flex-direction:column;
+}
+
+
+
+
+/*Cellphone media*/
+@media (max-width:570px)
+{
+    .footer[b-4tvn7u64oa] {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        gap: 20px;
+        padding-top: 1rem;
+    }
+
+    .redes-seccion[b-4tvn7u64oa]{
+        gap:10px;
+    }
+
+    .iconos-redes[b-4tvn7u64oa]{
+        display:flex;
+        flex-direction:row;
+    }
+
+    .contenedores[b-4tvn7u64oa] {
+        display: flex;
+        flex-direction: row;
+        justify-items:start;
+        justify-content:space-between;
+        gap:3rem;
+    }
+
+   [b-4tvn7u64oa] .contenedor-facebook{
+        width:40px;
+        height:40px;
+        align-items:center;
+        justify-content:center;
+        margin-top:2px;
+    }
+
+   [b-4tvn7u64oa] .contenedor-facebook i{
+       font-size:40px;
+       padding-bottom:2px;
+   }
+
+    #map[b-4tvn7u64oa]{
+       display:none;
+    }
+
+   .link-a-mapa[b-4tvn7u64oa]{
+       display:flex;
+       margin-top:10px;
+   }
+
+    .icon-link[b-4tvn7u64oa] {
+        text-decoration: none;
+        outline: none;
+    }
+
+    .contenedor-ubicacion[b-4tvn7u64oa]{
+        display:none;
+    }
+
+    [b-4tvn7u64oa] .iconos-contacto{
+        margin-top:10px;
+        gap:20px;
+        display:flex;
+        flex-direction:row;
+    }
+
+    [b-4tvn7u64oa] .contenedor-tiktok{
+        margin-top:0px;
+    }
+
+    .mail-texto[b-4tvn7u64oa], .frase-tel[b-4tvn7u64oa] {
+        display: none;
+    }
+
+    .ubicacion-frase[b-4tvn7u64oa]{
+        font-size:16px;
+    }
 }

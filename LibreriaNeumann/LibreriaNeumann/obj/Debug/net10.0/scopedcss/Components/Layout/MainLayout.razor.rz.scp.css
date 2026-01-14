@@ -54,6 +54,10 @@ main[b-acmwwuxy9a] {
         text-overflow: ellipsis;
     }
 
+    .footer[b-acmwwuxy9a]  .nav-link::after{
+        display:none;
+    }
+
 @media (max-width: 640.98px) {
     .top-row[b-acmwwuxy9a] {
         justify-content: space-between;

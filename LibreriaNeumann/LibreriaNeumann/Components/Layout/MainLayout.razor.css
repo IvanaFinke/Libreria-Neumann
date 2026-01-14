@@ -54,6 +54,10 @@ main {
         text-overflow: ellipsis;
     }
 
+    .footer ::deep .nav-link::after{
+        display:none;
+    }
+
 @media (max-width: 640.98px) {
     .top-row {
         justify-content: space-between;

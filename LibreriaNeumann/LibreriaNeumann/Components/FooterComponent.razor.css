@@ -1,4 +1,4 @@
-﻿.footer {
+﻿﻿.footer {
     display: grid;
     grid-template-columns: auto auto auto;
     width: 100%;
@@ -6,19 +6,19 @@
     padding: 3em 3rem;
     padding-top: 2.5rem;
     gap: 1rem;
-    background-color:lightgray;
+    background-color: lightgray;
 }
 
-.frase{
-    color:white;
-    font-size:22px;
+.frase {
+    color: white;
+    font-size: 22px;
 }
 
-.redes-seccion{
-    display:flex;
-    flex-direction:column;  
-    gap:1.5rem;
-    align-items:start;
+.redes-seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: start;
 }
 
 ::deep .contenedor {
@@ -31,85 +31,195 @@
     justify-content: center;
     justify-items: start;
     border-color: rgb(244, 152, 117);
-    border-style:solid;
-    cursor:pointer;
+    border-style: solid;
+    cursor: pointer;
 }
 
-.contenedor i{
-    font-size:24px;
-    color:lightgray;
-    padding-top:1px;
+::deep .contenedor-tiktok {
+    content: "";
+    background-color: rgb(244, 152, 117);
+    border-radius: 75px;
+    width: 41px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    justify-items: end;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    cursor: pointer;
+    margin-top:12px;
+}
+
+.contenedor i, .contenedor-tiktok i {
+    font-size: 24px;
+    color: lightgray;
+    padding-top: 1px;
 }
 
 ::deep .contenedor-facebook {
     display: flex;
     background: none;
-    align-items:start;
+    align-items: start;
     width: 40px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-::deep .contenedor-facebook i {
-    color: rgb(244, 152, 117);
-    font-size: 40px;
-    align-self:start;
-    padding-right:6px;
-}
+    ::deep .contenedor-facebook i {
+        font-size: 40px;
+        line-height: 1;
+        transform: translateX(-1px);
+        color: rgb(244, 152, 117);
+    }
 
 .clase-donde-estamos {
     display: flex;
     flex-direction: column;
-
 }
 
 
-::deep .iconos-contacto{
-    display:flex;
-    flex-direction:column;
-    align-items:start;
-    gap:2rem;
-    margin-top:1.7rem;
-   
+::deep .iconos-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2.4rem;
+    margin-top: 2rem;
 }
 
-::deep .telefono-seccion{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:start;
-    gap:20px;
-    
+::deep .telefono-seccion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
 }
 
-.contenedor-mail, .contenedor-ubicacion {
+.contenedor-mail, .contenedor-ubicacion, .link-a-mapa {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: start;
     gap: 20px;
     background-color: rgb(244, 152, 117);
-    border-radius:75px;
-    width:40px;
-    height:40px;
-    text-wrap:nowrap;
-    cursor:pointer;
+    border-radius: 75px;
+    width: 40px;
+    height: 40px;
+    text-wrap: nowrap;
+    cursor: pointer;
 }
 
-.bi-envelope, .contenedor-ubicacion i{
-    font-size:24px;
-    color:lightgray;
-    display:flex;
-    justify-items:center;
-    padding-left:8px;
-    gap:20px;
-}
+    .bi-envelope, .contenedor-ubicacion i, .link-a-mapa i {
+        font-size: 24px;
+        color: lightgray;
+        display: flex;
+        justify-items: center;
+        padding-left: 8px;
+        gap: 20px;
+    }
 
-::deep .mail-texto, .horario-texto{
-    margin-left:10px;
+::deep .mail-texto, .horario-texto {
+    margin-left: 10px;
 }
 
 ::deep #map {
     height: 200px;
-    width:400px;
-    border-radius:8px;
+    width: 400px;
+    border-radius: 8px;
+}
+
+.link-a-mapa{
+    display:none;
+}
+
+.icon-link{
+    text-decoration:none;
+    outline:none;
+}
+
+
+::deep .iconos-redes{
+    gap:2rem;
+    display:flex;
+    flex-direction:column;
+}
+
+
+
+
+/*Cellphone media*/
+@media (max-width:570px)
+{
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        gap: 20px;
+        padding-top: 1rem;
+    }
+
+    .redes-seccion{
+        gap:10px;
+    }
+
+    .iconos-redes{
+        display:flex;
+        flex-direction:row;
+    }
+
+    .contenedores {
+        display: flex;
+        flex-direction: row;
+        justify-items:start;
+        justify-content:space-between;
+        gap:3rem;
+    }
+
+   ::deep .contenedor-facebook{
+        width:40px;
+        height:40px;
+        align-items:center;
+        justify-content:center;
+        margin-top:2px;
+    }
+
+   ::deep .contenedor-facebook i{
+       font-size:40px;
+       padding-bottom:2px;
+   }
+
+    #map{
+       display:none;
+    }
+
+   .link-a-mapa{
+       display:flex;
+       margin-top:10px;
+   }
+
+    .icon-link {
+        text-decoration: none;
+        outline: none;
+    }
+
+    .contenedor-ubicacion{
+        display:none;
+    }
+
+    ::deep .iconos-contacto{
+        margin-top:10px;
+        gap:20px;
+        display:flex;
+        flex-direction:row;
+    }
+
+    ::deep .contenedor-tiktok{
+        margin-top:0px;
+    }
+
+    .mail-texto, .frase-tel {
+        display: none;
+    }
+
+    .ubicacion-frase{
+        font-size:16px;
+    }
 }
