@@ -1,6 +1,6 @@
 ﻿.user-component {
     display: grid;
-    grid-template-columns: auto 20%;
+    grid-template-columns: 1fr auto;
     width: 100%;
     align-items: center;
     padding: 3em 3rem;
@@ -9,6 +9,7 @@
 }
 
 .nombre-usuario {
+    display:flex;
     align-self: start;
     font-family: serif;
     font-weight: 500;
@@ -43,3 +44,48 @@
     font-family: sans-serif;
 }
 
+@media (max-width:570px) {
+    .user-component {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        text-wrap: pretty;
+    }
+
+    .nombre-usuario {
+        align-self: center;
+        text-wrap:pretty;  
+    }
+
+    .email-usuario, .telefono-usuario, .provincia-seccion, .localidad-seccion, .direccion-usuario {
+       width:150px;
+       text-wrap:balance;
+    }
+
+    .cambiar-datos-boton {
+        align-self: center;
+    }
+}
+
+@media (min-width:571px) and (max-width:860px)
+{
+    .user-component{
+     display:grid;
+     grid-template-columns:1fr auto;
+    }
+}
+
+@media (min-width:1000px) and (max-width:1025px) {
+    .user.user-component {
+        display: grid;
+        grid-template-columns: auto auto;
+       
+    }
+
+    .cambiar-datos-boton {
+       margin-right:12vw;
+    }
+   
+}

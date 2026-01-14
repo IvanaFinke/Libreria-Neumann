@@ -21,6 +21,8 @@
     grid-column:1/-1;
     justify-content:space-between;
 }
+
+
 /* /Components/CarritoComponent.razor.rz.scp.css */
 .carrito[b-8g0gqjtdyx] {
     display: grid;
@@ -1702,7 +1704,7 @@ main[b-acmwwuxy9a] {
 /* /Components/UserComponent.razor.rz.scp.css */
 .user-component[b-5f5yu2qgmf] {
     display: grid;
-    grid-template-columns: auto 20%;
+    grid-template-columns: 1fr auto;
     width: 100%;
     align-items: center;
     padding: 3em 3rem;
@@ -1711,6 +1713,7 @@ main[b-acmwwuxy9a] {
 }
 
 .nombre-usuario[b-5f5yu2qgmf] {
+    display:flex;
     align-self: start;
     font-family: serif;
     font-weight: 500;
@@ -1745,3 +1748,48 @@ main[b-acmwwuxy9a] {
     font-family: sans-serif;
 }
 
+@media (max-width:570px) {
+    .user-component[b-5f5yu2qgmf] {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        text-wrap: pretty;
+    }
+
+    .nombre-usuario[b-5f5yu2qgmf] {
+        align-self: center;
+        text-wrap:pretty;  
+    }
+
+    .email-usuario[b-5f5yu2qgmf], .telefono-usuario[b-5f5yu2qgmf], .provincia-seccion[b-5f5yu2qgmf], .localidad-seccion[b-5f5yu2qgmf], .direccion-usuario[b-5f5yu2qgmf] {
+       width:150px;
+       text-wrap:balance;
+    }
+
+    .cambiar-datos-boton[b-5f5yu2qgmf] {
+        align-self: center;
+    }
+}
+
+@media (min-width:571px) and (max-width:860px)
+{
+    .user-component[b-5f5yu2qgmf]{
+     display:grid;
+     grid-template-columns:1fr auto;
+    }
+}
+
+@media (min-width:1000px) and (max-width:1025px) {
+    .user.user-component[b-5f5yu2qgmf] {
+        display: grid;
+        grid-template-columns: auto auto;
+       
+    }
+
+    .cambiar-datos-boton[b-5f5yu2qgmf] {
+       margin-right:12vw;
+    }
+   
+}
