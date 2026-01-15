@@ -667,8 +667,8 @@
     border-radius: 8px;
 }
 
-.link-a-mapa[b-4tvn7u64oa]{
-    display:none;
+.contenedor-link-horario[b-4tvn7u64oa] {
+    display: none;
 }
 
 .icon-link[b-4tvn7u64oa]{
@@ -693,12 +693,23 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto auto;
-        gap: 20px;
-        padding-top: 1rem;
+        gap: 6px;
+        padding-top: 8px;
+        margin-bottom: 30px;
     }
 
-    .redes-seccion[b-4tvn7u64oa]{
-        gap:10px;
+    .redes-seccion[b-4tvn7u64oa], .clase-donde-estamos[b-4tvn7u64oa], .atencion-seccion[b-4tvn7u64oa]{
+        gap:4px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+     
+    }
+    
+
+    .atencion-seccion[b-4tvn7u64oa]{
+        flex-direction:column;
+        gap:1px;
     }
 
     .iconos-redes[b-4tvn7u64oa]{
@@ -709,7 +720,7 @@
     .contenedores[b-4tvn7u64oa] {
         display: flex;
         flex-direction: row;
-        justify-items:start;
+        justify-items:center;
         justify-content:space-between;
         gap:3rem;
     }
@@ -727,26 +738,24 @@
        padding-bottom:2px;
    }
 
-    #map[b-4tvn7u64oa]{
-       display:none;
+    .contenedor-link-horario[b-4tvn7u64oa] {
+        display: flex;
+        margin-top: 10px;
+        align-content: center;
+        gap: 10px;
     }
-
-   .link-a-mapa[b-4tvn7u64oa]{
-       display:flex;
-       margin-top:10px;
-   }
 
     .icon-link[b-4tvn7u64oa] {
         text-decoration: none;
         outline: none;
     }
 
-    .contenedor-ubicacion[b-4tvn7u64oa]{
-        display:none;
+    .contenedor-ubicacion[b-4tvn7u64oa], .mail-texto[b-4tvn7u64oa], .frase-tel[b-4tvn7u64oa], #map[b-4tvn7u64oa] {
+        display: none;
     }
 
     [b-4tvn7u64oa] .iconos-contacto{
-        margin-top:10px;
+        margin-top:0px;
         gap:20px;
         display:flex;
         flex-direction:row;
@@ -754,10 +763,6 @@
 
     [b-4tvn7u64oa] .contenedor-tiktok{
         margin-top:0px;
-    }
-
-    .mail-texto[b-4tvn7u64oa], .frase-tel[b-4tvn7u64oa] {
-        display: none;
     }
 
     .ubicacion-frase[b-4tvn7u64oa]{
@@ -781,6 +786,8 @@
     align-items: center;
     gap: 8px;
 }
+
+
 
 .nombre-logo[b-rxk6cxr2lu] {
     font-size: max(30px);
@@ -819,7 +826,12 @@
 .user[b-rxk6cxr2lu], .carrito[b-rxk6cxr2lu], .logo[b-rxk6cxr2lu] {
     border:none;
     background:none;
-    padding-right:30px;
+}
+
+.user-carrito-seccion[b-rxk6cxr2lu]{
+    display:flex;
+    gap:10px;
+    padding-right:10px;
 }
 
 .bi-person-circle[b-rxk6cxr2lu], .bi-cart4[b-rxk6cxr2lu] {
@@ -906,7 +918,7 @@
     }
 
     .hamburguer-icon i[b-rxk6cxr2lu] {
-        font-size: 22px;
+        font-size: 30px;
     }
 
     .logo[b-rxk6cxr2lu] {
@@ -918,8 +930,8 @@
     }
 
     .logo img[b-rxk6cxr2lu] {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
      }
 
     .nombre-logo[b-rxk6cxr2lu] {
@@ -976,13 +988,12 @@
     }
 
     .user i[b-rxk6cxr2lu], .carrito i[b-rxk6cxr2lu] {
-        font-size: 18px;
+        font-size: 30px;
     }
 
     .user[b-rxk6cxr2lu], .carrito[b-rxk6cxr2lu]{
         width: 100%;
         padding: 0;
-        margin-right:5px;
     }
     
 }
@@ -996,6 +1007,7 @@
         grid-template-columns: auto 1fr auto auto;
         justify-content: space-between;
         align-items: center;
+
         gap: 20px;
     }
 
@@ -1012,6 +1024,8 @@
         width: fit-content;
         padding: 0;
     }
+
+
 
     .nombre-logo[b-rxk6cxr2lu] {
         font-size: 24px;
@@ -1034,7 +1048,7 @@
         min-width: 0;
     }
 
-    .user[b-rxk6cxr2lu], .carrito[b-rxk6cxr2lu], .user i[b-rxk6cxr2lu], .carrito i[b-rxk6cxr2lu] {
+    .user[b-rxk6cxr2lu], .carrito[b-rxk6cxr2lu], .user i[b-rxk6cxr2lu], .carrito i[b-rxk6cxr2lu]{
         font-size: 40px;
     }
 
@@ -1054,7 +1068,26 @@
         grid-template-rows: auto auto;
     }
 
+    .search[b-rxk6cxr2lu]{
+        width:100%;
+    }
+
+    .buscador[b-rxk6cxr2lu]{
+        flex:1;
+        min-width:0;
+    }
+
    
+}
+
+/*Arreglo para margenes que le faltaban a la tablet IpadAir y IpadMini*/
+@media (min-width:768px) and (max-width:820px)
+{
+    .header[b-rxk6cxr2lu]{
+        width:100%;
+    }
+
+  
 }
 /* /Components/HeroComponent.razor.rz.scp.css */
 
@@ -1213,14 +1246,21 @@
     flex-direction: column;
 }
 
-main[b-acmwwuxy9a] {
+main-content[b-acmwwuxy9a] {
     flex: 1;
 }
 
 .main-layout[b-acmwwuxy9a] {
-    display: grid;
-    min-height: 200px;
+    display: flex;
+    flex-direction:column;
+    min-height: 100vh;
     background-color:white;
+    align-items:stretch;
+}
+
+.header-content[b-acmwwuxy9a]{
+    min-width:100vw;
+    align-items:stretch;
 }
 
 .sidebar[b-acmwwuxy9a] {
@@ -1872,6 +1912,7 @@ main[b-acmwwuxy9a] {
         text-wrap: pretty;
         gap:4px;
         padding-bottom:2rem;
+        
     }
 
     .datos-usuario-seccion[b-5f5yu2qgmf]{

@@ -126,8 +126,8 @@
     border-radius: 8px;
 }
 
-.link-a-mapa{
-    display:none;
+.contenedor-link-horario {
+    display: none;
 }
 
 .icon-link{
@@ -152,12 +152,23 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto auto;
-        gap: 20px;
-        padding-top: 1rem;
+        gap: 6px;
+        padding-top: 8px;
+        margin-bottom: 30px;
     }
 
-    .redes-seccion{
-        gap:10px;
+    .redes-seccion, .clase-donde-estamos, .atencion-seccion{
+        gap:4px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+     
+    }
+    
+
+    .atencion-seccion{
+        flex-direction:column;
+        gap:1px;
     }
 
     .iconos-redes{
@@ -168,7 +179,7 @@
     .contenedores {
         display: flex;
         flex-direction: row;
-        justify-items:start;
+        justify-items:center;
         justify-content:space-between;
         gap:3rem;
     }
@@ -186,26 +197,24 @@
        padding-bottom:2px;
    }
 
-    #map{
-       display:none;
+    .contenedor-link-horario {
+        display: flex;
+        margin-top: 10px;
+        align-content: center;
+        gap: 10px;
     }
-
-   .link-a-mapa{
-       display:flex;
-       margin-top:10px;
-   }
 
     .icon-link {
         text-decoration: none;
         outline: none;
     }
 
-    .contenedor-ubicacion{
-        display:none;
+    .contenedor-ubicacion, .mail-texto, .frase-tel, #map {
+        display: none;
     }
 
     ::deep .iconos-contacto{
-        margin-top:10px;
+        margin-top:0px;
         gap:20px;
         display:flex;
         flex-direction:row;
@@ -213,10 +222,6 @@
 
     ::deep .contenedor-tiktok{
         margin-top:0px;
-    }
-
-    .mail-texto, .frase-tel {
-        display: none;
     }
 
     .ubicacion-frase{

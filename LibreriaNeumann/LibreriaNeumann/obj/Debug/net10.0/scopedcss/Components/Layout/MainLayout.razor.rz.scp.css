@@ -4,14 +4,21 @@
     flex-direction: column;
 }
 
-main[b-acmwwuxy9a] {
+main-content[b-acmwwuxy9a] {
     flex: 1;
 }
 
 .main-layout[b-acmwwuxy9a] {
-    display: grid;
-    min-height: 200px;
+    display: flex;
+    flex-direction:column;
+    min-height: 100vh;
     background-color:white;
+    align-items:stretch;
+}
+
+.header-content[b-acmwwuxy9a]{
+    min-width:100vw;
+    align-items:stretch;
 }
 
 .sidebar[b-acmwwuxy9a] {

@@ -126,8 +126,8 @@
     border-radius: 8px;
 }
 
-.link-a-mapa[b-4tvn7u64oa]{
-    display:none;
+.contenedor-link-horario[b-4tvn7u64oa] {
+    display: none;
 }
 
 .icon-link[b-4tvn7u64oa]{
@@ -152,12 +152,23 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto auto;
-        gap: 20px;
-        padding-top: 1rem;
+        gap: 6px;
+        padding-top: 8px;
+        margin-bottom: 30px;
     }
 
-    .redes-seccion[b-4tvn7u64oa]{
-        gap:10px;
+    .redes-seccion[b-4tvn7u64oa], .clase-donde-estamos[b-4tvn7u64oa], .atencion-seccion[b-4tvn7u64oa]{
+        gap:4px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+     
+    }
+    
+
+    .atencion-seccion[b-4tvn7u64oa]{
+        flex-direction:column;
+        gap:1px;
     }
 
     .iconos-redes[b-4tvn7u64oa]{
@@ -168,7 +179,7 @@
     .contenedores[b-4tvn7u64oa] {
         display: flex;
         flex-direction: row;
-        justify-items:start;
+        justify-items:center;
         justify-content:space-between;
         gap:3rem;
     }
@@ -186,26 +197,24 @@
        padding-bottom:2px;
    }
 
-    #map[b-4tvn7u64oa]{
-       display:none;
+    .contenedor-link-horario[b-4tvn7u64oa] {
+        display: flex;
+        margin-top: 10px;
+        align-content: center;
+        gap: 10px;
     }
-
-   .link-a-mapa[b-4tvn7u64oa]{
-       display:flex;
-       margin-top:10px;
-   }
 
     .icon-link[b-4tvn7u64oa] {
         text-decoration: none;
         outline: none;
     }
 
-    .contenedor-ubicacion[b-4tvn7u64oa]{
-        display:none;
+    .contenedor-ubicacion[b-4tvn7u64oa], .mail-texto[b-4tvn7u64oa], .frase-tel[b-4tvn7u64oa], #map[b-4tvn7u64oa] {
+        display: none;
     }
 
     [b-4tvn7u64oa] .iconos-contacto{
-        margin-top:10px;
+        margin-top:0px;
         gap:20px;
         display:flex;
         flex-direction:row;
@@ -213,10 +222,6 @@
 
     [b-4tvn7u64oa] .contenedor-tiktok{
         margin-top:0px;
-    }
-
-    .mail-texto[b-4tvn7u64oa], .frase-tel[b-4tvn7u64oa] {
-        display: none;
     }
 
     .ubicacion-frase[b-4tvn7u64oa]{

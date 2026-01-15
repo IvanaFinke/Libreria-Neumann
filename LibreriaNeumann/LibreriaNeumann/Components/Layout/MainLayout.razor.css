@@ -4,14 +4,21 @@
     flex-direction: column;
 }
 
-main {
+main-content {
     flex: 1;
 }
 
 .main-layout {
-    display: grid;
-    min-height: 200px;
+    display: flex;
+    flex-direction:column;
+    min-height: 100vh;
     background-color:white;
+    align-items:stretch;
+}
+
+.header-content{
+    min-width:100vw;
+    align-items:stretch;
 }
 
 .sidebar {
