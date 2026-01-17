@@ -19,7 +19,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="Components\Layout\NavMenu.razor" />
     <Content Remove="Components\UserComponent.razor.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Components\Layout\NavMenu.razor.css" />
   </ItemGroup>
 
   <ItemGroup>

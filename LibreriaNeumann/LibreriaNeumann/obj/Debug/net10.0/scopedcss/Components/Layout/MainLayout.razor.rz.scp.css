@@ -1,127 +1,32 @@
+
+/* layout raíz: flex column */
 .page[b-acmwwuxy9a] {
-    position: relative;
     display: flex;
     flex-direction: column;
-}
-
-main-content[b-acmwwuxy9a] {
-    flex: 1;
-}
-
-.main-layout[b-acmwwuxy9a] {
-    display: flex;
-    flex-direction:column;
-    min-height: 100vh;
-    background-color:white;
-    align-items:stretch;
-}
-
-.header-content[b-acmwwuxy9a]{
-    min-width:100vw;
-    align-items:stretch;
-}
-
-.sidebar[b-acmwwuxy9a] {
-}
-
-.pages-closed-sidebar[b-acmwwuxy9a] {
-    grid-row: 2;
-    grid-column: 1/-1;
-    background-color: white;
-}
-
-.pages-opened-sidebar[b-acmwwuxy9a]{
-    grid-row: 2;
-    grid-column: 2/-1;
-    background-color: white;
-}
-
-
-.top-row[b-acmwwuxy9a] {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
-    justify-content: flex-end;
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
-}
-
-    .top-row[b-acmwwuxy9a]  a, .top-row[b-acmwwuxy9a]  .btn-link {
-        white-space: nowrap;
-        margin-left: 1.5rem;
-        text-decoration: none;
-    }
-
-    .top-row[b-acmwwuxy9a]  a:hover, .top-row[b-acmwwuxy9a]  .btn-link:hover {
-        text-decoration: underline;
-    }
-
-    .top-row[b-acmwwuxy9a]  a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .footer[b-acmwwuxy9a]  .nav-link::after{
-        display:none;
-    }
-
-@media (max-width: 640.98px) {
-    .top-row[b-acmwwuxy9a] {
-        justify-content: space-between;
-    }
-
-    .top-row[b-acmwwuxy9a]  a, .top-row[b-acmwwuxy9a]  .btn-link {
-        margin-left: 0;
-    }
-}
-
-@media (min-width: 641px) {
-    .page[b-acmwwuxy9a] {
-        flex-direction: row;
-    }
-
-    .sidebar[b-acmwwuxy9a] {
-        width: 250px;
-        height: 100vh;
-        position: sticky;
-        top: 0;
-    }
-
-    .top-row[b-acmwwuxy9a] {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    }
-
-    .top-row.auth[b-acmwwuxy9a]  a:first-child {
-        flex: 1;
-        text-align: right;
-        width: 0;
-    }
-
-    .top-row[b-acmwwuxy9a], article[b-acmwwuxy9a] {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
-    }
-}
-
-#blazor-error-ui[b-acmwwuxy9a] {
-    color-scheme: light only;
-    background: lightyellow;
-    bottom: 0;
-    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    display: none;
-    left: 0;
-    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
-    position: fixed;
+    min-height: 100dvh; /* usa 100dvh para mobile moderno; si quieres fallback usa 100vh */
     width: 100%;
-    z-index: 1000;
 }
 
-    #blazor-error-ui .dismiss[b-acmwwuxy9a] {
-        cursor: pointer;
-        position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
-    }
+/* header: ocupa su altura natural, no crecer */
+.header-parte[b-acmwwuxy9a] {
+    flex: 0 0 auto;
+}
+
+/* content: ESTE es el que debe crecer y scrollear */
+.content[b-acmwwuxy9a] {
+    flex: 1 1 auto; /* ocupa el espacio restante */
+    min-height: 0; /* MUY IMPORTANTE en flex para que overflow funcione */
+    overflow-y: auto; /* el scrolling se produce aquí */
+    -webkit-overflow-scrolling: touch; /* suaviza scroll en iOS/WebKit */
+}
+
+/* footer: no debe tener height fijo ni ser scrollable */
+.footer-parte[b-acmwwuxy9a] {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+/* temporal: outlines para depurar (quítalos luego) */
+.page[b-acmwwuxy9a], .header-parte[b-acmwwuxy9a], .content[b-acmwwuxy9a], .footer-parte[b-acmwwuxy9a] {
+    outline: 1px dashed rgba(255,0,0,0.25); 
+}

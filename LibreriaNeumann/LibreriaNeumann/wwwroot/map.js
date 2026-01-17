@@ -1,6 +1,9 @@
 ﻿window.initMap = () => {
     const map = L.map('map').setView([-34.921819, -57.963100], 15);
 
+    document.body.style.overflowY = "auto";
+    document.documentElement.style.overflowY = "auto";
+
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);

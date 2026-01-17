@@ -124,6 +124,7 @@
     height: 200px;
     width: 400px;
     border-radius: 8px;
+    overflow:hidden;
 }
 
 .contenedor-link-horario[b-4tvn7u64oa] {
@@ -155,6 +156,7 @@
         gap: 6px;
         padding-top: 8px;
         margin-bottom: 30px;
+        width:100%;
     }
 
     .redes-seccion[b-4tvn7u64oa], .clase-donde-estamos[b-4tvn7u64oa], .atencion-seccion[b-4tvn7u64oa]{
