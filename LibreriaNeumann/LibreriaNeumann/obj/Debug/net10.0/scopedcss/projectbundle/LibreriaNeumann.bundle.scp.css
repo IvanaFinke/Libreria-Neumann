@@ -1255,6 +1255,7 @@
 /* header: ocupa su altura natural, no crecer */
 .header-parte[b-acmwwuxy9a] {
     flex: 0 0 auto;
+
 }
 
 /* content: ESTE es el que debe crecer y scrollear */

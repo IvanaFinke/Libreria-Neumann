@@ -10,6 +10,7 @@
 /* header: ocupa su altura natural, no crecer */
 .header-parte {
     flex: 0 0 auto;
+
 }
 
 /* content: ESTE es el que debe crecer y scrollear */

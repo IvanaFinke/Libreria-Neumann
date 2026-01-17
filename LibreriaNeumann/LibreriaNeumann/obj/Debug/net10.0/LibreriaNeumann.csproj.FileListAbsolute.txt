@@ -19,11 +19,9 @@ C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debu
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
-C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\Layout\ReconnectModal.razor.rz.scp.css
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\bundle\LibreriaNeumann.styles.css
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\projectbundle\LibreriaNeumann.bundle.scp.css
-C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\no4pvnjbwh-{0}-khy4lop6wu-khy4lop6wu.gz
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\nmdy2w9hsn-{0}-c2jlpeoesf-c2jlpeoesf.gz
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\1boq4163j9-{0}-aexeepp0ev-aexeepp0ev.gz
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\6euykdik33-{0}-ausgxo2sd3-ausgxo2sd3.gz
@@ -70,7 +68,6 @@ C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debu
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\CarritoComponent.razor.rz.scp.css
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\DetallesPagoComponent.razor.rz.scp.css
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\FooterComponent.razor.rz.scp.css
-C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\5a81f0n6nr-{0}-hu164r7ea6-hu164r7ea6.gz
 C:\Users\ivana\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\ivana\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\bin\Debug\net10.0\appsettings.json
 C:\Users\ivana\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\bin\Debug\net10.0\LibreriaNeumann.staticwebassets.runtime.json
@@ -184,9 +181,7 @@ C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debu
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\u7vjwg6xns-{0}-wl58j5mj3v-wl58j5mj3v.gz
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\kk0an68w9i-{0}-d4r6k3f320-d4r6k3f320.gz
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\awfsp27n1d-{0}-keugtjm085-keugtjm085.gz
-C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\prgv2jsgp8-{0}-zub09dkrxp-zub09dkrxp.gz
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\rm3nmc9urn-{0}-43atpzeawx-43atpzeawx.gz
-C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\z6gxipoq73-{0}-ynyaa8k90p-ynyaa8k90p.gz
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tvk5wzsrcg-{0}-c63t5i9ira-c63t5i9ira.gz
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\yhq2t8p8ax-{0}-4094rpi4f9-4094rpi4f9.gz
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\rc1g3zuj7u-{0}-hd3gran6i8-hd3gran6i8.gz
@@ -198,8 +193,6 @@ C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debu
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\CambioDatosComponent.razor.rz.scp.css
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\k91dbzg12w-{0}-2i0r6wwb69-2i0r6wwb69.gz
 C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\lzomuo2bci-{0}-iz83ucvm53-iz83ucvm53.gz
-C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\13twna8nz8-{0}-ebhkjwge9p-ebhkjwge9p.gz
-C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tnl8yodhue-{0}-ebhkjwge9p-ebhkjwge9p.gz
 C:\Users\Maite\Desktop\Libreria-Neumann\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\Maite\Desktop\Libreria-Neumann\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\bin\Debug\net10.0\appsettings.json
 C:\Users\Maite\Desktop\Libreria-Neumann\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\bin\Debug\net10.0\LibreriaNeumann.staticwebassets.runtime.json
@@ -301,3 +294,9 @@ C:\Users\Maite\Desktop\Libreria-Neumann\Libreria-Neumann\LibreriaNeumann\Libreri
 C:\Users\Maite\Desktop\Libreria-Neumann\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\no4pvnjbwh-{0}-5ccsb4k24z-5ccsb4k24z.gz
 C:\Users\Maite\Desktop\Libreria-Neumann\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\13twna8nz8-{0}-fz1g1a7qqu-fz1g1a7qqu.gz
 C:\Users\Maite\Desktop\Libreria-Neumann\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tnl8yodhue-{0}-fz1g1a7qqu-fz1g1a7qqu.gz
+C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\no4pvnjbwh-{0}-bwsoza9me4-bwsoza9me4.gz
+C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\prgv2jsgp8-{0}-48s5ajbst8-48s5ajbst8.gz
+C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\z6gxipoq73-{0}-3kuw3go582-3kuw3go582.gz
+C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\5a81f0n6nr-{0}-bk2jl2qtmr-bk2jl2qtmr.gz
+C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\13twna8nz8-{0}-fz1g1a7qqu-fz1g1a7qqu.gz
+C:\Users\Maite\Desktop\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tnl8yodhue-{0}-fz1g1a7qqu-fz1g1a7qqu.gz

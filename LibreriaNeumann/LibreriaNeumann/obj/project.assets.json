@@ -51,11 +51,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\LibreriaNeumann.csproj",
+      "projectUniqueName": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\LibreriaNeumann.csproj",
       "projectName": "LibreriaNeumann",
-      "projectPath": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\LibreriaNeumann.csproj",
+      "projectPath": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\LibreriaNeumann.csproj",
       "packagesPath": "C:\\Users\\Maite\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\obj\\",
+      "outputPath": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
