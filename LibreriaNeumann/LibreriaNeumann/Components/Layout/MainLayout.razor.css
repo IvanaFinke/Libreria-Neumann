@@ -3,11 +3,11 @@
 .page {
     display: flex;
     flex-direction: column;
-    min-height: 100dvh; /* usa 100dvh para mobile moderno; si quieres fallback usa 100vh */
+    min-height: 100dvh; /* usa 100dvh para mobile moderno*/
     width: 100%;
 }
 
-/* header: ocupa su altura natural, no crecer */
+/* header: ocupa su altura natural, no crece */
 .header-parte {
     flex: 0 0 auto;
 
@@ -15,19 +15,15 @@
 
 /* content: ESTE es el que debe crecer y scrollear */
 .content {
-    flex: 1 1 auto; /* ocupa el espacio restante */
-    min-height: 0; /* MUY IMPORTANTE en flex para que overflow funcione */
-    overflow-y: auto; /* el scrolling se produce aquí */
+    flex: 1 1 auto; /* ocupa el espacio restante agrandandose o achicandose dependiendo de la pagina */
+    min-height: 0; /*para que overflow funcione */
+    overflow-y: auto; /* el scrolling se produce aca */
     -webkit-overflow-scrolling: touch; /* suaviza scroll en iOS/WebKit */
 }
 
-/* footer: no debe tener height fijo ni ser scrollable */
 .footer-parte {
     flex: 0 0 auto;
     width: 100%;
+  
 }
 
-/* temporal: outlines para depurar (quítalos luego) */
-.page, .header-parte, .content, .footer-parte {
-    outline: 1px dashed rgba(255,0,0,0.25); 
-}
