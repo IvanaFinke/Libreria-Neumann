@@ -51,15 +51,34 @@
     padding-right: 30px;
 }
 
-.user, .carrito, .logo {
+ .user, .carrito, .logo {
     border:none;
     background:none;
 }
 
-.user-carrito-seccion{
-    display:flex;
-    gap:10px;
-    padding-right:10px;
+.user-carrito-seccion {
+    display: flex;
+    gap: 10px;
+    padding-right: 10px;
+}
+
+::deep .user:hover i {
+        color: #0d6efd;
+        transform: scale(1.05);
+        transition: transform ease 0.15s color 0.15s ease;
+}
+
+::deep a.user,
+::deep a.user:focus,
+::deep a.user:focus-visible,
+::deep a.user:active {
+    outline: none !important;
+    box-shadow: none !important;
+    outline-offset: 0 !important;
+}
+
+::deep a.user i {
+    color: black;
 }
 
 .bi-person-circle, .bi-cart4 {

@@ -51,15 +51,34 @@
     padding-right: 30px;
 }
 
-.user[b-rxk6cxr2lu], .carrito[b-rxk6cxr2lu], .logo[b-rxk6cxr2lu] {
+ .user[b-rxk6cxr2lu], .carrito[b-rxk6cxr2lu], .logo[b-rxk6cxr2lu] {
     border:none;
     background:none;
 }
 
-.user-carrito-seccion[b-rxk6cxr2lu]{
-    display:flex;
-    gap:10px;
-    padding-right:10px;
+.user-carrito-seccion[b-rxk6cxr2lu] {
+    display: flex;
+    gap: 10px;
+    padding-right: 10px;
+}
+
+[b-rxk6cxr2lu] .user:hover i {
+        color: #0d6efd;
+        transform: scale(1.05);
+        transition: transform ease 0.15s color 0.15s ease;
+}
+
+[b-rxk6cxr2lu] a.user,
+[b-rxk6cxr2lu] a.user:focus,
+[b-rxk6cxr2lu] a.user:focus-visible,
+[b-rxk6cxr2lu] a.user:active {
+    outline: none !important;
+    box-shadow: none !important;
+    outline-offset: 0 !important;
+}
+
+[b-rxk6cxr2lu] a.user i {
+    color: black;
 }
 
 .bi-person-circle[b-rxk6cxr2lu], .bi-cart4[b-rxk6cxr2lu] {
