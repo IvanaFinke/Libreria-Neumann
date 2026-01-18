@@ -19,6 +19,7 @@
     min-height: 0; /*para que overflow funcione */
     overflow-y: auto; /* el scrolling se produce aca */
     -webkit-overflow-scrolling: touch; /* suaviza scroll en iOS/WebKit */
+   
 }
 
 .footer-parte[b-acmwwuxy9a] {

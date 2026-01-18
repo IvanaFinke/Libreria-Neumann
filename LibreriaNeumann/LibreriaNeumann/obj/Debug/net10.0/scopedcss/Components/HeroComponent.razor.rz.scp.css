@@ -1,12 +1,16 @@
 
-.hero[b-pbijrvm6gy] {
+.pc-design[b-pbijrvm6gy] {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
     gap: 3rem;
-    width:100%;
+    width: 100%;
     padding: 3rem 3rem;
-    margin-bottom:7rem;
+    background-color: #937e5222;
+}
+
+.responsive-hero[b-pbijrvm6gy]{
+    display:none;
 }
 
 .hero-texto[b-pbijrvm6gy]{
@@ -49,4 +53,61 @@
     height: 356px;
     object-fit: contain;
     border-radius: 60px;
+}
+
+@media (max-width:580px) {
+
+    .pc-design[b-pbijrvm6gy]{
+        display:none;
+    }
+
+    .responsive-hero[b-pbijrvm6gy] {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 3rem;
+        gap:1rem;
+        justify-content: space-between;
+        align-items: safe center;
+        background-color: #937e5222;
+        min-height:0;
+    }
+
+    .img-eslogan[b-pbijrvm6gy]{
+       width:240px;
+       height:248px;
+    }
+
+    .titulo-hero[b-pbijrvm6gy] {
+        font-size: 40px;
+        font-family: serif;
+        text-wrap: balance;
+        text-align:center;
+        max-width: 200px;
+    }
+
+    .hero-imagen[b-pbijrvm6gy] {
+        width: 250px;
+        height: 160px;
+        border-radius: 20px;
+    }
+
+    .eslogan[b-pbijrvm6gy] {
+        font-size: 22px;
+        font-weight: 500;
+        font-family: serif;
+        text-wrap: pretty;
+        text-align: center;
+        max-width: 200px;
+        margin-top:1rem;
+        justify-self:center;
+    }
+
+    .btn-ver-libros[b-pbijrvm6gy] {
+        width: 150px;
+        height: 34px;
+        font-size:18px;
+        align-items:end;
+        margin-top:2rem;
+    }
 }
