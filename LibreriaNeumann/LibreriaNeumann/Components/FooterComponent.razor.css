@@ -124,7 +124,7 @@
     margin-left: 10px;
 }
 
-::deep #map {
+::deep .map-shared {
     height: 200px;
     width: 400px;
     border-radius: 8px;
@@ -214,7 +214,7 @@
         outline: none;
     }
 
-    .contenedor-ubicacion, .mail-texto, .frase-tel, #map, .clase-donde-estamos-tablet {
+    .contenedor-ubicacion, .mail-texto, .frase-tel, .map-shared, .clase-donde-estamos-tablet {
         display: none;
     }
 
@@ -298,7 +298,7 @@
         outline: none;
     }
 
-    .mail-texto, .frase-tel, .contenedor-link-horario horario-texto, .contenedor-link-horario .link-a-mapa,.contenedor-ubicacion, .clase-donde-estamos {
+    .mail-texto, .frase-tel, .contenedor-link-horario horario-texto, .contenedor-link-horario .link-a-mapa,.contenedor-ubicacion, .clase-donde-estamos-pc {
         display: none;
     }
 
@@ -329,8 +329,25 @@
         display: flex;
         flex-direction: row;
         gap:10px;
+        align-self:center;
+        text-wrap:pretty;
     }
 
+    .icono-horario .link-a-mapa{
+        width:32px;
+        height:32px;
+        margin-bottom:10px;
+    }
+
+    .horario-texto-tablet{
+        align-self:center;
+    }
+
+    .icono-horario i {
+        align-self: center;
+        font-size: 20px;
+        padding: 6px;
+    }
     .telefono-seccion{
         margin-top:4px;
     }
@@ -341,9 +358,10 @@
         margin:0;
     }
 
-    ::deep .clase-donde-estamos-tablet #map {
+    ::deep .map-shared {
         height: 130px;
         width: 300px;
         border-radius: 8px;
+        grid-row:4;
     }
 }
