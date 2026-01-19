@@ -62,11 +62,12 @@
     padding-right: 10px;
 }
 
-[b-rxk6cxr2lu] .user:hover i {
+[b-rxk6cxr2lu] .user:hover i, .carrito:hover i[b-rxk6cxr2lu] {
         color: #0d6efd;
         transform: scale(1.05);
         transition: transform ease 0.15s color 0.15s ease;
 }
+
 
 [b-rxk6cxr2lu] a.user,
 [b-rxk6cxr2lu] a.user:focus,
@@ -79,6 +80,19 @@
 
 [b-rxk6cxr2lu] a.user i {
     color: black;
+}
+
+[b-rxk6cxr2lu] a.carrito i{
+    color:black;
+}
+
+[b-rxk6cxr2lu] a.carrito,
+[b-rxk6cxr2lu] a.carrito:focus,
+[b-rxk6cxr2lu] a.carrito:focus-visible,
+[b-rxk6cxr2lu] a.carrito.active{
+    outline:none !important;
+    box-shadow: none !important;
+    outline-offset: 0 !important;
 }
 
 .bi-person-circle[b-rxk6cxr2lu], .bi-cart4[b-rxk6cxr2lu] {

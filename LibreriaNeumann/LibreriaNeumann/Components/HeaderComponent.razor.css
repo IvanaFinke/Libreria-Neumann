@@ -62,11 +62,12 @@
     padding-right: 10px;
 }
 
-::deep .user:hover i {
+::deep .user:hover i, .carrito:hover i {
         color: #0d6efd;
         transform: scale(1.05);
         transition: transform ease 0.15s color 0.15s ease;
 }
+
 
 ::deep a.user,
 ::deep a.user:focus,
@@ -79,6 +80,19 @@
 
 ::deep a.user i {
     color: black;
+}
+
+::deep a.carrito i{
+    color:black;
+}
+
+::deep a.carrito,
+::deep a.carrito:focus,
+::deep a.carrito:focus-visible,
+::deep a.carrito.active{
+    outline:none !important;
+    box-shadow: none !important;
+    outline-offset: 0 !important;
 }
 
 .bi-person-circle, .bi-cart4 {

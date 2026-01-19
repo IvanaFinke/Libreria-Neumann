@@ -835,11 +835,12 @@
     padding-right: 10px;
 }
 
-[b-rxk6cxr2lu] .user:hover i {
+[b-rxk6cxr2lu] .user:hover i, .carrito:hover i[b-rxk6cxr2lu] {
         color: #0d6efd;
         transform: scale(1.05);
         transition: transform ease 0.15s color 0.15s ease;
 }
+
 
 [b-rxk6cxr2lu] a.user,
 [b-rxk6cxr2lu] a.user:focus,
@@ -852,6 +853,19 @@
 
 [b-rxk6cxr2lu] a.user i {
     color: black;
+}
+
+[b-rxk6cxr2lu] a.carrito i{
+    color:black;
+}
+
+[b-rxk6cxr2lu] a.carrito,
+[b-rxk6cxr2lu] a.carrito:focus,
+[b-rxk6cxr2lu] a.carrito:focus-visible,
+[b-rxk6cxr2lu] a.carrito.active{
+    outline:none !important;
+    box-shadow: none !important;
+    outline-offset: 0 !important;
 }
 
 .bi-person-circle[b-rxk6cxr2lu], .bi-cart4[b-rxk6cxr2lu] {
@@ -1168,6 +1182,7 @@
     border-radius: 60px;
 }
 
+/*Movile design*/
 @media (max-width:580px) {
 
     .pc-design[b-pbijrvm6gy]{
@@ -1223,6 +1238,67 @@
         align-items:end;
         margin-top:2rem;
     }
+}
+
+/*Tablet mini/ipads mini*/
+@media (min-width:571px) and (max-width:860px)
+{
+    .responsive-hero[b-pbijrvm6gy] {
+        display: flex;
+        flex-direction: column;
+        min-height: 60vh;
+        background-color: #937e5222;
+        width: 100%;
+        padding: 3rem 3rem;
+        align-items:center;
+        justify-content:center;
+        gap:2rem;
+    }
+
+   .pc-design[b-pbijrvm6gy]{
+       display:none;
+   }
+
+   .titulo-hero[b-pbijrvm6gy]{
+       font-size:50px;
+       font-weight:500;
+       max-width:500px;
+       text-wrap:nowrap;
+       align-items:start;
+   }
+
+   .eslogan[b-pbijrvm6gy]{
+       font-size:34px;
+       text-align:center;
+       text-wrap:nowrap;
+       max-width:500px;
+   }
+
+   .img-eslogan[b-pbijrvm6gy]{
+       gap:2rem;
+       display:flex;
+       flex-direction:column;
+       align-content:center;
+       justify-content:center;
+   }
+   .hero-imagen[b-pbijrvm6gy] {
+        width: 530px;
+        height: 320px;
+        border-radius:20px;
+    }
+
+    .btn-ver-libros[b-pbijrvm6gy]{
+        width:200px;
+        height:60px;
+        font-size:28px;
+    }
+
+
+}
+
+/*Diseño tablets pro, grandes*/
+@media (min-width:853px) and (max-width:1024px) and (min-height:1280px) and (max-height:1370){
+
 }
 /* /Components/IniciarSesionComponent.razor.rz.scp.css */
 .inicio-sesion[b-awra8w7bqt] {
