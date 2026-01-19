@@ -234,9 +234,8 @@
     }
 }
 
-/*Tablets*/
-@media (min-width:571px) and (max-width:1024px) {
-
+/*Tablet mini/ipads mini*/
+@media (min-width:571px) and (max-width:860px){
     .footer[b-4tvn7u64oa] {
         display: flex;
         flex-direction: row;
@@ -251,11 +250,11 @@
         
     }
 
-
     .atencion-seccion[b-4tvn7u64oa] {
         display:flex;
         flex-direction: column;
-        gap: 10px;
+        gap:0;
+      
     }
 
     .iconos-redes[b-4tvn7u64oa]{
@@ -305,10 +304,11 @@
 
     [b-4tvn7u64oa] .iconos-contacto {
         margin-top: 0px;
-        gap: 22px;
+        padding-top:0;
+        gap: 30px;
         display: flex;
         flex-direction: column;
-        
+  
     }
 
     [b-4tvn7u64oa] .contenedor-tiktok {
@@ -335,12 +335,15 @@
         margin-top:4px;
     }
 
+    .telefono-seccion i[b-4tvn7u64oa], .contenedor i[b-4tvn7u64oa], .contenedor-tiktok i[b-4tvn7u64oa]{
+        align-self:center;
+        padding:0;
+        margin:0;
+    }
+
     [b-4tvn7u64oa] .clase-donde-estamos-tablet #map {
-        
-            height: 130px;
-            width: 300px;
-            border-radius: 8px;
-           
-        
+        height: 130px;
+        width: 300px;
+        border-radius: 8px;
     }
 }

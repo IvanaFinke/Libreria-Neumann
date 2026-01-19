@@ -34,24 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FooterComponent.razor",
-              "DocumentMoniker": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\FooterComponent.razor",
-              "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\FooterComponent.razor",
-              "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\FooterComponent.razor",
-              "RelativeToolTip": "LibreriaNeumann\\Components\\FooterComponent.razor",
-              "ViewState": "AgIAADYAAAAAAAAAAAAkwAoAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-19T19:22:37.721Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -61,9 +48,22 @@
               "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\FooterComponent.razor.css",
               "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\FooterComponent.razor.css",
               "RelativeToolTip": "LibreriaNeumann\\Components\\FooterComponent.razor.css",
-              "ViewState": "AgIAAA4BAAAAAAAAAAAqwEQBAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAE8BAAAAAAAAAAAqwFEBAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-01-19T19:21:03.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FooterComponent.razor",
+              "DocumentMoniker": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\FooterComponent.razor",
+              "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\FooterComponent.razor",
+              "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\FooterComponent.razor",
+              "RelativeToolTip": "LibreriaNeumann\\Components\\FooterComponent.razor",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-19T19:22:37.721Z",
               "EditorCaption": ""
             },
             {
@@ -74,7 +74,7 @@
               "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\HeroComponent.razor.css",
               "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\HeroComponent.razor.css",
               "RelativeToolTip": "LibreriaNeumann\\Components\\HeroComponent.razor.css",
-              "ViewState": "AgIAADMAAAAAAAAAAAAqwHQAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAHMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-01-18T18:06:05.031Z",
               "EditorCaption": ""
