@@ -14,6 +14,10 @@
     font-size: 22px;
 }
 
+.contenedor-mapa-link-horario-tablet{
+    display:none;
+}
+
 .redes-seccion {
     display: flex;
     flex-direction: column;
@@ -127,7 +131,7 @@
     overflow:hidden;
 }
 
-.contenedor-link-horario {
+.contenedor-link-horario, .clase-donde-estamos-tablet {
     display: none;
 }
 
@@ -210,7 +214,7 @@
         outline: none;
     }
 
-    .contenedor-ubicacion, .mail-texto, .frase-tel, #map {
+    .contenedor-ubicacion, .mail-texto, .frase-tel, #map, .clase-donde-estamos-tablet {
         display: none;
     }
 
@@ -227,5 +231,116 @@
 
     .ubicacion-frase{
         font-size:16px;
+    }
+}
+
+/*Tablets*/
+@media (min-width:571px) and (max-width:1024px) {
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        padding-top: 2rem;
+        width: 100%;
+        padding: 2em 3rem;
+    }
+
+    .redes-seccion, .clase-donde-estamos-tablet, .atencion-seccion {
+        gap: 4px;
+        
+    }
+
+
+    .atencion-seccion {
+        display:flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .iconos-redes{
+        display:flex;
+        flex-direction:column !important;
+        align-content:start;
+    }
+
+    .redes-seccion, .atencion-seccion{
+        align-items:start;
+    }
+
+    .contenedores {
+        justify-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    ::deep .contenedor-facebook {
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+    }
+
+        ::deep .contenedor-facebook i {
+            font-size: 40px;
+            padding-bottom: 2px;
+        }
+
+    .contenedor-link-horario {
+        display: flex;
+        margin-top: 10px;
+        align-content: center;
+        gap: 10px;
+    }
+
+    .icon-link {
+        text-decoration: none;
+        outline: none;
+    }
+
+    .mail-texto, .frase-tel, .contenedor-link-horario horario-texto, .contenedor-link-horario .link-a-mapa,.contenedor-ubicacion, .clase-donde-estamos {
+        display: none;
+    }
+
+    ::deep .iconos-contacto {
+        margin-top: 0px;
+        gap: 22px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    ::deep .contenedor-tiktok {
+        margin-top: 0px;
+    }
+
+    .ubicacion-frase {
+        font-size: 16px;
+    }
+
+    .clase-donde-estamos-tablet{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .icono-horario {
+        display: flex;
+        flex-direction: row;
+        gap:10px;
+    }
+
+    .telefono-seccion{
+        margin-top:4px;
+    }
+
+    ::deep .clase-donde-estamos-tablet #map {
+        
+            height: 130px;
+            width: 300px;
+            border-radius: 8px;
+           
+        
     }
 }

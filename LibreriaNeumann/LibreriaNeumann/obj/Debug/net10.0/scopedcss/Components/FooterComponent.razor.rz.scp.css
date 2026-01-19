@@ -14,6 +14,10 @@
     font-size: 22px;
 }
 
+.contenedor-mapa-link-horario-tablet[b-4tvn7u64oa]{
+    display:none;
+}
+
 .redes-seccion[b-4tvn7u64oa] {
     display: flex;
     flex-direction: column;
@@ -127,7 +131,7 @@
     overflow:hidden;
 }
 
-.contenedor-link-horario[b-4tvn7u64oa] {
+.contenedor-link-horario[b-4tvn7u64oa], .clase-donde-estamos-tablet[b-4tvn7u64oa] {
     display: none;
 }
 
@@ -210,7 +214,7 @@
         outline: none;
     }
 
-    .contenedor-ubicacion[b-4tvn7u64oa], .mail-texto[b-4tvn7u64oa], .frase-tel[b-4tvn7u64oa], #map[b-4tvn7u64oa] {
+    .contenedor-ubicacion[b-4tvn7u64oa], .mail-texto[b-4tvn7u64oa], .frase-tel[b-4tvn7u64oa], #map[b-4tvn7u64oa], .clase-donde-estamos-tablet[b-4tvn7u64oa] {
         display: none;
     }
 
@@ -227,5 +231,116 @@
 
     .ubicacion-frase[b-4tvn7u64oa]{
         font-size:16px;
+    }
+}
+
+/*Tablets*/
+@media (min-width:571px) and (max-width:1024px) {
+
+    .footer[b-4tvn7u64oa] {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        padding-top: 2rem;
+        width: 100%;
+        padding: 2em 3rem;
+    }
+
+    .redes-seccion[b-4tvn7u64oa], .clase-donde-estamos-tablet[b-4tvn7u64oa], .atencion-seccion[b-4tvn7u64oa] {
+        gap: 4px;
+        
+    }
+
+
+    .atencion-seccion[b-4tvn7u64oa] {
+        display:flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .iconos-redes[b-4tvn7u64oa]{
+        display:flex;
+        flex-direction:column !important;
+        align-content:start;
+    }
+
+    .redes-seccion[b-4tvn7u64oa], .atencion-seccion[b-4tvn7u64oa]{
+        align-items:start;
+    }
+
+    .contenedores[b-4tvn7u64oa] {
+        justify-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    [b-4tvn7u64oa] .contenedor-facebook {
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+    }
+
+        [b-4tvn7u64oa] .contenedor-facebook i {
+            font-size: 40px;
+            padding-bottom: 2px;
+        }
+
+    .contenedor-link-horario[b-4tvn7u64oa] {
+        display: flex;
+        margin-top: 10px;
+        align-content: center;
+        gap: 10px;
+    }
+
+    .icon-link[b-4tvn7u64oa] {
+        text-decoration: none;
+        outline: none;
+    }
+
+    .mail-texto[b-4tvn7u64oa], .frase-tel[b-4tvn7u64oa], .contenedor-link-horario horario-texto[b-4tvn7u64oa], .contenedor-link-horario .link-a-mapa[b-4tvn7u64oa],.contenedor-ubicacion[b-4tvn7u64oa], .clase-donde-estamos[b-4tvn7u64oa] {
+        display: none;
+    }
+
+    [b-4tvn7u64oa] .iconos-contacto {
+        margin-top: 0px;
+        gap: 22px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    [b-4tvn7u64oa] .contenedor-tiktok {
+        margin-top: 0px;
+    }
+
+    .ubicacion-frase[b-4tvn7u64oa] {
+        font-size: 16px;
+    }
+
+    .clase-donde-estamos-tablet[b-4tvn7u64oa]{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .icono-horario[b-4tvn7u64oa] {
+        display: flex;
+        flex-direction: row;
+        gap:10px;
+    }
+
+    .telefono-seccion[b-4tvn7u64oa]{
+        margin-top:4px;
+    }
+
+    [b-4tvn7u64oa] .clase-donde-estamos-tablet #map {
+        
+            height: 130px;
+            width: 300px;
+            border-radius: 8px;
+           
+        
     }
 }

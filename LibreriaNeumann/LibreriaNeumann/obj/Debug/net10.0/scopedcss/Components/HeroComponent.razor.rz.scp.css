@@ -172,4 +172,54 @@
 /*Diseño tablets pro, grandes*/
 @media (min-width:853px) and (max-width:1024px) and (min-height:1280px) and (max-height:1370){
 
+    .responsive-hero[b-pbijrvm6gy] {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: #937e5222;
+        width: 100%;
+        padding: 3rem 3rem;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .pc-design[b-pbijrvm6gy] {
+        display: none;
+    }
+
+    .titulo-hero[b-pbijrvm6gy] {
+        font-size: 50px;
+        font-weight: 500;
+        max-width: 500px;
+        text-wrap: nowrap;
+        align-items: start;
+    }
+
+    .eslogan[b-pbijrvm6gy] {
+        font-size: 34px;
+        text-align: center;
+        text-wrap: nowrap;
+        max-width: 500px;
+    }
+
+    .img-eslogan[b-pbijrvm6gy] {
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .hero-imagen[b-pbijrvm6gy] {
+        width: 530px;
+        height: 320px;
+        border-radius: 20px;
+    }
+
+    .btn-ver-libros[b-pbijrvm6gy] {
+        width: 200px;
+        height: 60px;
+        font-size: 28px;
+    }
 }
