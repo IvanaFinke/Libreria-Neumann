@@ -76,9 +76,6 @@
     private bool menuSeleccionado;
     private bool shoppingCart;
 
-    [Parameter]
-    public EventCallback cambiarACarritoHover { get; set; }
-
     private void CloseMenu()
     {
         menuSeleccionado = false;
@@ -99,11 +96,6 @@
     private void OnMouseOut()
     {
         shoppingCart = false;
-    }
-
-    public async Task MostrarCarritoHover()
-    {
-        await cambiarACarritoHover.InvokeAsync();
     }
 
 }
