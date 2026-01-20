@@ -99,3 +99,10 @@
     border: none;
     background: none;
 }
+
+/*Diseño movil*/
+@media (min-width:300px) and (max-width:1024px){
+    .carrito-hover[b-aurgo51u85]{
+        display:none;
+    }
+}
