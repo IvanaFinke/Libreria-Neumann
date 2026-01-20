@@ -140,3 +140,52 @@
 .seccion-compra-botones[b-8g0gqjtdyx]{
     width:70%;
 }
+
+/*Diseño movil*/
+@media (max-width:570px){
+
+    .carrito-full-screen[b-8g0gqjtdyx] {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 1rem;
+        width: 100%;
+    }
+
+    .titulo-carrito[b-8g0gqjtdyx] {
+        align-self: start;
+        font-family: serif;
+        font-weight: 500;
+    }
+
+    .datos-libro-carrito[b-8g0gqjtdyx] {
+        width: 100%;
+        height: 60%;
+    }
+
+    .datos-libro-carrito:hover[b-8g0gqjtdyx] {
+        background-color: rgb(238, 184, 162);
+     }
+
+    .titulo-precio[b-8g0gqjtdyx] {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .precio-carrito[b-8g0gqjtdyx] {
+        padding-top: 0px;
+    }
+
+    .seccion-compra-botones[b-8g0gqjtdyx] {
+        width: 100%;
+    }
+
+    .lista-libros-carrito[b-8g0gqjtdyx]{
+        display:flex;
+        flex-direction:column;
+        gap: 10px;
+    }
+
+}
