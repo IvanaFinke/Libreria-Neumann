@@ -1,5 +1,5 @@
-﻿.carrito {
-    display: grid;
+﻿.carrito-hover {
+    display: none;
     grid-template-columns: auto;
     width: 500px;
     align-items: center;
@@ -90,12 +90,53 @@
     align-content: center;
 }
 
-.boton-comprar:hover {
-   border-color: rgb(128, 128, 128);
-   border-width:2px;
-}
+    .boton-comprar:hover {
+        border-color: rgb(128, 128, 128);
+        border-width: 2px;
+        background-color: rgb(245, 128, 84);
+    }
 
 .boton-basura-carrito {
     border:none;
     background:none;
+}
+
+
+/*Seccion carrito full screen*/
+.carrito-full-screen {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 3rem;
+    width: 100%;
+}
+
+.titulo-carrito {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.datos-libro-carrito{
+    width:70%;
+    height:60%;
+}
+
+.datos-libro-carrito:hover{
+    background-color:rgb(238, 184, 162);
+}
+
+.titulo-precio {
+    align-items: center;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.precio-carrito {
+    padding-top: 0px;
+}
+
+.seccion-compra-botones{
+    width:70%;
 }
