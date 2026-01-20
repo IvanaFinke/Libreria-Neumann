@@ -1,0 +1,101 @@
+.carrito-hover[b-aurgo51u85] {
+    position: absolute;
+    top: calc(100% + 0.2rem);
+    right: 0;
+    width: 420px;
+    z-index: 1000;
+    padding: 1rem 1rem;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+
+.titulo-carrito[b-aurgo51u85] {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.datos-libro-carrito img[b-aurgo51u85] {
+    width: 80px;
+    height: 120px;
+    border-radius: 10px;
+    background: none;
+    margin-left: 12px;
+}
+
+.datos-libro-carrito[b-aurgo51u85] {
+    border-color: rgb(244, 152, 117);
+    border-width: 2px;
+    border-style: solid;
+    background: rgb(212, 212, 212, 0.6);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    align-content: center;
+    margin-top: 2px;
+
+}
+
+.titulo-libro-carrito[b-aurgo51u85], .precio-carrito[b-aurgo51u85] {
+    font-size: 20px;
+    text-wrap: balance;
+}
+
+.titulo-precio[b-aurgo51u85] {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding-left: 12px;
+}
+
+.precio-carrito[b-aurgo51u85] {
+    padding-top: 20px;
+}
+
+.bi-trash[b-aurgo51u85] {
+    display: flex;
+    justify-items: end;
+    margin-bottom: 6rem;
+    padding: 4px;
+    font-size: 22px;
+}
+
+.seccion-compra-botones[b-aurgo51u85] {
+    border-color: rgb(244, 152, 117);
+    border-width: 2px;
+    border-style: solid;
+    margin-top: 2px;
+}
+
+.frase-total[b-aurgo51u85], .frase-precio-total[b-aurgo51u85] {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.total-clase[b-aurgo51u85] {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+.boton-comprar[b-aurgo51u85] {
+    background-color: rgb(244, 152, 117);
+    color: white;
+    border-style: solid;
+    border-color: rgb(244, 152, 117);
+    font-weight: 500;
+    width: 100%;
+    align-content: center;
+}
+
+    .boton-comprar:hover[b-aurgo51u85] {
+        border-color: rgb(128, 128, 128);
+        border-width: 2px;
+        background-color: rgb(245, 128, 84);
+    }
+
+.boton-basura-carrito[b-aurgo51u85] {
+    border: none;
+    background: none;
+}

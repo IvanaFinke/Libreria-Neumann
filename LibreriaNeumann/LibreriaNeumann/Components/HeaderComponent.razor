@@ -13,16 +13,20 @@
        </div>
 
        <div class="user-carrito-seccion">
-        <a href="/mis-datos" class="user">
-                <i class="bi bi-person-circle"></i>
-            </a>
-
-        <a href="/mi-carrito" class="carrito">
-                <i class="bi bi-cart4"></i>
-            </a>
+            <a href="/mis-datos" class="user">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            <div class="carrito-pc-seccion" @onmouseenter="OnMouseHovered" @onmouseleave="OnMouseOut">
+                <a href="/mi-carrito" class="carrito">
+                    <i class="bi bi-cart4"></i>
+                </a>
+                @if (shoppingCart)
+                {
+                    <CarritoHoverComponent />
+                }
+            </div>
+           
        </div>
-      
-
             
            <button class="hamburger-menu"
                 @onclick = "ToggleMenu">
@@ -70,6 +74,10 @@
 @code {
 
     private bool menuSeleccionado;
+    private bool shoppingCart;
+
+    [Parameter]
+    public EventCallback cambiarACarritoHover { get; set; }
 
     private void CloseMenu()
     {
@@ -82,4 +90,20 @@
         menuSeleccionado = !menuSeleccionado;
 
     }
+
+    private void OnMouseHovered()
+    {
+        shoppingCart = true;
+    }
+
+    private void OnMouseOut()
+    {
+        shoppingCart = false;
+    }
+
+    public async Task MostrarCarritoHover()
+    {
+        await cambiarACarritoHover.InvokeAsync();
+    }
+
 }

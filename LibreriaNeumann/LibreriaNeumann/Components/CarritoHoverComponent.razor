@@ -1,10 +1,9 @@
-﻿@page "/mi-carrito"
+﻿<!-- Componente con el diseño del carrito para cuando aparezca como hover en PC-->
 
-<!-- Componente para el diseño del carrito en PC -->
+<div class="carrito-hover">
+    <div class="carrito">
 
-<div class="carrito-full-screen">
-
-        <h1 class="titulo-carrito">Mi carrito</h1>
+        <h3 class="titulo-carrito">Mi carrito</h3>
         <div class="lista-libros-carrito">
 
             <div class="datos-libro-carrito">
@@ -81,10 +80,10 @@
 
         </div>
 
+
+    </div>
 </div>
-   
 
-@code{
+@code {
     [Parameter] public bool MostrarBotonComprar { get; set; } = true;
-
 }
