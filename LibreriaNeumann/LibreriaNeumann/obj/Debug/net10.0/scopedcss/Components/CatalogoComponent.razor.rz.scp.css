@@ -14,7 +14,7 @@
     font-weight:500;
 }
 
-.menu-catalogo[b-q5pyqb11by] {
+.menu-catalogo-pc[b-q5pyqb11by] {
     display: grid;
     align-self: start;
     align-content: center;
@@ -103,4 +103,66 @@
     text-align: start;
     align-self:end;
     text-wrap: balance;
+}
+
+.menu-catalogo-responsive .botones-catalogo[b-q5pyqb11by], .boton-filtrar[b-q5pyqb11by] {
+    display: none;
+}
+
+
+/*Diseño movil*/
+@media (max-width:570px){
+    .catalogo[b-q5pyqb11by] {
+        display: flex;
+        flex-direction:column;
+        width: 100%;
+        align-items: center;
+        padding: 3rem 3rem;
+        padding-top: 1rem;
+        gap: 10px;
+    }
+
+    .titulo-catalogo[b-q5pyqb11by] {
+        align-self: center;
+        font-family: serif;
+        font-size:32px;
+        font-weight: 500;
+    }
+
+    .menu-catalogo-pc[b-q5pyqb11by]{
+        display:none;
+    }
+
+    .menu-catalogo-responsive[b-q5pyqb11by] {
+        display: flex;
+        flex-direction:column;
+        align-self: center;
+        align-content: center;
+        margin-top: 5px;
+        grid-column: 1;
+        gap: 10px;
+    }
+
+    .botones-catalogo[b-q5pyqb11by], .boton-filtrar[b-q5pyqb11by]{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 200px;
+        align-self: center;
+        border: 2px solid rgb(212, 212, 212);
+        background-color: white;
+        font-size: 18px;
+        font-family: sans-serif;
+        font-weight: 200;
+        padding: 0 10px;
+    }
+
+ .botones-catalogo i[b-q5pyqb11by]{
+        font-size:20px;
+    }
+
+    .ingreso-precios[b-q5pyqb11by]{
+        display:flex;
+        flex-direction:row;
+    }
 }

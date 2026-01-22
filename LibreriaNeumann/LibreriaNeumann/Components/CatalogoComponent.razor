@@ -1,34 +1,172 @@
 ﻿@page "/catalogo"
 
+@rendermode InteractiveServer
+
 <div class="catalogo">
 
     <h1 class="titulo-catalogo">Nuestros libros</h1>
 
-    <div class="menu-catalogo">
+    <button class="boton-filtrar" @onclick="() => PressButton(botonPresionado)">
+            <span>FILTRAR</span>
+            <i class="bi bi-arrow-down"></i>
+        </button>
 
-            <button class="botones-catalogo">
-                <span>CATEGORÍAS</span>
-                <i class="bi bi-star-fill"></i>
-            </button>
-           
-            <button class="botones-catalogo">
-                <span>PRECIO</span>
-                <i class="bi bi-star-fill"></i>
-            </button>
+    @if (botonPresionado)
+        {
+            <div class="menu-catalogo-responsive">
 
-            <button class ="botones-catalogo">
-                <span>AUTOR</span>
-                <i class="bi bi-star-fill"></i>
-            </button>
+                <button class="botones-catalogo">
+                    <span>CATEGORÍAS</span>
+                    <i class="bi bi-star-fill"></i>
+                </button>
 
-            <button class="botones-catalogo">
-               <span>
-                    FECHA
-               </span>
-                <i class="bi bi-star-fill"></i>
+                @if (botonCategorias)
+                {
+                    <button class="botones-catalogo">
+                        <span>SUSPENSO</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="botones-catalogo">
+                        <span>ROMANCE</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="botones-catalogo">
+                        <span>ACCIÓN</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="botones-catalogo">
+                        <span>HISTÓRICOS</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="botones-catalogo">
+                        <span>ARTE</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="botones-catalogo">
+                        <span>FANTASÍA</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="botones-catalogo">
+                        <span>POLICIAL</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="botones-catalogo">
+                        <span>CIENCIA FICCIÓN</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                }
 
-               </button>
+                <button class="botones-catalogo">
+                    <span>PRECIO</span>
+                    <i class="bi bi-star-fill"></i>
+                </button>
+
+                @if(botonPrecio)
+                {
+                    <button class="botones-catalogo">
+                        <span>$5000 a $10000 </span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="botones-catalogo">
+                        <span>$10000 a $15000 </span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="botones-catalogo">
+                        <span>$15000 a $20000 </span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="botones-catalogo">
+                        <span>$20000 a $25000 </span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <div class="ingreso-precios">
+                        <input placeholder="mínimo" type="number"/>
+                        <span>-</span>
+                        <input placeholder="maximo"/>
+                    </div>
+                }
+
+                <button class="botones-catalogo">
+                    <span>AUTOR</span>
+                    <i class="bi bi-star-fill"></i>
+                </button>
+
+                @if (botonAutor)
+                {
+                    <button class="botones-catalogo">
+                        <span>Homero</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="botones-catalogo">
+                        <span>Lweis Caroll</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="botones-catalogo">
+                        <span>Alexandre Dumas</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="botones-catalogo">
+                        <span>Hermanos Grim</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <div class="ingreso-autor">
+                    <input placeholder="nombre autor" />
+                    </div>
+                }
+
+                <button class="botones-catalogo">
+                    <span>FECHA </span>
+                    <i class="bi bi-star-fill"></i>
+                </button>
+
+            @if (botonFecha)
+            {
+                <button class="botones-catalogo">
+                    <span>Antiguos</span>
+                    <i class="bi bi-star-fill"></i>
+                </button>
+                <button class="botones-catalogo">
+                    <span>1800-1900</span>
+                    <i class="bi bi-star-fill"></i>
+                </button>
+                <button class="botones-catalogo">
+                    <span>1900-2000</span>
+                    <i class="bi bi-star-fill"></i>
+                </button>
+                <button class="botones-catalogo">
+                    <span>2000-Contemporáneo</span>
+                    <i class="bi bi-star-fill"></i>
+                </button>
+            }
+            </div>
+        }
+
+    <div class="menu-catalogo-pc">
+
+        <button class="botones-catalogo">
+            <span>CATEGORÍAS</span>
+            <i class="bi bi-star-fill"></i>
+        </button>
+
+        <button class="botones-catalogo">
+            <span>PRECIO</span>
+            <i class="bi bi-star-fill"></i>
+        </button>
+
+        <button class="botones-catalogo">
+            <span>AUTOR</span>
+            <i class="bi bi-star-fill"></i>
+        </button>
+
+        <button class="botones-catalogo">
+            <span>
+                FECHA
+            </span>
+            <i class="bi bi-star-fill"></i>
+
+        </button>
     </div>
+       
 
     <div class="lista-libros">
 
@@ -81,5 +219,16 @@
 </div>
 
 @code {
+    private bool botonPresionado;
+    private bool botonCategorias;
+    private bool botonPrecio;
+    private bool botonAutor;
+    private bool botonFecha;
+
+    private void PressButton(bool buttom)
+    {
+        buttom = !buttom;
+    }
+
 
 }
