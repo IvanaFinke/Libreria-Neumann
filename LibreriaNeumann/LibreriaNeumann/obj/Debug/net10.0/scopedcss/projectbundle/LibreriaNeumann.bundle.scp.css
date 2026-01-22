@@ -439,7 +439,7 @@
     grid-template-columns: auto 1fr;
     width: 100%;
     align-items: center;
-    padding: 3em 3rem;
+    padding: 3rem 3rem;
     padding-top:1rem;
     gap:10px;
 }
@@ -488,7 +488,7 @@
     align-content:start;
     grid-template-columns: repeat(4,1fr);
     gap:2rem;
-    width:900px;
+    width:fit-content;
     height:600px;
     margin-bottom:2rem;
 }
