@@ -1,7 +1,7 @@
 ﻿.menu-header-desplegable {
     position: absolute;
     top: 100%;
-    left:1.5rem;
+    left:0;
     z-index: 9999;
     background: white;
     border: 2px solid black;

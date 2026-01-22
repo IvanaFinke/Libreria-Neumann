@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\carritohovercomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\carritohovercomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\sidebarcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\sidebarcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\carritohovercomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\carritohovercomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\sidebarcomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\sidebarcomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\headercomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -22,11 +22,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SidebarComponent.razor",
+              "DocumentMoniker": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\SidebarComponent.razor",
+              "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\SidebarComponent.razor",
+              "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\SidebarComponent.razor",
+              "RelativeToolTip": "LibreriaNeumann\\Components\\SidebarComponent.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-22T15:30:09.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SidebarComponent.razor.css",
+              "DocumentMoniker": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\SidebarComponent.razor.css",
+              "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\SidebarComponent.razor.css",
+              "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\SidebarComponent.razor.css",
+              "RelativeToolTip": "LibreriaNeumann\\Components\\SidebarComponent.razor.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-22T15:23:52.663Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -39,32 +65,6 @@
               "ViewState": "AgIAAJYAAAAAAAAAAAAAAJgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-01-20T23:19:27.309Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CarritoHoverComponent.razor",
-              "DocumentMoniker": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\CarritoHoverComponent.razor",
-              "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\CarritoHoverComponent.razor",
-              "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\CarritoHoverComponent.razor",
-              "RelativeToolTip": "LibreriaNeumann\\Components\\CarritoHoverComponent.razor",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAE8AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-20T23:18:46.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CarritoHoverComponent.razor.css",
-              "DocumentMoniker": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\CarritoHoverComponent.razor.css",
-              "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\CarritoHoverComponent.razor.css",
-              "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\CarritoHoverComponent.razor.css",
-              "RelativeToolTip": "LibreriaNeumann\\Components\\CarritoHoverComponent.razor.css",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGcAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-20T23:18:45.339Z",
-              "EditorCaption": ""
             }
           ]
         }

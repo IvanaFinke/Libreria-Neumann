@@ -1,10 +1,22 @@
 ﻿@rendermode InteractiveServer 
 
 <div class="menu-header-desplegable">
-    <NavLink class="nav-link" href="/inicio" @onclick="Close">INICIO</NavLink>
-    <NavLink class="nav-link" href="/catalogo" @onclick="Close">CATÁLOGO</NavLink>
-    <NavLink class="nav-link" href="/nosotros" @onclick="Close">NOSOTROS</NavLink>
-    <NavLink class="nav-link" href="/contacto" @onclick="Close">CONTACTO</NavLink>
+    <NavLink class="nav-link" href="/inicio" @onclick="Close">
+        <i class="bi bi-house-door-fill"></i>
+        <span>INICIO</span>
+    </NavLink>
+    <NavLink class="nav-link" href="/catalogo" @onclick="Close">
+        <i class="bi bi-clipboard2-fill"></i>
+        <span>CATÁLOGO</span>
+    </NavLink>
+    <NavLink class="nav-link" href="/nosotros" @onclick="Close">
+        <i class="bi bi-people-fill"></i>
+        <span>NOSOTROS</span>
+    </NavLink>
+    <NavLink class="nav-link" href="/contacto" @onclick="Close">
+        <i class="bi bi-messenger"></i>
+        <span>CONTACTO</span>
+    </NavLink>
 </div>
 
 
