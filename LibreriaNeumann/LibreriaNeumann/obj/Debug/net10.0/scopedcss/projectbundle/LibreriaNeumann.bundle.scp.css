@@ -483,24 +483,22 @@
 }
 
 .lista-libros[b-q5pyqb11by] {
-    display:grid;
-    align-items:center;
-    align-content:start;
+    display: grid;
+    align-items: center;
+    align-content: start;
     grid-template-columns: repeat(4,1fr);
-    gap:2rem;
-    width:fit-content;
-    height:600px;
-    margin-bottom:2rem;
+    gap: 3rem;
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 2rem;
+
 }
 
 .cuadro-libro[b-q5pyqb11by] {
     display: grid;
-    width: 200px;
+    width: fit-content;
     height: 600px;
     align-self: start;
-    padding: 2px;
-    
-
 }
 
 .cuadro-libro img[b-q5pyqb11by]{
@@ -531,9 +529,16 @@
     text-wrap:balance;
 }
 
-.precio-catalogo[b-q5pyqb11by]{
-    text-align:start;
-    text-wrap:balance;
+.autor-catalogo[b-q5pyqb11by] {
+    text-align: start;
+    font-size: 16px;
+    text-wrap: balance;
+}
+
+.precio-catalogo[b-q5pyqb11by] {
+    text-align: start;
+    align-self:end;
+    text-wrap: balance;
 }
 /* /Components/ContactoComponent.razor.rz.scp.css */
 .contacto[b-8mn0lwk0x1] {
