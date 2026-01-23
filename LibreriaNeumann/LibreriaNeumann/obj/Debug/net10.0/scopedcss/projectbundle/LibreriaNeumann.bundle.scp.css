@@ -1,7 +1,7 @@
 /* /Components/CambioDatosComponent.razor.rz.scp.css */
 .seccion-cambiar-datos[b-9c4epm92vh] {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-direction:column;
     width: 100%;
     align-items: start;
     padding: 3em 3rem;
@@ -17,12 +17,35 @@
 }
 
 .datos-seccion-inputs[b-9c4epm92vh]{
-    gap:1rem;
-    grid-column:1/-1;
+    display:flex;
+    flex-direction:row; 
+    gap:2rem;
     justify-content:space-between;
 }
 
+.input-cambiar-datos[b-9c4epm92vh]{
+    width:400px;
+}
 
+.input-telefono[b-9c4epm92vh], .input-altura[b-9c4epm92vh]{
+    width:200px;
+}
+.guardar-datos-boton[b-9c4epm92vh] {
+    grid-column: 2;
+    background-color: rgb(244, 152, 117);
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: white;
+    border: 2px solid rgb(244, 152, 117);
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.datos-personales[b-9c4epm92vh], .datos-contacto[b-9c4epm92vh], .datos-ubicacion[b-9c4epm92vh]{
+  
+}
 /* /Components/CarritoComponent.razor.rz.scp.css */
 
 

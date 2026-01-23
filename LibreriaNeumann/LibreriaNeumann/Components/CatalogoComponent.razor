@@ -1,12 +1,11 @@
 ﻿@page "/catalogo"
-
 @rendermode InteractiveServer
 
 <div class="catalogo">
 
     <h1 class="titulo-catalogo">Nuestros libros</h1>
 
-    <button class="boton-filtrar" @onclick="() => PressButton(botonPresionado)">
+    <button class="boton-filtrar" @onclick="PressButton">
             <span>FILTRAR</span>
             <i class="bi bi-arrow-down"></i>
         </button>
@@ -83,6 +82,7 @@
                         <input placeholder="mínimo" type="number"/>
                         <span>-</span>
                         <input placeholder="maximo"/>
+                        <i class="bi bi-chevron-right"></i>
                     </div>
                 }
 
@@ -111,6 +111,7 @@
                     </button>
                     <div class="ingreso-autor">
                     <input placeholder="nombre autor" />
+                    <i class="bi bi-chevron-right"></i>
                     </div>
                 }
 
@@ -225,10 +226,22 @@
     private bool botonAutor;
     private bool botonFecha;
 
-    private void PressButton(bool buttom)
+    private void PressButton()
     {
-        buttom = !buttom;
+        botonPresionado = !botonPresionado;
     }
 
+    private FiltrosCatalogo filtros = new();
 
+    private void ToggleCategory(string categoria)
+    {
+        if (filtros.Categorias.Contains(categoria))
+        {
+            filtros.Categorias.Remove(categoria);
+        }
+        else
+        {
+            filtros.Categorias.Add(categoria);
+        }
+    }
 }
