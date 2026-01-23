@@ -26,8 +26,12 @@
     width:400px;
 }
 
-.input-telefono[b-9c4epm92vh], .input-altura[b-9c4epm92vh]{
-    width:200px;
+.input-telefono[b-9c4epm92vh], .input-altura[b-9c4epm92vh] {
+    width: 200px;
+    height: 30px;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    color: var(--bs-heading-color);
 }
 .guardar-datos-boton[b-9c4epm92vh] {
     grid-column: 2;
@@ -42,6 +46,42 @@
     font-family: sans-serif;
 }
 
-.datos-personales[b-9c4epm92vh], .datos-contacto[b-9c4epm92vh], .datos-ubicacion[b-9c4epm92vh]{
-  
+.datos-personales[b-9c4epm92vh], .datos-contacto[b-9c4epm92vh], .datos-ubicacion[b-9c4epm92vh] {
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+}
+
+/*Movil design*/
+@media (max-width:580px){
+
+    .seccion-cambiar-datos[b-9c4epm92vh] {
+        display: flex;
+        flex-direction:column;
+        width: 100%;
+        align-content: start;
+        padding: 1em 1rem;
+        gap: 1rem;
+    }
+
+   .datos-seccion-inputs[b-9c4epm92vh]{
+       display:flex;
+       width:100%;
+       flex-direction:column;
+   }
+
+    .input-cambiar-datos[b-9c4epm92vh] {
+        width: 100%;
+        border: 1px solid rgb(128, 128, 128);
+    }
+
+    .input-altura[b-9c4epm92vh], .input-telefono[b-9c4epm92vh] {
+        border: 1px solid rgb(128, 128, 128);
+    }
+    
+   .datos-personales[b-9c4epm92vh], .datos-contacto[b-9c4epm92vh], .datos-ubicacion[b-9c4epm92vh]{
+       height:fit-content;
+       gap:4px;
+   }
+   
 }

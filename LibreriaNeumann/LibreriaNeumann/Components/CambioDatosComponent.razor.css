@@ -26,8 +26,12 @@
     width:400px;
 }
 
-.input-telefono, .input-altura{
-    width:200px;
+.input-telefono, .input-altura {
+    width: 200px;
+    height: 30px;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    color: var(--bs-heading-color);
 }
 .guardar-datos-boton {
     grid-column: 2;
@@ -42,6 +46,42 @@
     font-family: sans-serif;
 }
 
-.datos-personales, .datos-contacto, .datos-ubicacion{
-  
+.datos-personales, .datos-contacto, .datos-ubicacion {
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+}
+
+/*Movil design*/
+@media (max-width:580px){
+
+    .seccion-cambiar-datos {
+        display: flex;
+        flex-direction:column;
+        width: 100%;
+        align-content: start;
+        padding: 1em 1rem;
+        gap: 1rem;
+    }
+
+   .datos-seccion-inputs{
+       display:flex;
+       width:100%;
+       flex-direction:column;
+   }
+
+    .input-cambiar-datos {
+        width: 100%;
+        border: 1px solid rgb(128, 128, 128);
+    }
+
+    .input-altura, .input-telefono {
+        border: 1px solid rgb(128, 128, 128);
+    }
+    
+   .datos-personales, .datos-contacto, .datos-ubicacion{
+       height:fit-content;
+       gap:4px;
+   }
+   
 }
