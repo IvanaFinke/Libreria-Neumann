@@ -1,5 +1,5 @@
-﻿window.initMap = () => {
-    const map = L.map('map').setView([-34.921819, -57.963100], 15);
+﻿window.initMap = (idMap,latitud,longitud) => {
+    const map = L.map(idMap).setView([-34.921819, -57.963100], 15);
 
     document.body.style.overflowY = "auto";
     document.documentElement.style.overflowY = "auto";
@@ -8,7 +8,7 @@
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    L.marker([-34.921819, -57.963100])
+    L.marker([latitud, longitud])
         .addTo(map)
         .bindPopup(`
             <div style="text-align:center">

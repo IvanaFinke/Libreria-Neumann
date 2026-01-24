@@ -190,6 +190,12 @@
         border-style:solid;
 }
 
+.mapa-efectivo{
+    display:flex;
+    width:350px;
+    height:200px;
+}
+
 /*Dispositivos celulares*/
 @media (max-width:570px){
     .boton-volver-carrito {
@@ -243,6 +249,12 @@
 
     .cuadro-carrito{
         display:none;
+    }
+
+    .mapa-efectivo {
+        display: flex;
+        width: 100%;
+        height: 150px;
     }
 
 }

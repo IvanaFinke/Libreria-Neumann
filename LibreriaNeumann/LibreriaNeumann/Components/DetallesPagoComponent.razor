@@ -1,6 +1,8 @@
 ﻿@rendermode InteractiveServer
 @inject NavigationManager NavigatorManager
 
+@inject IJSRuntime JS
+
 @page "/detalles-de-pago"
 
 <div class="detalles-pago">
@@ -84,7 +86,8 @@
                         </strong>
                     </h5>
 
-                   <!--ACA DEBERIA DE IR EL MAPA-->
+                   <div id="mapa-pago" class="mapa-efectivo"></div>
+
                     <h5 class="pt-2">Nuestros horarios de atencion:</h5>
                     <h5>
                         <strong>
@@ -198,18 +201,27 @@
     public void SeleccionarMedio(string medio)
     {
         /*Nota: esta funcion lo que hace es que primero pones la variable a la que le queres cambiar el valor y el '=' y al
-         * lado la pregunta, en este caso si el medioSeleccionado previamente es igual al que selecciono el usuario, se va a deseleccionar,
+        * lado la pregunta, en este caso si el medioSeleccionado previamente es igual al que selecciono el usuario, se va a deseleccionar,
          * sino se lo asigna. OPERADOR TERNARIO
          */
-        medioSeleccionado = medioSeleccionado == medio
-        ? medioSeleccionado = ""
-        : medioSeleccionado = medio;
+    medioSeleccionado = medioSeleccionado == medio
+    ? medioSeleccionado = ""
+    : medioSeleccionado = medio;
     } 
 
 
     private void ToCarrito()
     {
         NavigatorManager.NavigateTo("/mi-carrito");
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(medioSeleccionado == "efectivo")
+        {
+            await JS.InvokeVoidAsync("initMap", "mapa-pago", -34.921819, -57.963100);
+
+        }
     }
 
 }
