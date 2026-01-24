@@ -61,9 +61,10 @@
             <button class="cuadro-pago-efectivo @(medioSeleccionado == "efectivo" ? "activo" : "")" 
                  @onclick='() => SeleccionarMedio("efectivo")'>
 
-                <img src="https://i.postimg.cc/fy10kbHT/billete-logo.png" />
-
-                <h5 class="frase-efectivo-local">Efectivo en nuestro local</h5>
+                 <div class="icono-frase">
+                    <img src="https://i.postimg.cc/fy10kbHT/billete-logo.png" />
+                    <h5 class="frase-efectivo-local">Efectivo en nuestro local</h5>
+                 </div>
                 <i class="bi bi-caret-right-fill"></i>
             </button>
 
@@ -96,22 +97,16 @@
                         Al solicitar "comprar" se enviará un comprobante de solicitud de compra a su mail.
                         Por favor, dirijase a nuestro local dentro de 48 hs para continuar el proceso de compra de su pedido.
                     </h5>
-
-                    <button class="boton-cambiar-medio-pago"
-                    @onclick = "() => medioSeleccionado = null">
-                        <i class="bi bi-caret-left-fill"></i>
-                        <h5 class="frase-cambiar-medio-pago">Cambiar medio de pago</h5>
-                    </button>
                 </div>
             }
             </div>
 
             <button class="cuadro-pago-tarjeta @(medioSeleccionado == "tarjeta" ? "activo" : "")"
              @onclick =' () => SeleccionarMedio("tarjeta")'>
-
-            <img src="https://i.postimg.cc/MZ4SBs7V/tarjeta-logo.png" />
-
+                <div class="icono-frase">
+                <img src="https://i.postimg.cc/MZ4SBs7V/tarjeta-logo.png" />
                 <h5 class="frase-tarjeta">Pago con tarjetas</h5>
+                </div>
                  <i class="bi bi-caret-right-fill"></i>
             </button>
 
@@ -133,23 +128,16 @@
                         Al solicitar "comprar" se enviará un comprobante de compra a su mail.
                         Por favor, dirijase a correo para revisar los detalles de su pedido.
                     </h5>
-
-                    <button class="boton-cambiar-medio-pago"
-                    @onclick = "() => medioSeleccionado = null">
-
-                        <i class="bi bi-caret-left-fill"></i>
-                        <h5 class="frase-cambiar-medio-pago">Cambiar medio de pago</h5>
-                    </button>
                 </div>
             }
                 
 
             <button class="cuadro-pago-transferencia @(medioSeleccionado == "transferencia" ? "activo" : "")"
                  @onclick=' () => SeleccionarMedio("transferencia")'>
-
-            <img src="https://i.postimg.cc/CK6rRxtW/icono-transferencia.png" />
-
+                 <div class="icono-frase">
+                <img src="https://i.postimg.cc/CK6rRxtW/icono-transferencia.png" />
                 <h5 class="frase-transferencia">Transferencia bancaria</h5>
+                 </div>
                 <i class="bi bi-caret-right-fill"></i>
             </button>
 
@@ -191,13 +179,6 @@
                         Tenga en cuenta que la confirmación de comprar puede demorar un tiempo. Cuando su pago sea confirmado se le enviará confirmación
                         de pago y su numero de compra.
                     </h5>
-
-                    <button class="boton-cambiar-medio-pago"
-                    @onclick = "() => medioSeleccionado = null">
-
-                        <i class="bi bi-caret-left-fill"></i>
-                        <h5 class="frase-cambiar-medio-pago">Cambiar medio de pago</h5>
-                    </button>
                 </div>
             }
                

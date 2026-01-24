@@ -81,31 +81,32 @@
     height: 30px;
 }
 
-.cuadro-pago-efectivo[b-q6ignot1cw] {
+.cuadro-pago-efectivo[b-q6ignot1cw], .cuadro-pago-tarjeta[b-q6ignot1cw], .cuadro-pago-transferencia[b-q6ignot1cw] {
     width: 500px;
     height: 50px;
     border-radius: 8px;
     border-color: rgb(167, 167, 167, 0.4);
     border-style: solid;
     display: flex;
+    flex-direction:row;
     align-items: center;
-    padding-left: 10px;
-    align-content: space-evenly;
-    gap: 20px;
+    justify-content: space-between;
 }
 
-.frase-efectivo-local[b-q6ignot1cw]{
-  align-self:center;
-  padding-top:8px;
+.icono-frase[b-q6ignot1cw] {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items:center;
 }
 
-.clase-icono-flecha[b-q6ignot1cw]{
-    align-self:center;
-    font-size:26px;
-    align-items:start;
-    padding-left:9rem;
-    background:none;
-    border-style:none;
+.frase-transferencia[b-q6ignot1cw], .frase-efectivo-local[b-q6ignot1cw],.frase-tarjeta[b-q6ignot1cw]{
+    padding-top: 6px;
+}
+
+.bi-caret-right-fill[b-q6ignot1cw] {
+    font-size: 24px;
+    justify-self: end;
 }
 
 .cuando-clickea-billete[b-q6ignot1cw] {
@@ -121,61 +122,9 @@
     gap: 2px;
 }
 
-.direccionador-a-google-maps img[b-q6ignot1cw] {
-    width: 450px;
-    height: 300px;
-    padding: 2px;
-}
-
-.boton-cambiar-medio-pago[b-q6ignot1cw] {
-    display: flex;
-    justify-content: space-between;
-    justify-items: center;
-    border-style: solid;
-    border-color: rgb(167, 167, 167, 0.4);
-    width:250px;
-    padding: 0px;
-
-}
-
-.boton-cambiar-medio-pago i[b-q6ignot1cw]{
-    padding-top:3px;
-    font-size:20px;
-}
-
-.frase-cambiar-medio-pago[b-q6ignot1cw]{
-    padding-right:30rem;
-    display:flex;
-    text-wrap:nowrap;
-    text-align:center;
-    padding-top:6px;
-}
-
 .cuadro-pago-tarjeta img[b-q6ignot1cw]{
     height:46px;
     width:44px;
-}
-
-.cuadro-pago-tarjeta[b-q6ignot1cw] {
-    width: 500px;
-    height: 50px;
-    border-radius: 8px;
-    border-color: rgb(167, 167, 167, 0.4);
-    border-style: solid;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    align-content: space-evenly;
-    gap: 20px;
-}
-
-.frase-tarjeta[b-q6ignot1cw] {
-    align-self: center;
-    padding-top: 8px;
-}
-
-.cuadro-pago-tarjeta >.clase-icono-flecha[b-q6ignot1cw] {
-    padding-left:12.6rem;
 }
 
 .cuando-clickea-tarjetas[b-q6ignot1cw] {
@@ -191,27 +140,9 @@
     gap:2px;
 }
 
-.cuadro-pago-transferencia[b-q6ignot1cw] {
-    width: 500px;
-    height: 50px;
-    border-radius: 8px;
-    border-color: rgb(167, 167, 167, 0.4);
-    border-style: solid;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    align-content: space-evenly;
-    gap: 20px;
-    
-}
-
 .cuadro-pago-transferencia img[b-q6ignot1cw]{
     height:32px;
     width:42px;
-}
-
-.cuadro-pago-transferencia > .clase-icono-flecha[b-q6ignot1cw] {
-    padding-left: 9.7rem;
 }
 
 .cuando-clickea-transferencia[b-q6ignot1cw] {
@@ -231,10 +162,6 @@
     background-color: white;
     cursor: pointer;
     transition: background-color .2s ease;
-}
-.frase-transferencia[b-q6ignot1cw] {
-    align-self: center;
-    padding-top: 8px;
 }
 
 .activo[b-q6ignot1cw] {

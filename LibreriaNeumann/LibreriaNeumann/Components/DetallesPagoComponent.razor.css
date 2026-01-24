@@ -81,31 +81,32 @@
     height: 30px;
 }
 
-.cuadro-pago-efectivo {
+.cuadro-pago-efectivo, .cuadro-pago-tarjeta, .cuadro-pago-transferencia {
     width: 500px;
     height: 50px;
     border-radius: 8px;
     border-color: rgb(167, 167, 167, 0.4);
     border-style: solid;
     display: flex;
+    flex-direction:row;
     align-items: center;
-    padding-left: 10px;
-    align-content: space-evenly;
-    gap: 20px;
+    justify-content: space-between;
 }
 
-.frase-efectivo-local{
-  align-self:center;
-  padding-top:8px;
+.icono-frase {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items:center;
 }
 
-.clase-icono-flecha{
-    align-self:center;
-    font-size:26px;
-    align-items:start;
-    padding-left:9rem;
-    background:none;
-    border-style:none;
+.frase-transferencia, .frase-efectivo-local,.frase-tarjeta{
+    padding-top: 6px;
+}
+
+.bi-caret-right-fill {
+    font-size: 24px;
+    justify-self: end;
 }
 
 .cuando-clickea-billete {
@@ -121,61 +122,9 @@
     gap: 2px;
 }
 
-.direccionador-a-google-maps img {
-    width: 450px;
-    height: 300px;
-    padding: 2px;
-}
-
-.boton-cambiar-medio-pago {
-    display: flex;
-    justify-content: space-between;
-    justify-items: center;
-    border-style: solid;
-    border-color: rgb(167, 167, 167, 0.4);
-    width:250px;
-    padding: 0px;
-
-}
-
-.boton-cambiar-medio-pago i{
-    padding-top:3px;
-    font-size:20px;
-}
-
-.frase-cambiar-medio-pago{
-    padding-right:30rem;
-    display:flex;
-    text-wrap:nowrap;
-    text-align:center;
-    padding-top:6px;
-}
-
 .cuadro-pago-tarjeta img{
     height:46px;
     width:44px;
-}
-
-.cuadro-pago-tarjeta {
-    width: 500px;
-    height: 50px;
-    border-radius: 8px;
-    border-color: rgb(167, 167, 167, 0.4);
-    border-style: solid;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    align-content: space-evenly;
-    gap: 20px;
-}
-
-.frase-tarjeta {
-    align-self: center;
-    padding-top: 8px;
-}
-
-.cuadro-pago-tarjeta >.clase-icono-flecha {
-    padding-left:12.6rem;
 }
 
 .cuando-clickea-tarjetas {
@@ -191,27 +140,9 @@
     gap:2px;
 }
 
-.cuadro-pago-transferencia {
-    width: 500px;
-    height: 50px;
-    border-radius: 8px;
-    border-color: rgb(167, 167, 167, 0.4);
-    border-style: solid;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    align-content: space-evenly;
-    gap: 20px;
-    
-}
-
 .cuadro-pago-transferencia img{
     height:32px;
     width:42px;
-}
-
-.cuadro-pago-transferencia > .clase-icono-flecha {
-    padding-left: 9.7rem;
 }
 
 .cuando-clickea-transferencia {
@@ -231,10 +162,6 @@
     background-color: white;
     cursor: pointer;
     transition: background-color .2s ease;
-}
-.frase-transferencia {
-    align-self: center;
-    padding-top: 8px;
 }
 
 .activo {
