@@ -2,7 +2,9 @@
 
 <!-- Componente para el diseño del carrito en PC -->
 
-<div class="carrito-full-screen">
+@if(MostrarCarritoPC)
+{
+    <div class="carrito-full-screen">
 
         <h1 class="titulo-carrito">Mi carrito</h1>
         <div class="lista-libros-carrito">
@@ -71,20 +73,92 @@
 
             <br />
 
-
-            @if (MostrarBotonComprar)
-            {
-                <button class="boton-comprar">
-                    <span><strong>COMPRAR</strong></span>
-                </button>
-            }
-
+         <button class="boton-comprar">
+          <span><strong>COMPRAR</strong></span>
+          </button>
         </div>
 
-</div>
+    </div>
+}
+
+
+@if (MostrarCarritoDetallesPago)
+{
+    <div class="carrito-detalles-pago">
+        <div class="carrito">
+
+            <h3 class="titulo-carrito">Mi carrito</h3>
+            <div class="lista-libros-carrito">
+
+                <div class="datos-libro-carrito">
+                    <img src="https://i.postimg.cc/9MJy1Jrj/fantasm-ope.jpg" />
+
+                    <div class="titulo-precio">
+                        <h4 class="titulo-libro-carrito">EL FANTASMA DE LA OPERA</h4>
+                        <h4 class="precio-carrito">$20.0000</h4>
+                    </div>
+
+                    <button class="boton-basura-carrito">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </div>
+
+                <div class="datos-libro-carrito">
+                    <img src="https://i.postimg.cc/sX8xLs2W/cronicas-muerte-anun.webp" />
+
+                    <div class="titulo-precio">
+                        <h4 class="titulo-libro-carrito">CRONICAS DE UNA MUERTE ANUNCIADA</h4>
+                        <h4 class="precio-carrito">$34.000</h4>
+                    </div>
+
+                    <button class="boton-basura-carrito">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </div>
+
+                <div class="datos-libro-carrito">
+                    <img src="https://i.postimg.cc/QtVJ2QpS/de-cada-quinientos.webp" />
+
+                    <div class="titulo-precio">
+                        <h4 class="titulo-libro-carrito">DE CADA QUINIENTOS UN ALMA</h4>
+                        <h4 class="precio-carrito">$44.000</h4>
+                    </div>
+
+                    <button class="boton-basura-carrito">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </div>
+
+                <div class="datos-libro-carrito">
+                    <img src="https://i.postimg.cc/hGYd7Hdx/doctor-jekyll.webp" />
+
+                    <div class="titulo-precio">
+                        <h4 class="titulo-libro-carrito">EL DR. JEKYLL Y MR. HYDE</h4>
+                        <h4 class="precio-carrito">$26.000</h4>
+                    </div>
+
+                    <button class="boton-basura-carrito">
+                        <i class="bi bi-trash"></i>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="seccion-compra-botones">
+
+                <div class="total-clase">
+                    <h4 class="frase-total">Total:</h4>
+                    <h4 class="frase-precio-total">$124.000</h4>
+                </div>
+
+                <br />
+            </div>
+        </div>
+    </div>
+}
    
 
 @code{
-    [Parameter] public bool MostrarBotonComprar { get; set; } = true;
-
+    [Parameter] public bool MostrarCarritoDetallesPago { get; set; } = false;
+    [Parameter] public bool MostrarCarritoPC { get; set; } = true;
 }
