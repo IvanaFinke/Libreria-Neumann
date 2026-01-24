@@ -10,7 +10,7 @@
     </button>
 
     <div class="columna-1">
-        <h2 class="titulo-detalles-pago">Detalles de pago</h2>
+        <h1 class="titulo-detalles-pago">Detalles de pago</h1>
         <h5 class="detalles-contacto">DETALLES DEL CONTACTO </h5>
 
         <div class="mail-detpago">
@@ -21,44 +21,32 @@
         <div class="ingresos">
             <div class="ingreso-telefono">
                 <h4>Ingrese su teléfono</h4>
-                <div class="clase-input-telefono">
-                    <input type="text" class="ingreso" />
-                </div>
+                <input type="text" class="ingreso" />
             </div>
 
             <div class="ingreso-calle">
                 <h4>Ingrese su calle</h4>
-                <div class="clase-input-calle">
-                    <input type="text" class="ingreso" />
-                </div>
+                 <input type="text" class="ingreso" />
             </div>
 
             <div class="ingreso-altura">
                 <h4>Ingrese su altura de calle</h4>
-                <div class="clase-input-altura">
-                    <input type="number" class="ingreso" />
-                </div>
+                <input type="number" class="ingreso" />
             </div>
 
             <div class="ingreso-contraseña">
                 <h4>Ingrese su contraseña</h4>
-                <div class="clase-input-contraseña">
-                    <input type="password" class="ingreso" />
-                </div>
+                <input type="password" class="ingreso" />
             </div>
 
             <div class="ingreso-localidad">
                 <h4>Ingrese su localidad</h4>
-                <div class="clase-input-localidad">
-                    <input type="text" class="ingreso" />
-                </div>
+                <input type="text" class="ingreso" />
             </div>
 
             <div class="ingreso-provincia">
                 <h4>Ingrese su provincia</h4>
-                <div class="clase-input-provincia">
-                    <input type="text" class="ingreso" />
-                </div>
+                <input type="text" class="ingreso" />
             </div>
         </div>
     </div>
@@ -95,7 +83,7 @@
                         </strong>
                     </h5>
 
-                    <div id="map" class="direccionador-a-google-maps" href="#"><img src="https://i.postimg.cc/bN8ghyGG/image.png"></div>
+                   <!--ACA DEBERIA DE IR EL MAPA-->
                     <h5 class="pt-2">Nuestros horarios de atencion:</h5>
                     <h5>
                         <strong>
@@ -228,8 +216,15 @@
 
     public void SeleccionarMedio(string medio)
     {
-        medioSeleccionado = medio;
-    }
+        /*Nota: esta funcion lo que hace es que primero pones la variable a la que le queres cambiar el valor y el '=' y al
+         * lado la pregunta, en este caso si el medioSeleccionado previamente es igual al que selecciono el usuario, se va a deseleccionar,
+         * sino se lo asigna. OPERADOR TERNARIO
+         */
+        medioSeleccionado = medioSeleccionado == medio
+        ? medioSeleccionado = ""
+        : medioSeleccionado = medio;
+    } 
+
 
     private void ToCarrito()
     {
