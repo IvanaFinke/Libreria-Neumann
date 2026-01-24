@@ -1,4 +1,8 @@
-﻿.detalles-pago {
+﻿.boton-volver-carrito {
+    display: none;
+}
+
+.detalles-pago {
     display: grid;
     grid-template-columns: 1fr auto;
     width: 100%;
@@ -257,4 +261,45 @@
         border-color: rgb(128, 128, 128);
         border-width: 4px;
         border-style:solid;
+}
+
+/*Dispositivos celulares*/
+@media (max-width:570px){
+    .boton-volver-carrito {
+        display: flex;
+        width: 180px;
+        height: 34px;
+        color: white;
+        background-color: rgb(244, 152, 117);
+        border-radius: 15px;
+        font-size: 18px;
+        color: white;
+        border-color: rgb(244, 152, 117);
+        border-style: solid;
+        font-weight: 600;
+        font-family: sans-serif;
+        text-align:center;
+    }
+
+    .boton-volver-carrito i{
+        color:black;
+    }
+
+    .detalles-pago {
+        display: flex;
+        flex-direction:column;
+        width: 100%;
+        align-items: start;
+        padding: 3em 3rem;
+        padding-top: 1rem;
+        gap: 2rem;
+    }
+
+    .ingreso, .medios-pago-seccion, .seccion-medios-pago, .cuadro-pago-efectivo, .cuadro-pago-tarjeta, .cuadro-pago-transferencia{
+        width:100%;
+    }
+
+    .cuadro-carrito{
+        display:none;
+    }
 }
