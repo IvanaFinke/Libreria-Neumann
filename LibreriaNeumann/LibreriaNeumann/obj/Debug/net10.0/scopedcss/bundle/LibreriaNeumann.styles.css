@@ -54,7 +54,7 @@
 }
 
 /*Movil design*/
-@media (max-width:580px){
+@media (max-width:570px){
 
     .seccion-cambiar-datos[b-9c4epm92vh] {
         display: flex;
@@ -84,7 +84,58 @@
        height:fit-content;
        gap:4px;
    }
-   
+}
+
+/*Diseño Tablets mini/air*/
+@media (min-width:571px) and (max-width:1025px)
+{
+    .seccion-cambiar-datos[b-9c4epm92vh] {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-content: start;
+        padding: 2em 1rem;
+        gap: 1rem;
+    }
+
+    .datos-seccion-inputs[b-9c4epm92vh] {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .input-cambiar-datos[b-9c4epm92vh] {
+        width: 70%;
+        height:2rem;
+        font-size:22px;
+        border: 1px solid rgb(128, 128, 128);
+    }
+
+    .input-altura[b-9c4epm92vh], .input-telefono[b-9c4epm92vh] {
+        border: 1px solid rgb(128, 128, 128);
+        height: 2rem;
+        font-size: 22px;
+        width:30%;
+    }
+
+    .datos-personales[b-9c4epm92vh], .datos-contacto[b-9c4epm92vh], .datos-ubicacion[b-9c4epm92vh] {
+        height: fit-content;
+        gap: 4px;
+    }
+
+    h5[b-9c4epm92vh], h4[b-9c4epm92vh]{
+        font-size:24px;
+    }
+
+    .frase-cambio-datos-usuario[b-9c4epm92vh]{
+        font-size:32px;
+    }
+
+    .guardar-datos-boton[b-9c4epm92vh] {
+        width:210px;
+        height:46px;
+        font-size:24px;
+    }
 }
 /* /Components/CarritoComponent.razor.rz.scp.css */
 

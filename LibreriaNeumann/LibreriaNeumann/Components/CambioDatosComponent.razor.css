@@ -53,7 +53,7 @@
 }
 
 /*Movil design*/
-@media (max-width:580px){
+@media (max-width:570px){
 
     .seccion-cambiar-datos {
         display: flex;
@@ -83,5 +83,56 @@
        height:fit-content;
        gap:4px;
    }
-   
+}
+
+/*Diseño Tablets mini/air*/
+@media (min-width:571px) and (max-width:1025px)
+{
+    .seccion-cambiar-datos {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-content: start;
+        padding: 2em 1rem;
+        gap: 1rem;
+    }
+
+    .datos-seccion-inputs {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .input-cambiar-datos {
+        width: 70%;
+        height:2rem;
+        font-size:22px;
+        border: 1px solid rgb(128, 128, 128);
+    }
+
+    .input-altura, .input-telefono {
+        border: 1px solid rgb(128, 128, 128);
+        height: 2rem;
+        font-size: 22px;
+        width:30%;
+    }
+
+    .datos-personales, .datos-contacto, .datos-ubicacion {
+        height: fit-content;
+        gap: 4px;
+    }
+
+    h5, h4{
+        font-size:24px;
+    }
+
+    .frase-cambio-datos-usuario{
+        font-size:32px;
+    }
+
+    .guardar-datos-boton {
+        width:210px;
+        height:46px;
+        font-size:24px;
+    }
 }
