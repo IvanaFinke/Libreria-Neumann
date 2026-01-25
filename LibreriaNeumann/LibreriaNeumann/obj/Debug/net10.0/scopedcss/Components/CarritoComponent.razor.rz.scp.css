@@ -307,7 +307,7 @@
     .lista-libros-carrito[b-8g0gqjtdyx]{
         display:flex;
         flex-direction:column;
-        gap:10px;
+        gap:4px;
     }
 
     .titulo-libro-carrito[b-8g0gqjtdyx], .precio-carrito[b-8g0gqjtdyx] {
@@ -358,9 +358,9 @@
         grid-template-columns: auto 1fr auto;
         align-items: center;
         align-content: center;
-        margin-top: 20px;
         width: 100%;
         height:110px;
+        gap:4px;
     }
 
     .titulo-libro-carrito[b-8g0gqjtdyx], .precio-carrito[b-8g0gqjtdyx] {
@@ -371,10 +371,6 @@
     .titulo-precio[b-8g0gqjtdyx] {
         display: flex;
         justify-content:space-between;
-    }
-
-    .lista-libros-carrito[b-8g0gqjtdyx] {
-        gap: 4px;
     }
 
     .bi-trash[b-8g0gqjtdyx] {
@@ -500,5 +496,105 @@
     .boton-comprar[b-8g0gqjtdyx] {
         font-size: 28px;
         height: fit-content;
+    }
+
+
+    /*Carrito para seccion detañlles de pago*/
+    .carrito-detalles-pago[b-8g0gqjtdyx] {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        padding: 1rem 1rem;
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        gap: 4px;
+    }
+
+    .titulo-carrito[b-8g0gqjtdyx] {
+        align-self: start;
+        font-family: serif;
+        font-weight: 500;
+    }
+
+    .datos-libro-carrito img[b-8g0gqjtdyx] {
+        width: 60px;
+        height: 86px;
+        border-radius: 10px;
+        background: none;
+        margin-left: 12px;
+    }
+
+    .datos-libro-carrito[b-8g0gqjtdyx] {
+        border-color: rgb(244, 152, 117);
+        border-width: 2px;
+        border-style: solid;
+        background: rgb(212, 212, 212, 0.6);
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        height: 110px;
+        gap: 4px;
+    }
+
+    .titulo-libro-carrito[b-8g0gqjtdyx], .precio-carrito[b-8g0gqjtdyx] {
+        font-size: 16px;
+        text-wrap: pretty;
+    }
+
+    .titulo-precio[b-8g0gqjtdyx] {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bi-trash[b-8g0gqjtdyx] {
+        display: flex;
+        justify-items: end;
+        margin-bottom: 4rem;
+        padding: 4px;
+        font-size: 20px;
+    }
+
+    .seccion-compra-botones[b-8g0gqjtdyx] {
+        border-color: rgb(244, 152, 117);
+        border-width: 2px;
+        border-style: solid;
+        margin-top: 2px;
+        width: 100%;
+        height: 70px;
+    }
+
+    .frase-total[b-8g0gqjtdyx], .frase-precio-total[b-8g0gqjtdyx] {
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+    .total-clase[b-8g0gqjtdyx] {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 20px;
+    }
+
+    .boton-comprar[b-8g0gqjtdyx] {
+        background-color: rgb(244, 152, 117);
+        color: white;
+        border-style: solid;
+        border-color: rgb(244, 152, 117);
+        font-weight: 500;
+        width: 100%;
+        align-content: center;
+    }
+
+        .boton-comprar:hover[b-8g0gqjtdyx] {
+            border-color: rgb(128, 128, 128);
+            border-width: 2px;
+            background-color: rgb(245, 128, 84);
+        }
+
+    .boton-basura-carrito[b-8g0gqjtdyx] {
+        border: none;
+        background: none;
     }
 }
