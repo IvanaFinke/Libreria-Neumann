@@ -88,3 +88,82 @@
     gap: 10px;
 }
 
+/*Diseño movile*/
+@media (max-width:580px){
+    .libro-seccion[b-1l9de3t9q8] {
+        display: flex;
+        flex-direction:column;
+        width: 100%;
+        align-items: center;
+        align-content:center;
+        padding: 2rem 2rem;
+    }
+
+    .libro-seccion img[b-1l9de3t9q8] {
+            display: flex;
+            justify-items: start;
+            width: min(400px,90%);
+            height: max(450px, 500px);
+    }
+
+    .titulo-autor-comprar[b-1l9de3t9q8] {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 0;
+        padding-right: 0;
+        margin-top: 1rem;
+        width:100%;
+    }
+
+    .titulo-libro-seccion[b-1l9de3t9q8]{
+        font-size:26px;
+        align-self:start;
+    }
+
+    h4[b-1l9de3t9q8], h5[b-1l9de3t9q8]{
+        font-size:18px;
+        align-self:start;
+    }
+
+    .precio-libro-seccion[b-1l9de3t9q8], .precio-cuotas-libro-seccion[b-1l9de3t9q8], .frase-descripcion[b-1l9de3t9q8]{
+        font-size:20px; 
+    }
+
+    .cantidad-carrito[b-1l9de3t9q8]{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+    }
+
+    .cuadro-cantidad[b-1l9de3t9q8]{
+        display:flex;
+        flex-direction:row;
+        align-self:center;
+        width:100%;
+        height:44px;
+        font-size:22px;
+    }
+
+    .bi-caret-left-fill[b-1l9de3t9q8], .bi-caret-right-fill[b-1l9de3t9q8]{
+        font-size:22px;
+    }
+
+    .agregar-carrito[b-1l9de3t9q8] {
+        display: flex;
+        flex-direction: column;
+        justify-self: end;
+        justify-content:center;
+        width: 100%;
+        height:48px;
+        font-size:20px;
+        font-weight:500;
+        margin-top:0;
+    }
+
+    .descripcion-parrafo[b-1l9de3t9q8]{
+        font-size:18px;
+    }
+}
