@@ -284,23 +284,20 @@
     }
 
     .detalles-pago[b-q6ignot1cw] {
-        display: grid;
-        grid-template-rows: auto 1fr;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction:row;
         width: 100%;
         align-items: start;
         padding: 1em 1rem;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     .columna-1[b-q6ignot1cw] {
-        display: grid;
-        grid-column:1;
-        grid-row:2;
+        display: flex;
+        flex-direction:column;
         gap: 1rem;
         width:40vw;
         height:fit-content;
-        border: 2px solid black;
     }
 
     .titulo-detalles-pago[b-q6ignot1cw] {
@@ -345,26 +342,17 @@
 
     .cuadro-carrito[b-q6ignot1cw] {
         display: grid;
-        grid-column: 2;
-        grid-row:2;
         align-content: end;
         margin-top: 2rem;
         padding-top: 28px;
         width:30vw;
     }
 
-    .detalles-contacto[b-q6ignot1cw], .mail-detpago[b-q6ignot1cw] {
-        margin-top: 1rem;
-    }
-
     .medios-pago-seccion[b-q6ignot1cw] {
-        grid-row: 2;
-        grid-column: 1;
         align-self: end;
         justify-content: end;
         width: 40vw;
         height: fit-content;
-        border: 2px solid red;
     }
 
     .seccion-medios-pago[b-q6ignot1cw] {
@@ -381,5 +369,17 @@
     .cuadro-pago-efectivo img[b-q6ignot1cw] {
         width: 40px;
         height: 30px;
+    }
+
+    .boton-comprar[b-q6ignot1cw]{
+        margin:1rem 0;
+    }
+
+    .cuando-clickea-billete[b-q6ignot1cw], .cuando-clickea-tarjetas[b-q6ignot1cw], .cuando-clickea-transferencia[b-q6ignot1cw]{
+        width:50vw;
+    }
+
+    .mapa-efectivo[b-q6ignot1cw]{
+        width:100%;
     }
 }
