@@ -1,33 +1,27 @@
 ﻿<div class="inicio-sesion">
     <h1 class="inisesi-titulo">Iniciar Sesión</h1>
-
     <div class="ingresos">
-
+        <i class="bi bi-person-circle"></i>
         <div class="ingreso-mail">
             <h4>Ingrese su mail</h4>
                 <input type="email" class="ingreso" />
         </div>
 
-        <br />
-
         <div class="ingreso-contraseña">
             <h4>Ingrese su constraseña</h4>
-            <input type="password" class="ingreso" />
-            
+            <input type="password" class="ingreso" /> 
+            <NavLink class="nav-link-contraseña">
+                <span class="olvidaste-contraseña"><strong>¿Olvidaste tu contraseña?</strong></span>
+            </NavLink>
         </div>
-
-        <NavLink class="nav-link-contraseña">
-            <span class="olvidaste-contraseña"><strong>¿Olvidaste tu contraseña?</strong></span>
-        </NavLink>
 
         <div class="boton-preguntar-registrar">
             <button class="boton-inicio-sesion">Iniciar Sesión</button>
       
             <div class="preguntar-registrar">
                 <h5 class="preguntar-cuenta">¿No tenés cuenta?</h5>
-
-                <NavLink>
-                    <h5 class="frase-registrarme">Registrarme</h5>
+                <NavLink class="nav-link-registrarme">
+                    <span class="frase-registrarme">Registrarme</span>
                 </NavLink>
             </div>
         </div>

@@ -14,6 +14,12 @@
     font-weight: 500;
 }
 
+.ingresos{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
 .ingreso {
     width: 500px;
     border-radius: 8px;
@@ -39,11 +45,19 @@
         border-color: rgb(128, 128, 128);
 }
 
+.ingreso-contraseña {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: fit-content;
+}
+
 .olvidaste-contraseña {
     font-size: 14px;
     font-weight: 300;
-    margin-left:21rem;
-    margin-top:3rem;
+    display:flex;
+    justify-content:end;
+    margin-top:1rem;
 }
 
 ::deep .nav-link-contraseña {
@@ -58,15 +72,21 @@
     padding-top: 1rem;
 }
 
-::deep .frase-registrarme {
+.nav-link-registrarme {
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 21rem;
+    margin-top: 3rem;
+}
+
+::deep .frase-registrarme, .nav-link-contraseña {
     position: relative;
     display: inline-block;
     text-decoration: none;
-    color: rgb(48, 77, 255);
-
+    color: #006bb7;
 }
 
-::deep .frase-registrarme::after {
+::deep .frase-registrarme::after, .olvidaste-contraseña::after {
         content: "";
         position: absolute;
         left: 0;
@@ -81,16 +101,164 @@
         margin-top: 26px;
 }
 
-::deep .frase-registrarme:hover::after {
+::deep .frase-registrarme:hover::after, .olvidaste-contraseña:hover::after {
     transform: scaleX(1);
     transform-origin: left;
     background-color: rgb(0, 35, 248);
 }
 
-.frase-registrarme:hover {
+.frase-registrarme:hover, .olvidaste-contraseña:hover {
     color: rgb(0, 35, 248);
 }
 
 .boton-preguntar-registrar{
     padding-top:1rem;
+}
+
+.bi-person-circle {
+    display: none;
+}
+
+/*Movile design*/
+@media (max-width:580px){
+
+    .inicio-sesion {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        align-items: center;
+        padding: 3em 3rem;
+        padding-top: 1rem;
+        gap: 1.5rem;
+    }
+
+    .bi-person-circle {
+        display: none;
+    }
+
+    .ingresos{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+    }
+
+   .ingreso{
+       width:100%;
+   }
+
+   .ingreso-contraseña, .ingreso-mail{
+       display:flex;
+       flex-direction:column;
+       width:100%;
+   }
+
+    .preguntar-registrar {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .olvidaste-contraseña {
+        justify-content: start;
+        margin-top:6px;
+    }
+
+    .boton-inicio-sesion {
+        width: 200px;
+        height: 34px;
+    }
+
+    .preguntar-cuenta{
+        font-size:18px;
+    }
+
+    .nav-link-registrarme{
+        margin-top:0;
+    }
+
+    .frase-registrarme {
+        padding-bottom:0px;
+        margin-top: 0px;
+    }
+
+    .boton-preguntar-registrar{
+        justify-content:end;
+    }
+}
+
+/*Diseño Tablets mini/air*/
+@media (min-width:571px) and (max-width:860px){
+    .inicio-sesion {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        align-items: center;
+        padding: 3em 3rem;
+        gap: 2rem;
+    }
+
+    .bi-person-circle {
+        display: none;
+    }
+}
+
+/*Diseño tablets pro, grandes*/
+@media (min-width:853px) and (max-width:1024px){
+    .inicio-sesion {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        align-items: center;
+        justify-content:center;
+        padding: 3em 3rem;
+        gap: 2rem;
+    }
+
+    .inisesi-titulo{
+        display:grid;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .ingresos {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content:center;
+        gap: 2rem;
+    }
+
+    .ingreso{
+        width:300px;
+    }
+
+    .ingreso-mail, .ingreso-contraseña, .boton-preguntar-registrar{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+    }
+
+    .bi-person-circle{
+        display:grid;
+        font-size:150px;
+    }
+
+    h4{
+        font-size:28px;
+    }
+
+    .olvidaste-contraseña, .preguntar-cuenta, .preguntar-registrar {
+        font-size: 28px;
+    }
+
+    .boton-inicio-sesion{
+        width:300px;
+        height:50px;
+        font-size:28px;
+    }
+
+    .olvidaste-contraseña, .frase-registrarme{
+        margin-top:0px;
+    }
 }
