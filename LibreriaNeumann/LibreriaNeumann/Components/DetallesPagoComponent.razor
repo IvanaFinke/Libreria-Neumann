@@ -6,12 +6,12 @@
 @page "/detalles-de-pago"
 
 <div class="detalles-pago">
-    <button class="boton-volver-carrito" @onclick="ToCarrito">
-        <i class="bi bi-caret-left-fill"></i>
-        <h5 class="frase-volver-carrito">Volver al carrito</h5>
-    </button>
-
     <div class="columna-1">
+        <button class="boton-volver-carrito" @onclick="ToCarrito">
+            <i class="bi bi-caret-left-fill"></i>
+            <h5 class="frase-volver-carrito">Volver al carrito</h5>
+        </button>
+
         <h1 class="titulo-detalles-pago">Detalles de pago</h1>
         <h5 class="detalles-contacto">DETALLES DEL CONTACTO </h5>
 
@@ -51,148 +51,146 @@
                 <input type="text" class="ingreso" />
             </div>
         </div>
-    </div>
 
-    <div class="cuadro-carrito">
-        <CarritoComponent MostrarCarritoPC="false" MostrarCarritoDetallesPago="true"></CarritoComponent>
-    </div>
+        <div class="medios-pago-seccion">
+            <h5 class="frase-medios-pago">MEDIOS DE PAGO</h5>
+            <div class="seccion-medios-pago">
+                <button class="cuadro-pago-efectivo @(medioSeleccionado == "efectivo" ? "activo" : "")"
+                        @onclick='() => SeleccionarMedio("efectivo")'>
 
-    <div class="medios-pago-seccion">
-        <h5 class="frase-medios-pago">MEDIOS DE PAGO</h5>
-        <div class="seccion-medios-pago">
-            <button class="cuadro-pago-efectivo @(medioSeleccionado == "efectivo" ? "activo" : "")" 
-                 @onclick='() => SeleccionarMedio("efectivo")'>
-
-                 <div class="icono-frase">
-                    <img src="https://i.postimg.cc/fy10kbHT/billete-logo.png" />
-                    <h5 class="frase-efectivo-local">Efectivo en nuestro local</h5>
-                 </div>
-                <i class="bi bi-caret-right-fill"></i>
-            </button>
-
-            @if(medioSeleccionado == "efectivo")
-            {
-                <div class="cuando-clickea-billete">
-                    <div class="monto-a-pagar">
-                        <h5>Su monto total es:</h5>
-                        <h5><strong>$124.000</strong></h5>
+                    <div class="icono-frase">
+                        <img src="https://i.postimg.cc/fy10kbHT/billete-logo.png" />
+                        <h5 class="frase-efectivo-local">Efectivo en nuestro local</h5>
                     </div>
-                    <h5>Nuestra dirección de local es:</h5>
+                    <i class="bi bi-caret-right-fill"></i>
+                </button>
 
-                    <h5>
-                        <strong>
-                            Diagonal 73, 7526,
-                            La Plata
-                        </strong>
-                    </h5>
+                @if (medioSeleccionado == "efectivo")
+                {
+                    <div class="cuando-clickea-billete">
+                        <div class="monto-a-pagar">
+                            <h5>Su monto total es:</h5>
+                            <h5><strong>$124.000</strong></h5>
+                        </div>
+                        <h5>Nuestra dirección de local es:</h5>
 
-                   <div id="mapa-pago" class="mapa-efectivo"></div>
+                        <h5>
+                            <strong>
+                                Diagonal 73, 7526,
+                                La Plata
+                            </strong>
+                        </h5>
 
-                    <h5 class="pt-2">Nuestros horarios de atencion:</h5>
-                    <h5>
-                        <strong>
-                            Lun a Sab
-                            09:00 a 20:00
-                        </strong>
-                    </h5>
+                        <div id="mapa-pago" class="mapa-efectivo"></div>
 
-                    <h5>
-                        Al solicitar "comprar" se enviará un comprobante de solicitud de compra a su mail.
-                        Por favor, dirijase a nuestro local dentro de 48 hs para continuar el proceso de compra de su pedido.
-                    </h5>
-                </div>
-            }
+                        <h5 class="pt-2">Nuestros horarios de atencion:</h5>
+                        <h5>
+                            <strong>
+                                Lun a Sab
+                                09:00 a 20:00
+                            </strong>
+                        </h5>
+
+                        <h5>
+                            Al solicitar "comprar" se enviará un comprobante de solicitud de compra a su mail.
+                            Por favor, dirijase a nuestro local dentro de 48 hs para continuar el proceso de compra de su pedido.
+                        </h5>
+                    </div>
+                }
+
+                <button class="cuadro-pago-tarjeta @(medioSeleccionado == "tarjeta" ? "activo" : "")"
+                        @onclick=' () => SeleccionarMedio("tarjeta")'>
+                    <div class="icono-frase">
+                        <img src="https://i.postimg.cc/MZ4SBs7V/tarjeta-logo.png" />
+                        <h5 class="frase-tarjeta">Pago con tarjetas</h5>
+                    </div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </button>
+
+                @if (medioSeleccionado == "tarjeta")
+                {
+                    <div class="cuando-clickea-tarjetas">
+
+                        <h5>Ingrese numero de la tarjeta</h5>
+
+                        <input type="number" class="ingreso" />
+
+                        <h5>Nombre completo del titular de la tarjeta</h5>
+                        <input type="text" class="ingreso" />
+
+                        <h5>Codigo de seguridad</h5>
+                        <input type="number" class="ingreso" />
+
+                        <h5>
+                            Al solicitar "comprar" se enviará un comprobante de compra a su mail.
+                            Por favor, dirijase a correo para revisar los detalles de su pedido.
+                        </h5>
+                    </div>
+                }
+
+
+                <button class="cuadro-pago-transferencia @(medioSeleccionado == "transferencia" ? "activo" : "")"
+                        @onclick=' () => SeleccionarMedio("transferencia")'>
+                    <div class="icono-frase">
+                        <img src="https://i.postimg.cc/CK6rRxtW/icono-transferencia.png" />
+                        <h5 class="frase-transferencia">Transferencia bancaria</h5>
+                    </div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </button>
+
+                @if (medioSeleccionado == "transferencia")
+                {
+                    <div class="cuando-clickea-transferencia">
+
+                        <h5>Datos para la transferencia</h5>
+
+                        <div class="cbu-class">
+                            <h5><strong>CBU:</strong></h5>
+                            <h6 class="cbu-frase">005689192727</h6>
+                        </div>
+
+                        <div class="alias-frase">
+                            <h5><strong>Alias: </strong></h5>
+                            <h6>neumann.libros.fantasia.mp</h6>
+                        </div>
+
+                        <div class="nombre-transferencia-frase">
+                            <h5><strong>Titular cuenta:</strong></h5>
+                            <h6>Lucas Kingschollar</h6>
+                        </div>
+
+                        <div class="banco-frase">
+                            <h5><strong>Banco:</strong></h5>
+                            <h6>Galicia</h6>
+                        </div>
+
+                        <h5>Al solicitar "comprar" se enviará un comprobante de solicitud de compra a su mail.</h5>
+
+                        <h5> Por favor, envie el comprobante de transferencia a nuestro mail dentro de 48 hs para continuar el proceso de compra de su pedido.</h5>
+                        <h5>
+                            Tenga en cuenta que la confirmación de comprar puede demorar un tiempo. Cuando su pago sea confirmado se le enviará confirmación
+                            de pago y su numero de compra.
+                        </h5>
+                    </div>
+                 }
             </div>
-
-            <button class="cuadro-pago-tarjeta @(medioSeleccionado == "tarjeta" ? "activo" : "")"
-             @onclick =' () => SeleccionarMedio("tarjeta")'>
-                <div class="icono-frase">
-                <img src="https://i.postimg.cc/MZ4SBs7V/tarjeta-logo.png" />
-                <h5 class="frase-tarjeta">Pago con tarjetas</h5>
-                </div>
-                 <i class="bi bi-caret-right-fill"></i>
+        </div>
+            <button class="boton-comprar">
+                <span><strong>COMPRAR</strong></span>
             </button>
+       
+    </div>
 
-            @if(medioSeleccionado == "tarjeta")
-            {
-                <div class="cuando-clickea-tarjetas">
+        <div class="cuadro-carrito">
+            <CarritoComponent MostrarCarritoPC="false" MostrarCarritoDetallesPago="true"></CarritoComponent>
+        </div>
 
-                    <h5>Ingrese numero de la tarjeta</h5>
-
-                    <input type="number" class="ingreso" />
-
-                    <h5>Nombre completo del titular de la tarjeta</h5>
-                    <input type="text" class="ingreso" />
-
-                    <h5>Codigo de seguridad</h5>
-                    <input type="number" class="ingreso" />
-
-                    <h5>
-                        Al solicitar "comprar" se enviará un comprobante de compra a su mail.
-                        Por favor, dirijase a correo para revisar los detalles de su pedido.
-                    </h5>
-                </div>
-            }
-                
-
-            <button class="cuadro-pago-transferencia @(medioSeleccionado == "transferencia" ? "activo" : "")"
-                 @onclick=' () => SeleccionarMedio("transferencia")'>
-                 <div class="icono-frase">
-                <img src="https://i.postimg.cc/CK6rRxtW/icono-transferencia.png" />
-                <h5 class="frase-transferencia">Transferencia bancaria</h5>
-                 </div>
-                <i class="bi bi-caret-right-fill"></i>
-            </button>
-
-            @if(medioSeleccionado == "transferencia")
-            {
-                <div class="cuando-clickea-transferencia">
-
-                    <h5>Datos para la transferencia</h5>
-
-                    <div class="cbu-class">
-                        <h5><strong>CBU:</strong></h5>
-                        <h6 class="cbu-frase">005689192727</h6>
-                    </div>
-
-                    <div class="alias-frase">
-                        <h5><strong>Alias: </strong></h5>
-                        <h6>neumann.libros.fantasia.mp</h6>
-                    </div>
-
-                    <div class="nombre-transferencia-frase">
-                        <h5><strong>Titular cuenta:</strong></h5>
-                        <h6>Lucas Kingschollar</h6>
-                    </div>
-
-                    <div class="banco-frase">
-                        <h5><strong>Banco:</strong></h5>
-                        <h6>Galicia</h6>
-                    </div>
-
-                    <h5>
-                        Al solicitar "comprar" se enviará un comprobante de solicitud de compra a su mail.
-                    </h5>
-
-                    <h5>
-                        Por favor, envie el comprobante de transferencia a nuestro mail dentro de 48 hs para continuar el proceso de compra de su pedido.
-
-                    </h5>
-                    <h5>
-                        Tenga en cuenta que la confirmación de comprar puede demorar un tiempo. Cuando su pago sea confirmado se le enviará confirmación
-                        de pago y su numero de compra.
-                    </h5>
-                </div>
-            }
+   
+</div>
                
 
-       </div>
+           
 
-                <button class="boton-comprar">
-                 <span><strong>COMPRAR</strong></span>
-                 </button>
-       
-</div>
 
 @code {
 

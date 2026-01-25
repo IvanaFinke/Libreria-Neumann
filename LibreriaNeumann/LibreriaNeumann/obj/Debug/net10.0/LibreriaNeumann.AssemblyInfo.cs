@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LibreriaNeumann")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d13cea83c05716e6fa12a637c152e1f46fb03f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6d75d6973e47e8f952fc48a0ce90bdf70f9a525")]
 [assembly: System.Reflection.AssemblyProductAttribute("LibreriaNeumann")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LibreriaNeumann")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
