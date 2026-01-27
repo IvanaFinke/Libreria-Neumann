@@ -3281,7 +3281,7 @@
     }
 }
 
-/*Diseño Tablets mini/air*/
+/*Diseño Tablets mini/air y grandes Ipad Pro Ipad surface 7*/
 @media (min-width:571px) and (max-width:1025px){
     .libro-seccion[b-1l9de3t9q8] {
         display: grid;
@@ -3342,7 +3342,13 @@
     align-items: center;
     padding: 3em 3rem;
     padding-top: 1rem;
-    gap: 10px;
+    gap: 2rem;
+}
+
+.ingresos[b-f1rx34fkzg]{
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
 }
 
 .titulo-registrarse-seccion[b-f1rx34fkzg]{
@@ -3415,7 +3421,126 @@
     color: rgb(0, 35, 248);
 }
 
+/*Movile design*/
+@media (max-width:570px){
+    .registrarse[b-f1rx34fkzg] {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        align-items: center;
+        padding: 1em 1rem;
+        gap: 1.5rem;
+    }
 
+    .bi-person-circle[b-f1rx34fkzg] {
+        display: none;
+    }
+
+    .ingresos[b-f1rx34fkzg] {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .ingreso[b-f1rx34fkzg] {
+        width: 100%;
+    }
+
+    .ingreso-contraseña[b-f1rx34fkzg], .ingreso-mail[b-f1rx34fkzg] {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .clase-preguntar-cuenta[b-f1rx34fkzg] {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        text-wrap:nowrap;
+        font-size:20px;
+        align-items:center;
+    }
+
+    [b-f1rx34fkzg] .inicia-sesion-frase {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0px;
+        align-self: start;
+    }
+
+    [b-f1rx34fkzg] .texto-inicia-sesion {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 4px;
+        font-size: 20px;
+    }
+
+    .olvidaste-contraseña[b-f1rx34fkzg] {
+        justify-content: start;
+        margin-top: 6px;
+    }
+
+    .preguntar-cuenta[b-f1rx34fkzg] {
+        font-size: 18px;
+    }
+
+    .nav-link-registrarme[b-f1rx34fkzg] {
+        margin-top: 0;
+    }
+
+    .frase-registrarme[b-f1rx34fkzg] {
+        padding-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .boton-preguntar-registrar[b-f1rx34fkzg] {
+        justify-content: end;
+    }
+}
+
+/*Diseño Tablets mini/air*/
+@media (min-width:571px) and (max-width:1025px){
+    .registrarse[b-f1rx34fkzg] {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        align-items: center;
+        padding: 3em 3rem;
+        padding-top: 1rem;
+        gap: 2rem;
+    }
+
+    .ingresos[b-f1rx34fkzg] {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .clase-preguntar-cuenta[b-f1rx34fkzg], h5[b-f1rx34fkzg]{
+        display:flex;
+        flex-direction:row;
+        font-size:24px;
+    }
+
+    [b-f1rx34fkzg] .inicia-sesion-frase {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0px;
+        align-self: start;
+    }
+
+    [b-f1rx34fkzg] .texto-inicia-sesion {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 4px;
+    }
+
+    .boton-registrarse[b-f1rx34fkzg]{
+        font-size:24px;
+        height:50px;
+    }
+
+}
 
 /* /Components/SidebarComponent.razor.rz.scp.css */
 .menu-header-desplegable[b-uqn0fedkqy] {

@@ -168,7 +168,7 @@
     }
 }
 
-/*Diseño Tablets mini/air*/
+/*Diseño Tablets mini/air y grandes Ipad Pro Ipad surface 7*/
 @media (min-width:571px) and (max-width:1025px){
     .libro-seccion {
         display: grid;
