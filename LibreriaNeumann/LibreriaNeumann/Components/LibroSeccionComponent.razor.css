@@ -167,3 +167,57 @@
         font-size:18px;
     }
 }
+
+/*Diseño Tablets mini/air*/
+@media (min-width:571px) and (max-width:1025px){
+    .libro-seccion {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr auto;
+        width: 100%;
+        align-items: center;
+        padding: 2rem 2rem;
+    }
+
+    .titulo-autor-comprar{
+        display:grid;
+        grid-column:2;
+        align-content:start;
+        width:100%;
+     
+        padding: 1rem 1rem;
+    }
+
+    .agregar-carrito{
+        width: max(200px, 180px);
+        height: 50px;
+        font-size:17px;
+        font-weight:500;
+    }
+
+    .cuadro-cantidad {
+        width: max(120px, 100px);
+        height: 50px;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    h4, .uno, .bi-caret-left-fill, .bi-caret-right-fill{
+        font-size:24px;
+    }
+
+
+    h5, .descripcion-parrafo{
+        font-size:22px;
+    }
+
+    .libro-seccion img {
+        display: flex;
+        justify-items: start;
+        width: min(420px,350px);
+        height: min(500px, 480px);
+    }
+
+}
