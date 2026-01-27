@@ -10,7 +10,6 @@
 
 .parrafo{
     text-wrap: wrap;
-
     text-align:justify;
 }
 
@@ -23,5 +22,23 @@
         max-width:100%;
         max-height:100%;
  
+    }
+}
+
+/*Diseño Tablets mini/air y ipads grandes*/
+@media (min-width:571px) and (max-width:1025px){
+    .sobre-nosotros {
+       display:flex;
+        width: 100%;
+        align-items: center;
+        justify-content:center;
+        padding: 3em 3rem;
+        gap: 2rem;
+    }
+
+    .titulo-sobre-nosotros {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
     }
 }
