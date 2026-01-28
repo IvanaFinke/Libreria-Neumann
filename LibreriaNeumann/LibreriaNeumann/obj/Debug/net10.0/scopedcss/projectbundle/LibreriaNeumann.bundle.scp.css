@@ -2686,6 +2686,10 @@
     border-style: solid;
 }
 
+.clase-captcha[b-awra8w7bqt] {
+    margin-top: 1rem;
+}
+
 .boton-inicio-sesion[b-awra8w7bqt] {
     text-emphasis-color: white;
     background-color: rgb(244, 152, 117);
@@ -3350,6 +3354,11 @@
     flex-direction:column;
     gap:0.5rem;
 }
+
+.clase-captcha[b-f1rx34fkzg] {
+    margin-top:1rem;
+}
+
 
 .titulo-registrarse-seccion[b-f1rx34fkzg]{
     align-self: start;

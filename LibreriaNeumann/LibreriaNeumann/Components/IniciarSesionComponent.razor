@@ -1,4 +1,9 @@
-﻿<div class="inicio-sesion">
+﻿@page "/iniciar-sesion"
+@inject IJSRuntime JS
+@rendermode InteractiveServer
+
+
+<div class="inicio-sesion">
     <h1 class="inisesi-titulo">Iniciar Sesión</h1>
     <div class="ingresos">
         <i class="bi bi-person-circle"></i>
@@ -15,8 +20,13 @@
             </NavLink>
         </div>
 
+        <div class="clase-captcha">
+            <div class="g-recaptcha"></div>
+        </div>
+
+
         <div class="boton-preguntar-registrar">
-            <button class="boton-inicio-sesion">Iniciar Sesión</button>
+            <button class="boton-inicio-sesion" @onclick="IniciarSesion">Iniciar Sesión</button>
       
             <div class="preguntar-registrar">
                 <h5 class="preguntar-cuenta">¿No tenés cuenta?</h5>
@@ -30,5 +40,27 @@
 </div>
 
 @code {
+    [Inject] ReCaptcha Captcha{ get; set; }
+
+    async Task IniciarSesion()
+    {
+        var token = await JS.InvokeAsync<string>("getCaptchaToken");
+
+        var validate = await Captcha.Validate(token);
+
+        if (!validate)
+        {
+            Console.WriteLine("Captcha no válido");
+            return;
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(firstRender)
+        {
+            await JS.InvokeVoidAsync("renderCaptcha");
+        }
+    }
 
 }

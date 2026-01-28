@@ -1,4 +1,8 @@
-﻿<div class="registrarse">
+﻿@page "/registrarme"
+@rendermode InteractiveServer
+@inject IJSRuntime JS
+
+<div class="registrarse">
     <h1 class="titulo-registrarse-seccion">Registrate</h1>
 
     <div class="ingresos">
@@ -19,10 +23,10 @@
                 <input type="password" class="ingreso" />
     </div>
 
-        <button class="boton-registrarse">Registrarse</button>
+    <button class="boton-registrarse" @onclick="Registrar">Registrarse</button>
 
         <div class="clase-captcha">
-            <h4>aca va el captcha</h4>
+            <div class="g-recaptcha"></div>
         </div>
 
         <div class="clase-preguntar-cuenta">
@@ -37,5 +41,26 @@
 </div>
 
 @code {
+    [Inject] ReCaptcha Captcha{ get; set; }
 
+    async Task Registrar()
+    {
+        var token = await JS.InvokeAsync<string>("getCaptchaToken");
+
+        var valido = await Captcha.Validate(token);
+
+        if (!valido)
+        {
+            Console.WriteLine("Captcha no válido");
+            return;
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("renderCaptcha");
+        }
+    }
 }

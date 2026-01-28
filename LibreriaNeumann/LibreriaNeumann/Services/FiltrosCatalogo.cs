@@ -1,4 +1,4 @@
-﻿namespace LibreriaNeumann.Components
+﻿namespace LibreriaNeumann.Services
 {
     public class FiltrosCatalogo
     {

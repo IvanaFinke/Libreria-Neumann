@@ -1,10 +1,15 @@
 using LibreriaNeumann.Components;
+using LibreriaNeumann.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddHttpClient();
+builder.Services.AddHttpClient<ReCaptcha>();
+builder.Services.AddScoped<ReCaptcha>();
 
 var app = builder.Build();
 

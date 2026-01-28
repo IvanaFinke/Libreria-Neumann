@@ -19,6 +19,20 @@
             crossorigin=""></script>
     <ImportMap />
     <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
+    <script>
+        window.renderCaptcha = () => {
+            if(typeof grecaptcha !== "undefined"){
+                grecaptcha.render(document.querySelector(".g-recaptcha"),{
+                    sitekey: "6LdfcVgsAAAAADApxliAps0efmG1uWA-QF_Zx-4m"
+                });
+            }
+        };
+
+        window.getCaptchaToken = () =>{
+            return grecaptcha.getResponse();
+        };
+    </script>
     <HeadOutlet />
 </head>
 
