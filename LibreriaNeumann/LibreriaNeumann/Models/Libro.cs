@@ -1,0 +1,31 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace LibreriaNeumann.Models
+{
+    public class Libro
+    {
+        public int Id { get; set; }
+
+        public required string Titulo { get; set; }
+
+        public required string Autor { get; set; }
+
+        [Range(0,9999999.9)]
+        [DataType(DataType.Currency)]
+        public required decimal Precio { get; set; }
+
+        public required string ImageURL { get; set; }
+
+        [Range(0,9999999.9)]
+        [DataType(DataType.Currency)]
+        public required decimal PrecioCuotas { get; set; }
+
+        [Range(0, int.MaxValue)]
+        public required int Stock { get; set; }
+
+        [MaxLength(4000)]
+        public required string Descripcion { get; set; }
+
+        public required string Categoria { get; set; }
+    }
+}

@@ -1,4 +1,6 @@
 ﻿@page "/inicio"
+@rendermode InteractiveServer
+@inject NavigationManager NavigatorManager
 
 <div class="hero">
 
@@ -8,7 +10,7 @@
 
             <h3 class="eslogan">Un lugar lleno de historias <br /> esperandote</h3>
 
-            <button class="btn-ver-libros">Ver libros</button>
+            <button class="btn-ver-libros" @onclick="OnClick">Ver libros</button>
         </div>
 
         <div class="hero-imagen">
@@ -24,11 +26,16 @@
 
             <h3 class="eslogan">Un lugar lleno de historias esperandote</h3>
         </div>
-            <button class="btn-ver-libros">Ver libros</button> 
+        <button class="btn-ver-libros" @onclick="OnClick">Ver libros</button>
     </div>
 
 </div>
 
 @code {
+
+    private void OnClick()
+    {
+        NavigatorManager.NavigateTo("/catalogo");
+    }
 
 }

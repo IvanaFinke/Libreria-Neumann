@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace LibreriaNeumann.Services
+namespace LibreriaNeumann.Models
 {
     public class ReCaptcha
     {
