@@ -3,36 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\data\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\data\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\services\\libroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\services\\libroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\services\\filtroscatalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\services\\filtroscatalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\libroseccioncomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\libroseccioncomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\models\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\models\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\migrations\\20260131022232_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\migrations\\20260131022232_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\catalogocomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\catalogocomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\data\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\data\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\models\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\models\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\services\\libroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\services\\libroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\services\\filtroscatalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\services\\filtroscatalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\maite\\desktop\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\libroseccioncomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\libroseccioncomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,72 +58,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "20260131022232_Init.cs",
+              "DocumentMoniker": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Migrations\\20260131022232_Init.cs",
+              "RelativeDocumentMoniker": "LibreriaNeumann\\Migrations\\20260131022232_Init.cs",
+              "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Migrations\\20260131022232_Init.cs",
+              "RelativeToolTip": "LibreriaNeumann\\Migrations\\20260131022232_Init.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T02:22:33.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\appsettings.json",
+              "RelativeDocumentMoniker": "LibreriaNeumann\\appsettings.json",
+              "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\appsettings.json",
+              "RelativeToolTip": "LibreriaNeumann\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-31T01:59:24.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Program.cs",
               "RelativeDocumentMoniker": "LibreriaNeumann\\Program.cs",
               "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Program.cs",
               "RelativeToolTip": "LibreriaNeumann\\Program.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBAAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAADwvygAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T22:27:50.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-30T22:27:50.688Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "DataSeeder.cs",
               "DocumentMoniker": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Data\\DataSeeder.cs",
               "RelativeDocumentMoniker": "LibreriaNeumann\\Data\\DataSeeder.cs",
               "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Data\\DataSeeder.cs",
               "RelativeToolTip": "LibreriaNeumann\\Data\\DataSeeder.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAwFUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwAMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-30T21:14:37.018Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "FiltrosCatalogo.cs",
               "DocumentMoniker": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Services\\FiltrosCatalogo.cs",
               "RelativeDocumentMoniker": "LibreriaNeumann\\Services\\FiltrosCatalogo.cs",
               "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Services\\FiltrosCatalogo.cs",
               "RelativeToolTip": "LibreriaNeumann\\Services\\FiltrosCatalogo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T16:26:39.292Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-30T16:26:39.292Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "LibreriaNeumann\\Data\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Data\\AppDbContext.cs",
               "RelativeToolTip": "LibreriaNeumann\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAcwBgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAYwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T23:34:10Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T23:34:10Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "LibroService.cs",
               "DocumentMoniker": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Services\\LibroService.cs",
               "RelativeDocumentMoniker": "LibreriaNeumann\\Services\\LibroService.cs",
               "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Services\\LibroService.cs",
               "RelativeToolTip": "LibreriaNeumann\\Services\\LibroService.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAAwFMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAADwv1MAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T23:24:34.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T23:24:34.929Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "LibroSeccionComponent.razor",
               "DocumentMoniker": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\LibroSeccionComponent.razor",
               "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\LibroSeccionComponent.razor",
@@ -123,8 +152,7 @@
               "RelativeToolTip": "LibreriaNeumann\\Components\\LibroSeccionComponent.razor",
               "ViewState": "AgIAACoAAAAAAAAAAAAAADcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-29T23:18:28.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T23:18:28.602Z"
             },
             {
               "$type": "Document",
@@ -134,23 +162,21 @@
               "RelativeDocumentMoniker": "LibreriaNeumann\\Models\\Libro.cs",
               "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Models\\Libro.cs",
               "RelativeToolTip": "LibreriaNeumann\\Models\\Libro.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA5wCYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAmwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T23:09:11.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T23:09:11.691Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "CatalogoComponent.razor",
               "DocumentMoniker": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\CatalogoComponent.razor",
               "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\CatalogoComponent.razor",
               "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\CatalogoComponent.razor",
               "RelativeToolTip": "LibreriaNeumann\\Components\\CatalogoComponent.razor",
-              "ViewState": "AgIAACwBAAAAAAAAAAAAwEQBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAAAL4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-29T22:15:18.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T22:15:18.833Z"
             }
           ]
         }

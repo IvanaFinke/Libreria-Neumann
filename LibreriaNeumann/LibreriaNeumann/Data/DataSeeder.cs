@@ -34,7 +34,7 @@ namespace LibreriaNeumann.Data
                 Autor = "J.R.R. Tolkien",
                 Fecha = 1937,
                 Precio = 14900,
-                ImageURL = "https://i.postimg.cc/3x3Q1Y6y/el-hobbit.jpg",
+                ImageURL = "/images/libros/el-hobit.webp",
                 Editorial = "Minotauro",
                 Stock = 15,
                 Descripcion = "Bilbo Bolsón, un hobbit apacible y amante de la comodidad, ve su vida trastornada cuando el " +
@@ -77,6 +77,23 @@ namespace LibreriaNeumann.Data
                 " Con la ayuda de un compañero de prisión, descubre un tesoro oculto en la isla de Monte Cristo. ",
                 Stock = 9,
                 Categoria = "suspenso",
+            });
+
+            db.Libros.Add(new Libro
+            {
+                Titulo = "Alicia en el pais de las maravillas",
+                Fecha = 1865,
+                Autor = "Lewis Caroll",
+                Precio = 20000,
+                cantPaginas = 140,
+                ImageURL = "/images/libros/alicia.webp",
+                Editorial = "Del fondo",
+                Stock = 10,
+                Descripcion = "'Durante una tarde aburrida, mientras su hermana está bordando debajo de un árbol," +
+                " Alicia ve a un conejo blanco, vestido y con un reloj de bolsillo pasando. Ella decide seguirlo por un agujero" +
+                " cuando, de repente, cae muy lejos en un mundo de fantasía poblado por peculiares criaturas antropomorfas. El cuento " +
+                "juega con la lógica, lo que le da popularidad duradera tanto a los adultos como a los niños. ",
+                Categoria = "fantasia",
             });
 
             db.SaveChanges();

@@ -46,6 +46,11 @@ wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\favicon.png
 wwwroot\app.css
 wwwroot\.editorconfig
+wwwroot\images\libros\01-Portada-Estudio-Escarlata_CAST.jpg
+wwwroot\images\libros\alicia-pais.maravillas.jpg
+wwwroot\images\libros\alicia.webp
+wwwroot\images\libros\el-hobit.webp
+wwwroot\images\libros\monte-cristo.webp
 Components\Layout\ReconnectModal.razor.js
 C:\Users\Maite\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.2\build\..\_framework\blazor.web.js
 C:\Users\Maite\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.2\build\..\_framework\blazor.server.js
