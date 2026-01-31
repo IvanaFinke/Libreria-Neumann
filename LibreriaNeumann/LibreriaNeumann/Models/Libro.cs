@@ -8,6 +8,8 @@ namespace LibreriaNeumann.Models
 
         public required string Titulo { get; set; }
 
+        public required int Fecha { get; set; }
+
         public required string Autor { get; set; }
 
         [Range(0,9999999.9)]
@@ -18,7 +20,7 @@ namespace LibreriaNeumann.Models
 
         [Range(0,9999999.9)]
         [DataType(DataType.Currency)]
-        public required decimal PrecioCuotas { get; set; }
+        public decimal PrecioCuotas { get; set; }
 
         [Range(0, int.MaxValue)]
         public required int Stock { get; set; }
@@ -27,5 +29,10 @@ namespace LibreriaNeumann.Models
         public required string Descripcion { get; set; }
 
         public required string Categoria { get; set; }
+
+        public required string Editorial { get; set; }
+
+        [Range(1,int.MaxValue)]
+        public required int cantPaginas { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿@page "/catalogo"
 @rendermode InteractiveServer
+@inject LibroService LibroService
 
 <div class="catalogo">
 
@@ -21,35 +22,35 @@
 
                 @if (botonCategorias)
                 {
-                    <button class="botones-catalogo">
+                    <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[0])">
                         <span>SUSPENSO</span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
-                    <button class="botones-catalogo">
+                    <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[1])">
                         <span>ROMANCE</span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
-                    <button class="botones-catalogo">
+                <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[2])">
                         <span>ACCIÓN</span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
-                    <button class="botones-catalogo">
+                <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[3])">
                         <span>HISTÓRICOS</span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
-                    <button class="botones-catalogo">
+                <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[4])">
                         <span>ARTE</span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
-                    <button class="botones-catalogo">
+                <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[5])">
                         <span>FANTASÍA</span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
-                    <button class="botones-catalogo">
+                <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[6])">
                         <span>POLICIAL</span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
-                    <button class="botones-catalogo">
+                <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[7])">
                         <span>CIENCIA FICCIÓN</span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
@@ -62,27 +63,31 @@
 
                 @if(botonPrecio)
                 {
-                    <button class="botones-catalogo">
+                <button class="botones-catalogo" @onclick="() => FiltrarPrecios(5000,10000)">
                         <span>$5000 a $10000 </span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
-                    <button class="botones-catalogo">
+                    <button class="botones-catalogo" @onclick="() => FiltrarPrecios(10000,15000)">
                         <span>$10000 a $15000 </span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
-                    <button class="botones-catalogo">
+                    <button class="botones-catalogo" @onclick="() => FiltrarPrecios(15000,20000)">
                         <span>$15000 a $20000 </span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
-                    <button class="botones-catalogo">
+                    <button class="botones-catalogo" @onclick="() => FiltrarPrecios(20000,25000)">
                         <span>$20000 a $25000 </span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
                     <div class="ingreso-precios">
-                        <input placeholder="mínimo" type="number"/>
+                        <input placeholder="mínimo" type="number" @bind="minimo"/>
                         <span>-</span>
-                        <input placeholder="maximo"/>
+                        <input placeholder="maximo" type="number" @bind="maximo"/>
+                        <button class="btn-precio-buscar" @onclick="() => FiltrarPrecios(minimo,maximo)">
+                        <span>Buscar</span>
                         <i class="bi bi-chevron-right"></i>
+                        </button>
+                        
                     </div>
                 }
 
@@ -93,25 +98,27 @@
 
                 @if (botonAutor)
                 {
-                    <button class="botones-catalogo">
+                    <button class="botones-catalogo" @onclick="() => FiltrarAutor(Autores[0])">
                         <span>Homero</span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
-                    <button class="botones-catalogo">
-                        <span>Lweis Caroll</span>
+                <button class="botones-catalogo" @onclick="() => FiltrarAutor(Autores[1])">
+                        <span>Lewis Caroll</span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
-                    <button class="botones-catalogo">
+                <button class="botones-catalogo" @onclick="() => FiltrarAutor(Autores[2])">
                         <span>Alexandre Dumas</span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
-                    <button class="botones-catalogo">
+                <button class="botones-catalogo" @onclick="() => FiltrarAutor(Autores[3])">
                         <span>Hermanos Grim</span>
                         <i class="bi bi-chevron-right"></i>
                     </button>
                     <div class="ingreso-autor">
-                    <input placeholder="nombre autor" />
-                    <i class="bi bi-chevron-right"></i>
+                    <input placeholder="nombre autor" @bind="autor"/>
+                    <button class="btn-filtrar-autor" @onclick="() => FiltrarAutor(autor)"> 
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
                     </div>
                 }
 
@@ -122,19 +129,19 @@
 
             @if (botonFecha)
             {
-                <button class="botones-catalogo">
+                <button class="botones-catalogo" @onclick="() => FiltrarFecha(1, 1800)">
                     <span>Antiguos</span>
                     <i class="bi bi-star-fill"></i>
                 </button>
-                <button class="botones-catalogo">
+                <button class="botones-catalogo" @onclick="() => FiltrarFecha(1800, 1900)">
                     <span>1800-1900</span>
                     <i class="bi bi-star-fill"></i>
                 </button>
-                <button class="botones-catalogo">
+                <button class="botones-catalogo" @onclick="() => FiltrarFecha(1900, 2000)">
                     <span>1900-2000</span>
                     <i class="bi bi-star-fill"></i>
                 </button>
-                <button class="botones-catalogo">
+                <button class="botones-catalogo" @onclick="() => FiltrarFecha(2000, esteAnio)">
                     <span>2000-Contemporáneo</span>
                     <i class="bi bi-star-fill"></i>
                 </button>
@@ -171,7 +178,18 @@
 
     <div class="lista-libros">
 
-        <div class="cuadro-libro">
+            @foreach(var libro in listaLibros)
+            {
+                 <div class="cuadro-libro">
+                     <img src="@libro.ImageURL" />
+                     <h4 class="titulo-libro-catalogo pt-2">@libro.Titulo</h4>
+                     <p class="autor-catalogo">@libro.Autor</p>
+                     <p class="precio-catalogo"><strong>@libro.Precio</strong></p>
+                     <button class="boton-comprar-libro">AGREGAR AL CARRITO</button>
+                 </div>
+            }
+
+            <!--
             <img src="https://i.postimg.cc/CM38mrH1/heartslayul-4.webp" />
             <h4 class="titulo-libro-catalogo pt-2">TWISTED WONDERLAND NO 4</h4>
             <p class="autor-catalogo">Yana Toboso / Wakana Hadzuki /<br /> Sumire Kowono</p>
@@ -212,7 +230,7 @@
             <p class="autor-catalogo">Robert Fisher</p>
             <p class="precio-catalogo"><strong>$11.000,00</strong></p>
             <button class="boton-comprar-libro">AGREGAR AL CARRITO</button>
-        </div>
+            </div>-->
 
     </div>
 
@@ -225,15 +243,74 @@
     private bool botonPrecio;
     private bool botonAutor;
     private bool botonFecha;
+    int esteAnio = DateTime.Now.Year;
+    private decimal minimo;
+    private decimal maximo;
+    private string autor="";
+    private List<Libro> listaLibros = new();
+    FiltrosCatalogo filtros = new();
 
     private void PressButton()
     {
         botonPresionado = !botonPresionado;
     }
 
-    private FiltrosCatalogo filtros = new();
+    protected override async Task OnInitializedAsync()
+    {
+        listaLibros = await LibroService.ObtenerLibros();
+    }
 
-    private void ToggleCategory(string categoria)
+    /*Filtros*/
+
+    private List<string> categorias = new()
+    {
+        "suspenso",
+        "romance",
+        "accion",
+        "historicos",
+        "arte",
+        "fantasia",
+        "policial",
+        "ciencia ficcion"
+    };
+
+    private List<string> Autores = new()
+    {
+        "Homero",
+        "Lewis Caroll",
+        "Alexandre Dumas",
+        "Hermanos Grim"
+    };
+
+    async Task FiltrarCategoria(string categoria)
+    {
+        filtros.Categoria = categoria;
+        listaLibros = await LibroService.Filtros(filtros);
+    }
+
+    async Task FiltrarPrecios(decimal preciomin, decimal preciomax)
+    {
+        filtros.PrecioMin = preciomin;
+        filtros.PrecioMax = preciomax;
+
+        listaLibros = await LibroService.Filtros(filtros);
+    }
+
+    async Task FiltrarAutor(string autor)
+    {
+        filtros.Autor = autor;
+        listaLibros = await LibroService.Filtros(filtros);
+    }
+
+    async Task FiltrarFecha(int ? fechamin, int fechamax)
+    {
+        filtros.FechaMin = fechamin;
+        filtros.FechaMax = fechamax;
+        listaLibros = await LibroService.Filtros(filtros);
+    }
+
+
+    /*private void ToggleCategory(string categoria)
     {
         if (filtros.Categorias.Contains(categoria))
         {
@@ -243,5 +320,5 @@
         {
             filtros.Categorias.Add(categoria);
         }
-    }
+    }*/
 }
