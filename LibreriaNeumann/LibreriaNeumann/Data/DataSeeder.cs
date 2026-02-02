@@ -5,7 +5,6 @@ namespace LibreriaNeumann.Data
 {
     public class DataSeeder
     {
-
         public static void Seed(AppDbContext db)
         {
             if (db.Libros.Any()) return;

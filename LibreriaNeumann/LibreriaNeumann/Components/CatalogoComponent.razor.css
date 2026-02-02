@@ -110,6 +110,32 @@
     display: none;
 }
 
+.ingreso-precios{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:6px;
+    font-family:sans-serif;
+}
+
+.ingreso-precios input, .ingreso-autor input {
+    width: 180px;
+    height: 30px;
+}
+
+.btn-precio-buscar {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    width: 100px;
+    height: 30px;
+}
+
+.ingreso-autor{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
 
 /*Diseño movil*/
 @media (max-width:570px){

@@ -151,28 +151,140 @@
 
     <div class="menu-catalogo-pc">
 
-        <button class="botones-catalogo">
+        <button class="botones-catalogo" @onclick="PressFilter">
             <span>CATEGORÍAS</span>
             <i class="bi bi-star-fill"></i>
         </button>
 
-        <button class="botones-catalogo">
+        @if (botonCategorias)
+        {
+            <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[0])">
+                <span>SUSPENSO</span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[1])">
+                <span>ROMANCE</span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[2])">
+                <span>ACCIÓN</span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[3])">
+                <span>HISTÓRICOS</span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[4])">
+                <span>ARTE</span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[5])">
+                <span>FANTASÍA</span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[6])">
+                <span>POLICIAL</span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarCategoria(categorias[7])">
+                <span>SCI-FI</span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        }
+
+        <button class="botones-catalogo" @onclick="PressPrecio">
             <span>PRECIO</span>
             <i class="bi bi-star-fill"></i>
         </button>
 
-        <button class="botones-catalogo">
+
+        @if (botonPrecio)
+        {
+            <button class="botones-catalogo" @onclick="() => FiltrarPrecios(5000, 10000)">
+                <span>$5000 a $10000 </span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarPrecios(10000, 15000)">
+                <span>$10000 a $15000 </span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarPrecios(15000, 20000)">
+                <span>$15000 a $20000 </span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarPrecios(20000, 25000)">
+                <span>$20000 a $25000 </span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <div class="ingreso-precios">
+                <span>Precio mínimo</span>
+                <input placeholder="mínimo" type="number" @bind="minimo" />
+                <span>Precio máximo</span>
+                <input placeholder="maximo" type="number" @bind="maximo" />
+                <button class="btn-precio-buscar" @onclick="() => FiltrarPrecios(minimo, maximo)">
+                    <span>Buscar</span>
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+        }
+
+        <button class="botones-catalogo" @onclick="PressAutor" >
             <span>AUTOR</span>
             <i class="bi bi-star-fill"></i>
         </button>
 
-        <button class="botones-catalogo">
-            <span>
-                FECHA
-            </span>
-            <i class="bi bi-star-fill"></i>
+        @if (botonAutor)
+        {
+            <button class="botones-catalogo" @onclick="() => FiltrarAutor(Autores[0])">
+                <span>Homero</span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarAutor(Autores[1])">
+                <span>Lewis Caroll</span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarAutor(Autores[2])">
+                <span>Alexandre Dumas</span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarAutor(Autores[3])">
+                <span>Hermanos Grim</span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <div class="ingreso-autor">
+                <span>Buscar autor</span>
+                <input placeholder="nombre autor" @bind="autor" />
+                <button class="btn-precio-buscar" @onclick="() => FiltrarAutor(autor)">
+                    <span>Buscar</span>
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+        }
 
+        <button class="botones-catalogo" @onclick="PressFecha">
+            <span>FECHA</span>
+            <i class="bi bi-star-fill"></i>
         </button>
+
+        @if (botonFecha)
+        {
+            <button class="botones-catalogo" @onclick="() => FiltrarFecha(1, 1800)">
+                <span>Antiguos - 1800</span>
+                <i class="bi bi-star-fill"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarFecha(1800, 1900)">
+                <span>1800 - 1900</span>
+                <i class="bi bi-star-fill"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarFecha(1900, 2000)">
+                <span>1900 - 2000</span>
+                <i class="bi bi-star-fill"></i>
+            </button>
+            <button class="botones-catalogo" @onclick="() => FiltrarFecha(2000, esteAnio)">
+                <span>2000 - Actual</span>
+                <i class="bi bi-star-fill"></i>
+            </button>
+        }
     </div>
        
 
@@ -189,53 +301,7 @@
                  </div>
             }
             <p>Libros cargados: @listaLibros.Count</p>
-
-            <!--
-            <img src="https://i.postimg.cc/CM38mrH1/heartslayul-4.webp" />
-            <h4 class="titulo-libro-catalogo pt-2">TWISTED WONDERLAND NO 4</h4>
-            <p class="autor-catalogo">Yana Toboso / Wakana Hadzuki /<br /> Sumire Kowono</p>
-            <p class="precio-catalogo"><strong>$16.900,00</strong></p>
-            <button class="boton-comprar-libro">AGREGAR AL CARRITO</button>
-        </div>
-
-        <div class="cuadro-libro">
-            <img src="https://i.postimg.cc/rsqm4nPR/la-odisea.webp"  />
-            <h4 class="titulo-libro-catalogo pt-2">LA ODISEA</h4>
-            <p class="autor-catalogo">Homero</p>
-            <p class="precio-catalogo"><strong>$16.200,00</strong></p>
-            <button class="boton-comprar-libro">AGREGAR AL CARRITO</button>
-        </div>
-
-        <div class="cuadro-libro">
-            <img src="https://i.postimg.cc/HnQT6Qfs/alicia-pais-libro.webp" />
-            <h4 class="titulo-libro-catalogo pt-2">ALICIA EN EL PAÍS DE LAS MARAVILLAS</h4>
-            <p class="autor-catalogo">Lewis Caroll</p>
-            <p class="precio-catalogo"><strong>$4.750,00</strong></p>
-            <button class="boton-comprar-libro">AGREGAR AL CARRITO</button>
-        </div>
-
-        <div class="cuadro-libro">
-            <img src="https://i.postimg.cc/4dfvf5QW/el-conde-mont-libro.webp" />
-            <h4 class="titulo-libro-catalogo pt-2">
-                EL CONDE DE MONTECRISTO</h4>
-            <p class="autor-catalogo">Alexandre Dumas</p>
-            <p class="precio-catalogo"><strong>$48.000,00</strong></p>
-            <button class="boton-comprar-libro">AGREGAR AL CARRITO</button>
-        </div>
-
-        <div class="cuadro-libro">
-            <img src="https://i.postimg.cc/Wz0zKDdS/caballero-armadura.webp" />
-            <h4 class="titulo-libro-catalogo pt-2">
-                EL CABALLERO DE LA ARMADURA OXIDADA
-            </h4>
-            <p class="autor-catalogo">Robert Fisher</p>
-            <p class="precio-catalogo"><strong>$11.000,00</strong></p>
-            <button class="boton-comprar-libro">AGREGAR AL CARRITO</button>
-            </div>-->
-
     </div>
-
-
 </div>
 
 @code {
@@ -311,15 +377,23 @@
     }
 
 
-    /*private void ToggleCategory(string categoria)
+    private void PressFilter()
     {
-        if (filtros.Categorias.Contains(categoria))
-        {
-            filtros.Categorias.Remove(categoria);
-        }
-        else
-        {
-            filtros.Categorias.Add(categoria);
-        }
-    }*/
+        botonCategorias = !botonCategorias;
+    }
+
+    private void PressPrecio()
+    {
+        botonPrecio = !botonPrecio;
+    }
+
+    private void PressAutor()
+    {
+        botonAutor = !botonAutor;
+    }
+
+    private void PressFecha()
+    {
+        botonFecha = !botonFecha;
+    }
 }

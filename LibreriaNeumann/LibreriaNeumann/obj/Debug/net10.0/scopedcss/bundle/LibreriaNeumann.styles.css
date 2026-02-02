@@ -960,6 +960,32 @@
     display: none;
 }
 
+.ingreso-precios[b-q5pyqb11by]{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:6px;
+    font-family:sans-serif;
+}
+
+.ingreso-precios input[b-q5pyqb11by], .ingreso-autor input[b-q5pyqb11by] {
+    width: 180px;
+    height: 30px;
+}
+
+.btn-precio-buscar[b-q5pyqb11by] {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    width: 100px;
+    height: 30px;
+}
+
+.ingreso-autor[b-q5pyqb11by]{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
 
 /*Diseño movil*/
 @media (max-width:570px){
