@@ -1,8 +1,12 @@
 ﻿@page "/registrarme"
 @using LibreriaNeumann.Models
+@using Microsoft.Extensions.Validation
 @rendermode InteractiveServer
 @inject IJSRuntime JS
 
+<EditForm Model="Usuario" OnValidSubmit="Registrar">
+    <DataAnnotationsValidator />
+    <ValidationSummary/>
 <div class="registrarse">
     <h1 class="titulo-registrarse-seccion">Registrate</h1>
 
@@ -10,18 +14,23 @@
 
                 <h4>Ingrese su nombre</h4>
                 <input type="text" class="ingreso" @bind-value="Usuario.Nombre"/>
+                <ValidationMessage For="() => Usuario.Nombre"/>
 
                 <h4>Ingrese su apellido</h4>
                 <input type="text" class="ingreso" @bind-value="Usuario.Apellido"/>
+                <ValidationMessage For="() => Usuario.Apellido"/>
 
                 <h4>Ingrese su mail</h4>
                 <input type="email" class="ingreso" @bind-value="Usuario.Email"/>
+                <ValidationMessage For="() => Usuario.Email"/>
 
                 <h4>Ingrese su constraseña</h4>
                 <input type="password" class="ingreso" @bind-value="Usuario.Constrasenia"/>
+                <ValidationMessage For="() => Usuario.Constrasenia"/>
 
                 <h4>Confirme su constraseña</h4>
                 <input type="password" class="ingreso" @bind-value="Usuario.ConfirmContrasenia"/>
+                <ValidationMessage For="() => Usuario.ConfirmContrasenia"/>
             </div>
    
     <button class="boton-registrarse" @onclick="Registrar">Registrarse</button>
@@ -35,14 +44,13 @@
                 <NavLink class="inicia-sesion-frase">
                     <a href="/iniciar-sesion" class="texto-inicia-sesion">Iniciar Sesión</a>
                 </NavLink>
-   
-       
         </div>
-
 </div>
+</EditForm>
 
 @code {
     [Inject] ReCaptcha Captcha{ get; set; }
+
     SignUpModel Usuario = new ();
 
     async Task Registrar()

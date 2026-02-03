@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "LibreriaNeumann\\Models\\SignUpModel.cs",
               "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Models\\SignUpModel.cs",
               "RelativeToolTip": "LibreriaNeumann\\Models\\SignUpModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBsAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-03T00:23:41.723Z",
               "EditorCaption": ""
@@ -49,7 +49,7 @@
               "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\RegistrarComponent.razor",
               "ToolTip": "C:\\Users\\Maite\\Desktop\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\RegistrarComponent.razor",
               "RelativeToolTip": "LibreriaNeumann\\Components\\RegistrarComponent.razor",
-              "ViewState": "AgIAACoAAAAAAAAAAAAmwEQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACAAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-02-03T00:21:43.73Z",
               "EditorCaption": ""
@@ -64,8 +64,7 @@
               "RelativeToolTip": "LibreriaNeumann\\Components\\Pages\\Home.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-03T00:21:01.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T00:21:01.467Z"
             }
           ]
         }
