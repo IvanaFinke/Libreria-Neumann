@@ -6,24 +6,24 @@
 <div class="registrarse">
     <h1 class="titulo-registrarse-seccion">Registrate</h1>
 
-    <div class="ingresos">
+            <div class="ingresos">
 
-            <h4>Ingrese su nombre</h4>
-            <input type="text" class="ingreso" />
+                <h4>Ingrese su nombre</h4>
+                <input type="text" class="ingreso" @bind-value="Usuario.Nombre"/>
 
-            <h4>Ingrese su apellido</h4>
-            <input type="text" class="ingreso" />
-            
-            <h4>Ingrese su mail</h4>
-             <input type="email" class="ingreso" />
-            
-             <h4>Ingrese su constraseña</h4>
-             <input type="password" class="ingreso" />
+                <h4>Ingrese su apellido</h4>
+                <input type="text" class="ingreso" @bind-value="Usuario.Apellido"/>
+
+                <h4>Ingrese su mail</h4>
+                <input type="email" class="ingreso" @bind-value="Usuario.Email"/>
+
+                <h4>Ingrese su constraseña</h4>
+                <input type="password" class="ingreso" @bind-value="Usuario.Constrasenia"/>
 
                 <h4>Confirme su constraseña</h4>
-                <input type="password" class="ingreso" />
-    </div>
-
+                <input type="password" class="ingreso" @bind-value="Usuario.ConfirmContrasenia"/>
+            </div>
+   
     <button class="boton-registrarse" @onclick="Registrar">Registrarse</button>
 
         <div class="clase-captcha">
@@ -33,7 +33,7 @@
         <div class="clase-preguntar-cuenta">
             <h5>¿Ya tenés una cuenta?</h5>
                 <NavLink class="inicia-sesion-frase">
-                    <span class="texto-inicia-sesion">Iniciar Sesión</span>
+                    <a href="/iniciar-sesion" class="texto-inicia-sesion">Iniciar Sesión</a>
                 </NavLink>
    
        
@@ -43,6 +43,7 @@
 
 @code {
     [Inject] ReCaptcha Captcha{ get; set; }
+    SignUpModel Usuario = new ();
 
     async Task Registrar()
     {
@@ -55,6 +56,11 @@
             Console.WriteLine("Captcha no válido");
             return;
         }
+    }
+
+    async Task Validar()
+    {
+        
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
