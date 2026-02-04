@@ -1,50 +1,88 @@
 ﻿@page "/iniciar-sesion"
 @using LibreriaNeumann.Models
+@using Microsoft.Extensions.Validation
 @inject IJSRuntime JS
 @rendermode InteractiveServer
 
+<EditForm Model="Login" OnValidSubmit="IniciarSesion">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div class="inicio-sesion">
+        <h1 class="inisesi-titulo">Iniciar Sesión</h1>
+        <div class="ingresos">
+            <i class="bi bi-person-circle"></i>
+            <div class="ingreso-mail">
+                <h4>Ingrese su mail</h4>
+                <input type="email" class="ingreso" @bind-value="Login.Email"/>
+                <ValidationMessage For="() => Login.Email"></ValidationMessage>
+            </div>
 
-<div class="inicio-sesion">
-    <h1 class="inisesi-titulo">Iniciar Sesión</h1>
-    <div class="ingresos">
-        <i class="bi bi-person-circle"></i>
-        <div class="ingreso-mail">
-            <h4>Ingrese su mail</h4>
-                <input type="email" class="ingreso" />
-        </div>
-
-        <div class="ingreso-contraseña">
-            <h4>Ingrese su constraseña</h4>
-            <input type="password" class="ingreso" /> 
-            <NavLink class="nav-link-contraseña">
-                <span class="olvidaste-contraseña"><strong>¿Olvidaste tu contraseña?</strong></span>
-            </NavLink>
-        </div>
-
-        <div class="clase-captcha">
-            <div class="g-recaptcha"></div>
-        </div>
-
-
-        <div class="boton-preguntar-registrar">
-            <button class="boton-inicio-sesion" @onclick="IniciarSesion">Iniciar Sesión</button>
-      
-            <div class="preguntar-registrar">
-                <h5 class="preguntar-cuenta">¿No tenés cuenta?</h5>
-                <NavLink class="nav-link-registrarme">
-                    <span class="frase-registrarme">Registrarme</span>
+            <div class="ingreso-contraseña">
+                <h4>Ingrese su constraseña</h4>
+                <input type="password" class="ingreso" @bind-value="Login.Password"/>
+                <ValidationMessage For ="() => Login.Password"></ValidationMessage>
+                <NavLink class="nav-link-contraseña">
+                    <span class="olvidaste-contraseña"><strong>¿Olvidaste tu contraseña?</strong></span>
                 </NavLink>
             </div>
-        </div>
-    </div>
 
-</div>
+            @if (@color == "verde")
+            {
+                <p class="text-success">@mensaje</p>
+            }
+            else if (@color == "rojo")
+            {
+                <p class="text-danger">@mensaje</p>
+            }
+
+            <div class="clase-captcha">
+                <div class="g-recaptcha"></div>
+            </div>
+
+
+            <div class="boton-preguntar-registrar">
+                <button class="boton-inicio-sesion" type="submit">Iniciar Sesión</button>
+
+                <div class="preguntar-registrar">
+                    <h5 class="preguntar-cuenta">¿No tenés cuenta?</h5>
+                    <NavLink class="nav-link-registrarme" href="registrarme">
+                        <span class="frase-registrarme">Registrarme</span>
+                    </NavLink>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</EditForm>
 
 @code {
     [Inject] ReCaptcha Captcha{ get; set; }
+    SignInModel Login = new();
+    [Inject] AppDbContext db { get; set; }
+    [Inject] PasswordHash hasher{ get; set; }
+    private string mensaje = "";
+    private string color = "";
 
     async Task IniciarSesion()
     {
+        var user = db.Users.FirstOrDefault(u => u.Email.Equals(Login.Email));
+
+        if (user == null)
+        {
+            mensaje = "Usuario no registrado";
+            color = "rojo";
+            StateHasChanged();
+            return;
+        }
+
+        if (!hasher.Verify(user.HashPassword, Login.Password))
+        {
+            mensaje = "Contraseña incorrecta. Intente nuevamente";
+            color = "rojo";
+            StateHasChanged();
+            return;
+        }
+
         var token = await JS.InvokeAsync<string>("getCaptchaToken");
 
         var validate = await Captcha.Validate(token);
@@ -54,6 +92,10 @@
             Console.WriteLine("Captcha no válido");
             return;
         }
+
+        mensaje = "Bienvenid@! Iniciaste correctamente!";
+        color = "verde";
+        StateHasChanged();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
