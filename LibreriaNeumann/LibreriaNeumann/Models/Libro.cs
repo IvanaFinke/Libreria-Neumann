@@ -4,6 +4,7 @@ namespace LibreriaNeumann.Models
 {
     public class Libro
     {
+        [Key]
         public int Id { get; set; }
 
         public required string Titulo { get; set; }

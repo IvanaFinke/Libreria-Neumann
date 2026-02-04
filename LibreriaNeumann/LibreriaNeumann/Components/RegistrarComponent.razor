@@ -33,7 +33,16 @@
                 <ValidationMessage For="() => Usuario.ConfirmContrasenia"/>
             </div>
    
-    <button class="boton-registrarse" @onclick="Registrar">Registrarse</button>
+    <button class="boton-registrarse" type="submit">Registrarse</button>
+    
+        @if(@color=="verde")
+        {
+            <p class="text-success">@mensaje</p>
+        }
+        else if(@color=="red")
+        {
+            <p class="text-danger">@mensaje</p>
+        }
 
         <div class="clase-captcha">
             <div class="g-recaptcha"></div>
@@ -50,6 +59,10 @@
 
 @code {
     [Inject] ReCaptcha Captcha{ get; set; }
+    [Inject] PasswordHash PasswordHash { get; set; }
+    [Inject] AppDbContext Db { get; set; }
+    public string mensaje = "";
+    public string color = "";
 
     SignUpModel Usuario = new ();
 
@@ -64,11 +77,29 @@
             Console.WriteLine("Captcha no válido");
             return;
         }
-    }
 
-    async Task Validar()
-    {
-        
+        if (Db.Users.Any(User => User.Email.Equals(Usuario.Email)))
+        {
+            mensaje = "El mail ya está registrado";
+            color = "red";
+            StateHasChanged();
+            return;
+        }
+
+        var user = new User
+        {
+            Nombre = Usuario.Nombre,
+            Apellido = Usuario.Apellido,
+            Email = Usuario.Email,
+            HashPassword = PasswordHash.Hash(Usuario.Constrasenia),
+            Rol = "Cliente"
+        };
+
+        Db.Users.Add(user);
+        await Db.SaveChangesAsync();
+        mensaje = "Usuario correctamente registrado!";
+        color = "verde";
+        StateHasChanged();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)

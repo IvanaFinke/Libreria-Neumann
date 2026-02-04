@@ -12,6 +12,7 @@ namespace LibreriaNeumann.Data
     {
         /*Creamos la tabla SQL Libros, la cual contiene objetos de tipo Libro*/
         public DbSet<Libro> Libros { get; set; }
+        public DbSet<User> Users { get; set; }
 
         /*Prepara conexion, tracking, provider, tablas, user, passwords,server. Le pasamos
          a la AppDbContext nuestra la configuracion de DbContext con base(options)*/

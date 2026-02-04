@@ -15,7 +15,7 @@ namespace LibreriaNeumann.Models
         public string Apellido { get; set; } = string.Empty;
 
         [Required]
-        [EmailAddress]
+        [EmailAddress(ErrorMessage = "Email Inválido")]
         public string Email { get; set; } = string.Empty;
 
         [PasswordPropertyText]
