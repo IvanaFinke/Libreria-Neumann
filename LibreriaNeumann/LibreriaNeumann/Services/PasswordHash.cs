@@ -2,6 +2,7 @@
 
 namespace LibreriaNeumann.Services
 {
+    /*Servicio que hashea y verifica que la contaseña sea correcta*/
     public class PasswordHash
     {
         PasswordHasher<string> hasher = new PasswordHasher<string>();
