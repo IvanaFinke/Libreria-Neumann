@@ -19,16 +19,16 @@
            <div class="user-seccion">
                @if(sesion.Usuario == null)
                 {
-                    <a href="/registrarme" class="user">
+                    <a href="/iniciar-sesion" class="user">
                         <i class="bi bi-person-circle"></i>
                     </a>
                 }
 
                 @if (sesion.Usuario != null)
                 {
-                   <div class="datos-log-in" @onmouseenter="OnUser" @onmouseout="OnUserOut" @onclick="IrUsuario">
+                   <div class="datos-log-in" @onmouseenter="OnUser" @onclick="IrUsuario">
                             <i class="bi bi-person-circle"></i>
-                            <p class="text-decoration:none">Hola @sesion.Usuario.Nombre!</p>
+                            <p class="frase-hola">Hola @sesion.Usuario.Nombre!</p>
 
                     @if (mostrarLogOut)
                     {
@@ -53,16 +53,16 @@
                         <p>Inicia sesion para ver tu carrito!</p>
                     </div>
                 }
-                else if (shoppingCart && sesion.Usuario?.Carrito == null)
-                {
-                    <div class="cuadro-carrito-vacio">
-                        <p>Aún no has guardado libros en tu carrito!</p>
-                     </div>
-                }
+            <!--else if (shoppingCart && sesion.Usuario?.Carrito == null)
+             {
+                 <div class="cuadro-carrito-vacio">
+                     <p>Aún no has guardado libros en tu carrito!</p>
+                  </div>
+             }
                 else if (shoppingCart)
                 {
                    <CarritoHoverComponent></CarritoHoverComponent>
-                }
+                }-->
             </div>
            
        </div>
