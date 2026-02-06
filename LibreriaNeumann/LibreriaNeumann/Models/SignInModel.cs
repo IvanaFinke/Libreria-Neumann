@@ -9,7 +9,7 @@ namespace LibreriaNeumann.Models
         public string Email { get; set; } = "";
 
         [Required]
-        [MinLength(6)]
+        [MinLength(6,ErrorMessage ="La contraseña debe de tener 6 o más carácteres")]
         public string Password { get; set; } = "";
     }
 }

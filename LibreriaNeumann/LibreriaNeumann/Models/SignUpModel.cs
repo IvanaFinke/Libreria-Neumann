@@ -7,11 +7,11 @@ namespace LibreriaNeumann.Models
     public class SignUpModel
     {
         [Required]
-        [RegularExpression(@"^[A-Z][a-zA-Z]+$", ErrorMessage="Nombre Inválido")]
+        [RegularExpression(@"^[A-Z][a-zA-Z]+$", ErrorMessage="Ha ingresado caractéres inválidos")]
         public string Nombre { get; set; } = string.Empty;
 
         [Required]
-        [RegularExpression(@"^[A-Z][a-z-A-Z]+$", ErrorMessage ="Apellido Inválido")]
+        [RegularExpression(@"^[A-Z][a-z-A-Z]+$", ErrorMessage = "Ha ingresado caractéres inválidos")]
         public string Apellido { get; set; } = string.Empty;
 
         [Required]
@@ -20,7 +20,7 @@ namespace LibreriaNeumann.Models
 
         [PasswordPropertyText]
         [Required]
-        [MinLength(6)]
+        [MinLength(6,ErrorMessage ="La contraseña debe de tener 6 o más carácteres")]
         public string Constrasenia { get; set; } = string.Empty;
 
         [PasswordPropertyText]

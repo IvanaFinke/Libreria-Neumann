@@ -60,6 +60,7 @@
     SignInModel Login = new();
     [Inject] AppDbContext db { get; set; }
     [Inject] PasswordHash hasher{ get; set; }
+    [Inject] UserSession SesionIniciada { get; set; }
     private string mensaje = "";
     private string color = "";
 
@@ -69,7 +70,7 @@
 
         if (user == null)
         {
-            mensaje = "Usuario no registrado";
+            mensaje = "Esta cuenta no se encuentra registrada";
             color = "rojo";
             StateHasChanged();
             return;
@@ -95,6 +96,7 @@
 
         mensaje = "Bienvenid@! Iniciaste correctamente!";
         color = "verde";
+        SesionIniciada.SetUser(user);
         StateHasChanged();
     }
 

@@ -1,4 +1,7 @@
 ﻿@rendermode InteractiveServer
+@inject NavigationManager navigatorManager
+@implements IDisposable
+
 <div class="header">
        <div class="logo">
             <img src="https://i.postimg.cc/7ZkKL7v9/book-png.png" />
@@ -13,16 +16,52 @@
        </div>
 
        <div class="user-carrito-seccion">
-            <a href="/registrarme" class="user">
-                    <i class="bi bi-person-circle"></i>
-                </a>
+           <div class="user-seccion">
+               @if(sesion.Usuario == null)
+                {
+                    <a href="/registrarme" class="user">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                }
+
+                @if (sesion.Usuario != null)
+                {
+                   <div class="datos-log-in" @onmouseenter="OnUser" @onmouseout="OnUserOut" @onclick="IrUsuario">
+                            <i class="bi bi-person-circle"></i>
+                            <p class="text-decoration:none">Hola @sesion.Usuario.Nombre!</p>
+
+                    @if (mostrarLogOut)
+                    {
+                        <button class="btn-log-out" @onclick="CerrarSesion">
+                            <i class="bi bi-box-arrow-left"></i>
+                            <span>Log out</span>
+                        </button>
+                    }
+                </div>
+                }
+
+           </div>
+            
             <div class="carrito-pc-seccion" @onmouseenter="OnMouseHovered" @onmouseleave="OnMouseOut">
                 <a href="/mi-carrito" class="carrito">
                     <i class="bi bi-cart4"></i>
                 </a>
-                @if (shoppingCart)
+               <!--Si esta en hover el carrito y el usuario tiene libros guardados en el carrito-->
+                @if (shoppingCart && sesion.Usuario == null)
                 {
-                    <CarritoHoverComponent />
+                    <div class="cuadro-carrito-vacio">
+                        <p>Inicia sesion para ver tu carrito!</p>
+                    </div>
+                }
+                else if (shoppingCart && sesion.Usuario?.Carrito == null)
+                {
+                    <div class="cuadro-carrito-vacio">
+                        <p>Aún no has guardado libros en tu carrito!</p>
+                     </div>
+                }
+                else if (shoppingCart)
+                {
+                   <CarritoHoverComponent></CarritoHoverComponent>
                 }
             </div>
            
@@ -75,12 +114,20 @@
 
     private bool menuSeleccionado;
     private bool shoppingCart;
+    private bool mostrarLogOut;
+    User usuario = new();
+    [Inject] UserSession sesion { get; set; }
+
+    private void CerrarSesion()
+    {
+        sesion.LogOut();
+        navigatorManager.NavigateTo("/inicio");
+    }
 
     private void CloseMenu()
     {
         menuSeleccionado = false;
     }
-
 
     private void ToggleMenu()
     {
@@ -98,4 +145,35 @@
         shoppingCart = false;
     }
 
+    private void OnUser()
+    {
+        mostrarLogOut = true;
+    }
+
+    private void OnUserOut()
+    {
+        mostrarLogOut = false;
+    }
+
+    protected override void OnInitialized()
+    {
+        sesion.OnChange += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        sesion.OnChange -= StateHasChanged;
+    }
+
+    public void IrUsuario()
+    {
+        if(sesion.Usuario == null)
+        {
+            navigatorManager.NavigateTo("/iniciar-sesion");
+        }
+        else
+        {
+            navigatorManager.NavigateTo("/mis-datos");
+        }
+    }
 }
