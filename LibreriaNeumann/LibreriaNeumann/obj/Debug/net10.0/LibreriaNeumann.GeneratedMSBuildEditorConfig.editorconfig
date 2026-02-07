@@ -34,6 +34,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/Pages/AdminLibros.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbkxpYnJvcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -61,10 +65,6 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/AdminComponent.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBZG1pbkNvbXBvbmVudC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-ku2wewt6u0
 
 [C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/CambioDatosComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYW1iaW9EYXRvc0NvbXBvbmVudC5yYXpvcg==
@@ -117,6 +117,10 @@ build_metadata.AdditionalFiles.CssScope = b-77wm5m25zu
 [C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/LibroSeccionComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMaWJyb1NlY2Npb25Db21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-1l9de3t9q8
+
+[C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/Pages/Admin.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-i87l3h0epg
 
 [C:/Users/Maite/Desktop/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/RegistrarComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSZWdpc3RyYXJDb21wb25lbnQucmF6b3I=

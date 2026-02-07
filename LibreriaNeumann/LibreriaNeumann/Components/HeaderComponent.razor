@@ -19,10 +19,10 @@
             <!--Seccion solo para el admin interactuando con los datos-->
             @if (sesion?.Usuario?.Rol == "Admin")
             {
-                 <a href="/admin" class="admin-seccion">
+                 <NavLink href="/admin" class="admin-seccion">
                     <i class="bi bi-gear-fill"></i>
                     <span class="texto-admin">Admin</span>
-                </a>
+                </NavLink>
             }
            <div class="user-seccion">
                @if(sesion?.Usuario == null)
@@ -55,7 +55,7 @@
                     <i class="bi bi-cart4"></i>
                 </a>
                <!--Si esta en hover el carrito y el usuario tiene libros guardados en el carrito-->
-                @if (shoppingCart && sesion.Usuario == null)
+                @if (shoppingCart && sesion?.Usuario == null)
                 {
                     <div class="cuadro-carrito-vacio">
                         <p>Inicia sesion para ver tu carrito!</p>
@@ -124,11 +124,11 @@
     private bool shoppingCart;
     private bool mostrarLogOut;
     User usuario = new();
-    [Inject] UserSession sesion { get; set; }
+    [Inject] UserSession? sesion { get; set; }
 
     private void CerrarSesion()
     {
-        sesion.LogOut();
+        sesion?.LogOut();
         navigatorManager.NavigateTo("/inicio");
     }
 
@@ -165,17 +165,17 @@
 
     protected override void OnInitialized()
     {
-        sesion.OnChange += StateHasChanged;
+        sesion?.OnChange += StateHasChanged;
     }
 
     public void Dispose()
     {
-        sesion.OnChange -= StateHasChanged;
+        sesion?.OnChange -= StateHasChanged;
     }
 
     public void IrUsuario()
     {
-        if(sesion.Usuario == null)
+        if(sesion?.Usuario == null)
         {
             navigatorManager.NavigateTo("/iniciar-sesion");
         }

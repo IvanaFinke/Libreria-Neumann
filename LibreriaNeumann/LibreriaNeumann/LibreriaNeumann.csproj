@@ -27,11 +27,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="Components\AdminComponent.razor" />
     <Content Remove="Components\Layout\NavMenu.razor" />
     <Content Remove="Components\UserComponent.razor.razor" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Components\AdminComponent.razor.css" />
     <None Remove="Components\Layout\NavMenu.razor.css" />
   </ItemGroup>
 

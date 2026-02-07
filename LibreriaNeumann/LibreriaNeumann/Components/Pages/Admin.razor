@@ -1,0 +1,49 @@
+﻿@page "/admin"
+@inject NavigationManager navigatorManager
+@implements IDisposable
+@rendermode InteractiveServer
+
+@if (UsuarioSesion?.Usuario != null)
+{
+    <div class="admin-page">
+        <h1>Bienvenido administrador @UsuarioSesion.Usuario.Nombre!</h1>
+
+        <div class="panel">
+            <h4>Panel de administrador</h4>
+            <NavLink href="/admin/libros">Libros</NavLink>
+            <NavLink href="/admin/sobre-nosotros">Sobre Nosotros</NavLink>
+            <NavLink href="/admin/contacto">Contacto del negocio</NavLink>
+        </div>
+    </div>
+    
+}
+
+@code {
+
+    [Inject] UserSession? UsuarioSesion { get; set; }
+
+    /*Cuando la sesion cambie, llamamos a la funcion de este componente Admin*/
+    protected override void OnInitialized()
+    {
+        UsuarioSesion?.OnChange += SessionChanged;
+    }
+
+    /*Verifica que el usuario sea distinto de admin para mandarlo a inicio y asegurar seguridad*/
+    void SessionChanged()
+    {
+        if (UsuarioSesion?.Usuario?.Rol != "Admin")
+        {
+            navigatorManager.NavigateTo("/inicio", true);
+        }
+        /*Como UserSession tiene patron Singleton, blazor se rehusa a cambiar de thread
+        entonces debemos colocar InvokeAsync(StaeHasChanged) para forzar a recuperar el contexto visual 
+        donde ejcuta StateHaschanged*/
+        InvokeAsync(StateHasChanged);
+    }
+
+    /*Al salir de admin se elimina la conexión con el componente*/
+    public void Dispose()
+    {
+        UsuarioSesion?.OnChange -= SessionChanged;
+    }
+}
