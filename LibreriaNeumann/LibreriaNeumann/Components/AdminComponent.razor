@@ -1,0 +1,29 @@
+﻿@inject NavigationManager navigatorManager
+@page "/admin"
+
+@if(UsuarioSesion?.Usuario?.Rol != null)
+{
+    <h1>Bienvenido administrador @UsuarioSesion?.Usuario?.Nombre!</h1>
+
+    <h4>Panel de administrador</h4>
+    <div class="panel">
+        <NavLink href="/admin/libros">Libros</NavLink>
+        <NavLink href="/admin/sobre-nosotros">Sobre Nosotros</NavLink>
+        <NavLink href="/admin/contacto">Contacto del negocio</NavLink>
+    </div>
+}
+
+@code {
+    [Inject] UserSession ? UsuarioSesion { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(firstRender)
+        {
+            if(UsuarioSesion?.Usuario?.Rol != "Admin")
+            {
+                navigatorManager.NavigateTo("/inicio", true);
+            }
+        }
+    }
+}

@@ -16,28 +16,36 @@
        </div>
 
        <div class="user-carrito-seccion">
+            <!--Seccion solo para el admin interactuando con los datos-->
+            @if (sesion?.Usuario?.Rol == "Admin")
+            {
+                 <a href="/admin" class="admin-seccion">
+                    <i class="bi bi-gear-fill"></i>
+                    <span class="texto-admin">Admin</span>
+                </a>
+            }
            <div class="user-seccion">
-               @if(sesion.Usuario == null)
+               @if(sesion?.Usuario == null)
                 {
                     <a href="/iniciar-sesion" class="user">
                         <i class="bi bi-person-circle"></i>
                     </a>
                 }
 
-                @if (sesion.Usuario != null)
+                @if (sesion?.Usuario != null)
                 {
                    <div class="datos-log-in" @onmouseenter="OnUser" @onclick="IrUsuario">
                             <i class="bi bi-person-circle"></i>
                             <p class="frase-hola">Hola @sesion.Usuario.Nombre!</p>
 
-                    @if (mostrarLogOut)
-                    {
-                        <button class="btn-log-out" @onclick="CerrarSesion">
-                            <i class="bi bi-box-arrow-left"></i>
-                            <span>Log out</span>
-                        </button>
-                    }
-                </div>
+                            @if (mostrarLogOut)
+                            {
+                                <button class="btn-log-out" @onclick="CerrarSesion">
+                                    <i class="bi bi-box-arrow-left"></i>
+                                    <span>Log out</span>
+                                </button>
+                            }
+                     </div>
                 }
 
            </div>

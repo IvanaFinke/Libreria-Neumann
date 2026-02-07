@@ -1,0 +1,9 @@
+﻿h1{
+    display:flex;
+    font-size:40px;
+}
+
+.panel{
+    display:flex;
+    flex-direction:column;
+}

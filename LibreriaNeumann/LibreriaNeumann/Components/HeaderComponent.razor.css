@@ -1,6 +1,6 @@
 ﻿.header {
     display: grid;
-    grid-template-columns: minmax(20px,200px) 1fr auto auto;
+    grid-template-columns: minmax(20px,200px) 1fr auto auto auto;
     align-items: center;
     background-color: lightgray;
     padding: 0.75rem 1.5rem;
@@ -57,13 +57,16 @@
 .user-carrito-seccion {
     position:relative;
     display: flex;
-    gap: 10px;
-    padding-right: 10px;
+    gap: 20px;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    height:fit-content;
 }
 
-::deep .user:hover i, .carrito:hover i {
+::deep .user:hover i, .carrito:hover i, ::deep .admin-seccion:hover i, ::deep .user-seccion:hover i{
         color: #0d6efd;
-        transform: scale(1.05);
+        transform: scale(1.00);
         transition: transform ease 0.15s color 0.15s ease;
 }
 
@@ -77,21 +80,33 @@
     outline-offset: 0 !important;
 }
 
-::deep a.user i {
+::deep a.user i{
     color: black;
 }
 
+::deep a.admin-seccion span {
+    color: black;
+}
 ::deep a.carrito i{
     color:black;
+}
+
+::deep .bi-gear-fill {
+    color: black;
 }
 
 ::deep a.carrito,
 ::deep a.carrito:focus,
 ::deep a.carrito:focus-visible,
-::deep a.carrito.active{
+::deep a.carrito.active,
+::deep a.admin-seccion,
+::deep a.admin-seccion:focus,
+::deep a.admin-seccion:focus-visible,
+::deep a.admin-seccion.active{
     outline:none !important;
     box-shadow: none !important;
     outline-offset: 0 !important;
+    text-decoration:none;
 }
 
 .bi-person-circle, .bi-cart4 {
@@ -148,20 +163,25 @@
     display: none;
 }
 
-.user-seccion{
-    display:flex;
-    flex-direction:column;  
-    width:fit-content;
+.user-seccion {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
 }
 
 .btn-log-out{
     border:2px solid black;
     position: absolute;
-    top:90%;
+    top:100%;
+    width:100px;
 }
 
-.datos-log-in{
-    position:relative;
+.datos-log-in {
+    position: relative;
+    cursor: pointer;
+    display:flex;
+    flex-direction:row;
+    gap: 10px;
 }
 
 .cuadro-carrito-vacio{
@@ -178,9 +198,31 @@
     text-align:center;
 }
 
-.datos-log-in{
-   cursor:pointer;
+.admin-seccion{
+    display:flex;
+    flex-direction:column;
+    cursor:pointer;
+    align-self:center;
+    align-items:center;
+    justify-content:center;
+    height:fit-content;
+    gap:0px;
 }
+
+::deep .admin-seccion i{
+    font-size:45px;
+    padding-top:20px;
+}
+
+.frase-hola{
+    display:flex;
+    flex-direction:column;
+    text-wrap:balance;
+    width:80px;
+    text-align:start;
+    align-self:end;
+}
+
 
 /*Diseño movil*/
 @media (max-width:570px) {
@@ -290,8 +332,12 @@
         width: 14px; 
     }
 
-    .user i, .carrito i, .bi-person-circle {
+    .user i, .carrito i, .bi-person-circle, .admin-seccion i {
         font-size: 30px;
+    }
+
+    .admin-seccion span{
+        font-size:14px;
     }
 
     .user, .carrito{
@@ -311,10 +357,10 @@
 
     .header {
         display: grid;
-        grid-template-columns: auto 1fr auto auto;
+        grid-template-columns: auto 1fr auto auto auto;
         justify-content: space-between;
         align-items: center;
-        gap: 20px;
+        gap: 10px;
     }
 
     .menu-header {
@@ -331,7 +377,9 @@
         padding: 0;
     }
 
-
+    .logo img{
+        width:75px;
+    }
 
     .nombre-logo {
         font-size: 24px;
@@ -355,13 +403,32 @@
     }
 
     .user, .carrito, .user i, .carrito i{
-        font-size: 40px;
+        font-size: 38px;
     }
 
     .user, .carrito {
         width: 100%;
-        padding: 0;
+        
     }
+
+    .user-carrito-seccion{
+        gap:10px;
+    }
+
+    .datos-log-in{
+        display:flex;
+        width:fit-content;
+        margin-right:0;
+    }
+
+    .admin-seccion{
+        padding-left:20px;
+    }
+
+    .user-seccion{
+        padding-left:10px;
+    }
+
 }
 
 
