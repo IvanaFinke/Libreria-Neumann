@@ -1,0 +1,15 @@
+﻿.agregar-seccion {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    width: 100%;
+    align-items: center;
+    padding: 3rem 3rem;
+    padding-top: 1rem;
+    gap: 10px;
+}
+
+.titulo-catalogo {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}

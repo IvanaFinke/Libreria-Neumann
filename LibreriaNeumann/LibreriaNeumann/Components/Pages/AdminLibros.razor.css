@@ -1,0 +1,266 @@
+﻿.adm-libros-seccion {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    width: 100%;
+    align-items: center;
+    padding: 3rem 3rem;
+    padding-top: 1rem;
+    gap: 10px;
+}
+
+.titulo-catalogo {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.menu-catalogo-pc {
+    display: grid;
+    align-self: start;
+    align-content: center;
+    margin-top: 5px;
+    grid-column: 1;
+    gap: 10px;
+}
+
+.botones-catalogo {
+    width: 180px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    background-color: white;
+    border: 2px solid rgb(212, 212, 212);
+    font-size: 18px;
+    font-family: serif;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.agregar-libros {
+    width: 180px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    background-color: limegreen;
+    border: 2px solid rgb(0, 109, 6);
+    font-size: 18px;
+    font-family: serif;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.agregar-libros:hover{
+    color: greenyellow;
+    border-color:lawngreen;
+}
+
+.botones-catalogo:hover {
+    border-color: rgb(244, 152, 117);
+    color: rgb(244, 152, 117);
+}
+
+.botones-catalogo:hover i {
+    color: rgb(244, 152, 117);
+}
+
+.img-libro{
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-items:start;
+}
+
+.botones{
+    position:absolute;
+    display:flex;
+    z-index:9999;
+    justify-self:end;
+    align-items:end;
+}
+
+.eliminar{
+    background-color:red;
+    display:flex;
+    justify-self:end;
+}
+
+.modificar{
+    background-color:cornflowerblue;
+}
+
+.menu-eliminar{
+    position:absolute;
+    display:flex;
+    justify-self:center;
+    align-self:center;
+    z-index:99999;
+    border: 2px solid rgb(244, 152, 117);
+    top:50%;
+    background-color:white;
+    flex-direction:column;
+    padding-top: 10px;
+}
+
+.btn-eliminar, .btn-cancel {
+    border: 2px solid rgb(244, 152, 117);
+}
+
+.menu-eliminar p{
+    padding: 0 10px;
+}
+
+.opciones-eliminar{
+    display:grid;
+    grid-template-columns: auto auto;
+}
+
+.lista-libros {
+    display: grid;
+    align-items: center;
+    align-content: start;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3rem;
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 2rem;
+}
+
+.cuadro-libro {
+    display: grid;
+    width: fit-content;
+    height: 600px;
+    align-self: start;
+}
+
+    .cuadro-libro img {
+        width: 200px;
+        height: 350px;
+        object-fit: cover;
+    }
+
+.boton-comprar-libro {
+    background-color: rgb(244, 152, 117);
+    border: none;
+    color: white;
+    font-family: Arial;
+    font-weight: 600;
+    width: 100%;
+    height: 40px;
+    align-self: end;
+    font-size: 15px;
+}
+
+    .boton-comprar-libro:hover {
+        border-color: rgb(212, 212, 212);
+        border-style: solid;
+    }
+
+.titulo-libro-catalogo {
+    text-align: start;
+    font-size: 20px;
+    text-wrap: balance;
+}
+
+.autor-catalogo {
+    text-align: start;
+    font-size: 16px;
+    text-wrap: balance;
+}
+
+.precio-catalogo {
+    text-align: start;
+    align-self: end;
+    text-wrap: balance;
+}
+
+.menu-catalogo-responsive .botones-catalogo, .boton-filtrar {
+    display: none;
+}
+
+.ingreso-precios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6px;
+    font-family: sans-serif;
+}
+
+    .ingreso-precios input, .ingreso-autor input {
+        width: 180px;
+        height: 30px;
+    }
+
+.btn-precio-buscar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100px;
+    height: 30px;
+}
+
+.ingreso-autor {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/*Diseño movil*/
+@media (max-width:570px) {
+    .adm-libros-seccion {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 3rem 3rem;
+        padding-top: 1rem;
+        gap: 10px;
+    }
+
+    .titulo-catalogo {
+        align-self: center;
+        font-family: serif;
+        font-size: 32px;
+        font-weight: 500;
+    }
+
+    .menu-catalogo-pc {
+        display: none;
+    }
+
+    .menu-catalogo-responsive {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-content: center;
+        margin-top: 5px;
+        grid-column: 1;
+        gap: 10px;
+    }
+
+    .botones-catalogo, .boton-filtrar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 200px;
+        align-self: center;
+        border: 2px solid rgb(212, 212, 212);
+        background-color: white;
+        font-size: 18px;
+        font-family: sans-serif;
+        font-weight: 200;
+        padding: 0 10px;
+    }
+
+        .botones-catalogo i {
+            font-size: 20px;
+        }
+
+    .ingreso-precios {
+        display: flex;
+        flex-direction: row;
+    }
+}
