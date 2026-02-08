@@ -76,10 +76,10 @@
 
 .botones[b-dpp1rnt9yi]{
     position:absolute;
+    left:130px;
     display:flex;
-    z-index:9999;
-    justify-self:end;
-    align-items:end;
+    flex-direction:row;
+    gap:5px;
 }
 
 .eliminar[b-dpp1rnt9yi]{
@@ -92,17 +92,17 @@
     background-color:cornflowerblue;
 }
 
-.menu-eliminar[b-dpp1rnt9yi]{
-    position:absolute;
-    display:flex;
-    justify-self:center;
+.menu-eliminar[b-dpp1rnt9yi] {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
     align-self:center;
-    z-index:99999;
-    border: 2px solid rgb(244, 152, 117);
+    justify-self:center;
     top:50%;
-    background-color:white;
-    flex-direction:column;
-    padding-top: 10px;
+    z-index: 99999;
+    border: 2px solid rgb(244, 152, 117);
+    background-color: white;
+    padding-top:10px;
 }
 
 .btn-eliminar[b-dpp1rnt9yi], .btn-cancel[b-dpp1rnt9yi] {
