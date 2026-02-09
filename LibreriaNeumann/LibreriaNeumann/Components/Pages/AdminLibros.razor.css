@@ -136,11 +136,11 @@
     align-self: start;
 }
 
-    .cuadro-libro img {
-        width: 200px;
-        height: 350px;
-        object-fit: cover;
-    }
+.cuadro-libro img {
+    width: 200px;
+    height: 350px;
+    object-fit: cover;
+}
 
 .boton-comprar-libro {
     background-color: rgb(244, 152, 117);
