@@ -3526,12 +3526,12 @@ h1[b-i87l3h0epg] {
 /* /Components/Pages/AdminAgregarLibro.razor.rz.scp.css */
 .agregar-seccion[b-qjt3d5h19q] {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto;
     width: 100%;
     align-items: center;
     padding: 3rem 3rem;
     padding-top: 1rem;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .titulo-catalogo[b-qjt3d5h19q] {
@@ -3539,6 +3539,45 @@ h1[b-i87l3h0epg] {
     font-family: serif;
     font-weight: 500;
 }
+
+.boton-prev[b-qjt3d5h19q] {
+    text-emphasis-color: white;
+    background-color: rgb(244, 152, 117);
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: white;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-top:2rem;
+}
+
+.ingresos[b-qjt3d5h19q] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.ingreso[b-qjt3d5h19q] {
+    width: 500px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
+}
+
+.ingreso-de-la-solicitud[b-qjt3d5h19q] {
+    width: 500px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
+    border-width: 2px;
+    height: 300px;
+}
+
 /* /Components/Pages/AdminLibros.razor.rz.scp.css */
 .adm-libros-seccion[b-dpp1rnt9yi] {
     display: grid;
@@ -3678,11 +3717,11 @@ h1[b-i87l3h0epg] {
     align-self: start;
 }
 
-    .cuadro-libro img[b-dpp1rnt9yi] {
-        width: 200px;
-        height: 350px;
-        object-fit: cover;
-    }
+.cuadro-libro img[b-dpp1rnt9yi] {
+    width: 200px;
+    height: 350px;
+    object-fit: cover;
+}
 
 .boton-comprar-libro[b-dpp1rnt9yi] {
     background-color: rgb(244, 152, 117);
@@ -3748,6 +3787,20 @@ h1[b-i87l3h0epg] {
     display: flex;
     flex-direction: column;
     gap: 6px;
+}
+
+.ingresos[b-dpp1rnt9yi] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.ingreso[b-dpp1rnt9yi] {
+    width: 500px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
 }
 
 /*Diseño movil*/

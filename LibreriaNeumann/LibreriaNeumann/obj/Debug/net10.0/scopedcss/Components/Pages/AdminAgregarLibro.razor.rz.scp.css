@@ -1,11 +1,11 @@
 .agregar-seccion[b-qjt3d5h19q] {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto;
     width: 100%;
     align-items: center;
     padding: 3rem 3rem;
     padding-top: 1rem;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .titulo-catalogo[b-qjt3d5h19q] {
@@ -13,3 +13,42 @@
     font-family: serif;
     font-weight: 500;
 }
+
+.boton-prev[b-qjt3d5h19q] {
+    text-emphasis-color: white;
+    background-color: rgb(244, 152, 117);
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: white;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-top:2rem;
+}
+
+.ingresos[b-qjt3d5h19q] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.ingreso[b-qjt3d5h19q] {
+    width: 500px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
+}
+
+.ingreso-de-la-solicitud[b-qjt3d5h19q] {
+    width: 500px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
+    border-width: 2px;
+    height: 300px;
+}
+

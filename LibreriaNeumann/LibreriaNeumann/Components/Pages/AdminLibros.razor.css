@@ -208,6 +208,20 @@
     gap: 6px;
 }
 
+.ingresos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.ingreso {
+    width: 500px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
+}
+
 /*Diseño movil*/
 @media (max-width:570px) {
     .adm-libros-seccion {

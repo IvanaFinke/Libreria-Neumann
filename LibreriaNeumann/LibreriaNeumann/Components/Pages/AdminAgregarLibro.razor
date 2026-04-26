@@ -1,9 +1,106 @@
-﻿@page "/admin/libros/agregar"
+﻿@inject NavigationManager navigatorManager
+@rendermode InteractiveServer
+@implements IDisposable
 
-<div class="agregar-seccion">
-    <h1 class="titulo-agregar">Agregar libros</h1>
-</div>
+@page "/admin/libros/agregar"
+
+@if(usuarioSesion?.Usuario != null){
+    <div class="agregar-seccion">
+        <h1 class="titulo-agregar">Agregar libros</h1>
+
+        <div class="ingresos">
+            <div class="clase-input-nombre">
+                <h4>Inserte título del libro</h4>
+                <input type="text" class="ingreso" @bind="@titulo"/>
+            </div>
+
+            <div class="clase-input-mail">
+                <h4>Autor</h4>
+                <input class="ingreso" @bind="@autor"/>
+            </div>
+
+            <div class="clase-input-mail">
+                <h4>Precio</h4>
+                <input type="number" class="ingreso" @bind="precio" />
+            </div>
+
+            <div class="clase-input-mail">
+                <h4>Editorial</h4>
+                <input class="ingreso" @bind="editorial"/>
+            </div>
+
+            <div class="clase-input-solicitud">
+                <h4>Sinopsis</h4>
+                <textarea class="ingreso-de-la-solicitud" @bind="sinopsis"></textarea>
+            </div>
+
+            <div class="clase-input-mail">
+                <h4>Año Publicación</h4>
+                <input type="number" class="ingreso" @bind="publicacion"/>
+            </div>
+
+            <div class="clase-input-mail">
+                <h4>Cant. Páginas</h4>
+                <input type="number" class="ingreso" @bind="pags"/>
+            </div>
+
+            <div class="clase-input-mail">
+                <h4>Cantidad en Stock</h4>
+                <input type="number" class="ingreso" @bind="stock"/>
+            </div>
+
+            <button class="boton-prev">PREVISUALIZAR</button>
+
+        </div>
+    </div>
+}
 
 @code {
+    [Inject] UserSession? usuarioSesion { get; set; }
+    [Inject] LibroService? libroService { get;set; }
+    User usuario = new();
+    private string? titulo,autor,editorial,sinopsis,imgURL,categoria = "";
+    private decimal precio;
+    private int publicacion, pags, stock;
+
+    protected override void OnInitialized()
+    {
+        usuarioSesion?.OnChange -= SessionChanged;
+    }
+
+    void SessionChanged()
+    {
+        if (usuarioSesion?.Usuario?.Rol != "admin")
+        {
+            navigatorManager.NavigateTo("/inicio");
+        }
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        usuarioSesion?.OnChange -= SessionChanged;
+    }
+
+    protected Libro crearLibro()
+    {
+        var nuevoLibro = new Libro( //arreglar
+            titulo,
+            autor,
+            precio,
+            editorial,
+            sinopsis,
+            publicacion,
+            pags,
+            stock
+        );
+        return nuevoLibro;
+    }
+
+    protected async Task AgregarLibro(Libro libro)
+    {
+        await libroService.Add(libro);
+        InvokeAsync(StateHasChanged);
+    }
 
 }
