@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LibreriaNeumann.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260206180001_ChangeOberonAdmin")]
-    partial class ChangeOberonAdmin
+    [Migration("20260426193848_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -14,7 +14,14 @@ builder.Services.AddHttpClient();
 builder.Services.AddHttpClient<ReCaptcha>();
 builder.Services.AddScoped<ReCaptcha>();
 builder.Services.AddDbContext<AppDbContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+options.UseSqlServer(
+    builder.Configuration.GetConnectionString("DefaultConnection"),
+    sqlOptions => sqlOptions.EnableRetryOnFailure(
+        maxRetryCount: 5,
+        maxRetryDelay: TimeSpan.FromSeconds(10),
+        errorNumbersToAdd: null)
+    )
+);
 builder.Services.AddScoped<LibroService>();
 builder.Services.AddScoped<PasswordHash>();
 builder.Services.AddSingleton<UserSession>();
@@ -31,7 +38,7 @@ if (!app.Environment.IsDevelopment())
 }
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 app.UseHttpsRedirection();
-
+app.UseStaticFiles();
 app.UseAntiforgery();
 
 app.MapStaticAssets();
@@ -41,8 +48,9 @@ app.MapRazorComponents<App>()
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.EnsureCreated();
     DataSeeder.Seed(db);
-
+    
 }
 
 app.Run();

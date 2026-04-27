@@ -1,10 +1,12 @@
-﻿@inject NavigationManager navigatorManager
+﻿@page "/admin/libros/agregar"
+@inject NavigationManager navigatorManager
+@inject IWebHostEnvironment env
 @rendermode InteractiveServer
 @implements IDisposable
 
-@page "/admin/libros/agregar"
 
-@if(usuarioSesion?.Usuario != null){
+@if(usuarioSesion?.Usuario != null)
+{
     <div class="agregar-seccion">
         <h1 class="titulo-agregar">Agregar libros</h1>
 
@@ -49,8 +51,17 @@
                 <input type="number" class="ingreso" @bind="stock"/>
             </div>
 
-            <button class="boton-prev">PREVISUALIZAR</button>
+            <div class="clase-input-mail">
+                <h4>Adjuntar imagen</h4>
+                <InputFile OnChange="CargarImagen" accept="image/*"></InputFile>
+            </div>
 
+            <div class="clase-input-mail">
+                <h4>Categoría</h4>
+                <input class="ingreso" @bind="categoria"/>
+            </div>
+
+            <button class="boton-prev" @onclick="AgregarLibro">PREVISUALIZAR</button>
         </div>
     </div>
 }
@@ -62,10 +73,11 @@
     private string? titulo,autor,editorial,sinopsis,imgURL,categoria = "";
     private decimal precio;
     private int publicacion, pags, stock;
+    private IBrowserFile? imagenSeleccionada;
 
     protected override void OnInitialized()
     {
-        usuarioSesion?.OnChange -= SessionChanged;
+        usuarioSesion?.OnChange += SessionChanged;
     }
 
     void SessionChanged()
@@ -84,23 +96,58 @@
 
     protected Libro crearLibro()
     {
-        var nuevoLibro = new Libro( //arreglar
-            titulo,
-            autor,
-            precio,
-            editorial,
-            sinopsis,
-            publicacion,
-            pags,
-            stock
-        );
-        return nuevoLibro;
+        return new Libro{
+            Titulo = titulo ?? "",
+            Autor = autor ?? "",
+            Editorial = editorial ?? "",
+            Descripcion = sinopsis ?? "",
+            Precio = precio,
+            Fecha = publicacion,
+            cantPaginas = pags,
+            Stock = stock,
+            Categoria = categoria ?? "",
+            ImageURL = imgURL ?? "",
+        };
     }
 
-    protected async Task AgregarLibro(Libro libro)
+    protected async Task AgregarLibro()
     {
-        await libroService.Add(libro);
-        InvokeAsync(StateHasChanged);
+        try
+        {
+            if (imagenSeleccionada != null)
+            {
+                //creamos un identificador con la extension del archivo pasado
+                var nombreImagen = $"{Guid.NewGuid()}{Path.GetExtension(imagenSeleccionada.Name)}";
+                //creamos la direccion
+                var ruta = Path.Combine(env.WebRootPath, "images", "libros", nombreImagen);
+                //creamos archivo vacio en la ruta
+                using var stream = File.Create(ruta);
+                //determinamos tamaño maximo de la imagen a guardar y guardamos la informacion en el archivo vacio
+                await imagenSeleccionada.OpenReadStream(maxAllowedSize: 5 * 1024 * 1024).CopyToAsync(stream);
+
+                imgURL = $"/images/libros/{nombreImagen}";
+            }
+
+            var libro = crearLibro();
+            await libroService!.Add(libro);
+            navigatorManager.NavigateTo("/admin/libros");
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine($"Error al agregar el libro: {ex.Message}");
+        }
+
+    }
+
+    protected async Task CargarImagen(InputFileChangeEventArgs e)
+    {
+        try{
+            imagenSeleccionada = e.File;
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine($"Error al cargar la imagen: {ex.Message}");
+        }
     }
 
 }
