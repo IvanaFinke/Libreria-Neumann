@@ -3859,6 +3859,60 @@ h1[b-i87l3h0epg] {
         flex-direction: row;
     }
 }
+/* /Components/Pages/AdminModificarLibro.razor.rz.scp.css */
+.modificar-seccion[b-j7wr8mao0a] {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    align-items: center;
+    padding: 3rem 3rem;
+    padding-top: 1rem;
+    gap: 1rem;
+}
+
+.titulo-catalogo[b-j7wr8mao0a] {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.boton-prev[b-j7wr8mao0a] {
+    text-emphasis-color: white;
+    background-color: rgb(244, 152, 117);
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: white;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-top: 2rem;
+}
+
+.ingresos[b-j7wr8mao0a] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.ingreso[b-j7wr8mao0a] {
+    width: 500px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
+}
+
+.ingreso-de-la-solicitud[b-j7wr8mao0a] {
+    width: 500px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
+    border-width: 2px;
+    height: 300px;
+}
 /* /Components/RegistrarComponent.razor.rz.scp.css */
 .registrarse[b-f1rx34fkzg] {
     display: grid;

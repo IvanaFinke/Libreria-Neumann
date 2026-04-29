@@ -302,7 +302,7 @@
                         <img src="@libro.ImageURL" />
                         <div class="botones">
                             <button class="eliminar" @onclick="() => PreguntarEliminar(libro.Id)"><i class="bi bi-trash"></i> </button>
-                            <button class="modificar"><i class="bi bi-gear-fill"></i></button>
+                            <button class="modificar" @onclick="() => ModificarLibro(libro)"><i class="bi bi-gear-fill"></i></button>
                         </div>
                     </div>
                     <h4 class="titulo-libro-catalogo pt-2">@libro.Titulo</h4>
@@ -469,5 +469,10 @@
         listaLibros = await libroService.ObtenerLibros();
         libroEliminar = null;
         await InvokeAsync(StateHasChanged);
+    }
+
+    private void  ModificarLibro(Libro libro)
+    {
+        navigatorManager.NavigateTo($"/admin/libros/modificar/{libro.Id}");
     }
 }
