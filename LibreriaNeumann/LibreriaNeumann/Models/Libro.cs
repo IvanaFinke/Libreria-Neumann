@@ -19,10 +19,6 @@ namespace LibreriaNeumann.Models
 
         public required string ImageURL { get; set; }
 
-        [Range(0,9999999.9)]
-        [DataType(DataType.Currency)]
-        public decimal PrecioCuotas { get; set; }
-
         [Range(0, int.MaxValue)]
         public required int Stock { get; set; }
 

@@ -3526,12 +3526,19 @@ h1[b-i87l3h0epg] {
 /* /Components/Pages/AdminAgregarLibro.razor.rz.scp.css */
 .agregar-seccion[b-qjt3d5h19q] {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
     width: 100%;
-    align-items: center;
+    align-items: start;
     padding: 3rem 3rem;
     padding-top: 1rem;
     gap: 1rem;
+}
+
+.columna2[b-qjt3d5h19q] {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
 }
 
 .titulo-catalogo[b-qjt3d5h19q] {

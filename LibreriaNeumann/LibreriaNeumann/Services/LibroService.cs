@@ -79,5 +79,11 @@ namespace LibreriaNeumann.Services
 
             return await query.ToListAsync();
         }
+
+        //filtro para evitar que se repitan libros con el mismo titulo, autor y editorial en el csv
+        public async Task<bool> ExistePorAutorTituloEditorial(string titulo, string autor, string editorial)
+        {
+            return await _context.Libros.AnyAsync(libro => libro.Titulo == titulo && libro.Autor == autor && libro.Editorial == editorial);
+        }
     }
 }

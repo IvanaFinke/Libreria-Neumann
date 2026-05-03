@@ -8,60 +8,95 @@
 @if(usuarioSesion?.Usuario != null)
 {
     <div class="agregar-seccion">
-        <h1 class="titulo-agregar">Agregar libros</h1>
+        <div class="columna1">
+            <h1 class="titulo-agregar">Agregar libro individual</h1>
 
-        <div class="ingresos">
-            <div class="clase-input-nombre">
-                <h4>Inserte título del libro</h4>
-                <input type="text" class="ingreso" @bind="@titulo"/>
+            <div class="ingresos">
+                <div class="clase-input-nombre">
+                    <h4>Inserte título del libro</h4>
+                    <input type="text" class="ingreso" @bind="@titulo" />
+                </div>
+
+                <div class="clase-input-mail">
+                    <h4>Autor</h4>
+                    <input class="ingreso" @bind="@autor" />
+                </div>
+
+                <div class="clase-input-mail">
+                    <h4>Precio</h4>
+                    <input type="number" class="ingreso" @bind="precio" />
+                </div>
+
+                <div class="clase-input-mail">
+                    <h4>Editorial</h4>
+                    <input class="ingreso" @bind="editorial" />
+                </div>
+
+                <div class="clase-input-solicitud">
+                    <h4>Sinopsis</h4>
+                    <textarea class="ingreso-de-la-solicitud" @bind="sinopsis"></textarea>
+                </div>
+
+                <div class="clase-input-mail">
+                    <h4>Año Publicación</h4>
+                    <input type="number" class="ingreso" @bind="publicacion" />
+                </div>
+
+                <div class="clase-input-mail">
+                    <h4>Cant. Páginas</h4>
+                    <input type="number" class="ingreso" @bind="pags" />
+                </div>
+
+                <div class="clase-input-mail">
+                    <h4>Cantidad en Stock</h4>
+                    <input type="number" class="ingreso" @bind="stock" />
+                </div>
+
+                <div class="clase-input-mail">
+                    <h4>Adjuntar imagen</h4>
+                    <InputFile OnChange="CargarImagen" accept="image/*"></InputFile>
+                </div>
+
+                <div class="clase-input-mail">
+                    <h4>Categoría</h4>
+                    <input class="ingreso" @bind="categoria" />
+                </div>
+
+                <button class="boton-prev" @onclick="AgregarLibro">PREVISUALIZAR</button>
             </div>
-
-            <div class="clase-input-mail">
-                <h4>Autor</h4>
-                <input class="ingreso" @bind="@autor"/>
-            </div>
-
-            <div class="clase-input-mail">
-                <h4>Precio</h4>
-                <input type="number" class="ingreso" @bind="precio" />
-            </div>
-
-            <div class="clase-input-mail">
-                <h4>Editorial</h4>
-                <input class="ingreso" @bind="editorial"/>
-            </div>
-
-            <div class="clase-input-solicitud">
-                <h4>Sinopsis</h4>
-                <textarea class="ingreso-de-la-solicitud" @bind="sinopsis"></textarea>
-            </div>
-
-            <div class="clase-input-mail">
-                <h4>Año Publicación</h4>
-                <input type="number" class="ingreso" @bind="publicacion"/>
-            </div>
-
-            <div class="clase-input-mail">
-                <h4>Cant. Páginas</h4>
-                <input type="number" class="ingreso" @bind="pags"/>
-            </div>
-
-            <div class="clase-input-mail">
-                <h4>Cantidad en Stock</h4>
-                <input type="number" class="ingreso" @bind="stock"/>
-            </div>
-
-            <div class="clase-input-mail">
-                <h4>Adjuntar imagen</h4>
-                <InputFile OnChange="CargarImagen" accept="image/*"></InputFile>
-            </div>
-
-            <div class="clase-input-mail">
-                <h4>Categoría</h4>
-                <input class="ingreso" @bind="categoria"/>
-            </div>
-
-            <button class="boton-prev" @onclick="AgregarLibro">PREVISUALIZAR</button>
+        </div>
+      <div class="columna2">
+          <h1 class="titulo-agregar">O importar varios libros desde .CSV</h1>
+          <InputFile OnChange="CargarCSV" accept=".csv"></InputFile>
+          @if(!string.IsNullOrEmpty(mensaje))
+            {
+                <p>@mensaje</p>
+            }
+            @if (preview.Any())
+            {
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Autor</th>
+                            <th>Editorial</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var libro in preview)
+                        {
+                            <tr>
+                                <td>@libro.Titulo</td>
+                                <td>@libro.Autor</td>
+                                <td>@libro.Editorial</td>
+                                <td>@libro.Precio</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <button class="boton-prev" @onclick="ImportarLibros">IMPORTAR</button>
+            }
         </div>
     </div>
 }
@@ -70,10 +105,11 @@
     [Inject] UserSession? usuarioSesion { get; set; }
     [Inject] LibroService? libroService { get;set; }
     User usuario = new();
-    private string? titulo,autor,editorial,sinopsis,imgURL,categoria = "";
+    private string? titulo,autor,editorial,sinopsis,imgURL,categoria = "", mensaje="";
     private decimal precio;
     private int publicacion, pags, stock;
     private IBrowserFile? imagenSeleccionada;
+    private List<Libro> preview = new();
 
     protected override void OnInitialized()
     {
@@ -150,4 +186,110 @@
         }
     }
 
+    protected async Task CargarCSV(InputFileChangeEventArgs e)
+    {
+        preview.Clear();
+        mensaje = "";
+
+        try
+        {
+            using var stream = e.File.OpenReadStream(maxAllowedSize: 2 * 1024 * 1024); //limite de 2MB para el archivo CSV
+            using var reader = new StreamReader(stream); //instancia el contenido del archivo, convirtiendo bytes a texto
+            var contenido = await reader.ReadToEndAsync(); //lee todo el contenido del archivo como una sola cadena de texto
+            var lineas = contenido.Split("\n", StringSplitOptions.RemoveEmptyEntries); //separa el contenido en lineas, eliminando las vacias. Pasa de un libro a otro
+
+            foreach (var linea in lineas.Skip(1)) //recorre cada linea (libro), omitiendo el encabezado
+            {
+                var libro = ParsearLinea(linea); //trae el libro generado a partir de la linea del CSV, con sus campos asignados a las propiedades del libro
+                if(libro != null)
+                {
+                    preview.Add(libro);
+                }
+            }
+            mensaje = $"Se encontraron {preview.Count} libros para importar.";
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine($"Error al cargar el CSV: {ex.Message}");
+            mensaje = "Error al cargar el archivo CSV. Asegúrate de que el formato sea correcto.";
+        }
+
+    }
+
+    private Libro? ParsearLinea(string linea)
+    {
+        try
+        {
+            var columnas = ParsarCSV(linea); //trae un array (la fila de libros) con cada campo del CSV, respetando las comillas para campos con comas-
+            if (columnas.Length < 10) return null; //si no estan todas las columnas necesarias, se omite la linea
+            return new Libro //se asignan los campos del CSV a las propiedades del libro, con el orden definido en el encabezado
+                {
+                    Titulo = columnas[0].Trim(),
+                    Fecha = int.Parse(columnas[1].Trim()),
+                    Autor = columnas[2].Trim(),
+                    Precio = decimal.Parse(columnas[3].Trim()),
+                    ImageURL = columnas[4].Trim(),
+                    Stock = int.Parse(columnas[5].Trim()),
+                    Descripcion = columnas[6].Trim(),
+                    Categoria = columnas[7].Trim(),
+                    Editorial = columnas[8].Trim(),
+                    cantPaginas = int.Parse(columnas[9].Trim()),
+                };
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine($"Error al parsear la línea: {ex.Message}");
+            return null;
+        }
+    }
+
+    //funcion para distinguir las comas de la descripcion larga o de campos con comas dentro. Los demas campos no llevan comillas porque son  cortos
+    private string[] ParsarCSV(string linea)
+    {
+        var resultado = new List<string>();
+        bool dentroDeComillas = false;
+        var campo = new System.Text.StringBuilder(); //stringbuilder para construir el campo actual letra por letra, es mas eficiente que concatenar strings
+
+        foreach(char c in linea){ //revisamos caracter por caracter de la linea, 
+            if(c == '"') //si estamos en una descripcion o campo con comas, activamos o desactivamos el limitador de la descripcion
+            {
+                dentroDeComillas = !dentroDeComillas;
+            }
+            else if(c == ',' && !dentroDeComillas) //encontramos el fin de una columna y no es descripcion
+            {
+                resultado.Add(campo.ToString()); // guardamos el string campo construido caracter a caracter dentro de la lista de strings resultado
+                campo.Clear();                   //limpiamos el stringbuilder para empezar a construir el siguiente campo de la siguiente columna
+            }
+            else
+            {
+                campo.Append(c);                //si no estamos en descripcion o en campo con comas y no termino la columna, simplemente guardamos el caracter en campo
+            }
+        }
+        resultado.Add(campo.ToString()); //guarda el ultimo campo despues de salir del bucle, ya que no termina con coma
+        return resultado.ToArray(); //devuelve el resultado como un array de strings, cada uno representando una columna del CSV
+    }
+
+    protected async Task ImportarLibros()
+    {
+        int agregados = 0;
+        int omitidos = 0;
+
+        foreach(var libro in preview)
+        {
+            var existe = await libroService!.ExistePorAutorTituloEditorial(libro.Titulo, libro.Autor, libro.Editorial); //verifica si esxiste
+            if (!existe)
+            {
+                await libroService!.Add(libro); //si no existe lo crea
+                agregados++;
+            }
+            else
+            {
+                omitidos++; //si el libro esta duplicado evita agregarlo
+            }
+        }
+        preview.Clear();
+        mensaje = $"agregados: {agregados}, omitidos por duplicado: {omitidos}";
+        await InvokeAsync(StateHasChanged);
+
+    }
 }

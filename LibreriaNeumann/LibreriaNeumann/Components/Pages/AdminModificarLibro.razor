@@ -99,9 +99,9 @@
 
     protected override async Task OnInitializedAsync()
     {
-        libroModificar = await libroService!.ObtenerPorId(Id);
+        libroModificar = await libroService!.ObtenerPorId(Id); //guardamos en libroModificar el libro que coincide por id con el seleccionado
 
-        if(libroModificar != null)
+        if(libroModificar != null) //si lo encontro, guarda en cada variable el valor de cada variable del libro guardado
         {
             titulo = libroModificar.Titulo;
             autor = libroModificar.Autor;
@@ -134,7 +134,7 @@
     {
         try
         {
-            if(imagenSeleccionada != null)
+            if(imagenSeleccionada != null) //si se modifico la imagen, permiimos crear una nueva imagen y almacenarla
             {
                 var nombreImagen = $"{Guid.NewGuid()}{Path.GetExtension(imagenSeleccionada?.Name)}";
                 var ruta = Path.Combine(env.WebRootPath, "images", "libros", nombreImagen);
@@ -143,7 +143,7 @@
                 await imagenSeleccionada!.OpenReadStream(maxAllowedSize: 5 * 1024 * 1024).CopyToAsync(stream);
                 imgURL = $"/images/libros/{nombreImagen}";
             }
-
+            //actualizamos cada variable del libro con el valor de cada variable modificada
             libroModificar!.Titulo = titulo ?? "";
             libroModificar!.Autor = autor ?? "";
             libroModificar!.Editorial = editorial ?? "";
