@@ -291,6 +291,10 @@
             <button class="agregar-libros" @onclick="IrAAgregarLibro">
                 <span>AGREGAR LIBRO</span>
             </button>
+            <button class="exportar-libros" @onclick="ExportarLibros">
+                <span>DESCARGAR LIBROS</span>
+                <i class="bi bi-filetype-csv"></i>
+            </button>
         </div>
 
         <div class="lista-libros">
@@ -343,6 +347,7 @@
     FiltrosCatalogo filtros = new();
     [Inject] UserSession? usuarioSesion{ get; set; }
     [Inject] LibroService? libroService{ get; set; }
+    [Inject] IJSRuntime jS { get; set; }
     User usuario = new();
 
     protected override void OnInitialized()
@@ -474,5 +479,15 @@
     private void  ModificarLibro(Libro libro)
     {
         navigatorManager.NavigateTo($"/admin/libros/modificar/{libro.Id}");
+    }
+
+    private async Task ExportarLibros()
+    {
+        var libro = await libroService!.ObtenerLibros();
+        var contenidoCSV = libroService!.ExportarCSV(libro);
+        var bytes = System.Text.Encoding.UTF8.GetBytes(contenidoCSV);
+        var base64 = Convert.ToBase64String(bytes);
+
+        await jS.InvokeVoidAsync("descargarArchivo", "libros.csv", base64);
     }
 }

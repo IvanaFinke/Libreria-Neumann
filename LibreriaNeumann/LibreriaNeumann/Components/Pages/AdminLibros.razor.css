@@ -222,6 +222,34 @@
     border-style: solid;
 }
 
+.exportar-libros {
+    display: flex;
+    width: 180px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    background-color: rgb(243, 136, 73);
+    border: 2px solid rgb(239, 93, 8);
+    font-size: 18px;
+    font-family: serif;
+    font-weight: 200;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.bi-filetype-csv {
+    font-size:28px;
+    align-self: center;
+    display: flex;
+}
+
+.exportar-libros:hover {
+    color: rgb(231, 204, 13);
+    border: 2px solid rgb(231, 204, 13);
+}
+
+
 /*Diseño movil*/
 @media (max-width:570px) {
     .adm-libros-seccion {

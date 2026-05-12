@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\LibreriaNeumann",
-    "\\LibreriaNeumann\\LibreriaNeumann"
+    "\\LibreriaNeumann\\LibreriaNeumann",
+    "\\LibreriaNeumann\\LibreriaNeumann\\Components",
+    "\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages",
+    "\\LibreriaNeumann\\LibreriaNeumann\\Services"
   ],
-  "SelectedNode": "\\LibreriaNeumann\\LibreriaNeumann.slnx",
+  "SelectedNode": "\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminAgregarLibro.razor",
   "PreviewInSolutionExplorer": false
 }
