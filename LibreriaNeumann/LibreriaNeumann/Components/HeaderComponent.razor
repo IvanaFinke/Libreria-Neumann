@@ -8,12 +8,12 @@
             <span class="nombre-logo fw-bold">Neumann</span>
        </div>
 
-       <div class="search">
-           <input class="buscador" placeholder="  Buscar Libros"/>
-            <button class="lupa">
+        <div class="search">
+            <input class="buscador" placeholder="  Buscar Libros" @bind="searchFilter" @bind:event="oninput" @onkeydown="enterPresionado"/>
+            <button class="lupa" @onclick="searchBooks">
                 <img src="https://i.postimg.cc/264C7Bwy/lupa-25px.png" />
             </button>
-       </div>
+        </div>      
 
        <div class="user-carrito-seccion">
             <!--Seccion solo para el admin interactuando con los datos-->
@@ -125,6 +125,7 @@
     private bool mostrarLogOut;
     User usuario = new();
     [Inject] UserSession? sesion { get; set; }
+    public string searchFilter = "";
 
     private void CerrarSesion()
     {
@@ -184,4 +185,24 @@
             navigatorManager.NavigateTo("/mis-datos");
         }
     }
+
+    public void searchBooks(){
+        if (!string.IsNullOrWhiteSpace(searchFilter))
+        {
+            navigatorManager.NavigateTo($"/catalogo?busqueda={Uri.EscapeDataString(searchFilter)}"); //convierte espacios y caracteres especiales en formato URL
+        }
+        else
+        {
+            navigatorManager.NavigateTo("/catalogo");
+        }
+    }
+
+    public async Task enterPresionado(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter" || e.Code == "NumpadEnter")
+        {
+            searchBooks();
+        }
+    }
+
 }

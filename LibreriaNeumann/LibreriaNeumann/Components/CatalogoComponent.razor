@@ -317,6 +317,9 @@
     private List<Libro> listaLibros = new();
     FiltrosCatalogo filtros = new();
 
+    [SupplyParameterFromQuery(Name = "busqueda")]
+    public string? busqueda{ get; set; }
+
     private void PressButton()
     {
         botonPresionado = !botonPresionado;
@@ -325,6 +328,22 @@
     protected override async Task OnInitializedAsync()
     {
         listaLibros = await LibroService.ObtenerLibros();
+
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        listaLibros = await LibroService.ObtenerLibros();
+
+        if (!string.IsNullOrEmpty(busqueda))
+        {
+            listaLibros = listaLibros.Where(l =>
+                l.Titulo.Contains(busqueda, StringComparison.OrdinalIgnoreCase) ||
+                l.Autor.Contains(busqueda, StringComparison.OrdinalIgnoreCase) ||
+                l.Categoria.Contains(busqueda, StringComparison.OrdinalIgnoreCase) ||
+                l.Editorial.Contains(busqueda, StringComparison.OrdinalIgnoreCase)
+            ).ToList();
+        }
     }
 
     /*Filtros*/
@@ -396,4 +415,5 @@
     {
         botonFecha = !botonFecha;
     }
+
 }
