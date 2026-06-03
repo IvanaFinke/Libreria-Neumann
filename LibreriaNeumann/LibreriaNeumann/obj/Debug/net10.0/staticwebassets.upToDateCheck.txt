@@ -69,10 +69,11 @@ wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 wwwroot\map.js
 Components\Layout\ReconnectModal.razor.js
-C:\Users\ivana\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.7\build\..\_framework\blazor.web.js
-C:\Users\ivana\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.7\build\..\_framework\blazor.server.js
+C:\Users\ivana\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.8\build\..\_framework\blazor.web.js
+C:\Users\ivana\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.8\build\..\_framework\blazor.server.js
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+C:\Users\ivana\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.8\_framework\blazor.server.js
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
@@ -99,7 +100,6 @@ C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroo
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\css\bootstrap.css
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
-C:\Users\ivana\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.7\_framework\blazor.server.js
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
@@ -115,9 +115,9 @@ C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroo
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\js\bootstrap.js
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+C:\Users\ivana\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.8\_framework\blazor.web.js
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\app.css
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
-C:\Users\ivana\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.7\_framework\blazor.web.js
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\Components\Layout\ReconnectModal.razor.js
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\wwwroot\app.js

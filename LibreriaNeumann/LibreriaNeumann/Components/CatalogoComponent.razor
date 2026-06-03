@@ -294,13 +294,14 @@
             {
                  <div class="cuadro-libro">
                      <img src="@libro.ImageURL" />
-                     <h4 class="titulo-libro-catalogo pt-2">@libro.Titulo</h4>
-                     <p class="autor-catalogo">@libro.Autor</p>
-                     <p class="precio-catalogo"><strong>@libro.Precio</strong></p>
+                     <div class="texto-libros">
+                        <h4 class="titulo-libro-catalogo pt-2">@libro.Titulo</h4>
+                        <p class="autor-catalogo">@libro.Autor</p>
+                        <p class="precio-catalogo"><strong>@libro.Precio</strong></p>
+                     </div>
                      <button class="boton-comprar-libro">AGREGAR AL CARRITO</button>
                  </div>
             }
-            <p>Libros cargados: @listaLibros.Count</p>
     </div>
 </div>
 

@@ -918,7 +918,9 @@
 .cuadro-libro img[b-q5pyqb11by]{
     width:200px;
     height:350px;
-    object-fit:cover;
+    object-fit:cover; /*recorta manteniendo proporcion*/
+    object-position:center; /*centra recorte*/
+    display:block;
 }
 
 .boton-comprar-libro[b-q5pyqb11by] {
@@ -994,7 +996,7 @@
         flex-direction:column;
         width: 100%;
         align-items: center;
-        padding: 3rem 3rem;
+        padding: 1rem 1rem;
         padding-top: 1rem;
         gap: 10px;
     }
@@ -1018,6 +1020,8 @@
         margin-top: 5px;
         grid-column: 1;
         gap: 10px;
+        width: fit-content;
+        height: fit-content;
     }
 
     .botones-catalogo[b-q5pyqb11by], .boton-filtrar[b-q5pyqb11by]{
@@ -1034,6 +1038,10 @@
         padding: 0 10px;
     }
 
+    .botones-catalogo[b-q5pyqb11by] {
+        flex-direction: column;
+        border: 2px solid red;
+    }
  .botones-catalogo i[b-q5pyqb11by]{
         font-size:20px;
     }
@@ -1042,6 +1050,50 @@
         display:flex;
         flex-direction:row;
     }
+
+    .lista-libros[b-q5pyqb11by]{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        align-items: start;
+        flex-wrap: wrap;
+        width: fit-content;
+        gap:4px;
+        height:40%;
+        margin: 0 10px 0 10px;
+    }
+
+    .cuadro-libro[b-q5pyqb11by] {
+        display: grid;
+        grid-template-rows: 250px 1fr auto; /* imagen | titulo | autor | precio | boton */
+        align-self: start;
+        width: 100%;
+        height: 100%;
+        border-width: 3px;
+        border-color: rgba(212, 212, 212, 0.3);
+        border-style: solid;
+    }
+
+        .cuadro-libro img[b-q5pyqb11by] {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+    .boton-comprar-libro[b-q5pyqb11by] {
+        height: 50px;
+        font-size: 14px;
+        text-align: center;
+        align-self: end; /* ← se pega al fondo de su celda */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .texto-libros[b-q5pyqb11by]{
+        padding-left:4px;
+    }
+
 }
 /* /Components/ContactoComponent.razor.rz.scp.css */
 .contacto[b-8mn0lwk0x1] {
