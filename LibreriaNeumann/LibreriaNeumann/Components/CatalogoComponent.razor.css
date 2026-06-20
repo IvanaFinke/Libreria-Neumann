@@ -174,27 +174,29 @@
         height: fit-content;
     }
 
+    .menu-catalogo-responsive .botones-catalogo{
+        display:flex;
+        flex-direction:row;
+    }
+
     .botones-catalogo, .boton-filtrar{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: space-evenly;
         width: 200px;
-        align-self: center;
         border: 2px solid rgb(212, 212, 212);
         background-color: white;
         font-size: 18px;
         font-family: sans-serif;
         font-weight: 200;
-        padding: 0 10px;
+        padding: 0 0;
     }
 
-    .botones-catalogo {
-        flex-direction: column;
-        border: 2px solid red;
+
+    .botones-catalogo i, .boton-filtrar{
+        display:flex;
+        font-size:18px;
     }
- .botones-catalogo i{
-        font-size:20px;
-    }
+
 
     .ingreso-precios{
         display:flex;
@@ -244,4 +246,46 @@
         padding-left:4px;
     }
 
+    .ingreso-precios , .ingreso-precios input {
+        display:flex;
+        flex-direction:column;
+        width:200px;
+        font-size:18px;
+    }
+
+    .ingreso-precios input{
+        border: 2px solid rgb(212, 212, 212);
+    }
+
+    .btn-precio-buscar{
+        display: flex;
+        font-size: 18px;
+        width: 200px;
+        border: 2px solid rgb(212, 212, 212);
+        
+    }
+
+    .ingreso-autor{
+        display:flex;
+        flex-wrap:nowrap;
+        flex-direction:row;
+        width:200px;
+        gap:0;
+    }
+
+        .ingreso-autor input {
+            display: flex;
+            width: 165px;
+            font-size: 18px;
+            border: 2px solid rgb(212, 212, 212);
+            height:fit-content;
+        }
+
+    .btn-filtrar-autor {
+        display: flex;
+        font-size: 18px;
+        width: fit-content;
+        border: 2px solid rgb(212, 212, 212);
+    }
+    
 }

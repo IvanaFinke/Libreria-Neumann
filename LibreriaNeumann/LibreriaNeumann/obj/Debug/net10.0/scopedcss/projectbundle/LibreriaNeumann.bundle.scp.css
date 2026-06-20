@@ -1024,27 +1024,29 @@
         height: fit-content;
     }
 
+    .menu-catalogo-responsive .botones-catalogo[b-q5pyqb11by]{
+        display:flex;
+        flex-direction:row;
+    }
+
     .botones-catalogo[b-q5pyqb11by], .boton-filtrar[b-q5pyqb11by]{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: space-evenly;
         width: 200px;
-        align-self: center;
         border: 2px solid rgb(212, 212, 212);
         background-color: white;
         font-size: 18px;
         font-family: sans-serif;
         font-weight: 200;
-        padding: 0 10px;
+        padding: 0 0;
     }
 
-    .botones-catalogo[b-q5pyqb11by] {
-        flex-direction: column;
-        border: 2px solid red;
+
+    .botones-catalogo i[b-q5pyqb11by], .boton-filtrar[b-q5pyqb11by]{
+        display:flex;
+        font-size:18px;
     }
- .botones-catalogo i[b-q5pyqb11by]{
-        font-size:20px;
-    }
+
 
     .ingreso-precios[b-q5pyqb11by]{
         display:flex;
@@ -1094,6 +1096,48 @@
         padding-left:4px;
     }
 
+    .ingreso-precios[b-q5pyqb11by] , .ingreso-precios input[b-q5pyqb11by] {
+        display:flex;
+        flex-direction:column;
+        width:200px;
+        font-size:18px;
+    }
+
+    .ingreso-precios input[b-q5pyqb11by]{
+        border: 2px solid rgb(212, 212, 212);
+    }
+
+    .btn-precio-buscar[b-q5pyqb11by]{
+        display: flex;
+        font-size: 18px;
+        width: 200px;
+        border: 2px solid rgb(212, 212, 212);
+        
+    }
+
+    .ingreso-autor[b-q5pyqb11by]{
+        display:flex;
+        flex-wrap:nowrap;
+        flex-direction:row;
+        width:200px;
+        gap:0;
+    }
+
+        .ingreso-autor input[b-q5pyqb11by] {
+            display: flex;
+            width: 165px;
+            font-size: 18px;
+            border: 2px solid rgb(212, 212, 212);
+            height:fit-content;
+        }
+
+    .btn-filtrar-autor[b-q5pyqb11by] {
+        display: flex;
+        font-size: 18px;
+        width: fit-content;
+        border: 2px solid rgb(212, 212, 212);
+    }
+    
 }
 /* /Components/ContactoComponent.razor.rz.scp.css */
 .contacto[b-8mn0lwk0x1] {

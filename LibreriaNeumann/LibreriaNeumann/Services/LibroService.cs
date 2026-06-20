@@ -3,6 +3,7 @@ using LibreriaNeumann.Models;
 using Microsoft.EntityFrameworkCore;
 using LibreriaNeumann.Services;
 using System.Text;
+using System.Collections;
 
 namespace LibreriaNeumann.Services
 {
@@ -50,12 +51,12 @@ namespace LibreriaNeumann.Services
 
             if(!string.IsNullOrEmpty(filtros.Categoria))
             {
-                query = query.Where(libros => libros.Categoria == filtros.Categoria);
+                query = query.Where(libros => libros.Categoria.Contains(filtros.Categoria));
             }
 
             if(!string.IsNullOrEmpty(filtros.Autor))
             {
-                query = query.Where(libros => libros.Autor == filtros.Autor);
+                query = query.Where(libros => libros.Autor.Contains(filtros.Autor));
             }
 
             if(filtros.FechaMin.HasValue)
