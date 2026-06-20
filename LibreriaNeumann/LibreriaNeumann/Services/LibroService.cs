@@ -20,6 +20,13 @@ namespace LibreriaNeumann.Services
 
         public async Task<Libro?> ObtenerPorId(int id) => await _context.Libros.FindAsync(id);
 
+        public async Task<Libro?> ObtenerPorNombre(string nombre)
+        {
+            SlugHelper slugHelper = new SlugHelper();
+            var libros = await _context.Libros.ToListAsync();  // EF no puede traducir Regex a SQL, hay que traerlos y comparar en memoria
+            return libros.FirstOrDefault(libro => slugHelper.GenerarSlug(libro.Titulo) == nombre);
+        }
+
         public async Task Add(Libro libro)
         {
             _context.Libros.Add(libro);

@@ -1,6 +1,7 @@
 ﻿@page "/catalogo"
 @rendermode InteractiveServer
 @inject LibroService LibroService
+@inject NavigationManager navigationManager
 
 <div class="catalogo">
 
@@ -292,7 +293,7 @@
 
             @foreach(var libro in listaLibros)
             {
-                 <div class="cuadro-libro">
+                 <div class="cuadro-libro" @onclick="() => iRASeccionLibro(libro)">
                      <img src="@libro.ImageURL" />
                      <div class="texto-libros">
                         <h4 class="titulo-libro-catalogo pt-2">@libro.Titulo</h4>
@@ -371,7 +372,6 @@
 
     async Task FiltrarCategoria(string categoria)
     {
-        if (filtros.Categoria != null) filtros.Autor = "";
         filtros.Categoria = categoria;
         listaLibros = await LibroService.Filtros(filtros);
         botonPresionado = false;
@@ -423,6 +423,15 @@
     private void PressFecha()
     {
         botonFecha = !botonFecha;
+    }
+
+    public void iRASeccionLibro(Libro libro)
+    {
+        SlugHelper slugHelper = new SlugHelper();
+
+        string slug = slugHelper.GenerarSlug(libro.Titulo);
+
+        navigationManager.NavigateTo($"/libro-{slug}");
     }
 
 }
