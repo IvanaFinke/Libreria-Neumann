@@ -9,14 +9,19 @@ namespace LibreriaNeumann.Services
 
         public void AgregarLibro(Libro libro)
         {
+            AgregarLibroConCantidad(libro, 1);
+        }
+
+        public void AgregarLibroConCantidad(Libro libro, int cantidad)
+        {
             var item = Items.FirstOrDefault(it => it.libro.Id == libro.Id); //busca repetidos
-            if(item != null)
+            if (item != null)
             {
-                item.Cantidad++;
+                item.Cantidad += cantidad;
             }
             else
             {
-                Items.Add(new ItemCarrito { libro = libro, Cantidad = 1 }); //nuevo
+                Items.Add(new ItemCarrito { libro = libro, Cantidad = cantidad }); //nuevo
             }
             NotificarCambio();
         }

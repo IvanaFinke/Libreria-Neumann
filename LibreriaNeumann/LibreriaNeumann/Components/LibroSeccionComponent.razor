@@ -31,7 +31,7 @@
                 </button>
             </div>
 
-            <button class="agregar-carrito">AGREGAR AL CARRITO</button>
+            <button class="agregar-carrito" @onclick="() => AgregarAlCarrito(libroActual!, contador)">AGREGAR AL CARRITO</button>
         </div>
            
 
@@ -71,6 +71,7 @@
     [Parameter] public string nombre { get; set; }
     private Libro? libroActual;
     [Inject] LibroService? libroService { get; set; }
+    [Inject] CarritoService? carritoService{ get; set; }
     private string? titulo,autor,descripcion,editorial,imagen = "";
     private decimal precio;
     private int fechaPublicaciom,cantPags;
@@ -78,7 +79,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        libroActual = await libroService.ObtenerPorNombre(nombre);
+        libroActual = await libroService!.ObtenerPorNombre(nombre);
 
         if(libroActual != null)
         {
@@ -109,5 +110,8 @@
 
     private void AumentarContador() => contador += 1;
 
-
+    private void AgregarAlCarrito(Libro libro, int cantidad)
+    {
+        carritoService!.AgregarLibroConCantidad(libro,cantidad);
+    }
 }
