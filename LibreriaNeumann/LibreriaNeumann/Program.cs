@@ -13,6 +13,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddHttpClient();
 builder.Services.AddHttpClient<ReCaptcha>();
 builder.Services.AddScoped<ReCaptcha>();
+builder.Services.AddScoped<CarritoService>(); //Los addScoped se crean una vez por cada usuario
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseSqlServer(
     builder.Configuration.GetConnectionString("DefaultConnection"),

@@ -46,15 +46,23 @@
 }
 
 .titulo-precio {
-    align-items: center;
+    align-items: start;
     display:flex;
+    justify-content:space-between;
     flex-direction:column;
     gap:10px;
 }
 
 .titulo-libro-carrito, .precio-carrito {
-    font-size: 20px;
+    font-size: 18px;
     text-wrap: balance;
+}
+
+.titulo-repetido{
+    display:flex;
+    flex-direction: row;
+    font-size:18px;
+    gap:10px;
 }
 
 .precio-carrito {

@@ -71,6 +71,7 @@
     object-fit:cover; /*recorta manteniendo proporcion*/
     object-position:center; /*centra recorte*/
     display:block;
+    cursor:pointer;
 }
 
 .boton-comprar-libro {
@@ -137,6 +138,14 @@
     display:flex;
     flex-direction:column;
     gap:6px;
+}
+
+.boton-titulo-autor{
+    display:flex;
+    width:fit-content;
+    height:fit-content;
+    background: none;
+    border:none;
 }
 
 /*Diseño movil*/

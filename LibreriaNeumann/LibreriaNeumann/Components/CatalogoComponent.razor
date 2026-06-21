@@ -293,14 +293,18 @@
 
             @foreach(var libro in listaLibros)
             {
-                 <div class="cuadro-libro" @onclick="() => iRASeccionLibro(libro)">
-                     <img src="@libro.ImageURL" />
+                 <div class="cuadro-libro">
+                <img src="@libro.ImageURL" @onclick="() => iRASeccionLibro(libro)" />
                      <div class="texto-libros">
-                        <h4 class="titulo-libro-catalogo pt-2">@libro.Titulo</h4>
-                        <p class="autor-catalogo">@libro.Autor</p>
+                        <button @onclick="() => iRASeccionLibro(libro)" class="boton-titulo-autor">
+                            <h4 class="titulo-libro-catalogo pt-2">@libro.Titulo</h4>
+                         </button>
+                         <button @onclick="() => FiltrarAutor(libro.Autor)" class="boton-titulo-autor">
+                             <p class="autor-catalogo">@libro.Autor </p>
+                         </button>
                         <p class="precio-catalogo"><strong>@libro.Precio</strong></p>
                      </div>
-                     <button class="boton-comprar-libro">AGREGAR AL CARRITO</button>
+                <button class="boton-comprar-libro" @onclick="() => AgregarAlCarrito(libro)">AGREGAR AL CARRITO</button>
                  </div>
             }
     </div>
@@ -318,6 +322,7 @@
     private string autor="";
     private List<Libro> listaLibros = new();
     FiltrosCatalogo filtros = new();
+    [Inject] CarritoService? carritoService { get; set; }
 
     [SupplyParameterFromQuery(Name = "busqueda")]
     public string? busqueda{ get; set; }
@@ -432,6 +437,11 @@
         string slug = slugHelper.GenerarSlug(libro.Titulo);
 
         navigationManager.NavigateTo($"/libro-{slug}");
+    }
+
+    public void AgregarAlCarrito(Libro libro)
+    {
+        carritoService!.AgregarLibro(libro);
     }
 
 }
