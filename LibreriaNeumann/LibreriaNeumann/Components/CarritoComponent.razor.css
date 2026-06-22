@@ -58,6 +58,33 @@
     text-wrap: balance;
 }
 
+.controles-cantidad{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    gap:6px;
+    align-self:start;
+    margin-top:10px;
+    margin-right:10px;
+}
+
+.controles-cantidad span{
+    align-self:center;
+}
+.botones-aumenta-decrece {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:6px;
+}
+
+.btn-cantidad, .cantidad-numero {
+    border:none;
+    background:none;
+    font-size:20px;
+}
+
 .titulo-repetido{
     display:flex;
     flex-direction: row;

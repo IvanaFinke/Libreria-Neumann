@@ -39,6 +39,24 @@ namespace LibreriaNeumann.Services
 
         public decimal Total => Items.Sum(i => i.libro.Precio * i.Cantidad);
 
+        public void DisminuirCantidad(Libro libro)
+        {
+            var item = Items.FirstOrDefault(i => i.libro.Id == libro.Id);
+            if (item != null)
+            {
+                if(item.Cantidad > 1)
+                {
+                    item.Cantidad--;
+
+                }
+                else
+                {
+                    Items.Remove(item);
+                }
+                NotificarCambio();
+            }
+        }
+
         private void NotificarCambio()
         {
             OnChange?.Invoke();

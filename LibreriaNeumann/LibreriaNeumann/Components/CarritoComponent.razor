@@ -18,20 +18,24 @@
                     <img src="@item.libro.ImageURL" />
 
                     <div class="titulo-precio">
-                        <div class="titulo-repetido">
-                            <h4 class="titulo-libro-carrito">@item.libro.Titulo</h4>
-                            @if (item.Cantidad > 1)
-                            {
-                                <h4 class="contador">(@item.Cantidad)</h4>
-                            }
-                        </div>
-                       
+                        <h4 class="titulo-libro-carrito">@item.libro.Titulo</h4>
                         <h4 class="precio-carrito">$@(item.libro.Precio * item.Cantidad)</h4>
                     </div>
 
-                    <button class="boton-basura-carrito" @onclick="() => EliminarLibro(item.libro)">
-                        <i class="bi bi-trash"></i>
-                    </button>
+                    <div class="controles-cantidad">
+                        <span><strong>Cantidad</strong></span>
+                        <div class="botones-aumenta-decrece">
+                            <button class="btn-cantidad" @onclick="() => carritoService!.DisminuirCantidad(item.libro)">
+                                <i class="bi bi-dash-circle-fill"></i>
+                            </button>
+                            <span class="cantidad-numero">@item.Cantidad</span>
+                            <button class="btn-cantidad" @onclick="() => carritoService!.AgregarLibro(item.libro)">
+                                <i class="bi bi-plus-circle-fill"></i>
+                            </button>
+                        </div>
+                       
+                    </div>
+
                 </div>
             }
 
@@ -63,7 +67,7 @@
             <h3 class="titulo-carrito">Mi carrito</h3>
             <div class="lista-libros-carrito">
 
-                @foreach(var libro in libros)
+                @foreach(var libro in libros!)
                 {
                     <div class="datos-libro-carrito">
                         <img src="https://i.postimg.cc/9MJy1Jrj/fantasm-ope.jpg" />

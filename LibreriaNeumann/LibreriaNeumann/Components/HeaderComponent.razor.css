@@ -223,6 +223,26 @@
     align-self:end;
 }
 
+.carrito {
+    position: relative;
+}
+
+.badge-carrito {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: rgb(244, 152, 117);
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 /*Diseño movil*/
 @media (max-width:570px) {

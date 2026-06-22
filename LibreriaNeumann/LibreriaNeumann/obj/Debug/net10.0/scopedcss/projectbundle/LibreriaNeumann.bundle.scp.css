@@ -198,6 +198,33 @@
     text-wrap: balance;
 }
 
+.controles-cantidad[b-8g0gqjtdyx]{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    gap:6px;
+    align-self:start;
+    margin-top:10px;
+    margin-right:10px;
+}
+
+.controles-cantidad span[b-8g0gqjtdyx]{
+    align-self:center;
+}
+.botones-aumenta-decrece[b-8g0gqjtdyx] {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:6px;
+}
+
+.btn-cantidad[b-8g0gqjtdyx], .cantidad-numero[b-8g0gqjtdyx] {
+    border:none;
+    background:none;
+    font-size:20px;
+}
+
 .titulo-repetido[b-8g0gqjtdyx]{
     display:flex;
     flex-direction: row;
@@ -765,9 +792,37 @@
     font-weight: 500;
 }
 
+.controles-cantidad[b-aurgo51u85] {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 6px;
+    align-self: start;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+    .controles-cantidad span[b-aurgo51u85] {
+        align-self: center;
+    }
+
+.botones-aumenta-decrece[b-aurgo51u85] {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6px;
+}
+
+.btn-cantidad[b-aurgo51u85], .cantidad-numero[b-aurgo51u85] {
+    border: none;
+    background: none;
+    font-size: 20px;
+}
+
 .datos-libro-carrito img[b-aurgo51u85] {
-    width: 80px;
-    height: 120px;
+    width: 90px;
+    height: 140px;
     border-radius: 10px;
     background: none;
     margin-left: 12px;
@@ -782,8 +837,8 @@
     grid-template-columns: auto 1fr auto;
     align-items: center;
     align-content: center;
-    margin-top: 2px;
-
+    padding: 6px 0;
+    gap:1rem;
 }
 
 .titulo-libro-carrito[b-aurgo51u85], .precio-carrito[b-aurgo51u85] {
@@ -794,12 +849,16 @@
 .titulo-precio[b-aurgo51u85] {
     display: flex;
     justify-content: center;
+    flex-direction:column;
     gap: 14px;
     padding-left: 12px;
 }
 
-.precio-carrito[b-aurgo51u85] {
-    padding-top: 20px;
+.lista-libros-carrito[b-aurgo51u85]{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:4px;
 }
 
 .bi-trash[b-aurgo51u85] {
@@ -2438,6 +2497,26 @@
     text-align:start;
     align-self:end;
 }
+
+.carrito[b-rxk6cxr2lu] {
+    position: relative;
+}
+
+.badge-carrito[b-rxk6cxr2lu] {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: rgb(244, 152, 117);
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 /*Diseño movil*/
