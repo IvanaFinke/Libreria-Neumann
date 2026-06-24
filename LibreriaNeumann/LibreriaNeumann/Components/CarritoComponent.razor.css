@@ -148,6 +148,38 @@
     font-size: 22px;
 }
 
+.carrito-vacio {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 3rem;
+    width: 100%;
+}
+
+.urls{
+    display:flex;
+    flex-direction:row;
+    justify-content:start;
+    gap:4px;
+}
+
+.titulo-ca{
+    display:flex;
+    flex-direction:column;
+}
+
+.linea {
+    display: flex;
+    flex-direction: row;
+    margin: 0 50px 0 0;
+}
+
+.texto-nohay{
+    display:flex;
+    font-size:20px;
+    align-self:center;
+}
+
 /*Diseño para detalles de pago*/
 .carrito-detalles-pago {
     width: 420px;
