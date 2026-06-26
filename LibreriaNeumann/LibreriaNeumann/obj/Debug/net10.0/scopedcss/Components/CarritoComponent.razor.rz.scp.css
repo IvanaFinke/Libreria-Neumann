@@ -62,10 +62,9 @@
     display:flex;
     flex-direction:column;
     flex-wrap:nowrap;
-    justify-content:space-between;
+    justify-self:end;
     gap:6px;
     align-self:start;
-    margin-top:10px;
     margin-right:10px;
 }
 
@@ -82,7 +81,7 @@
 .btn-cantidad[b-8g0gqjtdyx], .cantidad-numero[b-8g0gqjtdyx] {
     border:none;
     background:none;
-    font-size:20px;
+    font-size:22px;
 }
 
 .titulo-repetido[b-8g0gqjtdyx]{
@@ -140,12 +139,12 @@
     padding-top: 20px;
 }
 
-.bi-trash[b-8g0gqjtdyx] {
+.bi-trash-fill[b-8g0gqjtdyx] {
     display: flex;
     justify-items: end;
-    margin-bottom: 6rem;
     padding: 4px;
-    font-size: 22px;
+    font-size: 30px;
+    color: rgb(167, 34, 34);
 }
 
 .carrito-vacio[b-8g0gqjtdyx] {
@@ -179,6 +178,20 @@
     font-size:20px;
     align-self:center;
 }
+
+.eliminar-dec-inc[b-8g0gqjtdyx]{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+}
+
+.eliminar-boton[b-8g0gqjtdyx]{
+    display:flex;
+    flex-direction:column;
+    background:none;
+    border:none;
+}
+
 
 /*Diseño para detalles de pago*/
 .carrito-detalles-pago[b-8g0gqjtdyx] {

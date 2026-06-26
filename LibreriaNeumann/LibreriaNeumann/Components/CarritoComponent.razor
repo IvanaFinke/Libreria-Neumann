@@ -24,19 +24,24 @@
                             <h4 class="precio-carrito">$@(item.libro.Precio * item.Cantidad)</h4>
                         </div>
 
-                        <div class="controles-cantidad">
-                            <span><strong>Cantidad</strong></span>
-                            <div class="botones-aumenta-decrece">
-                                <button class="btn-cantidad" @onclick="() => carritoService!.DisminuirCantidad(item.libro)">
-                                    <i class="bi bi-dash-circle-fill"></i>
-                                </button>
-                                <span class="cantidad-numero">@item.Cantidad</span>
-                                <button class="btn-cantidad" @onclick="() => carritoService!.AgregarLibro(item.libro)">
-                                    <i class="bi bi-plus-circle-fill"></i>
-                                </button>
-                            </div>
+                        <div class="eliminar-dec-inc">
+                            <button class=" eliminar-boton" @onclick="() => EliminarLibro(item.libro)">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
 
+                            <div class="controles-cantidad">
+                                <div class="botones-aumenta-decrece">
+                                    <button class="btn-cantidad" @onclick="() => carritoService!.DisminuirCantidad(item.libro)">
+                                        <i class="bi bi-dash-circle-fill"></i>
+                                    </button>
+                                    <span class="cantidad-numero">@item.Cantidad</span>
+                                    <button class="btn-cantidad" @onclick="() => carritoService!.AgregarLibro(item.libro)">
+                                        <i class="bi bi-plus-circle-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
+                       
 
                     </div>
                 }
