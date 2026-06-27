@@ -59,15 +59,15 @@
 @code {
     [Inject] ReCaptcha Captcha{ get; set; }
     SignInModel Login = new();
-    [Inject] AppDbContext db { get; set; }
     [Inject] PasswordHash hasher{ get; set; }
-    [Inject] UserSession SesionIniciada { get; set; }
+    [Inject] UserSession? SesionIniciada { get; set; }
+    [Inject] UserService? sesionUsuario{ get; set; }
     private string mensaje = "";
     private string color = "";
 
     async Task IniciarSesion()
     {
-        var user = db.Users.FirstOrDefault(u => u.Email.Equals(Login.Email));
+        var user = await sesionUsuario!.GetByEmail(Login.Email);
 
         if (user == null)
         {

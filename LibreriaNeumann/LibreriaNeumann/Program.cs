@@ -14,6 +14,7 @@ builder.Services.AddHttpClient();
 builder.Services.AddHttpClient<ReCaptcha>();
 builder.Services.AddScoped<ReCaptcha>();
 builder.Services.AddScoped<CarritoService>(); //Los addScoped se crean una vez por cada usuario
+builder.Services.AddScoped<UserService>();
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseSqlServer(
     builder.Configuration.GetConnectionString("DefaultConnection"),
@@ -49,7 +50,7 @@ app.MapRazorComponents<App>()
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.EnsureCreated();
+    db.Database.Migrate();
     DataSeeder.Seed(db);
     
 }

@@ -1,38 +1,167 @@
-﻿@page "/cambio-datos"
-<div class="seccion-cambiar-datos">
-    <h2 class="frase-cambio-datos-usuario"><strong>Cambio de datos de usuario:</strong></h2>
-    <div class="datos-seccion-inputs">
-        <div class="datos-personales">
-            <h4>Datos de cuenta</h4>
-            <h5>Su nombre: </h5>
-            <input class="input-cambiar-datos" placeholder="ingrese aquí para modificar su nombre" />
-            <h5>Su apellido: </h5>
-            <input class="input-cambiar-datos" placeholder="ingrese aquí para modificar su apellido" />
-            <h5>Su contraseña: </h5>
-            <input class="input-cambiar-datos" placeholder="ingrese aquí para modificar su contraseña" />
+﻿@rendermode InteractiveServer
+@inject NavigationManager navigatorManager
+
+@page "/cambio-datos"
+@if(sesionUsuario?.Usuario?.Rol != null)
+{
+    <div class="seccion-cambiar-datos">
+        <h2 class="frase-cambio-datos-usuario"><strong>Cambio de datos de usuario:</strong></h2>
+        <div class="datos-seccion-inputs">
+            <div class="datos-personales">
+                <h4>Datos de cuenta</h4>
+                <h5>Su nombre: </h5>
+                <input class="input-cambiar-datos" placeholder="ingrese aquí para modificar su nombre" @bind="nombre"/>
+                <h5>Su apellido: </h5>
+                <input class="input-cambiar-datos" placeholder="ingrese aquí para modificar su apellido" @bind="apellido"/>
+                <h5>Contraseña actual:</h5>
+                <input type="password" class="input-cambiar-datos" @bind="passwordActual" />
+
+                <h5>Nueva contraseña:</h5>
+                <input type="password" class="input-cambiar-datos" @bind="passwordNueva" />
+
+                <h5>Confirmar nueva contraseña:</h5>
+                <input type="password" class="input-cambiar-datos" @bind="passwordConfirmacion" />
+
+                @if (!string.IsNullOrEmpty(errorPassword))
+                {
+                    <p class="error-texto">@errorPassword</p>
+                }
+
+            </div>
+            <div class="datos-contacto">
+                <h4>Datos de contacto</h4>
+                <h5>Su mail: </h5>
+                <input class="input-cambiar-datos" placeholder="ingrese aquí para modificar su mail" type="email" @bind="email" />
+                <h5>Su telefono: </h5>
+                <input class="input-telefono" placeholder="modificar su teléfono" @bind="telefono"/>
+            </div>
+            <div class="datos-ubicacion">
+                <h4>Datos de domicilio</h4>
+                <h5>Su provincia: </h5>
+                <input class="input-cambiar-datos" placeholder="ingrese aquí para modificar su provincia" @bind="provincia"/>
+                <h5>Su localidad: </h5>
+                <input class="input-cambiar-datos" placeholder="ingrese aquí para modificar su localidad" @bind="localidad"/>
+                <h5>Su calle: </h5>
+                <input class="input-cambiar-datos" placeholder="ingrese aquí para modificar su calle" type="text" @bind="calle"/>
+                <h5>Su altura: </h5>
+                <input class="input-altura" placeholder="modificar su altura" type="number" @bind="alturaCalle"/>
+            </div>
         </div>
-       <div class="datos-contacto">
-           <h4>Datos de contacto</h4>
-            <h5>Su mail: </h5>
-            <input class="input-cambiar-datos" placeholder="ingrese aquí para modificar su mail" type="email" />
-            <h5>Su telefono: </h5>
-            <input class="input-telefono" placeholder="modificar su teléfono" />
-       </div>
-       <div class="datos-ubicacion">
-           <h4>Datos de domicilio</h4>
-            <h5>Su provincia: </h5>
-            <input class="input-cambiar-datos" placeholder="ingrese aquí para modificar su provincia" />
-            <h5>Su localidad: </h5>
-            <input class="input-cambiar-datos" placeholder="ingrese aquí para modificar su localidad" />
-            <h5>Su calle: </h5>
-            <input class="input-cambiar-datos" placeholder="ingrese aquí para modificar su calle" type="text" />
-            <h5>Su altura: </h5>
-            <input class="input-altura" placeholder="modificar su altura" type="number" />
-       </div>     
+        <button class="guardar-datos-boton" @onclick="() => GuardarInfo()">Guardar datos</button>
     </div>
-    <button class="guardar-datos-boton">Guardar datos</button>
-</div>
+}
+
 
 @code {
+    [Inject] UserSession? sesionUsuario{ get; set; }
+    [Inject] UserService? servicioUsuario{ get; set;}
+    [Inject] PasswordHash? hashConstrasenia{ get; set; }
 
+    private string nombre = "";
+    private string apellido = "";
+    private string email = "";
+    private string? telefono = "";
+    private string? provincia = "";
+    private string? localidad = "";
+    private string? calle = "";
+    private int alturaCalle;
+    private string passwordActual = "";
+    private string passwordNueva = "";
+    private string passwordConfirmacion = "";
+    private string errorPassword = "";
+
+    protected override void OnInitialized()
+    {
+        if (sesionUsuario?.Usuario != null)
+        {
+            nombre = sesionUsuario.Usuario.Nombre;
+            apellido = sesionUsuario.Usuario.Apellido;
+            email = sesionUsuario.Usuario.Email;
+            telefono = sesionUsuario?.Usuario?.telefono?.ToString();
+            provincia = sesionUsuario?.Usuario.provincia;
+            localidad = sesionUsuario?.Usuario.localidad;
+            calle = sesionUsuario?.Usuario.calle;
+            alturaCalle = int.Parse(sesionUsuario?.Usuario?.alturaCalle?.ToString() ?? "0");
+        }
+    }
+
+    private async Task GuardarInfo()
+    {
+        var codigoPassword = ValidarPassword();
+
+        if(codigoPassword != "0Null" && codigoPassword != "202")
+        {
+            StateHasChanged();
+            return;
+        }
+
+        AsignacionDeDatos();
+
+        if(codigoPassword == "202")
+        {
+            sesionUsuario!.Usuario!.HashPassword = hashConstrasenia!.Hash(passwordNueva);
+
+        }
+
+        //actualizar datos y guardar nuevos 
+        await servicioUsuario!.Update(sesionUsuario!.Usuario!);
+    }
+
+    private void AsignacionDeDatos()
+    {
+        if (sesionUsuario?.Usuario != null)
+        {
+            sesionUsuario.Usuario.Nombre = nombre;
+            sesionUsuario.Usuario.Apellido = apellido;
+            sesionUsuario.Usuario.Email = email;
+            sesionUsuario.Usuario.telefono = telefono;
+            sesionUsuario.Usuario.provincia = provincia;
+            sesionUsuario.Usuario.localidad = localidad;
+            sesionUsuario.Usuario.calle = calle;
+            sesionUsuario.Usuario.alturaCalle = alturaCalle.ToString();
+        }
+    }
+
+    private string ValidarPassword()
+    {
+        string codigoError ="";
+
+        if (!string.IsNullOrEmpty(passwordNueva))
+        {
+            codigoError = "0Null"; //no cambia contra
+        }
+
+            if (!hashConstrasenia!.Verify(sesionUsuario!.Usuario!.HashPassword,passwordActual))
+            {
+                errorPassword = "La contraseña actual es incorrecta.";
+                return "01";
+            }
+            if (passwordNueva != passwordConfirmacion)
+            {
+                errorPassword = "La nueva contraseña y la confirmación no coinciden.";
+                return "02";
+            }
+            if (passwordNueva.Length < 6)
+            {
+                errorPassword = "La nueva contraseña debe tener al menos 6 caracteres.";
+                return  "03";
+            }
+
+            codigoError = ""; //no hubo problemas con la constraseña
+        
+        return "202"; //codigo bien
+    }
+
+    private void HashearPassword()
+    {
+        if (ValidarPassword() == "202")
+        {
+            sesionUsuario!.Usuario!.HashPassword = hashConstrasenia!.Hash(passwordNueva);
+        }
+        else
+        {
+            errorPassword = "No se ha podido guardar la contraseña!";
+            StateHasChanged();
+        }
+    }
 }

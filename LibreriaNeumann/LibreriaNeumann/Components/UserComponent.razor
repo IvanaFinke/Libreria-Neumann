@@ -2,27 +2,57 @@
 @rendermode InteractiveServer
 @page "/mis-datos"
 
-<div class="user-component">
-    <h1 class="nombre-usuario">Hola, @nombreUsuario!</h1>
-    <h3 class="frase-datos-usuario"><strong>Datos de usuario:</strong></h3>
-    <div class="datos-usuario-seccion">
-        <h5 class="email-usuario">Su email: <strong>@mailUsuario</strong></h5>
-        <h5 class="telefono-usuario"> Su teléfono: <strong>@telefonoUsuario</strong></h5>
-        <h5 class="provincia-seccion">Su provincia: <strong>@provinciaUsuario</strong></h5>
-        <h5 class="localidad-seccion">Su localidad: <strong>@localidadUsuario</strong></h5>
-        <h5 class="direccion-usuario">Su calle: <strong>@calleUsuario @numeroCalleUsuario</strong></h5>
+@if(sesionUsuario?.Usuario?.Rol != null)
+{
+    <div class="user-component">
+        <h1 class="nombre-usuario">Hola, @sesionUsuario.Usuario.Nombre!</h1>
+        <h3 class="frase-datos-usuario"><strong>Datos de usuario:</strong></h3>
+        <div class="datos-usuario-seccion">
+            <h5 class="email-usuario">Su email: <strong>@sesionUsuario.Usuario.Email</strong></h5>
+
+            @if(sesionUsuario?.Usuario?.telefono != null)
+            {
+                <h5 class="telefono-usuario"> Su teléfono: <strong>@sesionUsuario.Usuario.telefono</strong></h5>
+            }
+            else
+            {
+                <h5>Teléfono aún no asignado</h5>
+            }
+            @if (@sesionUsuario?.Usuario?.provincia != null)
+            {
+                <h5 class="provincia-seccion">Su provincia: <strong>@sesionUsuario?.Usuario.provincia</strong></h5>
+            }
+            else
+            {
+                <h5>Provincia aún no asignada</h5>
+            }
+            @if (sesionUsuario?.Usuario?.localidad != null)
+            {
+                <h5 class="localidad-seccion">Su localidad: <strong>@sesionUsuario?.Usuario.localidad</strong></h5>
+
+            }
+            else
+            {
+                <h5>Localidad aún no asignada</h5>
+            }
+            @if (sesionUsuario?.Usuario?.calle != null)
+            {
+                <h5 class="direccion-usuario">Su calle: <strong>@sesionUsuario?.Usuario.calle</strong></h5>
+            }
+            else
+            {
+                <h5>Calle aún no asignada</h5>
+            }
+            
+        </div>
+        <button class="cambiar-datos-boton" @onclick="OnClick">Cambiar datos</button>
+
     </div>
-    <button class="cambiar-datos-boton" @onclick="OnClick">Cambiar datos</button>
-</div>
+}
+
 
 @code {
-    private string nombreUsuario = "Edmond";
-    private string mailUsuario = "edmond@gmail.com";
-    private string telefonoUsuario = "11-5453-1233";
-    private string calleUsuario = "Guemes";
-    private string provinciaUsuario = "Buenos Aires";
-    private string localidadUsuario = "San Martín";
-    private int numeroCalleUsuario = 1234;
+    [Inject] UserSession? sesionUsuario { get; set; }
 
     public void OnClick()
     {

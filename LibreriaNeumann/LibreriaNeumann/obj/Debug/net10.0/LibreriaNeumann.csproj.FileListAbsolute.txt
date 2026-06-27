@@ -786,7 +786,6 @@ C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\De
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\Libreria.CF81EDEE.Up2Date
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\LibreriaNeumann.dll
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\refint\LibreriaNeumann.dll
@@ -796,5 +795,6 @@ C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\De
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\vxbbu6djjr-{0}-o5gql5sgat-o5gql5sgat.gz
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\k91dbzg12w-{0}-ne14ti1q68-ne14ti1q68.gz
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\lzomuo2bci-{0}-ig5xotzpx5-ig5xotzpx5.gz
-C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\13twna8nz8-{0}-94a4lbfu06-94a4lbfu06.gz
-C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tnl8yodhue-{0}-94a4lbfu06-94a4lbfu06.gz
+C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\13twna8nz8-{0}-dhugb4yuk1-dhugb4yuk1.gz
+C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tnl8yodhue-{0}-dhugb4yuk1-dhugb4yuk1.gz
+C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
