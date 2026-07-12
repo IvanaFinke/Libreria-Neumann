@@ -1,0 +1,32 @@
+﻿@page "/resetear"
+@rendermode InteractiveServer
+
+<div class="cambio-contra">
+    <h1 class="titulo-cambio">Cambiar Contraseña</h1>
+    <h5 class="frase-cambio">Recibirá un correo en su mail para el cambio de contraseña</h5>
+    <input type="email" class="ingreso" placeholder="ej: tumail@gmail.com" @bind="mail"/>
+    <button class="boton-cambio" type="submit" @onclick="() => EnviarMail(mail)">Enviar Mail</button>
+    <p>@mensaje</p>
+
+</div>
+@code {
+    [Inject] UserService? userService{ get; set; }
+    [Inject] EmailService? emailService { get; set; }
+    string mail = "";
+    string mensaje = "";
+
+    protected async Task EnviarMail(string email)
+    {
+        var user = await userService!.GetByEmail(email); 
+
+        if (user != null)
+        {
+            var token = await userService!.GenerarTokenReset(email);
+            var link = $"https://localhost:7102/nueva-contrasenia?token={token}";
+            await emailService!.EnviarResetPassword(email, link);
+        }
+        mensaje = "Si el correo existe, recibirá un mail para cambiar la contraseña";
+        
+    }
+
+}

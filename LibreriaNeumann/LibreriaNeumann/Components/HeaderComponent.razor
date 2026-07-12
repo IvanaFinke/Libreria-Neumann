@@ -141,6 +141,7 @@
     [Inject] UserSession? sesion { get; set; }
     [Inject] CarritoService? carritoService{ get; set; }
     public string searchFilter = "";
+    private Func<Task>? _onChangeHandler;
 
     private void CerrarSesion()
     {
@@ -181,14 +182,13 @@
 
     protected override void OnInitialized() //para que el componente escuche los cambios de sesion y de carrito service en tiempo real y modifique datos
     {
-        sesion?.OnChange += StateHasChanged;
-        carritoService!.OnChange += StateHasChanged;
+        _onChangeHandler = () => InvokeAsync(StateHasChanged);
+        sesion!.OnChange += _onChangeHandler;
     }
 
     public void Dispose()
     {
-        sesion?.OnChange -= StateHasChanged;
-        carritoService!.OnChange -= StateHasChanged;
+        sesion?.OnChange -= _onChangeHandler;
     }
 
     public void IrUsuario()

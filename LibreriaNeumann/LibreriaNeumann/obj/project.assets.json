@@ -807,6 +807,19 @@
           }
         }
       },
+      "Resend/0.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Resend.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Resend.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.ClientModel/1.5.1": {
         "type": "package",
         "dependencies": {
@@ -2752,6 +2765,21 @@
         "packageIcon.png"
       ]
     },
+    "Resend/0.6.0": {
+      "sha512": "tYqh8kDmv2onFxV417PNwaD8SClhTRFG/WtiPoZpizGOzy9aQ0dXXW6lB3mwcIv1pbFOyubN+KprYkFoXY1/lw==",
+      "type": "package",
+      "path": "resend/0.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net8.0/Resend.dll",
+        "lib/net8.0/Resend.xml",
+        "resend.0.6.0.nupkg.sha512",
+        "resend.nuspec"
+      ]
+    },
     "System.ClientModel/1.5.1": {
       "sha512": "k2jKSO0X45IqhVOT9iQB4xralNN9foRQsRvXBTyRpAVxyzCJlG895T9qYrQWbcJ6OQXxOouJQ37x5nZH5XKK+A==",
       "type": "package",
@@ -3111,7 +3139,8 @@
       "Microsoft.AspNetCore.App.Internal.Assets >= 10.0.9",
       "Microsoft.EntityFrameworkCore >= 10.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 10.0.2",
-      "Microsoft.EntityFrameworkCore.Tools >= 10.0.2"
+      "Microsoft.EntityFrameworkCore.Tools >= 10.0.2",
+      "Resend >= 0.6.0"
     ]
   },
   "packageFolders": {
@@ -3186,6 +3215,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[10.0.2, )"
+          },
+          "Resend": {
+            "target": "Package",
+            "version": "[0.6.0, )"
           }
         },
         "imports": [

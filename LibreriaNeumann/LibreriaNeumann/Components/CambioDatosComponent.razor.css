@@ -15,6 +15,10 @@
     color: rgb(244, 152, 117);
 }
 
+.guardar-datos-boton:hover {
+    border-color: rgb(128, 128, 128);
+}
+
 .datos-seccion-inputs{
     display:flex;
     flex-direction:row; 

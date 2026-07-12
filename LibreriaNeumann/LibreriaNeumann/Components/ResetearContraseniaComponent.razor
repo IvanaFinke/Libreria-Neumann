@@ -1,0 +1,52 @@
+﻿@page "/nueva-contrasenia"
+@rendermode InteractiveServer
+@inject NavigationManager navigatorManager
+
+<div class="seccion-nvcontra">
+    <h1 class="titulo-nv">Restablecer contraseña</h1>
+    <input type="password" class="ingreso" placeholder="Nueva contraseña" @bind="nuevaContrasenia"/>
+    <input type="password" class="ingreso" placeholder="Confirmar contraseña" @bind="confirmarContrasenia"/>
+    <button class="guarda-contra" @onclick="() => Resetear()">Guardar</button>
+    <p>@mensaje</p>
+</div>
+
+@code {
+    string nuevaContrasenia = "";
+    string confirmarContrasenia = "";
+    string mensaje = "";
+    [SupplyParameterFromQuery]
+    public string? token { get; set; } // Recibir el token desde la URL
+    [Inject] UserService? userService { get; set; }
+
+    private async Task Resetear()
+    {
+        if(string.IsNullOrEmpty(token))
+        {
+            mensaje = "Token inválido";
+            return;
+        }
+
+        if(nuevaContrasenia != confirmarContrasenia)
+        {
+            mensaje = "Las contraseñas no coinciden";
+            return;
+        }
+        if (nuevaContrasenia.Length < 6)
+        {
+            mensaje = "La contraseña debe tener al menos 6 caracteres";
+            return;
+        }
+
+        var ok = await userService!.ResetPassword(token, nuevaContrasenia);
+
+        if(ok)
+        {
+            navigatorManager.NavigateTo("/iniciar-sesion");
+        }
+        else
+        {
+            mensaje = "El link es inválido o ha expirado";
+        }
+
+    }
+}

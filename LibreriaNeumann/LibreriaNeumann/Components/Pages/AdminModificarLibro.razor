@@ -90,10 +90,12 @@
     private int publicacion, pags, stock;
     [Parameter] public int Id { get; set; }
     private IBrowserFile? imagenSeleccionada;
+    private Func<Task>? _onChangeHandler;
 
     protected override void OnInitialized()
     {
-        sesionUsuario?.OnChange -= SessionChanged;
+        _onChangeHandler = () => InvokeAsync(StateHasChanged);
+        sesionUsuario?.OnChange -= _onChangeHandler;
     }
 
     protected override async Task OnInitializedAsync()
@@ -126,7 +128,7 @@
 
     public void Dispose()
     {
-        sesionUsuario?.OnChange -= SessionChanged;
+        sesionUsuario?.OnChange -= _onChangeHandler;
     }
 
     protected async Task ModificarLibro()

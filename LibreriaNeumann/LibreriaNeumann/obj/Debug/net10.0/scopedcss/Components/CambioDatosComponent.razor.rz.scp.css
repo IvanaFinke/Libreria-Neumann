@@ -15,6 +15,10 @@
     color: rgb(244, 152, 117);
 }
 
+.guardar-datos-boton:hover[b-9c4epm92vh] {
+    border-color: rgb(128, 128, 128);
+}
+
 .datos-seccion-inputs[b-9c4epm92vh]{
     display:flex;
     flex-direction:row; 

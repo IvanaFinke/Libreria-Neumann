@@ -3,6 +3,7 @@
 @using Microsoft.Extensions.Validation
 @inject IJSRuntime JS
 @rendermode InteractiveServer
+@inject NavigationManager navigationManager
 
 <EditForm Model="Login" OnValidSubmit="IniciarSesion">
     <DataAnnotationsValidator/>
@@ -21,7 +22,7 @@
                 <h4>Ingrese su constraseña</h4>
                 <input type="password" class="ingreso" @bind-value="Login.Password"/>
                 <ValidationMessage For ="() => Login.Password"></ValidationMessage>
-                <NavLink class="nav-link-contraseña">
+                <NavLink class="nav-link-contraseña" href="/resetear">
                     <span class="olvidaste-contraseña"><strong>¿Olvidaste tu contraseña?</strong></span>
                 </NavLink>
             </div>
@@ -108,5 +109,6 @@
             await JS.InvokeVoidAsync("renderCaptcha");
         }
     }
+
 
 }

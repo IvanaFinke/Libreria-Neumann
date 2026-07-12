@@ -5,18 +5,26 @@ namespace LibreriaNeumann.Services
     public class UserSession
     {
         public User? Usuario { get; set; }
-        public event Action? OnChange;
+        public event Func<Task>? OnChange;
 
-        public void SetUser(User user)
+        public async Task SetUser(User user)
         {
             Usuario = user;
-            OnChange?.Invoke();
+            await NotificarCambio();
         }
 
-        public void LogOut()
+        public async Task LogOut()
         {
             Usuario = null;
-            OnChange?.Invoke();
+            await NotificarCambio();
+        }
+
+        public async Task NotificarCambio()
+        {
+            if(OnChange != null) //si hay algun metodo suscrito al evento OnChange
+            {
+                await OnChange.Invoke();
+            }
         }
     }
 }

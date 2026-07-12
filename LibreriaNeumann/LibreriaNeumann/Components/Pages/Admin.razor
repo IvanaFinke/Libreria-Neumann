@@ -21,11 +21,13 @@
 @code {
 
     [Inject] UserSession? UsuarioSesion { get; set; }
+    private Func<Task>? _onChangeHandler;
 
     /*Cuando la sesion cambie, llamamos a la funcion de este componente Admin*/
     protected override void OnInitialized()
     {
-        UsuarioSesion?.OnChange += SessionChanged;
+        _onChangeHandler = () => InvokeAsync(StateHasChanged);
+        UsuarioSesion?.OnChange += _onChangeHandler;
     }
 
     /*Verifica que el usuario sea distinto de admin para mandarlo a inicio y asegurar seguridad*/
@@ -44,6 +46,6 @@
     /*Al salir de admin se elimina la conexión con el componente*/
     public void Dispose()
     {
-        UsuarioSesion?.OnChange -= SessionChanged;
+        UsuarioSesion?.OnChange -= _onChangeHandler;
     }
 }

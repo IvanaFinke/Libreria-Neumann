@@ -12,6 +12,7 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddHttpClient();
 builder.Services.AddHttpClient<ReCaptcha>();
+builder.Services.AddHttpClient<EmailService>();
 builder.Services.AddScoped<ReCaptcha>();
 builder.Services.AddScoped<CarritoService>(); //Los addScoped se crean una vez por cada usuario
 builder.Services.AddScoped<UserService>();

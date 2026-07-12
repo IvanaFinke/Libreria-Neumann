@@ -348,10 +348,12 @@
     [Inject] UserSession? usuarioSesion{ get; set; }
     [Inject] LibroService? libroService{ get; set; }
     [Inject] IJSRuntime jS { get; set; }
+    private Func<Task>? _onChangeHandler;
 
     protected override void OnInitialized()
     {
-        usuarioSesion?.OnChange -= SessionChanged;
+        _onChangeHandler = () => InvokeAsync(StateHasChanged);
+        usuarioSesion?.OnChange -= _onChangeHandler;
     }
 
     void SessionChanged()
@@ -366,7 +368,7 @@
 
     public void Dispose()
     {
-        usuarioSesion?.OnChange -= SessionChanged;
+        usuarioSesion?.OnChange -= _onChangeHandler;
     }
 
 

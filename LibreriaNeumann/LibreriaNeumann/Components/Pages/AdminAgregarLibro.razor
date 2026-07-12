@@ -109,10 +109,12 @@
     private int publicacion, pags, stock;
     private IBrowserFile? imagenSeleccionada;
     private List<Libro> preview = new();
+    private Func<Task>? _onChangeHandler;
 
     protected override void OnInitialized()
     {
-        usuarioSesion?.OnChange += SessionChanged;
+        _onChangeHandler = () => InvokeAsync(StateHasChanged);
+        usuarioSesion?.OnChange += _onChangeHandler;
     }
 
     void SessionChanged()
@@ -126,7 +128,7 @@
 
     public void Dispose()
     {
-        usuarioSesion?.OnChange -= SessionChanged;
+        usuarioSesion?.OnChange -= _onChangeHandler;
     }
 
     protected Libro crearLibro()

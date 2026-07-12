@@ -26,5 +26,34 @@ namespace LibreriaNeumann.Services
             var usuario = await _context.Users.FirstOrDefaultAsync<User>(u => u.Email == email);
             return usuario;
         }
+
+        public async Task<string> GenerarTokenReset(string email)
+        {
+            var user = await GetByEmail(email);
+            if (user != null)
+            {
+                var token = Convert.ToBase64String(Guid.NewGuid().ToByteArray()).Replace("/", "_").Replace("+", "-"); //evitar problemas de url
+                user.TokenPassword = token;
+                user.TokenExpiracion = DateTime.UtcNow.AddHours(1); //tiempo limite
+                await _context.SaveChangesAsync();
+                return token;
+            }
+            else
+            {
+                return null!;
+            }
+
+        }
+
+        public async Task<bool> ResetPassword(string token,string nuevaContra)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(usuario => usuario.TokenPassword == token && usuario.TokenExpiracion > DateTime.UtcNow);
+            if (user == null) return false; //token invalido o expirado
+            user.HashPassword = _hasher.Hash(nuevaContra);
+            user.TokenPassword = null;
+            user.TokenExpiracion = null;
+            await _context.SaveChangesAsync();
+            return true;
+        }
     }
 }

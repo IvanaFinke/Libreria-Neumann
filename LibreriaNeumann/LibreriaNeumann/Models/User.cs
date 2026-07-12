@@ -13,5 +13,7 @@
         public string? localidad { get; set; }
         public string? calle { get; set; }
         public string? alturaCalle { get; set; }
+        public string? TokenPassword { get; set; }
+        public DateTime? TokenExpiracion { get; set; }
     }
 }

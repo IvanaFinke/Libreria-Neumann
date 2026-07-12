@@ -1,3 +1,120 @@
+/* /Components/CambioContraseniaComponent.razor.rz.scp.css */
+.cambio-contra[b-n59oycbxuj] {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    align-items: center;
+    padding: 3em 3rem;
+    padding-top: 1rem;
+    gap: 10px;
+}
+
+.titulo-cambio[b-n59oycbxuj] {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.ingreso[b-n59oycbxuj] {
+    width: 500px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
+}
+
+.boton-cambio[b-n59oycbxuj] {
+    text-emphasis-color: white;
+    background-color: rgb(244, 152, 117);
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: white;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-top:2rem;
+}
+
+.boton-cambio:hover[b-n59oycbxuj] {
+    border-color: rgb(128, 128, 128);
+}
+
+/*Movile design*/
+@media (max-width:580px) {
+
+    .cambio-contra[b-n59oycbxuj] {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        align-items: center;
+        padding: 3em 3rem;
+        padding-top: 1rem;
+        gap: 1.5rem;
+    }
+
+    .ingreso[b-n59oycbxuj] {
+        width: 100%;
+    }
+
+    .frase-cambio[b-n59oycbxuj]{
+        font-size:clamp(14px,16px,18px);
+    }
+
+    .boton-cambio[b-n59oycbxuj] {
+        width: 200px;
+        height: 34px;
+    }
+}
+
+/*Diseño Tablets mini/air*/
+@media (min-width:571px) and (max-width:860px) {
+    .cambio-contra[b-n59oycbxuj] {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        align-items: center;
+        padding: 3em 3rem;
+        gap: 2rem;
+    }
+}
+
+/*Diseño tablets pro, grandes*/
+@media (min-width:853px) and (max-width:1024px) {
+    .cambio-contra[b-n59oycbxuj] {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 3em 3rem;
+        gap: 2rem;
+    }
+
+    .titulo-cambio[b-n59oycbxuj] {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ingreso[b-n59oycbxuj] {
+        width: 100%;
+        height:clamp(36px,38px,40px);
+        font-size:24px;
+    }
+
+    h5[b-n59oycbxuj] {
+        font-size: 28px;
+    }
+
+    .boton-cambio[b-n59oycbxuj] {
+        width: 300px;
+        height: 50px;
+        font-size: 28px;
+    }
+
+}
 /* /Components/CambioDatosComponent.razor.rz.scp.css */
 .seccion-cambiar-datos[b-9c4epm92vh] {
     display: flex;
@@ -14,6 +131,10 @@
     font-family: serif;
     font-weight: 500;
     color: rgb(244, 152, 117);
+}
+
+.guardar-datos-boton:hover[b-9c4epm92vh] {
+    border-color: rgb(128, 128, 128);
 }
 
 .datos-seccion-inputs[b-9c4epm92vh]{
@@ -4419,6 +4540,118 @@ h1[b-i87l3h0epg] {
 
 }
 
+/* /Components/ResetearContraseniaComponent.razor.rz.scp.css */
+.seccion-nvcontra[b-9vcem32n02] {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    align-items: center;
+    padding: 3em 3rem;
+    padding-top: 1rem;
+    gap: 10px;
+}
+
+.titulo-nv[b-9vcem32n02] {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.ingreso[b-9vcem32n02] {
+    width: 500px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
+}
+
+.guarda-contra[b-9vcem32n02]{
+    text-emphasis-color: white;
+    background-color: rgb(244, 152, 117);
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: white;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-top: 2rem;
+}
+
+    .guarda-contra:hover[b-9vcem32n02] {
+        border-color: rgb(128, 128, 128);
+    }
+
+/*Movile design*/
+@media (max-width:580px) {
+
+    .seccion-nvcontra[b-9vcem32n02] {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        align-items: center;
+        padding: 3em 3rem;
+        padding-top: 1rem;
+        gap: 1.5rem;
+    }
+
+    .ingreso[b-9vcem32n02] {
+        width: 100%;
+    }
+
+    .boton-cambio[b-9vcem32n02] {
+        width: 200px;
+        height: 34px;
+    }
+}
+
+/*Diseño Tablets mini/air*/
+@media (min-width:571px) and (max-width:860px) {
+    .seccion-nvcontra[b-9vcem32n02] {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        align-items: center;
+        padding: 3em 3rem;
+        gap: 2rem;
+    }
+}
+
+/*Diseño tablets pro, grandes*/
+@media (min-width:853px) and (max-width:1024px) {
+    .seccion-nvcontra[b-9vcem32n02] {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 3em 3rem;
+        gap: 2rem;
+    }
+
+    .titulo-nv[b-9vcem32n02] {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ingreso[b-9vcem32n02] {
+        width: 100%;
+        height: clamp(36px,38px,40px);
+        font-size: 24px;
+    }
+
+    h5[b-9vcem32n02] {
+        font-size: 28px;
+    }
+
+    .guarda-contra[b-9vcem32n02] {
+        width: 300px;
+        height: 50px;
+        font-size: 28px;
+    }
+}
 /* /Components/SidebarComponent.razor.rz.scp.css */
 .menu-header-desplegable[b-uqn0fedkqy] {
     position: absolute;

@@ -68,7 +68,7 @@
     private string passwordActual = "";
     private string passwordNueva = "";
     private string passwordConfirmacion = "";
-    private string errorPassword = "";
+    private string errorPassword,codigoError = "";
 
     protected override void OnInitialized()
     {
@@ -105,6 +105,7 @@
 
         //actualizar datos y guardar nuevos 
         await servicioUsuario!.Update(sesionUsuario!.Usuario!);
+        navigatorManager.NavigateTo("/mis-datos");
     }
 
     private void AsignacionDeDatos()
@@ -124,14 +125,12 @@
 
     private string ValidarPassword()
     {
-        string codigoError ="";
 
-        if (!string.IsNullOrEmpty(passwordNueva))
+        if (!string.IsNullOrEmpty(passwordNueva)) //si la contra tiene algun ingreso
         {
             codigoError = "0Null"; //no cambia contra
-        }
 
-            if (!hashConstrasenia!.Verify(sesionUsuario!.Usuario!.HashPassword,passwordActual))
+            if (!hashConstrasenia!.Verify(sesionUsuario!.Usuario!.HashPassword, passwordActual))
             {
                 errorPassword = "La contraseña actual es incorrecta.";
                 return "01";
@@ -144,10 +143,11 @@
             if (passwordNueva.Length < 6)
             {
                 errorPassword = "La nueva contraseña debe tener al menos 6 caracteres.";
-                return  "03";
+                return "03";
             }
+        }
 
-            codigoError = ""; //no hubo problemas con la constraseña
+        codigoError = ""; //no hubo problemas con la constraseña
         
         return "202"; //codigo bien
     }
