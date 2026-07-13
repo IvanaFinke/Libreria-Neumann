@@ -8,10 +8,15 @@
     <h1 class="titulo-catalogo">Nuestros libros</h1>
 
     <!--SECCION MOVIL-->
-    <button class="boton-filtrar" @onclick="PressButton">
+    <div class="sec-fltr">
+        <button class="boton-lmp-movil" @onclick="() => LimpiarFiltros()">
+            <i class="bi bi-x-square-fill"></i>
+        </button>
+        <button class="boton-filtrar" @onclick="PressButton">
             <span>FILTRAR</span>
             <i class="bi bi-arrow-down"></i>
         </button>
+    </div>
 
     @if (botonPresionado)
         {

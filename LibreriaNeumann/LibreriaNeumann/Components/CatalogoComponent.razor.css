@@ -13,6 +13,15 @@
     font-weight:500;
 }
 
+.boton-lmp-movil {
+    background:none;
+    border:none;
+}
+
+.sec-fltr{
+    display:none;
+}
+
 .boton-lmp {
     display: flex;
     width: 180px;
@@ -22,10 +31,10 @@
     cursor: pointer;
 }
 
-.boton-lmp i{
-    color:red;
-    font-size:16px;
-}
+    .boton-lmp i, .boton-lmp-movil i {
+        color: red;
+        font-size: 16px;
+    }
 
 .menu-catalogo-pc {
     display: grid;
@@ -195,6 +204,23 @@
         height: fit-content;
     }
 
+    .sec-fltr {
+        display: flex;
+        justify-content:space-between;
+        gap:28px;
+    }
+
+    .boton-lmp-movil i{
+        font-size:clamp(20px,24px,26px);
+    }
+
+    .boton-lmp-movil {
+        display: flex;
+        border:red 2px solid;
+        gap:1px;
+        padding: 0 4px 0 4px;
+    }
+
     .menu-catalogo-responsive .botones-catalogo{
         display:flex;
         flex-direction:row;
@@ -209,7 +235,6 @@
         font-size: 18px;
         font-family: sans-serif;
         font-weight: 200;
-        padding: 0 0;
     }
 
 

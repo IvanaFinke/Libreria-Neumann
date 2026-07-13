@@ -799,5 +799,5 @@ C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\bin\De
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\CambioContraseniaComponent.razor.rz.scp.css
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\ResetearContraseniaComponent.razor.rz.scp.css
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
-C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\13twna8nz8-{0}-j6mgt5wezg-j6mgt5wezg.gz
-C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tnl8yodhue-{0}-j6mgt5wezg-j6mgt5wezg.gz
+C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\13twna8nz8-{0}-05d94g8tma-05d94g8tma.gz
+C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tnl8yodhue-{0}-05d94g8tma-05d94g8tma.gz
