@@ -1,5 +1,4 @@
-﻿@using LibreriaNeumann.Components.Pages
-@rendermode InteractiveServer
+﻿@rendermode InteractiveServer
 @inject NavigationManager navigatorManager
 @implements IDisposable
 
@@ -141,7 +140,7 @@
     [Inject] UserSession? sesion { get; set; }
     [Inject] CarritoService? carritoService{ get; set; }
     public string searchFilter = "";
-    private Func<Task>? _onChangeHandler;
+    private Func<Task>? _onChangeHandler; //creamos una variable de tipo Func<Task> para suscribirnos al evento OnChange de la clase UserSession
 
     private void CerrarSesion()
     {
@@ -183,12 +182,12 @@
     protected override void OnInitialized() //para que el componente escuche los cambios de sesion y de carrito service en tiempo real y modifique datos
     {
         _onChangeHandler = () => InvokeAsync(StateHasChanged);
-        sesion!.OnChange += _onChangeHandler;
+        sesion!.OnChange += _onChangeHandler; //suscribimos la variable _onChangeHandler al evento OnChange de la clase UserSession
     }
 
     public void Dispose()
     {
-        sesion?.OnChange -= _onChangeHandler;
+        sesion?.OnChange -= _onChangeHandler; //desuscribimos la variable _onChangeHandler al evento OnChange de la clase UserSession
     }
 
     public void IrUsuario()

@@ -5,7 +5,7 @@ namespace LibreriaNeumann.Services
     public class UserSession
     {
         public User? Usuario { get; set; }
-        public event Func<Task>? OnChange;
+        public event Func<Task>? OnChange; //delegado; es decir; puntero a metodo
 
         public async Task SetUser(User user)
         {

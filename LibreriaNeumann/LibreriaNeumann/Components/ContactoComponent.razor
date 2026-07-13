@@ -1,4 +1,5 @@
 ﻿@page "/contacto"
+@rendermode InteractiveServer
 
 <div class="contacto">
     <h1 class="titulo-contacto-seccion">Contactate con nosotros</h1>
@@ -11,22 +12,35 @@
 
             <h4>Ingrese su mail</h4>
             <div class="clase-input-mail">
-                <input type="email" class="ingreso" />
+                <input type="email" class="ingreso" @bind="@mail"/>
             </div>
 
             <h4>Ingrese su solicitud</h4>
             <div class="clase-input-solicitud">
-            <textarea class="ingreso-de-la-solicitud"></textarea>
+            <textarea class="ingreso-de-la-solicitud" @bind="@consulta"></textarea>
             </div>
 
         <div class="clase-boton-enviar">
-            <button class="boton-enviar">Enviar consulta</button>
+            <button class="boton-enviar" @onclick="() => EnviarConsulta()">Enviar consulta</button>
         </div>
+        <p>@mensaje</p>
 
     </div>
         
 </div>
 
 @code {
+    [Inject] EmailService? emailService{ get; set; }
+    [Inject] UserService? userService{ get; set; }
+    string? mail,mensaje,consulta = "";
 
+    protected async Task EnviarConsulta()
+    {
+            var respuesta = await emailService!.EnviarConsulta(mail, consulta!);
+            if(respuesta)
+            {
+                mensaje = "Consulta enviada exitosamente!!";
+            }
+        }
+    }
 }

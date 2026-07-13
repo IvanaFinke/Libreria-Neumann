@@ -13,6 +13,20 @@
     font-weight:500;
 }
 
+.boton-lmp[b-q5pyqb11by] {
+    display: flex;
+    width: 180px;
+    justify-content: space-evenly;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+.boton-lmp i[b-q5pyqb11by]{
+    color:red;
+    font-size:16px;
+}
+
 .menu-catalogo-pc[b-q5pyqb11by] {
     display: grid;
     align-self: start;

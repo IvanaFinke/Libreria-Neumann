@@ -50,6 +50,35 @@ namespace LibreriaNeumann.Services
             var response = await _http.SendAsync(request); //enviamos peticion y guardamos la respuesta en response
             return response.IsSuccessStatusCode; //devuelve true si el codigo respuesta esta entre 200-299
         }
+
+        public async Task<bool> EnviarConsulta(string mail, string consulta)
+        {
+            //nuevo objeto para el cuerpo de la consulta
+            var mailsistema = "onboarding@resend.dev";
+
+            var body = new
+            {
+                from = $"{mail} <onboarding@resend.dev>", //aca deberia de ser el mail del dominio de la empresa, pero buenoxd 
+                to = new[] {mailsistema},
+                subject = "Consulta del usuario",
+                html = $"""<p>{consulta}</p>""",
+            };
+            //preparar request
+            var request = new HttpRequestMessage(HttpMethod.Post, "https://api.resend.com/emails");
+
+            //asignar autenticacion de apikey
+            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
+
+            //transformar a texto
+            request.Content = new StringContent(
+                JsonSerializer.Serialize(body),
+                Encoding.UTF8,
+                "application/json");
+
+            var response = await _http.SendAsync(request);
+            return response.IsSuccessStatusCode;
+
+        }
        
     }
 }

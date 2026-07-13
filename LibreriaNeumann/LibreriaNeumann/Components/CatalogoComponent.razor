@@ -7,6 +7,7 @@
 
     <h1 class="titulo-catalogo">Nuestros libros</h1>
 
+    <!--SECCION MOVIL-->
     <button class="boton-filtrar" @onclick="PressButton">
             <span>FILTRAR</span>
             <i class="bi bi-arrow-down"></i>
@@ -150,8 +151,13 @@
             </div>
         }
 
+        <!--SECCION PC-->
     <div class="menu-catalogo-pc">
-
+        
+        <button class="boton-lmp" @onclick="() => LimpiarFiltros()">
+            <i class="bi bi-x-square-fill"></i>
+            <span>LIMPIAR FILTROS</span>
+        </button>
         <button class="botones-catalogo" @onclick="PressFilter">
             <span>CATEGORÍAS</span>
             <i class="bi bi-star-fill"></i>
@@ -442,6 +448,18 @@
     public void AgregarAlCarrito(Libro libro)
     {
         carritoService!.AgregarLibro(libro);
+    }
+
+    public async Task LimpiarFiltros()
+    {
+        filtros.Autor = null;
+        filtros.Categoria = null;
+        filtros.PrecioMin = null;
+        filtros.PrecioMax = null;
+        filtros.FechaMin = null;
+        filtros.FechaMax = null;
+       listaLibros = await LibroService.ObtenerLibros();
+
     }
 
 }

@@ -68,7 +68,7 @@
 </div>
 
 @code {
-    [Parameter] public string nombre { get; set; }
+    [Parameter] public string? nombre { get; set; }
     private Libro? libroActual;
     [Inject] LibroService? libroService { get; set; }
     [Inject] CarritoService? carritoService{ get; set; }
@@ -79,7 +79,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        libroActual = await libroService!.ObtenerPorNombre(nombre);
+        libroActual = await libroService!.ObtenerPorNombre(nombre!);
 
         if(libroActual != null)
         {
