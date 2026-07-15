@@ -4,6 +4,7 @@
 @inject IJSRuntime JS
 @rendermode InteractiveServer
 @inject NavigationManager navigationManager
+@implements IDisposable
 
 <EditForm Model="Login" OnValidSubmit="IniciarSesion">
     <DataAnnotationsValidator/>
@@ -44,27 +45,31 @@
             <div class="boton-preguntar-registrar">
                 <button class="boton-inicio-sesion" type="submit">Iniciar Sesión</button>
 
-                <div class="preguntar-registrar">
-                    <h5 class="preguntar-cuenta">¿No tenés cuenta?</h5>
-                    <NavLink class="nav-link-registrarme" href="registrarme">
-                        <span class="frase-registrarme">Registrarme</span>
-                    </NavLink>
-                </div>
+                @if (habilitarRegistrar)
+                {
+                    <div class="preguntar-registrar">
+                        <h5 class="preguntar-cuenta">¿No tenés cuenta?</h5>
+                        <NavLink class="nav-link-registrarme" href="registrarme">
+                            <span class="frase-registrarme">Registrarme</span>
+                        </NavLink>
+                    </div>
+                }
+
             </div>
         </div>
-
-        <h5> @SesionIniciada?.Usuario?.Rol</h5>
     </div>
 </EditForm>
 
 @code {
-    [Inject] ReCaptcha Captcha{ get; set; }
+    [Parameter] public bool habilitarRegistrar { get; set; } = true;
+    [Inject] ReCaptcha Captcha { get; set; }
     SignInModel Login = new();
-    [Inject] PasswordHash hasher{ get; set; }
+    [Inject] PasswordHash hasher { get; set; }
     [Inject] UserSession? SesionIniciada { get; set; }
-    [Inject] UserService? sesionUsuario{ get; set; }
+    [Inject] UserService? sesionUsuario { get; set; }
     private string mensaje = "";
     private string color = "";
+    private bool esEstaPagina = true;
 
     async Task IniciarSesion()
     {
@@ -100,15 +105,36 @@
         color = "verde";
         await SesionIniciada!.SetUser(user);
         StateHasChanged();
+        if (!esEstaPagina)
+        {
+            navigationManager.NavigateTo("/detalles-de-pago");
+        }
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if(firstRender)
+        navigationManager.LocationChanged += OnLocationChanged!;
+        ActualizarEstadoPagina();
+
+        if (firstRender)
         {
             await JS.InvokeVoidAsync("renderCaptcha");
         }
     }
 
+    private void ActualizarEstadoPagina()
+    {
+        esEstaPagina = navigationManager.Uri.EndsWith("/iniciar-sesion");
+    }
 
+    private void OnLocationChanged(object sender, LocationChangedEventArgs e)
+    {
+        ActualizarEstadoPagina();
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        navigationManager.LocationChanged -= OnLocationChanged!;
+    }
 }

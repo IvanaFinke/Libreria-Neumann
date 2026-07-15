@@ -1,0 +1,21 @@
+﻿@page "/login"
+@rendermode InteractiveServer
+
+<div class="login"> 
+    <h1 class="titulo-login">Logeate para continuar la compra</h1>
+    <hr class="linea" />
+
+    <div class="inicio-registro">
+        <div class="inicio">
+            <IniciarSesionComponent habilitarRegistrar="false"></IniciarSesionComponent>
+        </div>
+
+        <div class="registro">
+            <RegistrarComponent mostrarIniciarSesion="false"></RegistrarComponent>
+        </div>
+    </div>
+</div>
+
+@code {
+
+}

@@ -793,11 +793,12 @@ C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\De
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\LibreriaNeumann.genruntimeconfig.cache
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\ref\LibreriaNeumann.dll
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\vxbbu6djjr-{0}-o5gql5sgat-o5gql5sgat.gz
-C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\k91dbzg12w-{0}-ne14ti1q68-ne14ti1q68.gz
-C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\lzomuo2bci-{0}-ig5xotzpx5-ig5xotzpx5.gz
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\bin\Debug\net10.0\Resend.dll
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\CambioContraseniaComponent.razor.rz.scp.css
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\ResetearContraseniaComponent.razor.rz.scp.css
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
-C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\13twna8nz8-{0}-ub9bob5eu5-ub9bob5eu5.gz
-C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tnl8yodhue-{0}-ub9bob5eu5-ub9bob5eu5.gz
+C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\k91dbzg12w-{0}-f7fxoh55ae-f7fxoh55ae.gz
+C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\lzomuo2bci-{0}-68qhiysw0j-68qhiysw0j.gz
+C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\InicioYRegistroComponent.razor.rz.scp.css
+C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\13twna8nz8-{0}-y90xqyr2mr-y90xqyr2mr.gz
+C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tnl8yodhue-{0}-y90xqyr2mr-y90xqyr2mr.gz

@@ -75,53 +75,58 @@
 
                 <h3 class="titulo-carrito">Mi carrito</h3>
 
-                <div class="lista-libros-carrito">
+                @if(sesionUsuario?.Usuario != null)
+                {
+                    <div class="lista-libros-carrito">
 
-                    @foreach (var item in carritoService!.Items)
-                    {
-                        <div class="datos-libro-carrito-detalles">
-                            <div class="parte-libro">
-                                <img src="@item.libro.ImageURL" />
+                        @foreach (var item in carritoService!.Items)
+                        {
+                            <div class="datos-libro-carrito-detalles">
+                                <div class="parte-libro">
+                                    <img src="@item.libro.ImageURL" />
 
-                                <div class="titulo-precio-detalles">
-                                    <h4 class="titulo-libro-carrito-detalles">@item.libro.Titulo</h4>
-                                    <h4 class="precio-carrito-detalles">$@(item.libro.Precio * item.Cantidad)</h4>
-                                </div>
-                            </div>
-                           
-                            <div class="trash-cant">
-                                <button class="boton-basura-carrito-detalles-" @onclick="() => EliminarLibro(item.libro)">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-
-                                <div class="controles-cantidad-detalles">
-                                    <div class="botones-aumenta-decrece">
-                                        <button class="btn-cantidad" @onclick="() => carritoService!.DisminuirCantidad(item.libro)">
-                                            <i class="bi bi-dash-circle-fill"></i>
-                                        </button>
-                                        <span class="cantidad-numero">@item.Cantidad</span>
-                                        <button class="btn-cantidad" @onclick="() => carritoService!.AgregarLibro(item.libro)">
-                                            <i class="bi bi-plus-circle-fill"></i>
-                                        </button>
+                                    <div class="titulo-precio-detalles">
+                                        <h4 class="titulo-libro-carrito-detalles">@item.libro.Titulo</h4>
+                                        <h4 class="precio-carrito-detalles">$@(item.libro.Precio * item.Cantidad)</h4>
                                     </div>
                                 </div>
+
+                                <div class="trash-cant">
+                                    <button class="boton-basura-carrito-detalles-" @onclick="() => EliminarLibro(item.libro)">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+
+                                    <div class="controles-cantidad-detalles">
+                                        <div class="botones-aumenta-decrece">
+                                            <button class="btn-cantidad" @onclick="() => carritoService!.DisminuirCantidad(item.libro)">
+                                                <i class="bi bi-dash-circle-fill"></i>
+                                            </button>
+                                            <span class="cantidad-numero">@item.Cantidad</span>
+                                            <button class="btn-cantidad" @onclick="() => carritoService!.AgregarLibro(item.libro)">
+                                                <i class="bi bi-plus-circle-fill"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                            
-                        </div>
-                    }
-
-                
-                </div>
-
-                <div class="seccion-compra-botones">
-
-                    <div class="total-clase">
-                        <h4 class="frase-total">Total:</h4>
-                        <h4 class="frase-precio-total">$@carritoService?.Total</h4>
+                        }
                     </div>
 
-                    <br />
-                </div>
+                    <div class="seccion-compra-botones">
+                        <div class="total-clase">
+                            <h4 class="frase-total">Total:</h4>
+                            <h4 class="frase-precio-total">$@carritoService?.Total</h4>
+                        </div>
+
+                        <br />
+                    </div>
+                }
+                else
+                {
+                    <p>Inicia sesion para ver los items agregados al carrito!</p>
+                }
+
             </div>
         </div>
     }
@@ -150,6 +155,7 @@ else
     [Parameter] public bool MostrarCarritoPC { get; set; } = true;
     [Inject] LibroService? libroService { get; set; }
     [Inject] CarritoService? carritoService { get; set; }
+    [Inject] UserSession? sesionUsuario{ get; set; }
     private List<Libro>? libros;
 
     protected override void OnInitialized()
@@ -174,7 +180,16 @@ else
 
     protected void irAComprar()
     {
-        navigatorManager.NavigateTo("/detalles-de-pago");
+        if (sesionUsuario?.Usuario == null)
+        {
+            navigatorManager.NavigateTo("/login");
+            return;
+        }
+        else
+        {
+            navigatorManager.NavigateTo("/detalles-de-pago");
+
+        }
     }
 
 }

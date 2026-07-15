@@ -2,7 +2,9 @@
 @using LibreriaNeumann.Models
 @using Microsoft.Extensions.Validation
 @rendermode InteractiveServer
+@inject NavigationManager navigatorManager;
 @inject IJSRuntime JS
+@implements IDisposable
 
 <EditForm Model="Usuario" OnValidSubmit="Registrar">
     <DataAnnotationsValidator />
@@ -44,16 +46,23 @@
             <p class="text-danger">@mensaje</p>
         }
 
-        <div class="clase-captcha">
-            <div class="g-recaptcha"></div>
-        </div>
-
-        <div class="clase-preguntar-cuenta">
-            <h5>¿Ya tenés una cuenta?</h5>
+        @if(esEstaPagina)
+        {
+            <div class="clase-captcha">
+                <div class="g-recaptcha"></div>
+            </div>
+        }
+   
+        @if(mostrarIniciarSesion)
+        {
+            <div class="clase-preguntar-cuenta">
+                <h5>¿Ya tenés una cuenta?</h5>
                 <NavLink class="inicia-sesion-frase">
                     <a href="/iniciar-sesion" class="texto-inicia-sesion">Iniciar Sesión</a>
                 </NavLink>
-        </div>
+            </div>
+        }
+      
 </div>
 </EditForm>
 
@@ -61,8 +70,10 @@
     [Inject] ReCaptcha Captcha{ get; set; }
     [Inject] PasswordHash PasswordHash { get; set; }
     [Inject] AppDbContext Db { get; set; }
+    [Parameter] public bool mostrarIniciarSesion { get; set; } = true;
     public string mensaje = "";
     public string color = "";
+    private bool esEstaPagina = true;   
 
     SignUpModel Usuario = new ();
 
@@ -104,9 +115,28 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender)
+        navigatorManager.LocationChanged += OnLocationChanged!; 
+        ActualizarEstadoPagina();
+
+        if (firstRender && esEstaPagina) //solo en la pagina de /registrar habra ReCaptcha, luego en el /login habra solo captcha vinculado a la pag de inicioSesion
         {
             await JS.InvokeVoidAsync("renderCaptcha");
         }
+    }
+
+    private void OnLocationChanged(object sender,LocationChangedEventArgs e) //funcion que se encarga de avisar al OnLocationChanged de un cambio en la pagina
+    {
+        ActualizarEstadoPagina(); 
+        StateHasChanged();
+    } 
+
+    private void ActualizarEstadoPagina() //guarda nuevo valor segun si estamos o no en esta pagina
+    {
+        esEstaPagina = navigatorManager.Uri.EndsWith("/registrarme");
+    }
+
+    public void Dispose() //limpia evento
+    {
+        navigatorManager.LocationChanged -= OnLocationChanged!;
     }
 }

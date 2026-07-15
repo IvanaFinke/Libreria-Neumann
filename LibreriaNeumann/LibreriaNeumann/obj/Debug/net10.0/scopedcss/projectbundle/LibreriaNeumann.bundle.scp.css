@@ -3572,6 +3572,35 @@
         margin-top:0px;
     }
 }
+/* /Components/InicioYRegistroComponent.razor.rz.scp.css */
+.titulo-login[b-tugxoxvnmf] {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.login[b-tugxoxvnmf] {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 3rem;
+    width: 100%;
+}
+
+.linea[b-tugxoxvnmf]{
+    display:flex;
+    flex-direction:row;
+    padding: 0 50px 0 0;
+    margin-top:0;
+}
+
+.inicio-registro[b-tugxoxvnmf]{
+    display:grid;
+    grid-template-columns:auto auto;
+    flex-wrap:wrap;
+    width:100%;
+}
+
 /* /Components/Layout/MainLayout.razor.rz.scp.css */
 
 /* layout raíz: flex column */
