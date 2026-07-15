@@ -1,6 +1,7 @@
 ﻿@page "/mi-carrito"
 @implements IDisposable
 @rendermode InteractiveServer
+@inject NavigationManager navigatorManager
 
 <!-- Componente para el diseño del carrito en PC -->
 
@@ -57,7 +58,7 @@
 
                 <br />
 
-                <button class="boton-comprar">
+                <button class="boton-comprar" @onclick="() => irAComprar()">
                     <span><strong>COMPRAR</strong></span>
                 </button>
             </div>
@@ -65,6 +66,7 @@
         </div>
     }
 
+<!--PARTE DEL CARRITO QUE VA A SER PASADO AL COMPONENTE DE DETALLES DE PAGO-->
 
     @if (MostrarCarritoDetallesPago)
     {
@@ -72,21 +74,39 @@
             <div class="carrito">
 
                 <h3 class="titulo-carrito">Mi carrito</h3>
+
                 <div class="lista-libros-carrito">
 
-                    @foreach (var libro in libros!)
+                    @foreach (var item in carritoService!.Items)
                     {
-                        <div class="datos-libro-carrito">
-                            <img src="https://i.postimg.cc/9MJy1Jrj/fantasm-ope.jpg" />
+                        <div class="datos-libro-carrito-detalles">
+                            <div class="parte-libro">
+                                <img src="@item.libro.ImageURL" />
 
-                            <div class="titulo-precio">
-                                <h4 class="titulo-libro-carrito">EL FANTASMA DE LA OPERA</h4>
-                                <h4 class="precio-carrito">$20.0000</h4>
+                                <div class="titulo-precio-detalles">
+                                    <h4 class="titulo-libro-carrito-detalles">@item.libro.Titulo</h4>
+                                    <h4 class="precio-carrito-detalles">$@(item.libro.Precio * item.Cantidad)</h4>
+                                </div>
                             </div>
+                           
+                            <div class="trash-cant">
+                                <button class="boton-basura-carrito-detalles-" @onclick="() => EliminarLibro(item.libro)">
+                                    <i class="bi bi-trash"></i>
+                                </button>
 
-                            <button class="boton-basura-carrito">
-                                <i class="bi bi-trash"></i>
-                            </button>
+                                <div class="controles-cantidad-detalles">
+                                    <div class="botones-aumenta-decrece">
+                                        <button class="btn-cantidad" @onclick="() => carritoService!.DisminuirCantidad(item.libro)">
+                                            <i class="bi bi-dash-circle-fill"></i>
+                                        </button>
+                                        <span class="cantidad-numero">@item.Cantidad</span>
+                                        <button class="btn-cantidad" @onclick="() => carritoService!.AgregarLibro(item.libro)">
+                                            <i class="bi bi-plus-circle-fill"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     }
 
@@ -97,7 +117,7 @@
 
                     <div class="total-clase">
                         <h4 class="frase-total">Total:</h4>
-                        <h4 class="frase-precio-total">$124.000</h4>
+                        <h4 class="frase-precio-total">$@carritoService?.Total</h4>
                     </div>
 
                     <br />
@@ -149,7 +169,12 @@ else
 
     public void AgregarLibroAlCarrito(Libro libro)
     {
-            libros?.Add(libro);
+        libros?.Add(libro);
+    }
+
+    protected void irAComprar()
+    {
+        navigatorManager.NavigateTo("/detalles-de-pago");
     }
 
 }

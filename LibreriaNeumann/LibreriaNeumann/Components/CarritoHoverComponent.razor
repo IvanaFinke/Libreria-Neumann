@@ -1,5 +1,6 @@
 ﻿@rendermode InteractiveServer
 @implements IDisposable
+@inject NavigationManager navigatorManager
 <!-- Componente con el diseño del carrito para cuando aparezca como hover en PC-->
 
 <div class="carrito-hover">
@@ -48,7 +49,7 @@
 
             @if (MostrarBotonComprar)
             {
-                <button class="boton-comprar">
+                <button class="boton-comprar" @onclick="() => irAComprar()">
                     <span><strong>COMPRAR</strong></span>
                 </button>
             }
@@ -77,5 +78,10 @@
     private void EliminarLibro(Libro libro)
     {
         carritoService?.EliminarLibro(libro);
+    }
+
+    protected void irAComprar()
+    {
+        navigatorManager.NavigateTo("/detalles-de-pago");
     }
 }

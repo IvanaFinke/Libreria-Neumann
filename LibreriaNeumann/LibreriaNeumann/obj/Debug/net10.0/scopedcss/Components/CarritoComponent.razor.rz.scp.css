@@ -58,6 +58,26 @@
     text-wrap: balance;
 }
 
+.datos-libro-carrito-detalles[b-8g0gqjtdyx]{
+    display:flex;
+    flex-direction:row;
+    padding-top:1rem;
+}
+
+.boton-basura-carrito-detalles-[b-8g0gqjtdyx]{
+    justify-self:start;
+    align-self:end;
+    background:none;
+    border:none;
+}
+
+.controles-cantidad-detalles[b-8g0gqjtdyx]{
+    display:flex;
+    flex-direction:row;
+    align-self:end;
+    margin-right: 0px;
+}
+
 .controles-cantidad[b-8g0gqjtdyx]{
     display:flex;
     flex-direction:column;
@@ -193,13 +213,54 @@
 }
 
 
-/*Diseño para detalles de pago*/
+/*Diseño para DETALLES de pago*/
 .carrito-detalles-pago[b-8g0gqjtdyx] {
+    display:grid;
+    grid-template-columns: 1fr auto;
     width: 420px;
     padding: 1rem 1rem;
     background: white;
     border: 1px solid #ccc;
     box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+
+.trash-cant[b-8g0gqjtdyx] {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height:100px;
+    justify-content:center;
+    gap:1rem;
+}
+
+.titulo-precio-detalles[b-8g0gqjtdyx]{
+    display:flex;
+    flex-direction:column;
+    padding-left:12px;
+    padding-top:10px;
+}
+
+.titulo-libro-carrito-detalles[b-8g0gqjtdyx]{
+    font-size:20px;
+    
+}
+
+.precio-carrito-detalles[b-8g0gqjtdyx]{
+    font-size:22px;
+
+}
+
+.parte-libro[b-8g0gqjtdyx]{
+    display:flex;
+    flex-direction:row;
+}
+.boton-basura-carrito-detalles- .bi-trash[b-8g0gqjtdyx] {
+    display:flex;
+    justify-items: start;
+    align-self:start;
+    margin-bottom: 0px;
+    padding: 0px;
+    font-size: 22px;
 }
 
 .titulo-carrito[b-8g0gqjtdyx] {
@@ -208,7 +269,7 @@
     font-weight: 500;
 }
 
-.datos-libro-carrito img[b-8g0gqjtdyx] {
+.datos-libro-carrito img[b-8g0gqjtdyx], .datos-libro-carrito-detalles img[b-8g0gqjtdyx] {
     width: 80px;
     height: 120px;
     border-radius: 10px;
@@ -229,6 +290,20 @@
     width:100%;
 }
 
+.datos-libro-carrito-detalles[b-8g0gqjtdyx] {
+    border-color: rgb(244, 152, 117);
+    border-width: 2px;
+    border-style: solid;
+    background: rgb(212, 212, 212, 0.6);
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: start;
+    align-content: start;
+    margin-top: 2px;
+    width: 100%;
+    height:150px;
+}
+
 .titulo-libro-carrito[b-8g0gqjtdyx], .precio-carrito[b-8g0gqjtdyx] {
     font-size: 20px;
     text-wrap: balance;
@@ -236,13 +311,14 @@
 
 .titulo-precio[b-8g0gqjtdyx] {
     display: flex;
-    justify-content: center;
-    gap: 14px;
+    align-self: center;
     padding-left: 12px;
+    margin-top:10px;
+    gap:0   ;
 }
 
 .precio-carrito[b-8g0gqjtdyx] {
-    padding-top: 20px;
+    justify-self:end;
 }
 
 .bi-trash[b-8g0gqjtdyx] {
