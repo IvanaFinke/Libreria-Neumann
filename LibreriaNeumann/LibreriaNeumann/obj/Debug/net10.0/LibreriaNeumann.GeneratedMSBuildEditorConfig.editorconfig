@@ -35,6 +35,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/Pages/AdminControlPedidosComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbkNvbnRyb2xQZWRpZG9zQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -138,6 +142,10 @@ build_metadata.AdditionalFiles.CssScope = b-dpp1rnt9yi
 [C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/Pages/AdminModificarLibro.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbk1vZGlmaWNhckxpYnJvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-j7wr8mao0a
+
+[C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/PedidoConfirmadoComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQZWRpZG9Db25maXJtYWRvQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-7flxvspxk8
 
 [C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/RegistrarComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSZWdpc3RyYXJDb21wb25lbnQucmF6b3I=

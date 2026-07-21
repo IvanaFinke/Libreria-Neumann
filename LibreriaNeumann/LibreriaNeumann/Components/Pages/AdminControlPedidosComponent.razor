@@ -1,0 +1,77 @@
+﻿@page "/admin/libros/pedidos"
+@inject NavigationManager navigatorManager
+@inject IWebHostEnvironment env
+@rendermode InteractiveServer
+@implements IDisposable
+
+@if(sesionUsuario?.Usuario != null && sesionUsuario.Usuario.Rol == "Admin")
+{
+    <h1>Control de pedidos</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID Pedido</th>
+                <th>Usuario</th>
+                <th>Fecha</th>
+                <th>Total</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pedido in pedidos!)
+            {
+                <tr>
+                    <td>@pedido.Id</td>
+                    <td>@pedido.UsuarioId</td>
+                    <td>@pedido.FechaCreacion.ToString("dd/MM/yyyy")</td>
+                    <td>@pedido.Total.ToString("C")</td>
+                    <td>@pedido.Estado</td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+}
+else
+{
+    irAInicio();
+}
+
+@code {
+    [Inject] UserSession? sesionUsuario{ get; set; }
+    [Inject] CarritoService? carritoService{ get; set; }
+    [Inject] ProcesadorPagosService? pedidosService{ get; set; }
+    private List<Pedido>? pedidos;
+    private Func<Task>? _onChangeHandler;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _onChangeHandler = () => InvokeAsync(SesionChanged);
+        sesionUsuario?.OnChange += _onChangeHandler;
+
+        pedidos = await pedidosService!.ObtenerPedidos();
+    }
+
+    private void SesionChanged()
+    {
+        if (sesionUsuario?.Usuario == null || sesionUsuario.Usuario.Rol != "Admin")
+        {
+            irAInicio();
+        }
+        InvokeAsync(StateHasChanged);
+    }
+
+    private void irAInicio()
+    {
+        navigatorManager.NavigateTo("/inicio");
+    }
+
+    public void Dispose()
+    {
+        sesionUsuario?.OnChange -= _onChangeHandler;
+    }
+
+ 
+
+}

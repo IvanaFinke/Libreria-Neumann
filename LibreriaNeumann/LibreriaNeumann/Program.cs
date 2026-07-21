@@ -3,6 +3,7 @@ using LibreriaNeumann.Data;
 using LibreriaNeumann.Models;
 using LibreriaNeumann.Services;
 using Microsoft.EntityFrameworkCore;
+using System.Net.Security;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +14,10 @@ builder.Services.AddRazorComponents()
 builder.Services.AddHttpClient();
 builder.Services.AddHttpClient<ReCaptcha>();
 builder.Services.AddHttpClient<EmailService>();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ClientInfoService>();
 builder.Services.AddScoped<ReCaptcha>();
+builder.Services.AddScoped<ProcesadorPagosService>();
 builder.Services.AddScoped<CarritoService>(); //Los addScoped se crean una vez por cada usuario
 builder.Services.AddScoped<UserService>();
 builder.Services.AddDbContext<AppDbContext>(options =>

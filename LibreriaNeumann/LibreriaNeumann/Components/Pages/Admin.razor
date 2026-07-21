@@ -3,7 +3,7 @@
 @implements IDisposable
 @rendermode InteractiveServer
 
-@if (UsuarioSesion?.Usuario != null)
+@if (UsuarioSesion?.Usuario != null && UsuarioSesion.Usuario.Rol == "Admin")
 {
     <div class="admin-page">
         <h1>Bienvenido administrador @UsuarioSesion.Usuario.Nombre!</h1>
@@ -11,11 +11,16 @@
         <div class="panel">
             <h4>Panel de administrador</h4>
             <NavLink href="/admin/libros">Libros</NavLink>
+            <NavLink href="/admin/pedidos">Pedidos</NavLink>
             <NavLink href="/admin/sobre-nosotros">Sobre Nosotros</NavLink>
             <NavLink href="/admin/contacto">Contacto del negocio</NavLink>
         </div>
     </div>
     
+}
+else
+{
+    irAInicio();
 }
 
 @code {
@@ -26,7 +31,7 @@
     /*Cuando la sesion cambie, llamamos a la funcion de este componente Admin*/
     protected override void OnInitialized()
     {
-        _onChangeHandler = () => InvokeAsync(StateHasChanged);
+        _onChangeHandler = () => InvokeAsync(SessionChanged);
         UsuarioSesion?.OnChange += _onChangeHandler;
     }
 
@@ -47,5 +52,10 @@
     public void Dispose()
     {
         UsuarioSesion?.OnChange -= _onChangeHandler;
+    }
+
+    private void irAInicio()
+    {
+        navigatorManager.NavigateTo("/inicio");
     }
 }

@@ -4471,6 +4471,114 @@ h1[b-i87l3h0epg] {
     border-width: 2px;
     height: 300px;
 }
+/* /Components/PedidoConfirmadoComponent.razor.rz.scp.css */
+.cuadro-conf[b-7flxvspxk8] {
+    border: 2px solid #4caf50; /*borde interno*/
+    outline: 2px solid #ff6a00ff; /*externo borde*/
+    outline-offset: 8px; /*ancho del contorno*/
+    border-radius: 6px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 480px;
+}
+
+.pedido-confirmado[b-7flxvspxk8]{
+    display:flex;
+    flex-direction:column;
+    padding: 3rem 3rem;
+}
+
+.check-container[b-7flxvspxk8] {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.check-svg[b-7flxvspxk8] {
+    width: 60px;
+    height: 60px;
+}
+
+.check-circulo[b-7flxvspxk8] {
+    stroke: #4caf50;
+    stroke-width: 2;
+    stroke-dasharray: 151; /* aprox. el perímetro del círculo (2 * π * r) */
+    stroke-dashoffset: 151;
+    animation: dibujar-circulo-b-7flxvspxk8 0.5s ease-out forwards;
+}
+
+.check-palito[b-7flxvspxk8] {
+    stroke: #4caf50;
+    stroke-width: 5; /*ancho de la linea del palito*/
+    stroke-linejoin: round;
+    stroke-dasharray: 33;
+    stroke-dashoffset: 33;
+    animation: dibujar-palito-b-7flxvspxk8 0.3s ease-out 0.5s forwards;
+}
+
+@keyframes dibujar-circulo-b-7flxvspxk8 {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes dibujar-palito-b-7flxvspxk8 {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.letra[b-7flxvspxk8]{
+    display:inline-block;
+    opacity:0;
+    animation: aparecer-letra-b-7flxvspxk8 0.3s ease-out forwards;
+    white-space: pre /*respeta espacios*/;
+}
+
+.volver-cat[b-7flxvspxk8]{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+    gap:1rem;
+}
+
+@keyframes aparecer-letra-b-7flxvspxk8{
+    from{
+        opacity:0;
+        transform: translateY(4px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.btn-seguir[b-7flxvspxk8] {
+    text-emphasis-color: white;
+    background-color: rgb(244, 152, 117);
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: white;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.texto-aparece[b-7flxvspxk8]{
+    animation: ease-out 0.5s forwards;
+}
+
+@keyframes dibuja-texto-b-7flxvspxk8{
+    to{
+        stroke-dashoffset:0;
+    }
+}
 /* /Components/RegistrarComponent.razor.rz.scp.css */
 .registrarse[b-f1rx34fkzg] {
     display: grid;

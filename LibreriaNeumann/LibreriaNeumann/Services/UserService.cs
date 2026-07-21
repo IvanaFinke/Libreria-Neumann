@@ -21,6 +21,12 @@ namespace LibreriaNeumann.Services
             await _context.SaveChangesAsync(); 
         }
 
+        public async Task<User?> GetById(int id)
+        {
+            var usuario = await _context.Users.FirstOrDefaultAsync<User>(u => u.Id == id);
+            return usuario;
+        }
+
         public async Task<User?> GetByEmail(string email)
         {
             var usuario = await _context.Users.FirstOrDefaultAsync<User>(u => u.Email == email);

@@ -1,0 +1,47 @@
+﻿@rendermode InteractiveServer
+@inject NavigationManager navigatorManager
+@page "/pedido-confirmado"
+
+@if(userSession!.Usuario != null)
+{
+    <div class="pedido-confirmado">
+        <div class="cuadro-conf">
+            <div class="check-container">
+                <svg class="check-svg" viewBox="0 0 52 52">
+                    <circle class="check-circulo" cx="26" cy="26" r="24" fill="none"></circle>
+                    <path class="check-palito" fill="none" d="M14 27 L21 34 L37 18"></path>
+                </svg>
+            </div>
+            <h4 class="texto-aparece">
+                @foreach (var (letra, index) in "Pedido Realizado! Recibirá un mail de confirmación!".Select((c,i) => (c,i)))
+                {
+                    <span class="letra" style="animation-delay:@(0.8 + index * 0.03) s">@letra</span>
+                }
+                </h4>
+        </div>
+        <div class="volver-cat">
+            <h4>Querés seguir viendo nuestro catálogo?</h4>
+            <button class="btn-seguir" @onclick="() => irACatalogo()">Catálogo</button>
+        </div>
+       
+    </div>
+}
+else
+{
+    irAInicio();
+}
+
+
+@code {
+    [Inject] UserSession? userSession{ get; set; }
+
+    private void irAInicio()
+    {
+        navigatorManager.NavigateTo("/inicio");
+    }
+
+    private void irACatalogo()
+    {
+        navigatorManager.NavigateTo("/catalogo");
+    }
+}

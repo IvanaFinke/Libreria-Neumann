@@ -79,6 +79,66 @@ namespace LibreriaNeumann.Services
             return response.IsSuccessStatusCode;
 
         }
-       
+
+        public async Task<bool> ConfirmacionPedido(string mail,Guid codigoOperacion) //para casos de pago en tarjeta
+        {
+            var mailSistema = "<onboarding@resend.dev>";
+
+            var body = new
+            {
+                from = $"Libreria Neumann {mailSistema}",
+                to = new[] { mail },
+                subject = "Confirmacion de pedido",
+                html = $"""
+                <h4>El sistema ha recibido su pedido con su pago correspondiente!</h4>
+                <H4>Su pedido quedo registrado bajo este codigo de operación:</H4><br>
+                <h3>{codigoOperacion}</<h3>
+                <h4>Ante cualquier duda contactanos!<\h4>
+                """
+            };
+
+            var request = new HttpRequestMessage(HttpMethod.Post, "https://api.resend.com/emails");
+            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer",_apiKey);
+
+            request.Content = new StringContent(
+                JsonSerializer.Serialize(body),
+                Encoding.UTF8,
+                "application/json");
+
+            var response = await _http.SendAsync(request);
+            return response.IsSuccessStatusCode;
+        }
+
+        public async Task<bool> PedidoPendiente(string mail, Guid codigoOperacion) //para casos de pago en efectivo o transferencia
+        {
+            var mailSistema = "<onboarding@resend.dev>";
+
+            var body = new
+            {
+                from = $"Libreria Neumann {mailSistema}",
+                to = new[] { mail },
+                subject = "Su pedido esta pendiente",
+                html = $"""
+                <h4>El sistema ha recibido su pedido con su pago a confirmar. Si ha abonado en trasferencia
+                se le enviará un mail al recibir el pago. Si ha seleccionado la opción de pago en
+                efectivo, por favor acerquese a nuestra sucursal</h4>
+                <H4>Su pedido quedo registrado bajo este codigo de operación:</H4><br>
+                <h3>{codigoOperacion}</<h3>
+                <h4>Ante cualquier duda contactanos!<\h4>
+                """
+            };
+
+            var request = new HttpRequestMessage(HttpMethod.Post, "https://api.resend.com/emails");
+            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
+
+            request.Content = new StringContent(
+                JsonSerializer.Serialize(body),
+                Encoding.UTF8,
+                "application/json");
+
+            var response = await _http.SendAsync(request);
+            return response.IsSuccessStatusCode;
+        }
+
     }
 }

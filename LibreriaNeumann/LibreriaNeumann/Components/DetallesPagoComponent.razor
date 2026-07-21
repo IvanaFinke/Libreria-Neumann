@@ -52,8 +52,10 @@
             <div class="medios-pago-seccion">
                 <h5 class="frase-medios-pago">MEDIOS DE PAGO</h5>
                 <div class="seccion-medios-pago">
-                    <button class="cuadro-pago-efectivo @(medioSeleccionado == "efectivo" ? "activo" : "")"
-                            @onclick='() => SeleccionarMedio("efectivo")'>
+                    <!--Si el medio es efectivo-->
+                    <button class="cuadro-pago-efectivo @(medioSeleccionado == 0 ? "activo" : "")" 
+                            @onclick='() => SeleccionarMedio(0)'>
+                       
 
                         <div class="icono-frase">
                             <img src="https://i.postimg.cc/fy10kbHT/billete-logo.png" />
@@ -61,8 +63,8 @@
                         </div>
                         <i class="bi bi-caret-right-fill"></i>
                     </button>
-
-                    @if (medioSeleccionado == "efectivo")
+                    <!--Si el medio es efectivo, se muestra el div de abajo-->
+                    @if (medioSeleccionado == 0)
                     {
                         <div class="cuando-clickea-billete">
                             <div class="monto-a-pagar">
@@ -78,7 +80,7 @@
                                 </strong>
                             </h5>
 
-                            <div id="mapa-pago" class="mapa-efectivo"></div>
+                            
 
                             <h5 class="pt-2">Nuestros horarios de atencion:</h5>
                             <h5>
@@ -94,9 +96,9 @@
                             </h5>
                         </div>
                     }
-
-                    <button class="cuadro-pago-tarjeta @(medioSeleccionado == "tarjeta" ? "activo" : "")"
-                            @onclick=' () => SeleccionarMedio("tarjeta")'>
+                    <!--Si el medio es tarjeta-->
+                    <button class="cuadro-pago-tarjeta @(medioSeleccionado == MedioPago.TarjetaCredito ? "activo" : "")" 
+                            @onclick=' () => SeleccionarMedio(MedioPago.TarjetaCredito)'>
                         <div class="icono-frase">
                             <img src="https://i.postimg.cc/MZ4SBs7V/tarjeta-logo.png" />
                             <h5 class="frase-tarjeta">Pago con tarjetas</h5>
@@ -104,7 +106,7 @@
                         <i class="bi bi-caret-right-fill"></i>
                     </button>
 
-                    @if (medioSeleccionado == "tarjeta")
+                    @if (medioSeleccionado == MedioPago.TarjetaCredito)
                     {
                         <div class="cuando-clickea-tarjetas">
 
@@ -126,8 +128,8 @@
                     }
 
 
-                    <button class="cuadro-pago-transferencia @(medioSeleccionado == "transferencia" ? "activo" : "")"
-                            @onclick=' () => SeleccionarMedio("transferencia")'>
+                    <button class="cuadro-pago-transferencia @(medioSeleccionado == MedioPago.TransferenciaBancaria ? "activo" : "")"
+                            @onclick=' () => SeleccionarMedio(MedioPago.TransferenciaBancaria)'>
                         <div class="icono-frase">
                             <img src="https://i.postimg.cc/CK6rRxtW/icono-transferencia.png" />
                             <h5 class="frase-transferencia">Transferencia bancaria</h5>
@@ -135,7 +137,7 @@
                         <i class="bi bi-caret-right-fill"></i>
                     </button>
 
-                    @if (medioSeleccionado == "transferencia")
+                    @if (medioSeleccionado == MedioPago.TransferenciaBancaria)
                     {
                         <div class="cuando-clickea-transferencia">
 
@@ -172,10 +174,10 @@
                     }
                 </div>
             </div>
-            <button class="boton-comprar">
+            <button class="boton-comprar" @onclick="() => Comprar()">
                 <span><strong>COMPRAR</strong></span>
             </button>
-
+            <p>@mensajeError</p>
         </div>
 
         <div class="cuadro-carrito">
@@ -193,19 +195,33 @@ else
 @code {
     [Inject] UserSession? sesionUsuario{ get; set; }
     [Inject] CarritoService? carritoService{ get; set; }
+    [Inject] ProcesadorPagosService? pagosService{ get; set; }
+    [Inject] IHttpContextAccessor httpContextAccessor { get; set; } = default!;
+    [Inject] ClientInfoService? clientInfoService { get; set; }
+    [Inject] EmailService? emailService{ get; set; }
     private int telefono,altura;
-    private string calle,provincia,localidad = "";
+    private string? calle,provincia,localidad, mensajeError= "";
+    DetallePedido? detallePedido;
+    private MedioPago? medioSeleccionado;
 
-    public string ? medioSeleccionado;
+    protected override void OnInitialized()
+    {
+        var http = httpContextAccessor.HttpContext;
+        if(http != null)
+        {
+            clientInfoService!.IP = http.Connection.RemoteIpAddress?.ToString();
+            clientInfoService!.UserAgent = http.Request.Headers["User-Agent"].ToString();
+        }
+    }
 
-    public void SeleccionarMedio(string medio)
+    public void SeleccionarMedio(MedioPago medio)
     {
         /*Nota: esta funcion lo que hace es que primero pones la variable a la que le queres cambiar el valor y el '=' y al
         * lado la pregunta, en este caso si el medioSeleccionado previamente es igual al que selecciono el usuario, se va a deseleccionar,
          * sino se lo asigna. OPERADOR TERNARIO
          */
     medioSeleccionado = medioSeleccionado == medio
-    ? medioSeleccionado = ""
+    ? medioSeleccionado = null
     : medioSeleccionado = medio;
     } 
 
@@ -215,23 +231,67 @@ else
         NavigatorManager.NavigateTo("/mi-carrito");
     }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if(medioSeleccionado == "efectivo")
-        {
-            await JS.InvokeVoidAsync("initMap", "mapa-pago", -34.921819, -57.963100);
-
-        }
-    }
+ 
 
     public async Task Comprar()
     {
+        var nuevoPedido = AsignarValores();
 
+        var error = await pagosService!.ProcesarPedido(nuevoPedido, clientInfoService!.IP!, clientInfoService!.UserAgent!);
+        if (error != null)
+        {
+            mensajeError = error;
+        }
+        else
+        {
+            if(medioSeleccionado == MedioPago.TarjetaCredito)
+            {
+                await emailService!.ConfirmacionPedido(sesionUsuario!.Usuario!.Email, nuevoPedido!.CodigoOperacion);
+            }
+            else
+            {
+                await emailService!.PedidoPendiente(sesionUsuario!.Usuario!.Email, nuevoPedido!.CodigoOperacion);
+            }
+            NavigatorManager.NavigateTo("/pedido-confirmado");
+        }
     }
 
     public void ToInicio()
     {
         NavigatorManager.NavigateTo("/inicio");
+    }
+
+    private Pedido AsignarValores()
+    {
+        var pedido = new Pedido
+        {
+            Telefono = telefono,
+            FechaCreacion = DateTime.Now,
+            Total = carritoService!.Total,
+            Estado = EstadoPedido.Pendiente, //pendiente
+            UsuarioId = sesionUsuario!.Usuario!.Id,
+            CodigoOperacion = pagosService!.GenerarCodigoOperacion(),
+            MedioPago = medioSeleccionado,
+            Calle = calle!,
+            Provincia = provincia!,
+            Localidad = localidad!,
+            AlturaCalle = altura,
+            Detalles = AsignarDetallesPedido()
+        };
+        return pedido;
+    }
+
+    private List<DetallePedido> AsignarDetallesPedido()
+    {
+        var detalles = carritoService!.Items.Select(item => new DetallePedido //convertimos cada libro de los items del carrito a objetos de tipo detalle
+        {
+            LibroId = item.libro.Id,
+            Cantidad = item.Cantidad,
+            TituloLibro = item.libro.Titulo,
+            PrecioUnitario = item.libro.Precio
+        }).ToList();
+
+        return detalles;
     }
 
 }
