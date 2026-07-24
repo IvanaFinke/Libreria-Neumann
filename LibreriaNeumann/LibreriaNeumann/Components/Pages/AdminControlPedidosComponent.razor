@@ -1,37 +1,63 @@
-﻿@page "/admin/libros/pedidos"
+﻿@page "/admin/pedidos"
 @inject NavigationManager navigatorManager
 @inject IWebHostEnvironment env
 @rendermode InteractiveServer
 @implements IDisposable
 
-@if(sesionUsuario?.Usuario != null && sesionUsuario.Usuario.Rol == "Admin")
+@if (sesionUsuario?.Usuario != null && sesionUsuario.Usuario.Rol == "Admin")
 {
-    <h1>Control de pedidos</h1>
+    <div class="sec-pedidos">
+        <h1 class="titulo-pedidos">Control de pedidos</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID Pedido</th>
-                <th>Usuario</th>
-                <th>Fecha</th>
-                <th>Total</th>
-                <th>Estado</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var pedido in pedidos!)
-            {
-                <tr>
-                    <td>@pedido.Id</td>
-                    <td>@pedido.UsuarioId</td>
-                    <td>@pedido.FechaCreacion.ToString("dd/MM/yyyy")</td>
-                    <td>@pedido.Total.ToString("C")</td>
-                    <td>@pedido.Estado</td>
-                </tr>
-            }
-            
-        </tbody>
-    </table>
+        @if (pedidos != null)
+        {
+            <table class="tabla-pedidos">
+                <thead>
+                    <tr>
+                        <th>ID Pedido</th>
+                        <th>ID Usuario</th>
+                        <th>Fecha</th>
+                        <th>Total</th>
+                        <th>Estado</th>
+                        <th>Detalles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var pedido in pedidos!)
+                    {
+                        <tr>
+                            <td>@pedido.Id</td>
+                            <td>@pedido.UsuarioId</td>
+                            <td>@pedido.FechaCreacion.ToString("dd/MM/yyyy")</td>
+                            <td>@pedido.Total.ToString("C")</td>
+                            <td>
+                                <span>@pedido.Estado</span>
+                                <div class="wrapper-estado">
+                                    <button class="btn-camb" @onclick="() => ToggleMenuEstado(pedido.Id)">Cambiar Estado</button>
+                                    @if (pedidoConMenuAbierto == pedido.Id)
+                                    {
+                                        <div class="cont-estados">
+                                            <button @onclick="() => CambiarEstadoYCerrar(pedido.Id, EstadoPedido.Pendiente)">Pendiente</button>
+                                            <button @onclick="() => CambiarEstadoYCerrar(pedido.Id, EstadoPedido.Aceptado)">Aceptado</button>
+                                            <button @onclick="() => CambiarEstadoYCerrar(pedido.Id, EstadoPedido.Enviado)">Enviado</button>
+                                            <button @onclick="() => CambiarEstadoYCerrar(pedido.Id, EstadoPedido.Entregado)">Entregado</button>
+                                            <button @onclick="() => CambiarEstadoYCerrar(pedido.Id, EstadoPedido.Cancelado)">Cancelado</button>
+                                        </div>
+                                    }
+                                </div>
+                            </td>
+                            <td><button @onclick="() => VerDetalles(pedido.Id)">ver detalles</button></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <hr class="linea" />
+            <p>Todavía no hay pedidos!</p>
+        }
+    </div>
 }
 else
 {
@@ -39,16 +65,21 @@ else
 }
 
 @code {
-    [Inject] UserSession? sesionUsuario{ get; set; }
-    [Inject] CarritoService? carritoService{ get; set; }
-    [Inject] ProcesadorPagosService? pedidosService{ get; set; }
+    [Inject] UserSession? sesionUsuario { get; set; }
+    [Inject] CarritoService? carritoService { get; set; }
+    [Inject] ProcesadorPagosService? pedidosService { get; set; }
     private List<Pedido>? pedidos;
     private Func<Task>? _onChangeHandler;
+    private Func<Task>? _onChangePedido;
+    private int? pedidoConMenuAbierto = null;
 
     protected override async Task OnInitializedAsync()
     {
         _onChangeHandler = () => InvokeAsync(SesionChanged);
         sesionUsuario?.OnChange += _onChangeHandler;
+
+        _onChangePedido = () => InvokeAsync(StateHasChanged);
+        pedidosService!.OnChange += _onChangePedido;
 
         pedidos = await pedidosService!.ObtenerPedidos();
     }
@@ -70,8 +101,22 @@ else
     public void Dispose()
     {
         sesionUsuario?.OnChange -= _onChangeHandler;
+        pedidosService?.OnChange -= _onChangePedido;
     }
 
- 
+    /*asignamos a pedidoConMenuAbierto null si el pedido tiene el mismo id que el previo seleccionado, sino se lo ponemos*/
+    private void ToggleMenuEstado(int pedidoId) =>
+    pedidoConMenuAbierto = pedidoConMenuAbierto == pedidoId ? null : pedidoId;
+
+    private async Task CambiarEstadoYCerrar(int id, EstadoPedido estado)
+    {
+        await pedidosService!.CambiarEstado(id, estado);
+        pedidoConMenuAbierto = null;
+    }
+
+    private void VerDetalles(int pedidoId)
+    {
+        navigatorManager.NavigateTo($"/admin/pedidos/{pedidoId}");
+    }
 
 }

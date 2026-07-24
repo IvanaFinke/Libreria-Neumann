@@ -1,0 +1,59 @@
+﻿.sec-pedidos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 3rem 3rem;
+    padding-top: 1rem;
+    gap: 10px;
+}
+
+.wrapper-estado {
+    position: relative;
+    display: inline-block;
+}
+
+.btn-camb {
+    display: inline-block;
+    /* ya no necesita position:relative */
+}
+
+.cont-estados {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white; /* recomendaba esto antes — si lo dejás en "none" el menú va a quedar transparente sobre el texto de abajo, cuidado */
+    border: 2px solid rgb(255, 106, 0);
+    z-index: 10;
+    min-width: 100%; /* con 10% te va a quedar carente de ancho, mejor 100% para que iguale al ancho del wrapper */
+}
+
+.linea {
+    display: flex;
+    flex-direction: row;
+    margin: 0 50px 0 0;
+}
+
+.titulo-pedidos {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.tabla-pedidos {
+    border: 2px solid rgb(255, 106, 0);
+    outline: 2px solid rgb(128, 128, 128);
+    outline-offset: 2px;
+    border-radius: 2px;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse; /*combina los bordes que quedaron separados en uno solo*/
+    margin: 0 0 0 0;
+}
+
+th, td {
+    border: 2px solid rgb(255, 106, 0);
+    padding: 8px;
+}

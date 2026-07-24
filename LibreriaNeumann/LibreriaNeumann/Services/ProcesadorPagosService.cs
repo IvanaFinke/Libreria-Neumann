@@ -8,6 +8,7 @@ namespace LibreriaNeumann.Services
     public class ProcesadorPagosService
     {
         public readonly AppDbContext _context;
+        public event Func<Task>? OnChange;
 
         public ProcesadorPagosService(AppDbContext context)
         {
@@ -22,7 +23,8 @@ namespace LibreriaNeumann.Services
             return Guid.NewGuid();
         }
 
-        public async Task<string?> ProcesarPedido(Pedido pedido,string? ip, string? userAgent)
+        /*Funcion que realiza los pedidos*/
+        public async Task<string?> ProcesarPedido(Pedido pedido, string? ip, string? userAgent)
         {
             var errorDireccion = VerificarDireccion(pedido);
             if (errorDireccion != null) return errorDireccion;
@@ -30,9 +32,20 @@ namespace LibreriaNeumann.Services
             var errorTelefono = VerificarTelefono(pedido);
             if (errorTelefono != null) return errorTelefono;
 
+            /*el pedido al ser abonado en tarjeta, en un caso ideal con fondos, es automaticamente aceptado*/
+            if (pedido.MedioPago == MedioPago.TarjetaCredito) pedido.Estado = EstadoPedido.Aceptado;
+
             GenerarMetadata(pedido, ip, userAgent);
             await GuardarPedido(pedido);
             return null; // Pedido procesado correctamente
+        }
+
+        public async Task NotificarCambio()
+        {
+            if (OnChange != null)
+            {
+                await OnChange.Invoke();
+            }
         }
 
         public string? VerificarTelefono(Pedido pedido)
@@ -77,11 +90,29 @@ namespace LibreriaNeumann.Services
             pedido.Metadata = System.Text.Json.JsonSerializer.Serialize(data);
         }
 
+        public async Task<bool> CambiarEstado(int id, EstadoPedido nuevoEstado)
+        {
+            var pedido = await _context.Pedidos.FindAsync(id);
+
+            if (pedido == null) { return false; }
+            pedido.Estado = nuevoEstado;
+            await _context.SaveChangesAsync();
+            await NotificarCambio();
+
+            return true;
+        }
+
         public async Task<bool> GuardarPedido(Pedido pedido)
         {
             _context.Pedidos.Add(pedido);
             await _context.SaveChangesAsync();
             return true;
+        }
+
+        public async Task<List<DetallePedido>?> ObtenerDetalles(int id)
+        {
+            var detalles = await _context.DetallesPedidos.Where(detalle => detalle.PedidoId == id).ToListAsync();
+            return detalles;
         }
     }
 }

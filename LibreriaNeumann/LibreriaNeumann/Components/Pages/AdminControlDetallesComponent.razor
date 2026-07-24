@@ -1,0 +1,72 @@
+﻿@page "/admin/pedidos/{id:int}" 
+@inject NavigationManager navigatorManager 
+@inject IWebHostEnvironment env 
+@rendermode InteractiveServer 
+@implements IDisposable  
+
+@if(sesionUsuario?.Usuario != null && sesionUsuario?.Usuario.Rol == "Admin")
+{     <div class="sec-detalles"> 
+        <h1 class="titulo-det">Detalles del pedido</h1>  
+        <hr class="linea"/>        
+        @if(detalles != null)    
+        { <table class="det-tabla">                 
+            <thead>                 
+                <tr>            
+                    <th>Id detalle</th>     
+                    <th>Id pedido</th>     
+                    <th>Id libro</th>      
+                    <th>Título libro</th>    
+                    <th>Precio unitario</th>   
+                    <th>Subtotal</th>           
+                    </tr>            
+                    </thead>           
+                    @foreach(var detalle in detalles)         
+                    {                     
+                        <tbody>                  
+                            <tr>                     
+                                <td>@detalle.Id</td>  
+                                <td>@detalle.PedidoId</td>       
+                                <td>@detalle.LibroId</td>       
+                                <td>@detalle.TituloLibro</td>    
+                                <td>@detalle.PrecioUnitario.ToString("C")</td>    
+                                <td>@((detalle.PrecioUnitario * detalle.Cantidad).ToString("C"))</td>  
+                            </tr>                
+                            </tbody>             
+                            }           
+                            </table>     
+                            }       
+                            else      
+                            {         
+                                <p>No hay detalles de pedido!</p>  
+                            }    
+                            </div> 
+                            } 
+                            else 
+                            {   
+                                irAInicio(); 
+                            }  
+@code 
+{   
+
+[Inject] UserSession? sesionUsuario{ get; set; }   
+[Inject] ProcesadorPagosService? pedidoService{ get; set; } 
+public Func<Task>? _onChangeSesion;    
+private List<DetallePedido>? detalles;  
+[Parameter] public int id { get; set; } 
+                                
+protected override async Task OnInitializedAsync()   
+{   _onChangeSesion = () => InvokeAsync(StateHasChanged);  
+    sesionUsuario!.OnChange += _onChangeSesion;    
+    detalles = await pedidoService!.ObtenerDetalles(id);   
+}     
+
+public void Dispose()
+{   
+    sesionUsuario!.OnChange -= _onChangeSesion;    
+}      
+
+private void irAInicio()    
+{        
+    navigatorManager.NavigateTo("/inicio");     
+}  
+} 
