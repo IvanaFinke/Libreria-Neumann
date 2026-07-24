@@ -1,4 +1,4 @@
-﻿.sec-detalles {
+.sec-detalles[b-eawrlowgw8] {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -8,17 +8,17 @@
     gap: 10px;
 }
 
-.wrapper-estado {
+.wrapper-estado[b-eawrlowgw8] {
     position: relative;
     display: inline-block;
 }
 
-.btn-camb {
+.btn-camb[b-eawrlowgw8] {
     display: inline-block;
     /* ya no necesita position:relative */
 }
 
-.cont-estados {
+.cont-estados[b-eawrlowgw8] {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -30,19 +30,19 @@
     min-width: 100%; /* con 10% te va a quedar carente de ancho, mejor 100% para que iguale al ancho del wrapper */
 }
 
-.linea {
+.linea[b-eawrlowgw8] {
     display: flex;
     flex-direction: row;
     margin: 0 50px 0 0;
 }
 
-.titulo-det {
+.titulo-det[b-eawrlowgw8] {
     align-self: start;
     font-family: serif;
     font-weight: 500;
 }
 
-.det-tabla {
+.det-tabla[b-eawrlowgw8] {
     border: 2px solid rgb(255, 106, 0);
     outline: 2px solid rgb(128, 128, 128);
     outline-offset: 2px;
@@ -53,7 +53,7 @@
     margin: 0 0 0 0;
 }
 
-th, td {
+th[b-eawrlowgw8], td[b-eawrlowgw8] {
     border: 2px solid rgb(255, 106, 0);
     padding: 8px;
 }

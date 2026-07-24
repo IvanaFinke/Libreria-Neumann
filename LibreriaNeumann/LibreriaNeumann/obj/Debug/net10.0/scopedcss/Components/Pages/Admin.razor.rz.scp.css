@@ -5,15 +5,17 @@
     justify-content: center;
     gap: 20px;
     background-color: #937e5222;
+    height:100%;
     padding: 2rem 0;
 }
 
 h1[b-i87l3h0epg] {
     display: flex;
-    font-size: 40px;
+    font-size: clamp(20px,26px,40px);
     color: rgb(244, 152, 117);
-    width: 500px;
+    max-width: 500px;
     text-align: center;
+    text-wrap:balance;
 }
 
 .panel[b-i87l3h0epg] {
@@ -26,3 +28,108 @@ h1[b-i87l3h0epg] {
     padding: 10px 10px;
 }
 
+.relleno[b-i87l3h0epg]{
+    display:none;
+}
+
+@media(max-width:590px){
+    .admin-page[b-i87l3h0epg] {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #937e5222;
+        gap:1.7rem;
+    }
+
+    .panel[b-i87l3h0epg]{
+        display:flex;
+        align-self:center;
+        justify-content:center;
+    }
+
+    .relleno[b-i87l3h0epg] {
+        display: flex;
+        flex-direction: column;
+        background-color: none;
+        width: 100%;
+        height: 12vh;
+    }
+
+    h1[b-i87l3h0epg]{
+        max-width:300px;
+    }
+}
+
+/*Diseño Tablets mini/air*/
+@media (min-width:571px) and (max-width:1025px) {
+    .admin-page[b-i87l3h0epg] {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #937e5222;
+        gap: 1.7rem;
+        padding-top:4rem;
+    }
+
+    .panel[b-i87l3h0epg] {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
+
+    .relleno[b-i87l3h0epg] {
+        display: flex;
+        flex-direction: column;
+        background-color: none;
+        width: 100%;
+        height: 24vh;
+    }
+
+    h1[b-i87l3h0epg] {
+        max-width: 300px;
+    }
+}
+
+/*Diseño tablets pro, grandes*/
+@media (min-width:852px) and (max-width:1024px) {
+    .admin-page[b-i87l3h0epg] {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #937e5222;
+        gap: 2rem;
+        padding: 5rem 0;
+    }
+
+    .panel[b-i87l3h0epg] {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        width: clamp(450px,600px,650px);
+        height:28vh;
+        font-size:clamp(28px,30px,34px);
+        text-align:center;
+    }
+
+    h4[b-i87l3h0epg] {
+        font-size: clamp(28px,36px,38px);
+    }
+
+    .relleno[b-i87l3h0epg] {
+        display: flex;
+        flex-direction: column;
+        background-color: none;
+        width: 100%;
+        height: 26vh;
+    }
+
+    h1[b-i87l3h0epg] {
+        max-width: 500px;
+        font-size: clamp(36px,38px,40px);
+        text-wrap: balance;
+        text-align: center;
+    }
+}
