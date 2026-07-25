@@ -23,6 +23,24 @@
     gap: 10px;
 }
 
+.sec-fltr[b-dpp1rnt9yi] {
+    display: none;
+}
+
+.boton-lmp[b-dpp1rnt9yi] {
+    display: flex;
+    width: 180px;
+    justify-content: space-evenly;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+    .boton-lmp i[b-dpp1rnt9yi], .boton-lmp-movil i[b-dpp1rnt9yi] {
+        color: red;
+        font-size: 16px;
+    }
+
 .botones-catalogo[b-dpp1rnt9yi] {
     width: 180px;
     height: 35px;
@@ -257,9 +275,13 @@
         flex-direction: column;
         width: 100%;
         align-items: center;
-        padding: 3rem 3rem;
+        padding: 1rem 1rem;
         padding-top: 1rem;
         gap: 10px;
+    }
+
+    .menu-catalogo-responsive .botones-catalogo[b-dpp1rnt9yi], .boton-filtrar[b-dpp1rnt9yi] {
+        display: flex;
     }
 
     .titulo-catalogo[b-dpp1rnt9yi] {
@@ -271,6 +293,23 @@
 
     .menu-catalogo-pc[b-dpp1rnt9yi] {
         display: none;
+    }
+
+    .sec-fltr[b-dpp1rnt9yi] {
+        display: flex;
+        justify-content: space-between;
+        gap: 28px;
+    }
+
+    .boton-lmp-movil i[b-dpp1rnt9yi] {
+        font-size: clamp(20px,24px,26px);
+    }
+
+    .boton-lmp-movil[b-dpp1rnt9yi] {
+        display: flex;
+        border: red 2px solid;
+        gap: 1px;
+        padding: 0 4px 0 4px;
     }
 
     .menu-catalogo-responsive[b-dpp1rnt9yi] {
@@ -304,5 +343,80 @@
     .ingreso-precios[b-dpp1rnt9yi] {
         display: flex;
         flex-direction: row;
+    }
+
+    .lista-libros[b-dpp1rnt9yi] {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: start;
+        flex-wrap: wrap;
+        width: 80vw;
+        gap: 6px;
+        height: 40%;
+        margin: 0 10px 0 10px;
+       
+    }
+
+    .botones[b-dpp1rnt9yi]{
+        left:0;
+    }
+
+    .texto-libros[b-dpp1rnt9yi] {
+        padding-left: 4px;
+    }
+
+    .boton-comprar-libro[b-dpp1rnt9yi] {
+        height: 50px;
+        font-size: 14px;
+        text-align: center;
+        align-self: end; /* ← se pega al fondo de su celda */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cuadro-libro[b-dpp1rnt9yi] {
+        display: grid;
+        grid-template-rows: 250px 1fr auto; /* imagen | titulo | autor | precio | boton */
+        align-self: start;
+        width: 100%;
+        height: 100%;
+        border-width: 3px;
+        border-color: rgba(212, 212, 212, 0.3);
+        border-style: solid;
+    }
+        .cuadro-libro img[b-dpp1rnt9yi] {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+    .ingreso-precios[b-dpp1rnt9yi] {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .btn-precio-buscar[b-dpp1rnt9yi]{
+        margin-top:10px;
+    }
+
+    .ingreso-autor[b-dpp1rnt9yi]{
+        display:flex;
+        flex-direction:column;
+        align-self:center;
+    }
+    .ingreso-precios span[b-dpp1rnt9yi]{
+        align-self:center;
+        font-size:20px;
+    }
+
+    .mínimo[b-dpp1rnt9yi], .maximo[b-dpp1rnt9yi] {
+        display:flex;
+        border-width: 3px;
+        border-color: rgba(212, 212, 212, 0.3);
+        border-style: solid;
+        width: 220px;
     }
 }

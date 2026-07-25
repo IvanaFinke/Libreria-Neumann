@@ -23,6 +23,24 @@
     gap: 10px;
 }
 
+.sec-fltr {
+    display: none;
+}
+
+.boton-lmp {
+    display: flex;
+    width: 180px;
+    justify-content: space-evenly;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+    .boton-lmp i, .boton-lmp-movil i {
+        color: red;
+        font-size: 16px;
+    }
+
 .botones-catalogo {
     width: 180px;
     height: 35px;
@@ -257,9 +275,13 @@
         flex-direction: column;
         width: 100%;
         align-items: center;
-        padding: 3rem 3rem;
+        padding: 1rem 1rem;
         padding-top: 1rem;
         gap: 10px;
+    }
+
+    .menu-catalogo-responsive .botones-catalogo, .boton-filtrar {
+        display: flex;
     }
 
     .titulo-catalogo {
@@ -271,6 +293,23 @@
 
     .menu-catalogo-pc {
         display: none;
+    }
+
+    .sec-fltr {
+        display: flex;
+        justify-content: space-between;
+        gap: 28px;
+    }
+
+    .boton-lmp-movil i {
+        font-size: clamp(20px,24px,26px);
+    }
+
+    .boton-lmp-movil {
+        display: flex;
+        border: red 2px solid;
+        gap: 1px;
+        padding: 0 4px 0 4px;
     }
 
     .menu-catalogo-responsive {
@@ -304,5 +343,80 @@
     .ingreso-precios {
         display: flex;
         flex-direction: row;
+    }
+
+    .lista-libros {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: start;
+        flex-wrap: wrap;
+        width: 80vw;
+        gap: 6px;
+        height: 40%;
+        margin: 0 10px 0 10px;
+       
+    }
+
+    .botones{
+        left:0;
+    }
+
+    .texto-libros {
+        padding-left: 4px;
+    }
+
+    .boton-comprar-libro {
+        height: 50px;
+        font-size: 14px;
+        text-align: center;
+        align-self: end; /* ← se pega al fondo de su celda */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cuadro-libro {
+        display: grid;
+        grid-template-rows: 250px 1fr auto; /* imagen | titulo | autor | precio | boton */
+        align-self: start;
+        width: 100%;
+        height: 100%;
+        border-width: 3px;
+        border-color: rgba(212, 212, 212, 0.3);
+        border-style: solid;
+    }
+        .cuadro-libro img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+    .ingreso-precios {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .btn-precio-buscar{
+        margin-top:10px;
+    }
+
+    .ingreso-autor{
+        display:flex;
+        flex-direction:column;
+        align-self:center;
+    }
+    .ingreso-precios span{
+        align-self:center;
+        font-size:20px;
+    }
+
+    .mínimo, .maximo {
+        display:flex;
+        border-width: 3px;
+        border-color: rgba(212, 212, 212, 0.3);
+        border-style: solid;
+        width: 220px;
     }
 }
