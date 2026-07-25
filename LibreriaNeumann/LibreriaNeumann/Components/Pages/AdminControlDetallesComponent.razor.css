@@ -57,3 +57,39 @@ th, td {
     border: 2px solid rgb(255, 106, 0);
     padding: 8px;
 }
+
+.tabla-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*Diseño movil*/
+@media (max-width:570px) 
+{
+    .sec-detalles {
+        padding: 1rem 1rem;
+    }
+
+    .tabla-scroll{
+        margin:0;
+    }
+
+    det-tabla{
+        min-width:600px;
+    }
+}
+
+/*Diseño Tablets mini/air*/
+@media (min-width:571px) and (max-width:1025px) {
+    .sec-detalles {
+        padding: 2rem 2rem;
+    }
+}
+
+/*Diseño tablets pro, grandes*/
+@media (min-width:852px) and (max-width:1024px) {
+    .sec-detalles {
+        margin: 2rem 0;
+    }
+}

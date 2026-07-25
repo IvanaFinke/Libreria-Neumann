@@ -9,31 +9,35 @@
         <h1 class="titulo-det">Detalles del pedido</h1>  
         <hr class="linea"/>        
         @if(detalles != null)    
-        { <table class="det-tabla">                 
-            <thead>                 
-                <tr>            
-                    <th>Id detalle</th>     
-                    <th>Id pedido</th>     
-                    <th>Id libro</th>      
-                    <th>Título libro</th>    
-                    <th>Precio unitario</th>   
-                    <th>Subtotal</th>           
-                    </tr>            
-                    </thead>           
-                    @foreach(var detalle in detalles)         
-                    {                     
-                        <tbody>                  
-                            <tr>                     
-                                <td>@detalle.Id</td>  
-                                <td>@detalle.PedidoId</td>       
-                                <td>@detalle.LibroId</td>       
-                                <td>@detalle.TituloLibro</td>    
-                                <td>@detalle.PrecioUnitario.ToString("C")</td>    
-                                <td>@((detalle.PrecioUnitario * detalle.Cantidad).ToString("C"))</td>  
-                            </tr>                
-                            </tbody>             
-                            }           
-                            </table>     
+        {
+            <div class="tabla-scroll">
+                <table class="det-tabla">
+                    <thead>
+                        <tr>
+                            <th>Id detalle</th>
+                            <th>Id pedido</th>
+                            <th>Id libro</th>
+                            <th>Título libro</th>
+                            <th>Precio unitario</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    @foreach (var detalle in detalles)
+                    {
+                        <tbody>
+                            <tr>
+                                <td>@detalle.Id</td>
+                                <td>@detalle.PedidoId</td>
+                                <td>@detalle.LibroId</td>
+                                <td>@detalle.TituloLibro</td>
+                                <td>@detalle.PrecioUnitario.ToString("C")</td>
+                                <td>@((detalle.PrecioUnitario * detalle.Cantidad).ToString("C"))</td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </div>
+           
                             }       
                             else      
                             {         
