@@ -11,46 +11,51 @@
 
         @if (pedidos != null)
         {
-            <table class="tabla-pedidos">
-                <thead>
-                    <tr>
-                        <th>ID Pedido</th>
-                        <th>ID Usuario</th>
-                        <th>Fecha</th>
-                        <th>Total</th>
-                        <th>Estado</th>
-                        <th>Detalles</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var pedido in pedidos!)
-                    {
+            <div class="tabla-scroll">
+                <table class="tabla-pedidos table-responsive-sm">
+                    <thead>
                         <tr>
-                            <td>@pedido.Id</td>
-                            <td>@pedido.UsuarioId</td>
-                            <td>@pedido.FechaCreacion.ToString("dd/MM/yyyy")</td>
-                            <td>@pedido.Total.ToString("C")</td>
-                            <td>
-                                <span>@pedido.Estado</span>
-                                <div class="wrapper-estado">
-                                    <button class="btn-camb" @onclick="() => ToggleMenuEstado(pedido.Id)">Cambiar Estado</button>
-                                    @if (pedidoConMenuAbierto == pedido.Id)
-                                    {
-                                        <div class="cont-estados">
-                                            <button @onclick="() => CambiarEstadoYCerrar(pedido.Id, EstadoPedido.Pendiente)">Pendiente</button>
-                                            <button @onclick="() => CambiarEstadoYCerrar(pedido.Id, EstadoPedido.Aceptado)">Aceptado</button>
-                                            <button @onclick="() => CambiarEstadoYCerrar(pedido.Id, EstadoPedido.Enviado)">Enviado</button>
-                                            <button @onclick="() => CambiarEstadoYCerrar(pedido.Id, EstadoPedido.Entregado)">Entregado</button>
-                                            <button @onclick="() => CambiarEstadoYCerrar(pedido.Id, EstadoPedido.Cancelado)">Cancelado</button>
-                                        </div>
-                                    }
-                                </div>
-                            </td>
-                            <td><button @onclick="() => VerDetalles(pedido.Id)">ver detalles</button></td>
+                            <th>ID Pedido</th>
+                            <th>ID Usuario</th>
+                            <th>Fecha</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                            <th>Detalles</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach (var pedido in pedidos!)
+                        {
+                            <tr>
+                                <td>@pedido.Id</td>
+                                <td>@pedido.UsuarioId</td>
+                                <td>@pedido.FechaCreacion.ToString("dd/MM/yyyy")</td>
+                                <td>@pedido.Total.ToString("C")</td>
+                                <td>
+                                    <div class="estado-boton">
+                                        <span>@pedido.Estado</span>
+                                        <div class="wrapper-estado">
+                                            <button class="btn-camb" @onclick="() => ToggleMenuEstado(pedido.Id)">Cambiar Estado</button>
+                                            @if (pedidoConMenuAbierto == pedido.Id)
+                                            {
+                                                <div class="cont-estados">
+                                                    <button @onclick="() => CambiarEstadoYCerrar(pedido.Id, EstadoPedido.Pendiente)">Pendiente</button>
+                                                    <button @onclick="() => CambiarEstadoYCerrar(pedido.Id, EstadoPedido.Aceptado)">Aceptado</button>
+                                                    <button @onclick="() => CambiarEstadoYCerrar(pedido.Id, EstadoPedido.Enviado)">Enviado</button>
+                                                    <button @onclick="() => CambiarEstadoYCerrar(pedido.Id, EstadoPedido.Entregado)">Entregado</button>
+                                                    <button @onclick="() => CambiarEstadoYCerrar(pedido.Id, EstadoPedido.Cancelado)">Cancelado</button>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                   
+                                </td>
+                                <td><button @onclick="() => VerDetalles(pedido.Id)">ver detalles</button></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
         }
         else
         {

@@ -47,13 +47,58 @@
     outline: 2px solid rgb(128, 128, 128);
     outline-offset: 2px;
     border-radius: 2px;
-    width: 100%;
+    min-width: 100%; /*la tabla no se achica por debajo de 600px por mas que la pantalla se achique*/
     text-align: center;
     border-collapse: collapse; /*combina los bordes que quedaron separados en uno solo*/
     margin: 0 0 0 0;
 }
 
+.tabla-scroll {
+    width:100%;
+    overflow-x: auto; /*para deslizar horizontalmente el contenido del div cuando no entra en pantalla sin cortarlo*/
+    -webkit-overflow-scrolling: touch; /*scroll fluido en ios*/
+}
+
 th, td {
     border: 2px solid rgb(255, 106, 0);
     padding: 8px;
+}
+
+/*Diseño movil*/
+@media (max-width:570px)
+{
+    .sec-pedidos {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        padding-top: 1rem;
+        gap: 10px;
+    }
+
+    .tabla-scroll{
+       margin:0;
+    }
+
+    .tabla-pedidos{
+        min-width:600px;
+    }
+}
+
+/*Diseño Tablets mini/air*/
+@media (min-width:571px) and (max-width:1025px)
+{
+    .estado-boton {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*Diseño tablets pro, grandes*/
+@media (min-width:852px) and (max-width:1024px) {
+    .estado-boton {
+        display: flex;
+        flex-direction: column;
+    }
 }
