@@ -4893,6 +4893,64 @@ th[b-u3jttjmlo1], td[b-u3jttjmlo1] {
     border-width: 2px;
     height: 300px;
 }
+/* /Components/Pages/AdminNosotrosComponent.razor.rz.scp.css */
+.adm-nos[b-vhn596o4zn] {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 3rem 3rem;
+    width: 100%;
+}
+
+.titulo-nos[b-vhn596o4zn] {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.linea[b-vhn596o4zn]{
+    display:flex;
+    flex-direction:row;
+    padding: 0 50px 0 0;
+    margin:0;
+}
+
+.boton-nos[b-vhn596o4zn] {
+    text-emphasis-color: white;
+    background-color: rgb(244, 152, 117);
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: white;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.texto-nos[b-vhn596o4zn]{
+    margin-top:1.5rem;
+}
+
+.ingresos[b-vhn596o4zn]{
+    display:flex;
+    flex-direction:column;
+    width:fit-content;
+    justify-content:space-between;
+    gap:2rem;
+}
+.ing-nos[b-vhn596o4zn] {
+    width: 700px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
+    border-width: 2px;
+    height: 300px;
+    display: flex;
+    align-self:start;
+    cursor: auto;
+}
 /* /Components/PedidoConfirmadoComponent.razor.rz.scp.css */
 .cuadro-conf[b-7flxvspxk8] {
     border: 2px solid #4caf50; /*borde interno*/
@@ -5355,13 +5413,27 @@ th[b-u3jttjmlo1], td[b-u3jttjmlo1] {
         width: 100%;
         align-items: center;
         padding: 3em 3rem;
-        padding-top: 1rem;
-        gap: 10px;
+        gap: 1rem;
 }
 
 .parrafo[b-91mq5d4biu]{
-    text-wrap: wrap;
+    text-wrap: balance;
     text-align:justify;
+    width:80vw;
+    text-autospace: normal;
+    line-height:1.5;
+}
+
+.titulo-sobre[b-91mq5d4biu] {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.linea[b-91mq5d4biu]{
+    display:flex;
+    flex-direction:row;
+    margin: 0 0 50px 0;
 }
 
 @media (max-width:768px)

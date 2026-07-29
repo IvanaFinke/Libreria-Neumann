@@ -1,0 +1,58 @@
+﻿@implements IDisposable
+@rendermode InteractiveServer
+@inject NavigationManager navigatorManager
+@page "/admin/sobre-nosotros"
+
+@if(userSession?.Usuario != null && userSession?.Usuario.Rol == "Admin")
+{
+    <div class="adm-nos">
+        <h1 class="titulo-nos">Personalizar 'Sobre Nosotros'</h1>
+        <hr class="linea" />
+        <div class="ingresos">
+            <h5 class="texto-nos">Ingrese una descripción de su empresa</h5>
+            <textarea class="ing-nos" @bind="@nosotros" />
+            <button class="boton-nos" @onclick="ModificarNos">GUARDAR</button>
+        </div>
+       
+    </div>
+}
+else
+{
+    irAInicio();
+}
+
+@code {
+    [Inject] UserSession? userSession{ get; set; }
+    [Inject] LibreriaService? libreriaService{ get; set; }
+    public event Func<Task>? _OnChangeAdvice;
+    private string? nosotros = "";
+    private Libreria? libreria;
+
+    private void irAInicio()
+    {
+        navigatorManager.NavigateTo("/inicio");
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _OnChangeAdvice = () => InvokeAsync(StateHasChanged);
+        userSession?.OnChange += _OnChangeAdvice;
+
+        libreria = await libreriaService!.ObtenerLibreria();
+        if(libreria != null)
+        {
+            nosotros = libreria?.SobreNosotros;
+        }
+
+    }
+
+    private async Task ModificarNos()
+    {
+        await libreriaService!.ModificarSobreNosotros(nosotros!);
+    }
+
+    public void Dispose()
+    {
+        userSession?.OnChange -= _OnChangeAdvice;
+    }
+}

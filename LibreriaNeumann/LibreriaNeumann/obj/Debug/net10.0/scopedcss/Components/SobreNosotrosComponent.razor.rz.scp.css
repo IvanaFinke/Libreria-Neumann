@@ -4,13 +4,27 @@
         width: 100%;
         align-items: center;
         padding: 3em 3rem;
-        padding-top: 1rem;
-        gap: 10px;
+        gap: 1rem;
 }
 
 .parrafo[b-91mq5d4biu]{
-    text-wrap: wrap;
+    text-wrap: balance;
     text-align:justify;
+    width:80vw;
+    text-autospace: normal;
+    line-height:1.5;
+}
+
+.titulo-sobre[b-91mq5d4biu] {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.linea[b-91mq5d4biu]{
+    display:flex;
+    flex-direction:row;
+    margin: 0 0 50px 0;
 }
 
 @media (max-width:768px)

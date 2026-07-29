@@ -1,20 +1,39 @@
-﻿@page "/nosotros"
+﻿@rendermode InteractiveServer
+@page "/nosotros"
 
 <div class="sobre-nosotros">
     <div class="titulo-sobre-nosotros">
-        <h1>Sobre nosotros</h1>
-        <br />
+        <h1 class="titulo-sobre">Sobre nosotros</h1>
         <h4 class="parrafo">
-            La libreria Neumann desde los años 1986 lleva cautivando a la gente con libros desde los más
-            tradicionales hasta los más modernos. <br /><br />
-            Nuestro principio es brindarle al lector una experiencia única con libros que conquistarán su corazón.<br /><br />
+            @nosotros
+            <!-- La libreria Neumann desde los años 1986 lleva cautivando a la gente con libros desde los más
+            tradicionales hasta los más modernos.
+            Nuestro principio es brindarle al lector una experiencia única con libros que conquistarán su corazón.
             Desde fantasía, economía, suspenso, infantiles, sci-fi, tenemos gran variedad porque sabemos
-            que tener un amplio repertorio es muy importante para nuestros lectores.
+            que tener un amplio repertorio es muy importante para nuestros lectores.-->
         </h4>
+        @if(nosotros == null)
+        {
+            <p>Todavia no tiene una descripción de 'Sobre Nosotros'</p>
+        }
     </div>
 
 </div>
 
 @code {
+    [Inject] LibreriaService? libreriaService{ get; set; }
+    private Libreria? libreria;
+    private string? nosotros,mensaje = "";
 
+    protected override async Task OnInitializedAsync()
+    {
+        libreria = await libreriaService!.ObtenerLibreria();
+        {
+            if(libreria != null)
+            {
+                nosotros = libreria.SobreNosotros;
+            }
+           
+        }
+    }
 }

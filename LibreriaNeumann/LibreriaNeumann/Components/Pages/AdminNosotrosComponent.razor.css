@@ -1,0 +1,57 @@
+﻿.adm-nos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 3rem 3rem;
+    width: 100%;
+}
+
+.titulo-nos {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.linea{
+    display:flex;
+    flex-direction:row;
+    padding: 0 50px 0 0;
+    margin:0;
+}
+
+.boton-nos {
+    text-emphasis-color: white;
+    background-color: rgb(244, 152, 117);
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: white;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.texto-nos{
+    margin-top:1.5rem;
+}
+
+.ingresos{
+    display:flex;
+    flex-direction:column;
+    width:fit-content;
+    justify-content:space-between;
+    gap:2rem;
+}
+.ing-nos {
+    width: 700px;
+    border-radius: 8px;
+    border-color: rgb(167, 167, 167);
+    border-style: solid;
+    border-width: 2px;
+    height: 300px;
+    display: flex;
+    align-self:start;
+    cursor: auto;
+}

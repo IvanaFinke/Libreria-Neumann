@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\ivana\\documents\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\pages\\admincontroldetallescomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\pages\\admincontroldetallescomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\ivana\\documents\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\pages\\adminnosotroscomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\pages\\adminnosotroscomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\ivana\\documents\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\pages\\admincontrolpedidoscomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\pages\\admincontrolpedidoscomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\ivana\\documents\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\pages\\adminnosotroscomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\pages\\adminnosotroscomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\ivana\\documents\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\pages\\admincontroldetallescomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\pages\\admincontroldetallescomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\ivana\\documents\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\pages\\adminmodificarlibro.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\pages\\adminmodificarlibro.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\ivana\\documents\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\pages\\admin.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\pages\\admin.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\ivana\\documents\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\inicioyregistrocomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\inicioyregistrocomponent.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\ivana\\documents\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\pages\\adminmodificarlibro.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|solutionrelative:librerianeumann\\components\\pages\\adminmodificarlibro.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EA6E2A4-B4E2-3188-D71D-89DB6E22A87F}|LibreriaNeumann\\LibreriaNeumann.csproj|c:\\users\\ivana\\documents\\libreria-neumann\\librerianeumann\\librerianeumann\\components\\pages\\admincontrolpedidoscomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,63 +49,77 @@
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdminControlDetallesComponent.razor.css",
-              "DocumentMoniker": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminControlDetallesComponent.razor.css",
-              "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\Pages\\AdminControlDetallesComponent.razor.css",
-              "ToolTip": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminControlDetallesComponent.razor.css",
-              "RelativeToolTip": "LibreriaNeumann\\Components\\Pages\\AdminControlDetallesComponent.razor.css",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAE0AAAAOAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "InicioYRegistroComponent.razor.css",
+              "DocumentMoniker": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\InicioYRegistroComponent.razor.css",
+              "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\InicioYRegistroComponent.razor.css",
+              "ToolTip": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\InicioYRegistroComponent.razor.css",
+              "RelativeToolTip": "LibreriaNeumann\\Components\\InicioYRegistroComponent.razor.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-07-25T23:19:56.385Z",
+              "WhenOpened": "2026-07-29T05:24:47.888Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AdminControlDetallesComponent.razor",
-              "DocumentMoniker": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminControlDetallesComponent.razor",
-              "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\Pages\\AdminControlDetallesComponent.razor",
-              "ToolTip": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminControlDetallesComponent.razor",
-              "RelativeToolTip": "LibreriaNeumann\\Components\\Pages\\AdminControlDetallesComponent.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-25T23:19:55.189Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Admin.razor.css",
-              "DocumentMoniker": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\Admin.razor.css",
-              "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\Pages\\Admin.razor.css",
-              "ToolTip": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\Admin.razor.css",
-              "RelativeToolTip": "LibreriaNeumann\\Components\\Pages\\Admin.razor.css",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "Title": "AdminModificarLibro.razor.css",
+              "DocumentMoniker": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminModificarLibro.razor.css",
+              "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\Pages\\AdminModificarLibro.razor.css",
+              "ToolTip": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminModificarLibro.razor.css",
+              "RelativeToolTip": "LibreriaNeumann\\Components\\Pages\\AdminModificarLibro.razor.css",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-07-25T03:04:07.716Z"
+              "WhenOpened": "2026-07-29T05:13:00.909Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AdminControlPedidosComponent.razor.css",
-              "DocumentMoniker": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminControlPedidosComponent.razor.css",
-              "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\Pages\\AdminControlPedidosComponent.razor.css",
-              "ToolTip": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminControlPedidosComponent.razor.css",
-              "RelativeToolTip": "LibreriaNeumann\\Components\\Pages\\AdminControlPedidosComponent.razor.css",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
+              "Title": "AdminNosotrosComponent.razor.css",
+              "DocumentMoniker": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminNosotrosComponent.razor.css",
+              "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\Pages\\AdminNosotrosComponent.razor.css",
+              "ToolTip": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminNosotrosComponent.razor.css",
+              "RelativeToolTip": "LibreriaNeumann\\Components\\Pages\\AdminNosotrosComponent.razor.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-07-25T01:46:20.959Z",
+              "WhenOpened": "2026-07-29T04:40:48.774Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminNosotrosComponent.razor",
+              "DocumentMoniker": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminNosotrosComponent.razor",
+              "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\Pages\\AdminNosotrosComponent.razor",
+              "ToolTip": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminNosotrosComponent.razor",
+              "RelativeToolTip": "LibreriaNeumann\\Components\\Pages\\AdminNosotrosComponent.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-25T23:39:40.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "AdminModificarLibro.razor",
+              "DocumentMoniker": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminModificarLibro.razor",
+              "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\Pages\\AdminModificarLibro.razor",
+              "ToolTip": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminModificarLibro.razor",
+              "RelativeToolTip": "LibreriaNeumann\\Components\\Pages\\AdminModificarLibro.razor",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-29T05:05:46.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AdminControlPedidosComponent.razor",
               "DocumentMoniker": "C:\\Users\\ivana\\Documents\\Libreria-Neumann\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminControlPedidosComponent.razor",
               "RelativeDocumentMoniker": "LibreriaNeumann\\Components\\Pages\\AdminControlPedidosComponent.razor",
@@ -109,7 +127,8 @@
               "RelativeToolTip": "LibreriaNeumann\\Components\\Pages\\AdminControlPedidosComponent.razor",
               "ViewState": "AgIAABcAAAAAAAAAAAAAwDAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-25T01:46:13.93Z"
+              "WhenOpened": "2026-07-25T01:46:13.93Z",
+              "EditorCaption": ""
             }
           ]
         }

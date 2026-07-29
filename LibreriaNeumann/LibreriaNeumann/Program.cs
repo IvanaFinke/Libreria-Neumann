@@ -17,6 +17,7 @@ builder.Services.AddHttpClient<EmailService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ClientInfoService>();
 builder.Services.AddScoped<ReCaptcha>();
+builder.Services.AddScoped<LibreriaService>();
 builder.Services.AddScoped<ProcesadorPagosService>();
 builder.Services.AddScoped<CarritoService>(); //Los addScoped se crean una vez por cada usuario
 builder.Services.AddScoped<UserService>();

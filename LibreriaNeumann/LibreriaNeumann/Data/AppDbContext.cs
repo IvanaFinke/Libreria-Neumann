@@ -15,6 +15,7 @@ namespace LibreriaNeumann.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<DetallePedido> DetallesPedidos { get; set; }
+        public DbSet<Libreria> Libreria { get; set; }
 
         /*Prepara conexion, tracking, provider, tablas, user, passwords,server. Le pasamos
          a la AppDbContext nuestra la configuracion de DbContext con base(options)*/
