@@ -39,39 +39,12 @@ namespace LibreriaNeumann.Services
             actual.SobreNosotros = nuevoNosotros;
            await  _context.SaveChangesAsync();
         }
-
-        public async Task ModificarTelefono(string nuevoTel)
-        {
-            await using var _context = await _contextFactory.CreateDbContextAsync();
-
-            var actual = await ObtenerLibreria();
-            actual.Telefono = nuevoTel;
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task ModificarCalle(string calle, int alturaCalle)
-        {
-            await using var _context = await _contextFactory.CreateDbContextAsync();
-
-            var actual = await ObtenerLibreria();
-            actual.Calle = calle;
-            actual.AlturaCalle = alturaCalle;
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task ModificarEmail(string nuevoMail)
-        {
-            await using var _context = await _contextFactory.CreateDbContextAsync();
-
-            var actual = await ObtenerLibreria();
-            actual.Email = nuevoMail;
-            await _context.SaveChangesAsync();
-        }
-
         public async Task<bool> ModificarLibreria(Libreria nueva)
         {
-            await using var _context = await _contextFactory.CreateDbContextAsync();
+            await using var _context = await _contextFactory.CreateDbContextAsync(); //nueva fabrica, vive con la instancia noma
 
+            //podria haber llamado a ObtenerLibreria(), pero como creamos nuevos contexto en cada metodo son conceptualmente contexto distintos
+            //por lo tanto la libreria de un contexto no es la misma de otro. Por eso usamos FirstOrDefaultAsync en el contexto de ESTE metodo
             var actual = await _context.Libreria.FirstOrDefaultAsync();
 
             if (actual == null) return false;

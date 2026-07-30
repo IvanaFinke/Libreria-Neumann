@@ -102,7 +102,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _onChangeDatos = () => InvokeAsync(StateHasChanged);
+        _onChangeDatos = ActualizarDatos;
         libreriaService!.OnChange += _onChangeDatos;
 
         libreria = await libreriaService!.ObtenerLibreria();
@@ -119,6 +119,24 @@
             telefono = libreria.Telefono;
             calle = libreria.Calle;
         }
+    }
+
+    private async Task ActualizarDatos()
+    {
+        libreria = await libreriaService!.ObtenerLibreria();
+
+        horaInicio = libreria.HoraInicio;
+        horaSalida = libreria.HoraSalida;
+        altura = libreria.AlturaCalle;
+        direccion = libreria.Calle;
+        instagram = libreria.Instagram;
+        facebook = libreria.Facebook;
+        tiktok = libreria.Tiktok;
+        mail = libreria.Email;
+        telefono = libreria.Telefono;
+        calle = libreria.Calle;
+
+        await InvokeAsync(StateHasChanged);
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
