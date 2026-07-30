@@ -1,0 +1,143 @@
+﻿@page "/admin/informacion"
+@implements IDisposable
+@rendermode InteractiveServer
+@inject NavigationManager navigatorManager
+
+@if(userSession?.Usuario != null && userSession?.Usuario.Rol == "Admin")
+{
+    <div class="sec-inf">
+        <h1 class="titulo-info">Ingrese los datos de su negocio</h1>
+        <hr class="linea" />
+        <div class="ingresos">
+            <div class="datos-per">
+                <h5>Datos del lugar</h5>
+                <div class="ing-tel">
+                    <h6>Su telefono</h6>
+                    <div class="icono-input">
+                        <div class="contenedor">
+                            <i class="bi bi-telephone "></i>
+                        </div>
+                        <input type="number" class="ing-tel" placeholder="ej: 11392346" @bind="telefono" />
+                    </div>
+                    
+                </div>
+                <div class="ing-mail">
+                    <h6>Su mail</h6>
+                    <div class="icono-input">
+                        <div class="contenedor">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <input class="ing-mail" type="text" placeholder="ej:libr@gmail.com" @bind="mail" />
+                    </div>
+                   
+                </div>
+                <div class="sec-dir">
+                    <h6>Su direccion y altura de calle</h6>
+                    <div class="icono-input">
+                        <div class="contenedor-ubicacion">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div class="ambos-direcc">
+                            <input class="input-direc" type="text" placeholder="ej:Los Cerros" @bind="direccion" />
+                            <input class="inp-alt" type="number" placeholder="ej: 4215" @bind="altura" />
+                        </div>
+                  
+                    </div>
+                </div>
+                <div class="hora">
+                    <div class="hor-aper">
+                        <h6>Hora apertura</h6>
+                        <input class="ing-hora" type="number" @bind="horaInicio" placeholder="ej: 08" />
+                    </div>
+                    <div class="hor-cier">
+                        <h6>Hora cierre</h6>
+                        <input class="ing-hora" type="number" @bind="horaCierre" placeholder="ej:19" />
+                    </div>
+                </div>
+            </div>
+                
+                <div class="redes">
+                    <h5>Redes</h5>
+                    <div class="Instagram">
+                        <div class="contenedor-instagram">
+                        <i class="bi bi-instagram"></i>
+                        </div>
+                        <input  class="ing-red" type="url" placeholder="ej: /marcyalvarez" @bind="instagram"/>
+                    </div>
+                    <div class="Facebook">
+                        <div class="contenedor-facebook">
+                        <i class="bi bi-facebook"></i>
+                        </div>
+                        <input class="ing-red" type="url" placeholder="ej: /marcyalvarez" @bind="facebook"/>
+                    </div>
+                    <div class="Tiktok">
+                        <div class="contenedor-tiktok">
+                        <i class="bi bi-tiktok"></i>
+                        </div>
+                        <input class="ing-red" type="url" placeholder="ej: /@nombremuestra" @bind="tiktok"/>
+                    </div>
+                </div>
+            
+            
+        </div>
+        
+        <button class="guardar" @onclick="() => Guardar()">GUARDAR</button>
+        @if(cambios)
+        {
+            <div class="cuadro">
+                <i class="bi bi-check-circle-fill"></i>
+                <p>Datos actualizados!</p>
+            </div>
+        }
+    </div>
+}
+else
+{
+    irAInicio();
+}
+
+@code {
+    [Inject] UserSession? userSession{ get; set; }
+    public event Func<Task>? _onChangeSesion;
+    [Inject] LibreriaService? libreriaService { get; set; }
+    [Inject] UserService? userService{ get; set; }
+    private string nombremuestra = $"@azurjade";
+    private Libreria? libreria;
+    private string? instagram, facebook, tiktok, direccion, telefono,mail = "";
+    private int? altura,horaInicio,horaCierre;
+    private bool cambios = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _onChangeSesion = () => InvokeAsync(StateHasChanged);
+        userSession?.OnChange += _onChangeSesion;
+    }
+
+    private void irAInicio()
+    {
+        navigatorManager.NavigateTo("/inicio");
+    }
+
+    public void Dispose()
+    {
+        userSession?.OnChange -= _onChangeSesion;
+    }
+
+    private async Task Guardar()
+    {
+        var actual = await libreriaService!.ObtenerLibreria();
+        if(actual != null)
+        {
+            //verifico si hubo cambios, sino dejo como estaba antes
+            actual.Telefono = telefono == null ? actual.Telefono : telefono; 
+            actual.AlturaCalle = altura == null ? actual.AlturaCalle : altura;
+            actual.Calle = direccion == null ? actual.Calle : direccion;
+            actual.Email = mail == null ? actual.Email : mail;
+            actual.Facebook = facebook == null ? actual.Facebook : facebook;
+            actual.Instagram = instagram == null ? actual.Instagram : instagram;
+            actual.Tiktok = tiktok == null ? actual.Tiktok : tiktok;
+            actual.SobreNosotros = actual.SobreNosotros; //no cambia
+        }
+        cambios = await libreriaService!.ModificarLibreria(actual!); //confirma si hubo cambios o no
+    }
+}

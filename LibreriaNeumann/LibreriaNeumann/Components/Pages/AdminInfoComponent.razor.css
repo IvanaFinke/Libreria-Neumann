@@ -1,0 +1,206 @@
+﻿.sec-inf {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 3rem 3rem;
+    width: 100%;
+}
+
+.linea {
+    display: flex;
+    flex-direction: row;
+    padding 0 50px 0 0;
+    margin: 0;
+}
+
+.titulo-info {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.contenedor, .contenedor-instagram, .contenedor-ubicacion {
+    content: "";
+    background-color: rgb(244, 152, 117);
+    border-radius: 75px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    justify-items: start;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    cursor: pointer;
+}
+
+.icono-input{
+    display:flex;
+    flex-direction:row;
+    gap:1rem;
+}
+
+.redes{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
+.ingresos {
+    display: grid;
+    grid-template-columns:auto auto;
+    gap:10px;
+}
+
+.datos-per{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
+.contenedor-tiktok {
+    content: "";
+    background-color: rgb(244, 152, 117);
+    border-radius: 75px;
+    width: 41px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    justify-items: end;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+    .contenedor i, .contenedor-tiktok i, .contenedor-instagram i, .contenedor-ubicacion i {
+        font-size: 24px;
+        color: lightgray;
+        padding-top: 1px;
+    }
+
+::deep .contenedor-facebook {
+    display: flex;
+    background: none;
+    align-items: start;
+    width: 40px;
+    cursor: pointer;
+}
+
+    ::deep .contenedor-facebook i {
+        font-size: 40px;
+        line-height: 1;
+        transform: translateX(-1px);
+        color: rgb(244, 152, 117);
+    }
+
+.guardar {
+        text-emphasis-color: white;
+        background-color: rgb(244, 152, 117);
+        width: 200px;
+        height: 40px;
+        border-radius: 15px;
+        font-size: 18px;
+        color: white;
+        border-color: rgb(244, 152, 117);
+        border-style: solid;
+        font-weight: 600;
+        font-family: sans-serif;
+    
+}
+
+.ing-tel, .ing-mail, .ing-dir{
+    display:flex;
+    flex-direction:column;
+}
+
+.hora {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.Instagram, .Facebook, .Tiktok {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 1rem;
+}
+
+/*Diseño movil*/
+@media (max-width:570px){
+    .sec-inf {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 1rem 1rem;
+        width: 100%;
+    }
+
+    .hora{
+        display:flex;
+        flex-direction:row;
+        margin-top:1rem;
+        gap:2rem;
+    }
+
+    .hor-aper, .hor-cier{
+        gap:10px;
+    }
+  
+    .ingresos{
+        display:flex;
+        flex-direction:column;
+        gap:1rem;
+    }
+
+    input{
+        width:100%;
+    }
+
+    .inp-alt{
+        width:20vw;
+    }
+
+    .ing-dir{
+        width:100%;
+    }
+
+    .ing-hora {
+        width: 24vw;
+        height:4vh;
+    }
+
+    .datos-per{
+        gap: 1.5rem;
+    }
+
+    .Instagram, .Facebook, .Tiktok{
+        gap:1.5rem;
+    }
+
+    .redes {
+        display:grid;
+        grid-template-rows: auto 1fr;
+    }
+
+    .ing-red{
+        min-height:5vh;
+        width:50vw;
+        align-self:end;
+    }
+
+    .input-direc{
+        width:40vw;
+    }
+
+    .guardar{
+        margin-top:1rem;
+    }
+
+    .ambos-direcc{
+        display:flex;
+        flex-direction:row;
+        width:100%;
+        
+    }
+}
