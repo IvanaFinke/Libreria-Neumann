@@ -1,0 +1,19 @@
+﻿{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=LibreriaNeumannDb;Trusted_Connection=True;TrustServerCertificate=True"
+  },
+  "ReCaptcha": {
+    "SecretKey": "6LdfcVgsAAAAAMtrpHh5vckMtfCETHcrZxZ7tPQ8"
+  },
+  "AllowedHosts": "*",
+
+  "Resend": {
+    "ApiToken": ""
+  }
+}

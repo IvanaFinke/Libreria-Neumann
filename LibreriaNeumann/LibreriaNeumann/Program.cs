@@ -28,12 +28,16 @@ options.UseSqlServer(
         maxRetryCount: 5,
         maxRetryDelay: TimeSpan.FromSeconds(10),
         errorNumbersToAdd: null)
-    )
+    ),
+    optionsLifetime: ServiceLifetime.Singleton
 );
 builder.Services.AddScoped<LibroService>();
 builder.Services.AddScoped<PasswordHash>();
 builder.Services.AddSingleton<UserSession>();
 builder.Services.AddValidation();
+//Factory de DbContext para poder utilizar distintas instancias dentro de una misma pagina
+builder.Services.AddDbContextFactory<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 

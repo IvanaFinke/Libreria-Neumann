@@ -126,6 +126,10 @@
     gap: 1rem;
 }
 
+.ing-mail{
+    width:28vw;
+}
+
 /*Diseño movil*/
 @media (max-width:570px){
     .sec-inf {

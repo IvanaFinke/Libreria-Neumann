@@ -1,0 +1,26 @@
+﻿# Migration Progress
+
+- Repository original HEAD: bd212faec75e0e6b20cbf2de4b80139a628524fb
+
+Important Guideline:
+
+1. When you use the terminal command tool, never input a long command with multiple lines; always use a single-line command.
+   - CRITICAL: When editing XML-based project files, use literal XML characters (<, >, &) in terminal commands and prefer file-editing tools.
+2. Do not search under `.appmod/` for semantic searches.
+3. Never create a new project; update existing projects only.
+4. Minimize code changes and add packages using the provided tools.
+
+
+Tasks:
+- [X] Record repository state and create migration branch — stashed local changes (note: some filesystem unlink warnings occurred during stash)
+- [X] Add migration tracking files (.appmod/.migration/plan.md, progress.md, .appmod/.gitignore)
+- [X] Update appsettings.json DefaultConnection to Azure SQL placeholder
+- [X] Install Azure.Identity NuGet package
+- [X] Search and replace any System.Data.SqlClient usages — none found
+- [in_progress] Build solution and fix compilation issues
+- [ ] Run completeness validation (migration_completeness)
+- [ ] Run consistency validation (migrate_git_diff + migration_consistency)
+- [ ] Run CVE vulnerability check for added packages
+- [ ] Final commit and review
+
+

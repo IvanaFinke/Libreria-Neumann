@@ -1,5 +1,5 @@
 ﻿@rendermode InteractiveServer
-
+@implements IDisposable
 @inject IJSRuntime JS
 
 <div class="footer">
@@ -9,15 +9,15 @@
         <h5 class="frase"><strong>NUESTRAS REDES</strong></h5>
 
         <div class="iconos-redes">
-            <a class="contenedor" href="https://www.instagram.com{@instagram}/" target="_blank">
+            <a class="contenedor" href="@($"https://www.instagram.com{instagram}/")" target="_blank">
                 <i class="bi bi-instagram"></i>
             </a>
 
-            <a class="contenedor-facebook" href="() => LinkFacebook()" target="_blank">
+            <a class="contenedor-facebook" href="@($"https://www.facebook.com/{facebook}")" target="_blank">
                 <i class="bi bi-facebook"></i>
             </a>
 
-            <a class="contenedor-tiktok" href="() => LinkTiktok()" target="_blank">
+            <a class="contenedor-tiktok" href="@($"https://www.tiktok.com{tiktok}")" target="_blank">
                 <i class="bi bi-tiktok"></i>
             </a>
         </div>
@@ -91,10 +91,20 @@
     [Inject] private LibreriaService? libreriaService{ get; set; }
     private Libreria? libreria;
     private int? horaInicio, horaSalida,altura;
-    private string? direccion,instagram,facebook,tiktok,mail,telefono,calle = "";
+    private string? direccion;
+    private string? instagram;
+    private string? facebook;
+    private string? tiktok;
+    private string? mail;
+    private string? telefono;
+    private string? calle;
+    public event Func<Task>? _onChangeDatos;
 
     protected override async Task OnInitializedAsync()
     {
+        _onChangeDatos = () => InvokeAsync(StateHasChanged);
+        libreriaService!.OnChange += _onChangeDatos;
+
         libreria = await libreriaService!.ObtenerLibreria();
         if(libreria != null)
         {
@@ -111,15 +121,16 @@
         }
     }
 
-    private string LinkInsta() => $"https://www.instagram.com{instagram}/";
-    private string LinkTiktok() => $"https://www.tiktok.com{@tiktok}";
-    private string LinkFacebook() => $"https://www.facebook.com/{@facebook}";
-
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
             await JS.InvokeVoidAsync("initMap", "map", -34.921819, -57.963100);
         }
+    }
+
+    public void Dispose()
+    {
+        libreriaService!.OnChange -= _onChangeDatos;
     }
 }

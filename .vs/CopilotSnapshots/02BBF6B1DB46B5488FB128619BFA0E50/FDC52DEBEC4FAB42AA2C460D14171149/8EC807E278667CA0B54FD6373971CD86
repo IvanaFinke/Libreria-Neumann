@@ -1,0 +1,50 @@
+﻿# .NET App Migration Prompt Template: SQL Server (local/on-prem) to Azure SQL Database
+
+## Migration Request
+
+Migrate this codebase from SQL Server (local/on-prem) to Azure SQL Database, focusing exclusively on code-level changes required for successful compilation.
+
+## Project Analysis (summary)
+
+- Solution path: C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\
+- Project: LibreriaNeumann (TargetFramework: net10.0)
+- ORM: Entity Framework Core 10.0.2 with Microsoft.EntityFrameworkCore.SqlServer
+- Current SQL client present in project assets: Microsoft.Data.SqlClient (6.x)
+- Identified local/on-prem usage: appsettings.json connection string uses (localdb)\\MSSQLLocalDB and Program.cs configures DbContext with UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+
+## Migration Goal
+
+- Replace local/on-prem SQL Server connection usage with Azure SQL Database configuration and support for Managed Identity-style authentication.
+- Keep original framework (net10.0) and EF Core provider.
+- Make only code/configuration changes needed for successful compilation.
+
+## Required Package Additions
+
+From Azure SQL Database knowledge base:
+- Azure.Identity (recommended version: latest stable, e.g., 1.14.0)
+- Microsoft.Data.SqlClient is already present; keep or align to KB if needed
+
+## Files to modify
+
+- LibreriaNeumann/appsettings.json — update DefaultConnection to Azure SQL format (placeholder values)
+- LibreriaNeumann/Program.cs — (verify) no code change required because UseSqlServer + EF Core works with Azure SQL; may register provider factory if needed
+
+## Plan of Action (high level)
+
+1. Record git state and create a migration branch.
+2. Add migration tracking files (.appmod/.migration/plan.md, progress.md and .appmod/.gitignore).
+3. Update appsettings.json DefaultConnection to Azure SQL Database connection string placeholder using Managed Identity style: "Server=tcp:<your-server>.database.windows.net;Database=LibreriaNeumannDb;Authentication=Active Directory Default;TrustServerCertificate=True"
+4. Install Azure.Identity NuGet package into LibreriaNeumann project.
+5. Search and replace any remaining System.Data.SqlClient usages (none found).
+6. Build solution and fix any compilation issues.
+7. Run completeness and consistency validations (migration_completeness, migrate_git_diff + migration_consistency).
+8. Check CVE for newly added packages (check_cve_vulnerability).
+9. Commit changes after each task and update progress.md accordingly.
+
+## Migration tasks and checklist
+
+Tasks will be tracked in .appmod/.migration/progress.md. Each task will be updated as in_progress and then completed. The final state will include the exact words: MIGRATION COMPLETED
+
+---
+
+This plan references guidance from #azure_sql_database_knowledge_base and is tailored to the discovered usage: a single DefaultConnection in appsettings.json and EF Core usage in Program.cs. Keep changes minimal and focused on configuration and package additions for Azure SQL compatibility.

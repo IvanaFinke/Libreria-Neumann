@@ -804,6 +804,6 @@ C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\De
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\Pages\AdminControlPedidosComponent.razor.rz.scp.css
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\Pages\AdminNosotrosComponent.razor.rz.scp.css
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\scopedcss\Components\Pages\AdminInfoComponent.razor.rz.scp.css
-C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\13twna8nz8-{0}-h1alvnxv4t-h1alvnxv4t.gz
-C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tnl8yodhue-{0}-h1alvnxv4t-h1alvnxv4t.gz
+C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\13twna8nz8-{0}-7mnw4y6vok-7mnw4y6vok.gz
+C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\compressed\tnl8yodhue-{0}-7mnw4y6vok-7mnw4y6vok.gz
 C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

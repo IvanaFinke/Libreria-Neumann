@@ -1,0 +1,53 @@
+﻿# Migration Progress
+
+- [ ] Record original HEAD commit id
+- [ ] Check repository state
+- [ ] Stash uncommitted changes (if any)
+- [ ] Create migration branch
+- [ ] Create migration temporary files
+- [ ] Update appsettings.json DefaultConnection to Azure SQL placeholder
+- [ ] Verify/align NuGet packages
+- [ ] Replace System.Data.SqlClient usages if any
+- [ ] Commit changes and track progress
+- [ ] Run migration_completeness
+- [ ] Run migration_consistency
+- [ ] CVE vulnerability check for added packages
+- [ ] Build verification
+- [ ] Finalize and add "MIGRATION COMPLETED"
+
+
+## Important Guideline
+
+1. When you use the terminal command tool, never input a long command with multiple lines; always use a single-line command. (This is a bug in VS Copilot)
+   - **CRITICAL**: When editing XML-based project files (`.csproj`, `.config`, `.props`, `.targets`, etc.) via terminal commands, you MUST use literal XML characters (`<`, `>`, `&`) — NEVER use their escaped Unicode equivalents (`\u003C`, `\u003E`, `\u0026`). Writing escaped Unicode into XML files corrupts the file format. In PowerShell, use single-quoted strings to keep XML markup literal.
+   - **CRITICAL**: Prefer tools related to editing files to make changes and do not use terminal commands to create, write, modify, or append to files.
+2. When performing semantic or intent-based searches, DO NOT search content from `.appmod/` folder.
+3. Never create a new project in the solution, always use the existing project to add new files or update the existing files.
+4. Minimize code changes:
+	- Update only what's necessary for the migration.
+	- Avoid unrelated code enhancements.
+5. Add new package references to projects
+   - Use `nuget_packages_install_latest` or `nuget_packages_install` to install packages.
+   - Use `nuget_packages_uninstall` tool to uninstall nuget packages.
+   - If the operation fails, use `dotnet_dependency_management_knowledge_base` tool for guidance.
+6. **Task Tracking and Progress Updates**
+   - Output each task as a Markdown-formatted checklist in `progress.md`.
+	 - Each task should begin with `- [ ]` (a dash, a space, an open square bracket, a space, and a closing square bracket), followed by the task description.
+	 - `- [ ]` for tasks not started
+	 - `- [X]` for tasks completed
+	 - `- [in_progress]` for tasks currently being worked on
+   - Before starting any migration task, mark it as `in_progress` in `progress.md`. Only one task should be marked as `in_progress` at a time.
+   - As soon as a task is completed, immediately update its status to completed in `progress.md`.
+   - Update the status of tasks in real-time as you work, ensuring `progress.md` always reflects the current state.
+   - If you discover new required tasks during migration, add them to `progress.md` and the plan immediately, and track their status as above.
+   - For tasks that are skipped or turned out to be unnecessary, mark them as completed with a note explaining why.
+   - Do not batch status updates; always update `progress.md` as soon as a task's status changes.
+   - After all tasks are finished, review `progress.md` to ensure every task is marked as complete, and then log the exact words `MIGRATION COMPLETED` in a new line to the end.
+7. **Version Control Integration**
+   - Use `migrate_git_head_id` to get the original commit id before starting migration tasks, save it to `progress.md` for future reference.
+   - ALWAYS include version control tasks in `progress.md` to ensure proper tracking:
+	 - Use `migrate_get_repo_state` to check git status before starting migration tasks
+	 - Use `migrate_git_stash` if there are any uncommitted (modified/added/untracked) changes before creating the migration branch, to ensure a clean working directory.
+	 - Use `migrate_git_checkout` to ALWAYS create a new migration branch using a name generated from `migrate_get_branch_name`
+	 - Use `migrate_git_commit` to stage and commit changes after each completed task
+	 - Use `migrate_get_repo_state` to check for uncommitted changes before finishing

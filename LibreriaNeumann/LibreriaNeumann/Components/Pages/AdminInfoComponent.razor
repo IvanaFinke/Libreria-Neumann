@@ -2,6 +2,7 @@
 @implements IDisposable
 @rendermode InteractiveServer
 @inject NavigationManager navigatorManager
+@using System.Text;
 
 @if(userSession?.Usuario != null && userSession?.Usuario.Rol == "Admin")
 {
@@ -103,14 +104,32 @@ else
     [Inject] UserService? userService{ get; set; }
     private string nombremuestra = $"@azurjade";
     private Libreria? libreria;
-    private string? instagram, facebook, tiktok, direccion, telefono,mail = "";
+    private string? direccion;
+    private string? instagram;
+    private string? facebook;
+    private string? tiktok;
+    private string? mail;
+    private string? telefono;
+    private string? calle;
+    private string? telefonoGuiones;
     private int? altura,horaInicio,horaCierre;
     private bool cambios = false;
 
     protected override async Task OnInitializedAsync()
     {
-        _onChangeSesion = () => InvokeAsync(StateHasChanged);
+        _onChangeSesion = ActualizarDatos;
         userSession?.OnChange += _onChangeSesion;
+
+        var actual = await libreriaService!.ObtenerLibreria();
+        telefono = actual.Telefono;
+        mail = actual.Email;
+        direccion = actual.Calle;
+        altura = actual.AlturaCalle;
+        instagram = actual.Instagram;
+        facebook = actual.Facebook;
+        tiktok = actual.Tiktok;
+        horaInicio = actual.HoraInicio;
+        horaCierre = actual.HoraSalida;
     }
 
     private void irAInicio()
@@ -126,18 +145,63 @@ else
     private async Task Guardar()
     {
         var actual = await libreriaService!.ObtenerLibreria();
-        if(actual != null)
+
+        //verifico si hubo cambios, sino dejo como estaba antes
+        if(telefono != null)
         {
-            //verifico si hubo cambios, sino dejo como estaba antes
-            actual.Telefono = telefono == null ? actual.Telefono : telefono; 
-            actual.AlturaCalle = altura == null ? actual.AlturaCalle : altura;
-            actual.Calle = direccion == null ? actual.Calle : direccion;
-            actual.Email = mail == null ? actual.Email : mail;
-            actual.Facebook = facebook == null ? actual.Facebook : facebook;
-            actual.Instagram = instagram == null ? actual.Instagram : instagram;
-            actual.Tiktok = tiktok == null ? actual.Tiktok : tiktok;
-            actual.SobreNosotros = actual.SobreNosotros; //no cambia
+            AddLine();
+            actual.Telefono = telefonoGuiones;
         }
+        else
+        {
+            actual.Telefono = actual.Telefono;
+        }
+        actual.AlturaCalle = altura == null ? actual.AlturaCalle : altura;
+        actual.Calle = direccion == null ? actual.Calle : direccion;
+        actual.Email = mail == null ? actual.Email : mail;
+        actual.Facebook = facebook == null ? actual.Facebook : facebook;
+        actual.Instagram = instagram == null ? actual.Instagram : instagram;
+        actual.HoraInicio = horaInicio == null ? actual.HoraInicio : horaInicio;
+        actual.HoraSalida = horaCierre == null ? actual.HoraSalida : horaCierre;
+        actual.Tiktok = tiktok == null ? actual.Tiktok : tiktok;
+        actual.SobreNosotros = actual.SobreNosotros; //no cambia
+
         cambios = await libreriaService!.ModificarLibreria(actual!); //confirma si hubo cambios o no
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private void AddLine()
+    {
+        StringBuilder sb = new StringBuilder(telefono);
+
+        if(telefono!.Length == 10)
+        {
+            sb.Insert(2, "-");
+
+            sb.Insert(7, "-");
+        }
+        else if(telefono!.Length == 8)
+        {
+            sb.Insert(4, "-");
+        }
+        telefonoGuiones = sb.ToString();
+    }
+
+    private async Task ActualizarDatos()
+    {
+        libreria = await libreriaService!.ObtenerLibreria();
+
+        horaInicio = libreria.HoraInicio;
+        horaCierre = libreria.HoraSalida;
+        altura = libreria.AlturaCalle;
+        direccion = libreria.Calle;
+        instagram = libreria.Instagram;
+        facebook = libreria.Facebook;
+        tiktok = libreria.Tiktok;
+        mail = libreria.Email;
+        telefono = libreria.Telefono;
+        calle = libreria.Calle;
+
+        await InvokeAsync(StateHasChanged);
     }
 }
