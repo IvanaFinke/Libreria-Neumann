@@ -102,7 +102,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _onChangeDatos = ActualizarDatos;
+        _onChangeDatos = ActualizarDatos; //primero llama a actualizar datos apenas renderiza el componente, luego trae los datos
         libreriaService!.OnChange += _onChangeDatos;
 
         libreria = await libreriaService!.ObtenerLibreria();
