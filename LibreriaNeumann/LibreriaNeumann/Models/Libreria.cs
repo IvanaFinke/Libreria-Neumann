@@ -8,6 +8,10 @@
         public string? Telefono { get; set; }
         public string? Calle { get; set; }
         public int? AlturaCalle { get; set; }
-
+        public string? Facebook { get; set; }
+        public string? Instagram { get; set; }
+        public string? Tiktok { get; set; }
+        public int? HoraInicio { get; set; }
+        public int? HoraSalida { get; set; }
     }
 }

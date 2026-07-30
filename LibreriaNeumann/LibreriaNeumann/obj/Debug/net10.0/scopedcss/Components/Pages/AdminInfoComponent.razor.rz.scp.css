@@ -1,0 +1,206 @@
+.sec-inf[b-r7igp912oo] {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 3rem 3rem;
+    width: 100%;
+}
+
+.linea[b-r7igp912oo] {
+    display: flex;
+    flex-direction: row;
+    padding 0 50px 0 0;
+    margin: 0;
+}
+
+.titulo-info[b-r7igp912oo] {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.contenedor[b-r7igp912oo], .contenedor-instagram[b-r7igp912oo], .contenedor-ubicacion[b-r7igp912oo] {
+    content: "";
+    background-color: rgb(244, 152, 117);
+    border-radius: 75px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    justify-items: start;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    cursor: pointer;
+}
+
+.icono-input[b-r7igp912oo]{
+    display:flex;
+    flex-direction:row;
+    gap:1rem;
+}
+
+.redes[b-r7igp912oo]{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
+.ingresos[b-r7igp912oo] {
+    display: grid;
+    grid-template-columns:auto auto;
+    gap:10px;
+}
+
+.datos-per[b-r7igp912oo]{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
+.contenedor-tiktok[b-r7igp912oo] {
+    content: "";
+    background-color: rgb(244, 152, 117);
+    border-radius: 75px;
+    width: 41px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    justify-items: end;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+    .contenedor i[b-r7igp912oo], .contenedor-tiktok i[b-r7igp912oo], .contenedor-instagram i[b-r7igp912oo], .contenedor-ubicacion i[b-r7igp912oo] {
+        font-size: 24px;
+        color: lightgray;
+        padding-top: 1px;
+    }
+
+[b-r7igp912oo] .contenedor-facebook {
+    display: flex;
+    background: none;
+    align-items: start;
+    width: 40px;
+    cursor: pointer;
+}
+
+    [b-r7igp912oo] .contenedor-facebook i {
+        font-size: 40px;
+        line-height: 1;
+        transform: translateX(-1px);
+        color: rgb(244, 152, 117);
+    }
+
+.guardar[b-r7igp912oo] {
+        text-emphasis-color: white;
+        background-color: rgb(244, 152, 117);
+        width: 200px;
+        height: 40px;
+        border-radius: 15px;
+        font-size: 18px;
+        color: white;
+        border-color: rgb(244, 152, 117);
+        border-style: solid;
+        font-weight: 600;
+        font-family: sans-serif;
+    
+}
+
+.ing-tel[b-r7igp912oo], .ing-mail[b-r7igp912oo], .ing-dir[b-r7igp912oo]{
+    display:flex;
+    flex-direction:column;
+}
+
+.hora[b-r7igp912oo] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.Instagram[b-r7igp912oo], .Facebook[b-r7igp912oo], .Tiktok[b-r7igp912oo] {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 1rem;
+}
+
+/*Diseño movil*/
+@media (max-width:570px){
+    .sec-inf[b-r7igp912oo] {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 1rem 1rem;
+        width: 100%;
+    }
+
+    .hora[b-r7igp912oo]{
+        display:flex;
+        flex-direction:row;
+        margin-top:1rem;
+        gap:2rem;
+    }
+
+    .hor-aper[b-r7igp912oo], .hor-cier[b-r7igp912oo]{
+        gap:10px;
+    }
+  
+    .ingresos[b-r7igp912oo]{
+        display:flex;
+        flex-direction:column;
+        gap:1rem;
+    }
+
+    input[b-r7igp912oo]{
+        width:100%;
+    }
+
+    .inp-alt[b-r7igp912oo]{
+        width:20vw;
+    }
+
+    .ing-dir[b-r7igp912oo]{
+        width:100%;
+    }
+
+    .ing-hora[b-r7igp912oo] {
+        width: 24vw;
+        height:4vh;
+    }
+
+    .datos-per[b-r7igp912oo]{
+        gap: 1.5rem;
+    }
+
+    .Instagram[b-r7igp912oo], .Facebook[b-r7igp912oo], .Tiktok[b-r7igp912oo]{
+        gap:1.5rem;
+    }
+
+    .redes[b-r7igp912oo] {
+        display:grid;
+        grid-template-rows: auto 1fr;
+    }
+
+    .ing-red[b-r7igp912oo]{
+        min-height:5vh;
+        width:50vw;
+        align-self:end;
+    }
+
+    .input-direc[b-r7igp912oo]{
+        width:40vw;
+    }
+
+    .guardar[b-r7igp912oo]{
+        margin-top:1rem;
+    }
+
+    .ambos-direcc[b-r7igp912oo]{
+        display:flex;
+        flex-direction:row;
+        width:100%;
+        
+    }
+}

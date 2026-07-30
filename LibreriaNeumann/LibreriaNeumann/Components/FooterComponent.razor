@@ -9,15 +9,15 @@
         <h5 class="frase"><strong>NUESTRAS REDES</strong></h5>
 
         <div class="iconos-redes">
-            <a class="contenedor">
+            <a class="contenedor" href="https://www.instagram.com{@instagram}/" target="_blank">
                 <i class="bi bi-instagram"></i>
             </a>
 
-            <a class="contenedor-facebook">
+            <a class="contenedor-facebook" href="() => LinkFacebook()" target="_blank">
                 <i class="bi bi-facebook"></i>
             </a>
 
-            <a class="contenedor-tiktok">
+            <a class="contenedor-tiktok" href="() => LinkTiktok()" target="_blank">
                 <i class="bi bi-tiktok"></i>
             </a>
         </div>
@@ -29,7 +29,7 @@
         <div class="clase-donde-estamos-pc">
             <h5 class="frase"><strong>DONDE ESTAMOS</strong></h5>
 
-            <h5 class="ubicacion-frase">Diagonal 73, 7526, La Plata</h5>
+            <h5 class="ubicacion-frase">@calle, @altura, La Plata</h5>
 
             <div class="contenedor-link-horario">
                 <div class="link-a-mapa">
@@ -37,14 +37,14 @@
                         <i class="bi bi-geo-alt-fill"></i> </a>
                 </div>
                 <h6 class="horario-texto">
-                    Lun a Sab <br />09:00 a 20:00
+                    Lun a Sab <br />@horaInicio a @horaSalida
                 </h6>
             </div>
         </div>
 
         <div class="clase-donde-estamos-tablet">
             <h5 class="frase"><strong>DONDE ESTAMOS</strong></h5>
-            <h5 class="ubicacion-frase">Diagonal 73, 7526, La Plata</h5>
+            <h5 class="ubicacion-frase">@calle,@altura, La Plata</h5>
             <div class="icono-horario">
                 <div class="link-a-mapa"><i class="bi bi-geo-alt-fill"></i> </div>
                 <h6 class="horario-texto-tablet"> Lun a Sab @horaInicio a @horaSalida</h6>
@@ -63,13 +63,13 @@
             <div class="iconos-contacto">
 
                 <div class="telefono-seccion">
-                    <a class="contenedor" href="tel:221-566-555"><i class="bi bi-telephone "></i></a>
-                    <h6 class="frase-tel">221-566-555</h6>
+                    <a class="contenedor" href="tel:@telefono"><i class="bi bi-telephone "></i></a>
+                    <h6 class="frase-tel">@telefono</h6>
                 </div>
 
                 <div class="contenedor-mail">
                     <a href="mailto:libneum@gmail.com" class="icon-link"> <i class="bi bi-envelope"></i></a>
-                    <h6 class="mail-texto">libneum@gmail.com</h6>
+                    <h6 class="mail-texto">@mail</h6>
                 </div>
 
                 <div class="contenedor-ubicacion">
@@ -77,7 +77,7 @@
                         <i class="bi bi-geo-alt-fill"></i>
                     </NavLink>
                     <h6 class="horario-texto">
-                        Lun a Sab <br />09:00 a 20:00
+                        Lun a Sab <br />@horaInicio a @horaSalida
                     </h6>
                 </div>
             </div>
@@ -91,7 +91,7 @@
     [Inject] private LibreriaService? libreriaService{ get; set; }
     private Libreria? libreria;
     private int? horaInicio, horaSalida,altura;
-    private string? direccion,instagram,facebook,tiktok = "";
+    private string? direccion,instagram,facebook,tiktok,mail,telefono,calle = "";
 
     protected override async Task OnInitializedAsync()
     {
@@ -105,13 +105,15 @@
             instagram = libreria.Instagram;
             facebook = libreria.Facebook;
             tiktok = libreria.Tiktok;
-
+            mail = libreria.Email;
+            telefono = libreria.Telefono;
+            calle = libreria.Calle;
         }
     }
 
     private string LinkInsta() => $"https://www.instagram.com{instagram}/";
-    private string LinkTiktok() => $"https://www.tiktok.com{tiktok}";
-    private string LinkFacebook() => $"https://www.facebook.com/{facebook}";
+    private string LinkTiktok() => $"https://www.tiktok.com{@tiktok}";
+    private string LinkFacebook() => $"https://www.facebook.com/{@facebook}";
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {

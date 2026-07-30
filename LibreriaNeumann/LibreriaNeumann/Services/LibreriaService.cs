@@ -54,5 +54,23 @@ namespace LibreriaNeumann.Services
             await _context.SaveChangesAsync();
         }
 
+        public async Task<bool> ModificarLibreria(Libreria nueva)
+        {
+            var actual = await ObtenerLibreria();
+
+            actual.Telefono = nueva.Telefono ?? actual.Telefono;
+            actual.Email = nueva.Email ?? actual.Email;
+            actual.Calle = nueva.Calle ?? actual.Calle;
+            actual.AlturaCalle = nueva.AlturaCalle ?? actual.AlturaCalle;
+            actual.Instagram = nueva.Instagram ?? actual.Instagram;
+            actual.Facebook = nueva.Facebook ?? actual.Facebook;
+            actual.Tiktok = nueva.Tiktok ?? actual.Tiktok;
+            actual.HoraInicio = nueva.HoraInicio ?? actual.HoraInicio;
+            actual.HoraSalida = nueva.HoraSalida ?? actual.HoraSalida;
+            // SobreNosotros lo dejamos afuera a propósito — se edita desde su propia página
+
+            await _context.SaveChangesAsync();
+            return true;
+        }
     }
 }
