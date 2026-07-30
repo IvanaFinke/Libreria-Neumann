@@ -47,7 +47,7 @@
             <h5 class="ubicacion-frase">Diagonal 73, 7526, La Plata</h5>
             <div class="icono-horario">
                 <div class="link-a-mapa"><i class="bi bi-geo-alt-fill"></i> </div>
-                <h6 class="horario-texto-tablet"> Lun a Sab 09:00 a 20:00</h6>
+                <h6 class="horario-texto-tablet"> Lun a Sab @horaInicio a @horaSalida</h6>
             </div>
         </div>
 
@@ -88,6 +88,31 @@
 
 </div>
 @code {
+    [Inject] private LibreriaService? libreriaService{ get; set; }
+    private Libreria? libreria;
+    private int? horaInicio, horaSalida,altura;
+    private string? direccion,instagram,facebook,tiktok = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        libreria = await libreriaService!.ObtenerLibreria();
+        if(libreria != null)
+        {
+            horaInicio = libreria.HoraInicio;
+            horaSalida = libreria.HoraSalida;
+            altura = libreria.AlturaCalle;
+            direccion = libreria.Calle;
+            instagram = libreria.Instagram;
+            facebook = libreria.Facebook;
+            tiktok = libreria.Tiktok;
+
+        }
+    }
+
+    private string LinkInsta() => $"https://www.instagram.com{instagram}/";
+    private string LinkTiktok() => $"https://www.tiktok.com{tiktok}";
+    private string LinkFacebook() => $"https://www.facebook.com/{facebook}";
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
