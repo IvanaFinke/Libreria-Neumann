@@ -27,5 +27,5 @@ Página web e-commerce de una librería desarrollada en Blazor Interactive Serve
 - CSS <br>
 
 ### :camera: Capturas
-  ![Header y Hero](wwwroot/images/capturas/header-hero-pc.png)
-  ![Hero y Footer](wwwroot/images/capturas/hero-footer-pc.png)
+  ![Header y Hero](Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/wwwroot/images/capturas/header-hero-pc.png)
+  ![Hero y Footer](Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/wwwroot/images/capturas/hero-footer-pc.png)
