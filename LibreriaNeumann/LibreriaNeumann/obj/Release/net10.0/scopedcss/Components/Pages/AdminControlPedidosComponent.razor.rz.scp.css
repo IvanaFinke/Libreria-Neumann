@@ -1,0 +1,104 @@
+.sec-pedidos[b-u3jttjmlo1] {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 3rem 3rem;
+    padding-top: 1rem;
+    gap: 10px;
+}
+
+.wrapper-estado[b-u3jttjmlo1] {
+    position: relative;
+    display: inline-block;
+}
+
+.btn-camb[b-u3jttjmlo1] {
+    display: inline-block;
+    /* ya no necesita position:relative */
+}
+
+.cont-estados[b-u3jttjmlo1] {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white; /* recomendaba esto antes — si lo dejás en "none" el menú va a quedar transparente sobre el texto de abajo, cuidado */
+    border: 2px solid rgb(255, 106, 0);
+    z-index: 10;
+    min-width: 100%; /* con 10% te va a quedar carente de ancho, mejor 100% para que iguale al ancho del wrapper */
+}
+
+.linea[b-u3jttjmlo1] {
+    display: flex;
+    flex-direction: row;
+    margin: 0 50px 0 0;
+}
+
+.titulo-pedidos[b-u3jttjmlo1] {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.tabla-pedidos[b-u3jttjmlo1] {
+    border: 2px solid rgb(255, 106, 0);
+    outline: 2px solid rgb(128, 128, 128);
+    outline-offset: 2px;
+    border-radius: 2px;
+    min-width: 100%; /*la tabla no se achica por debajo de 600px por mas que la pantalla se achique*/
+    text-align: center;
+    border-collapse: collapse; /*combina los bordes que quedaron separados en uno solo*/
+    margin: 0 0 0 0;
+}
+
+.tabla-scroll[b-u3jttjmlo1] {
+    width:100%;
+    overflow-x: auto; /*para deslizar horizontalmente el contenido del div cuando no entra en pantalla sin cortarlo*/
+    -webkit-overflow-scrolling: touch; /*scroll fluido en ios*/
+}
+
+th[b-u3jttjmlo1], td[b-u3jttjmlo1] {
+    border: 2px solid rgb(255, 106, 0);
+    padding: 8px;
+}
+
+/*Diseño movil*/
+@media (max-width:570px)
+{
+    .sec-pedidos[b-u3jttjmlo1] {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        padding-top: 1rem;
+        gap: 10px;
+    }
+
+    .tabla-scroll[b-u3jttjmlo1]{
+       margin:0;
+    }
+
+    .tabla-pedidos[b-u3jttjmlo1]{
+        min-width:600px;
+    }
+}
+
+/*Diseño Tablets mini/air*/
+@media (min-width:571px) and (max-width:1025px)
+{
+    .estado-boton[b-u3jttjmlo1] {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*Diseño tablets pro, grandes*/
+@media (min-width:852px) and (max-width:1024px) {
+    .estado-boton[b-u3jttjmlo1] {
+        display: flex;
+        flex-direction: column;
+    }
+}

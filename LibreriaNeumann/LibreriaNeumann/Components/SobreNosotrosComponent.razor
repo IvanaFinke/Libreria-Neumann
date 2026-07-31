@@ -1,5 +1,7 @@
 ﻿@rendermode InteractiveServer
 @page "/nosotros"
+@implements IDisposable
+@inject NavigationManager navigatorManager
 
 <div class="sobre-nosotros">
     <div class="titulo-sobre-nosotros">
@@ -21,19 +23,33 @@
 </div>
 
 @code {
-    [Inject] LibreriaService? libreriaService{ get; set; }
+    [Inject] UserSession? userSession { get; set; }
+    [Inject] LibreriaService? libreriaService { get; set; }
+    private Func<Task>? _onChangeAdvice;
+    private string? nosotros;
     private Libreria? libreria;
-    private string? nosotros,mensaje = "";
 
     protected override async Task OnInitializedAsync()
     {
+        _onChangeAdvice = () => InvokeAsync(StateHasChanged);
+        userSession?.OnChange += _onChangeAdvice;
+
         libreria = await libreriaService!.ObtenerLibreria();
-        {
-            if(libreria != null)
-            {
-                nosotros = libreria.SobreNosotros;
-            }
-           
-        }
+        nosotros = libreria.SobreNosotros;
+    }
+
+    private async Task ModificarNos()
+    {
+        await libreriaService!.ModificarSobreNosotros(nosotros!);
+    }
+
+    private void irAInicio()
+    {
+        navigatorManager.NavigateTo("/inicio");
+    }
+
+    public void Dispose()
+    {
+        userSession?.OnChange -= _onChangeAdvice;
     }
 }

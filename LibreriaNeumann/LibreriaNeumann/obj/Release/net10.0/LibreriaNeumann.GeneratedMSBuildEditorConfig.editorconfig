@@ -17,12 +17,13 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
+build_property.EntryPointFilePath = 
 build_property.RootNamespace = LibreriaNeumann
 build_property.RootNamespace = LibreriaNeumann
 build_property.ProjectDir = C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.RazorLangVersion = 9.0
+build_property.RazorLangVersion = 10.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\ivana\Documents\Libreria-Neumann\LibreriaNeumann\LibreriaNeumann
@@ -61,6 +62,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/CambioContraseniaComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYW1iaW9Db250cmFzZW5pYUNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-n59oycbxuj
 
 [C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/CambioDatosComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYW1iaW9EYXRvc0NvbXBvbmVudC5yYXpvcg==
@@ -102,6 +107,10 @@ build_metadata.AdditionalFiles.CssScope = b-pbijrvm6gy
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xJbmljaWFyU2VzaW9uQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-awra8w7bqt
 
+[C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/InicioYRegistroComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xJbmljaW9ZUmVnaXN0cm9Db21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-tugxoxvnmf
+
 [C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-acmwwuxy9a
@@ -122,6 +131,18 @@ build_metadata.AdditionalFiles.CssScope = b-i87l3h0epg
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbkFncmVnYXJMaWJyby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-qjt3d5h19q
 
+[C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/Pages/AdminControlDetallesComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbkNvbnRyb2xEZXRhbGxlc0NvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-eawrlowgw8
+
+[C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/Pages/AdminControlPedidosComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbkNvbnRyb2xQZWRpZG9zQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-u3jttjmlo1
+
+[C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/Pages/AdminInfoComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbkluZm9Db21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-r7igp912oo
+
 [C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/Pages/AdminLibros.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbkxpYnJvcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-dpp1rnt9yi
@@ -130,9 +151,21 @@ build_metadata.AdditionalFiles.CssScope = b-dpp1rnt9yi
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbk1vZGlmaWNhckxpYnJvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-j7wr8mao0a
 
+[C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/Pages/AdminNosotrosComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbk5vc290cm9zQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-vhn596o4zn
+
+[C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/PedidoConfirmadoComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQZWRpZG9Db25maXJtYWRvQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-7flxvspxk8
+
 [C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/RegistrarComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSZWdpc3RyYXJDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-f1rx34fkzg
+
+[C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/ResetearContraseniaComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSZXNldGVhckNvbnRyYXNlbmlhQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-9vcem32n02
 
 [C:/Users/ivana/Documents/Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/Components/SidebarComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaWRlYmFyQ29tcG9uZW50LnJhem9y

@@ -1,0 +1,366 @@
+﻿.footer[b-4tvn7u64oa] {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    align-items: start;
+    padding: 3em 3rem;
+    padding-top: 2.5rem;
+    gap: 1rem;
+    background-color: lightgray;
+}
+
+.frase[b-4tvn7u64oa] {
+    color: white;
+    font-size: 22px;
+}
+
+.contenedor-mapa-link-horario-tablet[b-4tvn7u64oa]{
+    display:none;
+}
+
+.redes-seccion[b-4tvn7u64oa] {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: start;
+}
+
+[b-4tvn7u64oa] .contenedor {
+    content: "";
+    background-color: rgb(244, 152, 117);
+    border-radius: 75px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    justify-items: start;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    cursor: pointer;
+}
+
+[b-4tvn7u64oa] .contenedor-tiktok {
+    content: "";
+    background-color: rgb(244, 152, 117);
+    border-radius: 75px;
+    width: 41px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    justify-items: end;
+    border-color: rgb(244, 152, 117);
+    border-style: solid;
+    cursor: pointer;
+    margin-top:12px;
+}
+
+.contenedor i[b-4tvn7u64oa], .contenedor-tiktok i[b-4tvn7u64oa] {
+    font-size: 24px;
+    color: lightgray;
+    padding-top: 1px;
+}
+
+[b-4tvn7u64oa] .contenedor-facebook {
+    display: flex;
+    background: none;
+    align-items: start;
+    width: 40px;
+    cursor: pointer;
+}
+
+    [b-4tvn7u64oa] .contenedor-facebook i {
+        font-size: 40px;
+        line-height: 1;
+        transform: translateX(-1px);
+        color: rgb(244, 152, 117);
+    }
+
+.clase-donde-estamos[b-4tvn7u64oa] {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+
+[b-4tvn7u64oa] .iconos-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2.4rem;
+    margin-top: 2rem;
+}
+
+[b-4tvn7u64oa] .telefono-seccion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.contenedor-mail[b-4tvn7u64oa], .contenedor-ubicacion[b-4tvn7u64oa], .link-a-mapa[b-4tvn7u64oa] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    background-color: rgb(244, 152, 117);
+    border-radius: 75px;
+    width: 40px;
+    height: 40px;
+    text-wrap: nowrap;
+    cursor: pointer;
+}
+
+    .bi-envelope[b-4tvn7u64oa], .contenedor-ubicacion i[b-4tvn7u64oa], .link-a-mapa i[b-4tvn7u64oa] {
+        font-size: 24px;
+        color: lightgray;
+        display: flex;
+        justify-items: center;
+        padding-left: 8px;
+        gap: 20px;
+    }
+
+[b-4tvn7u64oa] .mail-texto, .horario-texto[b-4tvn7u64oa] {
+    margin-left: 10px;
+}
+
+[b-4tvn7u64oa] .map-shared {
+    height: 200px;
+    width: 400px;
+    border-radius: 8px;
+    overflow:hidden;
+}
+
+.contenedor-link-horario[b-4tvn7u64oa], .clase-donde-estamos-tablet[b-4tvn7u64oa] {
+    display: none;
+}
+
+.icon-link[b-4tvn7u64oa]{
+    text-decoration:none;
+    outline:none;
+}
+
+
+[b-4tvn7u64oa] .iconos-redes{
+    gap:2rem;
+    display:flex;
+    flex-direction:column;
+}
+
+
+/*Cellphone media*/
+@media (max-width:570px)
+{
+    .footer[b-4tvn7u64oa] {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        gap: 6px;
+        padding-top: 8px;
+        width:100%;
+    }
+
+    .redes-seccion[b-4tvn7u64oa], .clase-donde-estamos[b-4tvn7u64oa], .atencion-seccion[b-4tvn7u64oa]{
+        gap:4px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+     
+    }
+    
+
+    .atencion-seccion[b-4tvn7u64oa]{
+        flex-direction:column;
+        gap:1px;
+    }
+
+    .iconos-redes[b-4tvn7u64oa]{
+        display:flex;
+        flex-direction:row;
+    }
+
+    .contenedores[b-4tvn7u64oa] {
+        display: flex;
+        flex-direction: row;
+        justify-items:center;
+        justify-content:space-between;
+        gap:3rem;
+    }
+
+   [b-4tvn7u64oa] .contenedor-facebook{
+        width:40px;
+        height:40px;
+        align-items:center;
+        justify-content:center;
+        margin-top:2px;
+    }
+
+   [b-4tvn7u64oa] .contenedor-facebook i{
+       font-size:40px;
+       padding-bottom:2px;
+   }
+
+    .contenedor-link-horario[b-4tvn7u64oa] {
+        display: flex;
+        margin-top: 10px;
+        align-content: center;
+        gap: 10px;
+    }
+
+    .icon-link[b-4tvn7u64oa] {
+        text-decoration: none;
+        outline: none;
+    }
+
+    .contenedor-ubicacion[b-4tvn7u64oa], .mail-texto[b-4tvn7u64oa], .frase-tel[b-4tvn7u64oa], .map-shared[b-4tvn7u64oa], .clase-donde-estamos-tablet[b-4tvn7u64oa] {
+        display: none;
+    }
+
+    [b-4tvn7u64oa] .iconos-contacto{
+        margin-top:0px;
+        gap:20px;
+        display:flex;
+        flex-direction:row;
+    }
+
+    [b-4tvn7u64oa] .contenedor-tiktok{
+        margin-top:0px;
+    }
+
+    .ubicacion-frase[b-4tvn7u64oa]{
+        font-size:16px;
+    }
+}
+
+/*Tablet mini/ipads mini*/
+@media (min-width:571px) and (max-width:860px){
+    .footer[b-4tvn7u64oa] {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        padding-top: 2rem;
+        width: 100%;
+        padding: 2em 3rem;
+    }
+
+    .redes-seccion[b-4tvn7u64oa], .clase-donde-estamos-tablet[b-4tvn7u64oa], .atencion-seccion[b-4tvn7u64oa] {
+        gap: 4px;
+        
+    }
+
+    .atencion-seccion[b-4tvn7u64oa] {
+        display:flex;
+        flex-direction: column;
+        gap:0;
+      
+    }
+
+    .iconos-redes[b-4tvn7u64oa]{
+        display:flex;
+        flex-direction:column !important;
+        align-content:start;
+    }
+
+    .redes-seccion[b-4tvn7u64oa], .atencion-seccion[b-4tvn7u64oa]{
+        align-items:start;
+    }
+
+    .contenedores[b-4tvn7u64oa] {
+        justify-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    [b-4tvn7u64oa] .contenedor-facebook {
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+    }
+
+        [b-4tvn7u64oa] .contenedor-facebook i {
+            font-size: 40px;
+            padding-bottom: 2px;
+        }
+
+    .contenedor-link-horario[b-4tvn7u64oa] {
+        display: flex;
+        margin-top: 10px;
+        align-content: center;
+        gap: 10px;
+    }
+
+    .icon-link[b-4tvn7u64oa] {
+        text-decoration: none;
+        outline: none;
+    }
+
+    .mail-texto[b-4tvn7u64oa], .frase-tel[b-4tvn7u64oa], .contenedor-link-horario horario-texto[b-4tvn7u64oa], .contenedor-link-horario .link-a-mapa[b-4tvn7u64oa],.contenedor-ubicacion[b-4tvn7u64oa], .clase-donde-estamos-pc[b-4tvn7u64oa] {
+        display: none;
+    }
+
+    [b-4tvn7u64oa] .iconos-contacto {
+        margin-top: 0px;
+        padding-top:0;
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+  
+    }
+
+    [b-4tvn7u64oa] .contenedor-tiktok {
+        margin-top: 0px;
+    }
+
+    .ubicacion-frase[b-4tvn7u64oa] {
+        font-size: 16px;
+    }
+
+    .clase-donde-estamos-tablet[b-4tvn7u64oa]{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .icono-horario[b-4tvn7u64oa] {
+        display: flex;
+        flex-direction: row;
+        gap:10px;
+        align-self:center;
+        text-wrap:pretty;
+    }
+
+    .icono-horario .link-a-mapa[b-4tvn7u64oa]{
+        width:32px;
+        height:32px;
+        margin-bottom:10px;
+    }
+
+    .horario-texto-tablet[b-4tvn7u64oa]{
+        align-self:center;
+    }
+
+    .icono-horario i[b-4tvn7u64oa] {
+        align-self: center;
+        font-size: 20px;
+        padding: 6px;
+    }
+    .telefono-seccion[b-4tvn7u64oa]{
+        margin-top:4px;
+    }
+
+    .telefono-seccion i[b-4tvn7u64oa], .contenedor i[b-4tvn7u64oa], .contenedor-tiktok i[b-4tvn7u64oa]{
+        align-self:center;
+        padding:0;
+        margin:0;
+    }
+
+    [b-4tvn7u64oa] .map-shared {
+        height: 130px;
+        width: 300px;
+        border-radius: 8px;
+        grid-row:4;
+    }
+}

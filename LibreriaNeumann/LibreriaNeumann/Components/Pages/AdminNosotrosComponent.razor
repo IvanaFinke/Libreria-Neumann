@@ -49,6 +49,7 @@ else
     private async Task ModificarNos()
     {
         await libreriaService!.ModificarSobreNosotros(nosotros!);
+        await InvokeAsync(StateHasChanged);
     }
 
     public void Dispose()

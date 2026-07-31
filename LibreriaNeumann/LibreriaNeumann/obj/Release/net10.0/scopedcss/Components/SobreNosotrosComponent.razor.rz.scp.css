@@ -1,0 +1,58 @@
+.sobre-nosotros[b-91mq5d4biu] {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        width: 100%;
+        align-items: center;
+        padding: 3em 3rem;
+        gap: 1rem;
+}
+
+.parrafo[b-91mq5d4biu]{
+    text-wrap: balance;
+    text-align:justify;
+    width:80vw;
+    text-autospace: normal;
+    line-height:1.5;
+}
+
+.titulo-sobre[b-91mq5d4biu] {
+    align-self: start;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.linea[b-91mq5d4biu]{
+    display:flex;
+    flex-direction:row;
+    margin: 0 0 50px 0;
+}
+
+@media (max-width:768px)
+{
+    .parrafo[b-91mq5d4biu]{
+        font-size:16px;
+        text-wrap:auto;
+        text-align:justify;
+        max-width:100%;
+        max-height:100%;
+ 
+    }
+}
+
+/*Diseño Tablets mini/air y ipads grandes*/
+@media (min-width:571px) and (max-width:1025px){
+    .sobre-nosotros[b-91mq5d4biu] {
+       display:flex;
+        width: 100%;
+        align-items: center;
+        justify-content:center;
+        padding: 3em 3rem;
+        gap: 2rem;
+    }
+
+    .titulo-sobre-nosotros[b-91mq5d4biu] {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+}

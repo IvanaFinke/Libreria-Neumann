@@ -1,0 +1,30 @@
+
+/* layout raíz: flex column */
+.page[b-acmwwuxy9a] {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh; /* usa 100dvh para mobile moderno*/
+    width: 100%;
+}
+
+/* header: ocupa su altura natural, no crece */
+.header-parte[b-acmwwuxy9a] {
+    flex: 0 0 auto;
+
+}
+
+/* content: ESTE es el que debe crecer y scrollear */
+.content[b-acmwwuxy9a] {
+    flex: 1 1 auto; /* ocupa el espacio restante agrandandose o achicandose dependiendo de la pagina */
+    min-height: 0; /*para que overflow funcione */
+    overflow-y: auto; /* el scrolling se produce aca */
+    -webkit-overflow-scrolling: touch; /* suaviza scroll en iOS/WebKit */
+   
+}
+
+.footer-parte[b-acmwwuxy9a] {
+    flex: 0 0 auto;
+    width: 100%;
+  
+}
+

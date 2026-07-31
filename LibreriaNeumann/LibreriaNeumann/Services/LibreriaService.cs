@@ -35,8 +35,8 @@ namespace LibreriaNeumann.Services
         {
             await using var _context = await _contextFactory.CreateDbContextAsync();
 
-            var actual = await ObtenerLibreria();
-            actual.SobreNosotros = nuevoNosotros;
+            var actual = await _context.Libreria.FirstOrDefaultAsync();
+            actual!.SobreNosotros = nuevoNosotros;
            await  _context.SaveChangesAsync();
         }
         public async Task<bool> ModificarLibreria(Libreria nueva)
