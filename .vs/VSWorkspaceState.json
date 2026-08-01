@@ -1,12 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\images",
     "\\LibreriaNeumann",
     "\\LibreriaNeumann\\LibreriaNeumann",
     "\\LibreriaNeumann\\LibreriaNeumann\\Components",
     "\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages",
-    "\\LibreriaNeumann\\LibreriaNeumann\\Services"
+    "\\LibreriaNeumann\\LibreriaNeumann\\Services",
+    "\\LibreriaNeumann\\LibreriaNeumann\\wwwroot",
+    "\\LibreriaNeumann\\LibreriaNeumann\\wwwroot\\images",
+    "\\LibreriaNeumann\\LibreriaNeumann\\wwwroot\\images\\capturas"
   ],
-  "SelectedNode": "\\LibreriaNeumann\\LibreriaNeumann\\Components\\Pages\\AdminAgregarLibro.razor",
+  "SelectedNode": "\\LibreriaNeumann\\LibreriaNeumann\\LibreriaNeumann.csproj",
   "PreviewInSolutionExplorer": false
 }
