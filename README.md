@@ -127,7 +127,10 @@ Página web e-commerce de una librería desarrollada en Blazor Interactive Serve
   -Sección de modificación de datos de la librería <br>
   ![Panel de administrador datos libreria](Libreria-Neumann/LibreriaNeumann/LibreriaNeumann/wwwroot/images/capturas/admin-informacion-pc.png)
 
-
+  ### :arrow_forward: Cómo ejecutar <br>
+  - dotnet restore
+  - dotnet ef database update
+  - dotnet run
 
 
 
