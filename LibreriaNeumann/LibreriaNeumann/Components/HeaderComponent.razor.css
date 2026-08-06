@@ -67,7 +67,7 @@
 ::deep .user:hover i, .carrito:hover i, ::deep .admin-seccion:hover i, ::deep .user-seccion:hover i{
         color: #0d6efd;
         transform: scale(1.00);
-        transition: transform ease 0.15s color 0.15s ease;
+        transition: transform ease 0.15s, color 0.15s ease;
 }
 
 

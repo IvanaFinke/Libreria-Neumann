@@ -60,12 +60,6 @@
                                  
             @if (shoppingCart)
             {
-                @if (carritoService?.Items.Count > 0 && sesion?.Usuario == null)
-                {
-                    <div class="cuadro-carrito-vacio">
-                        <p>Inicia sesion para ver tu carrito!</p>
-                    </div>
-                }
                 @if (sesion?.Usuario == null)
                 {
                     <div class="cuadro-carrito-vacio">

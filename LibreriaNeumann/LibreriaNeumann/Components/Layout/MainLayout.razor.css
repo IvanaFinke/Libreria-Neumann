@@ -13,7 +13,7 @@
 
 }
 
-/* content: ESTE es el que debe crecer y scrollear */
+/* content es el que debe crecer y scrollear */
 .content {
     flex: 1 1 auto; /* ocupa el espacio restante agrandandose o achicandose dependiendo de la pagina */
     min-height: 0; /*para que overflow funcione */

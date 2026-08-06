@@ -19,8 +19,9 @@ builder.Services.AddScoped<ClientInfoService>();
 builder.Services.AddScoped<ReCaptcha>();
 builder.Services.AddScoped<LibreriaService>();
 builder.Services.AddScoped<ProcesadorPagosService>();
-builder.Services.AddScoped<CarritoService>(); //Los addScoped se crean una vez por cada usuario
+builder.Services.AddScoped<CarritoService>(); 
 builder.Services.AddScoped<UserService>();
+
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseSqlServer(
     builder.Configuration.GetConnectionString("DefaultConnection"),
@@ -44,7 +45,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    app.UseExceptionHandler("/Error", createScopeForErrors: true); 
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
@@ -59,8 +60,8 @@ app.MapRazorComponents<App>()
 
 using (var scope = app.Services.CreateScope())
 {
-    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.Migrate();
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>(); //obtiene la instancia ya creada de Adddbcontext
+    db.Database.Migrate(); //trae todas las migraciones
     DataSeeder.Seed(db);
     
 }
