@@ -27,6 +27,9 @@ Página web e-commerce de una librería desarrollada en Blazor Interactive Serve
 - HTML <br>
 - CSS <br>
 
+### :mag_right: Documentación técnica
+https://docs.google.com/document/d/1oViUytjq8JoBOawM1QPf8ZGSxN2Ei4OePDrqQ91Oq9M/edit?usp=sharing 
+
 ### :camera: Capturas
 
 - Header, Hero y Footer <br>
